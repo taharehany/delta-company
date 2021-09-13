@@ -1,0 +1,242 @@
+//hero
+section(class="hero-header h-video transparent")
+    #video_container
+        video(id="background_video", loop, muted)
+        div(id="video_cover")
+    div(class="hero-content")
+        div(class="container")
+            div(class="hero-text")
+                h2 IT'S GREAT TO BE HOME!
+                h1 Find Your Perfect Home
+            div(class="hero-search")
+                form(action="") 
+                    div(class="row")
+                        div(class="col-lg-3 col-md-6")
+                            div(class="select-area")
+                                label(for="" class="form-label") type
+                                select(class="select")
+                                    option(disabled, selected, class="hidden-option") Choose One
+                                    option(value="1") option 1
+                                    option(value="2") option 2
+                                    option(value="3") option 3
+                                    option(value="4") option 4
+                        div(class="col-lg-3 col-md-6")
+                            div(class="select-area")
+                                label(for="" class="form-label") location
+                                select(class="select")
+                                    option(disabled, selected, class="hidden-option") Choose One
+                                    option(value="1") option 1
+                                    option(value="2") option 2
+                                    option(value="3") option 3
+                                    option(value="4") option 4
+                        div(class="col-lg-3 col-md-6")
+                            div(class="select-area")
+                                label(for="" class="form-label") price from
+                                select(class="select")
+                                    option(disabled, selected, class="hidden-option") Choose One
+                                    option(value="1") option 1
+                                    option(value="2") option 2
+                                    option(value="3") option 3
+                                    option(value="4") option 4
+                        div(class="col-lg-3 col-md-6")
+                            div(class="select-area")
+                                label(for="" class="form-label") price to
+                                select(class="select")
+                                    option(disabled, selected, class="hidden-option") Choose One
+                                    option(value="1") option 1
+                                    option(value="2") option 2
+                                    option(value="3") option 3
+                                    option(value="4") option 4
+                        div(class="col-12")
+                            div(class="input-area")
+                                label(for="search_text" class="form-label") enter text
+                                input(placeholder="enter text", id="search_text", type="text", class="form-control")
+                        div(class="col-12")
+                            div(class="buttons-area")
+                                button(class="btn" class="submit" type="submit")
+                                    i(class="bi bi-search")
+                                    | search
+                                button(class="btn btn-outline-light" class="reset" type="reset")
+                                    | reset
+//hero
+
+//search area
+section(class="search")
+    div(class="container")
+        div(class="filtration")
+            div(class="row")
+                div(class="col-9")
+                    //- nav
+                        div(class="nav-wrapper")
+                            div(class="col s12")
+                                a(href="#!", class="breadcrumb") First
+                                a(href="#!", class="breadcrumb") Second
+                                a(href="#!", class="breadcrumb") Third
+                
+                    div(class="result")
+                        p 88 found
+                        //- a(href="#!" class="rearrange_to_1") 
+                            i(class="material-icons") view_headline
+                        //- a(href="#!" class="rearrange_to_4") 
+                            i(class="material-icons") view_comfy
+                div(class="col-3")
+                    select(class="select float-end")
+                        option(disabled, selected, class="hidden-option") sort by
+                        option(value="1") new first
+                        option(value="2") area 
+                        option(value="3") low price first
+                        option(value="4") heght price first
+//search area
+
+//properties
+section(class="properties")
+    div(class="container")
+        div(class="property-content")
+            div(class="row")
+                div(class="col-md-6 col-lg-4")
+                    div(class="property-box")
+                        div(class="property-image")
+                            img(src="images/backgrounds/hero.jpg", alt="")
+                            span(class="images-number") 
+                                i(class="bi bi-images")
+                                | 2
+                        div(class="property-details")
+                            a(href="#!")
+                                h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                p(class="location")
+                                    i(class="bi-pin")
+                                    | Egypt, Cairo
+                                p(class="price") 150000 EGP
+                            a(href="#!" class="btn") view
+                            //- a(href="#!" class="btn" class="fav")
+                                i(class="bi bi-heart")
+                div(class="col-md-6 col-lg-4")
+                    div(class="property-box")
+                        div(class="property-image")
+                            img(src="images/property/02.jpg", alt="")
+                            span(class="images-number") 
+                                i(class="bi bi-images")
+                                | 10
+                        div(class="property-details")
+                            a(href="#!")
+                                h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                p(class="location")
+                                    i(class="bi-pin")
+                                    | Egypt, Cairo
+                                p(class="price") 150000 EGP
+                            a(href="#!" class="btn") view
+                div(class="col-md-6 col-lg-4")
+                    div(class="property-box")
+                        div(class="property-image")
+                            img(src="images/property/03.jpg", alt="")
+                            span(class="images-number") 
+                                i(class="bi bi-images")
+                                | 5
+                        div(class="property-details")
+                            a(href="#!")
+                                h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                p(class="location")
+                                    i(class="bi-pin")
+                                    | Egypt, Cairo
+                                p(class="price") 150000 EGP
+                            a(href="#!" class="btn") view
+                div(class="col-md-6 col-lg-4")
+                    div(class="property-box")
+                        div(class="property-image")
+                            img(src="images/property/04.jpg", alt="")
+                            span(class="images-number") 
+                                i(class="bi bi-images")
+                                | 25
+                        div(class="property-details")
+                            a(href="#!")
+                                h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                p(class="location")
+                                    i(class="bi-pin")
+                                    | Egypt, Cairo
+                                p(class="price") 150000 EGP
+                            a(href="#!" class="btn") view
+                div(class="col-md-6 col-lg-4")
+                    div(class="property-box")
+                        div(class="property-image")
+                            img(src="images/property/01.jpg", alt="")
+                            span(class="images-number") 
+                                i(class="bi bi-images")
+                                | 21
+                        div(class="property-details")
+                            a(href="#!")
+                                h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                p(class="location")
+                                    i(class="bi-pin")
+                                    | Egypt, Cairo
+                                p(class="price") 150000 EGP
+                            a(href="#!" class="btn") view
+                div(class="col-md-6 col-lg-4")
+                    div(class="property-box")
+                        div(class="property-image")
+                            img(src="images/property/02.jpg", alt="")
+                            span(class="images-number") 
+                                i(class="bi bi-images")
+                                | 15
+                        div(class="property-details")
+                            a(href="#!")
+                                h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                p(class="location")
+                                    i(class="bi-pin")
+                                    | Egypt, Cairo
+                                p(class="price") 150000 EGP
+                            a(href="#!" class="btn") view
+                div(class="col-12")
+                    div(class="view-all")
+                        a(href="properties.html" class="btn") view all
+//properties
+
+//hot
+section(class="hot")
+    div(class="container")
+        div(class="main-title")
+            h2 Find Out What's Hot!
+                span(class="line")
+        div(class="row")
+            div(class="col-md-4 col-lg-3")
+                div(class="hot-box")
+                    a(href="#!") 
+                        div(class="hot-image")
+                            img(src="images/hot/01.jpg", alt="")
+                        div(class="hot-details")
+                            h2 new cairo
+            div(class="col-md-4 col-lg-3")
+                div(class="hot-box")
+                    a(href="#!") 
+                        div(class="hot-image")
+                            img(src="images/hot/02.jpg", alt="")
+                        div(class="hot-details")
+                            h2 Nasr city
+            div(class="col-md-4 col-lg-3")
+                div(class="hot-box")
+                    a(href="#!") 
+                        div(class="hot-image")
+                            img(src="images/hot/03.jpg", alt="")
+                        div(class="hot-details")
+                            h2 Jiza
+            div(class="col-md-4 col-lg-3")
+                div(class="hot-box")
+                    a(href="#!") 
+                        div(class="hot-image")
+                            img(src="images/hot/04.jpg", alt="")
+                        div(class="hot-details")
+                            h2 badr city
+            div(class="col-md-4 col-lg-3")
+                div(class="hot-box")
+                    a(href="#!") 
+                        div(class="hot-image")
+                            img(src="images/hot/03.jpg", alt="")
+                        div(class="hot-details")
+                            h2 new cairo
+            div(class="col-md-4 col-lg-3")
+                div(class="hot-box")
+                    a(href="#!") 
+                        div(class="hot-image")
+                            img(src="images/hot/04.jpg", alt="")
+                        div(class="hot-details")
+                            h2 new cairo
+//hot

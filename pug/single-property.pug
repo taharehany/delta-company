@@ -1,0 +1,63 @@
+extends index
+
+block website_title
+    title aqary | single property
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/backgrounds/01.jpg')")
+        div(class="container")
+            ol(class="breadcrumb")
+                li(class="breadcrumb-item")
+                    a(href="index.html") Home
+                li(class="breadcrumb-item active", aria-current="page") single property
+    //breadcrumb
+    
+    //single property
+    section(class="single-property-page")
+        div(class="container")
+            //- div(class="main-title")
+            //-     h2 Apartment for sale 50m in Zahra - North Coast
+            //-     p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates iure harum officiis placeat ipsam praesentium dolores, ad exercitationem neque quasi officia iste facere rem fuga sit consequatur dignissimos atque pariatur.e
+            div(class="property-content")
+                div(class="row")
+                    div(class="col-md-8 col-lg-8")
+                        div(class="single-property-box")
+                            div(class="slider-for")
+                                div(class="item")
+                                    // عرض الصورة يبقى ضعف الطول، عشان الصورة تظهر حلوة بس مش أكتر
+                                    img(src="images/slides/01.jpg", claas="img-fluid" alt="")
+                                div(class="item")
+                                    img(src="images/slides/02.jpg", claas="img-fluid" alt="")
+                                div(class="item")
+                                    img(src="images/slides/03.jpg", claas="img-fluid" alt="")
+                                div(class="item")
+                                    img(src="images/slides/04.jpg", claas="img-fluid" alt="")
+                            div(class="slider-nav")
+                                div(class="item")
+                                    img(src="images/slides/01.jpg", claas="img-fluid" alt="")
+                                div(class="item")
+                                    img(src="images/slides/02.jpg", claas="img-fluid" alt="")
+                                div(class="item")
+                                    img(src="images/slides/03.jpg", claas="img-fluid" alt="")
+                                div(class="item")
+                                    img(src="images/slides/04.jpg", claas="img-fluid" alt="")
+                    div(class="col-md-4 col-lg-4")
+                        aside 
+                            div(class="list-group")
+                                a(href="#!", class="list-group-item list-group-item-action active", aria-current="true")
+                                    i(class="bi bi-question-circle")
+                                    | 150000 EGP
+                                a(href="tel:01150547411", class="list-group-item list-group-item-action") 
+                                    i(class="bi bi-telephone-outbound")
+                                    | 01150547411
+                                a(href="mailto:test@email.com", class="list-group-item list-group-item-action") 
+                                    i(class="bi bi-envelope")
+                                    | test@email.com
+                                a(href="#!", class="list-group-item list-group-item-action") 
+                                    i(class="bi bi-pin")
+                                    | see map
+                                a(href="#!", class="list-group-item list-group-item-action") 
+                                    i(class="bi bi-heart")
+                                    | add to favorit
+    //single property

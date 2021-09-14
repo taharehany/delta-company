@@ -1,12 +1,58 @@
 $(document).ready(function () {
   "use strict";
 
-  //dropdown 
+  //dropdown dropkick select
   $(".select").dropkick({
     mobile: true
   });
 
+  //toast notification
+  let toastTrigger = document.getElementById('addToFavBtn')
+  let toastLiveExample = document.getElementById('favToast')
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', function () {
+      let toast = new bootstrap.Toast(toastLiveExample)
+      toast.show()
+    })
+  }
 
+  //filter home page
+  $(".dk-option:not(.dk-option-disabled)").on("click", function () {
+    let dkOption = $(this).context.innerText;
+    $(".filter .filter-slug").text(dkOption);
+
+    if ($(".filter .filter-slug").text() !== "") {
+      $(".result .filter").css("display", "block");
+      $(".filter .close").removeClass("d-none");
+    }
+  });
+
+  $(".result .filter .close").on("click", function () {
+    $(".result .filter").css("display", "none");
+  });
+
+
+  //validate form
+  (function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+
+
+  //single property slider
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -16,7 +62,7 @@ $(document).ready(function () {
     autoplaySpeed: 2000,
     asNavFor: '.slider-nav'
   });
-  
+
   $('.slider-nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -30,12 +76,12 @@ $(document).ready(function () {
 
   $('a[data-slide]').click(function (e) {
     e.preventDefault();
-    var slideno = $(this).data('slide');
+    let slideno = $(this).data('slide');
     $('.slider-nav').slick('slickGoTo', slideno - 1);
   });
 
   //video
-  var bv = new Bideo();
+  let bv = new Bideo();
   bv.init({
     // Video element
     videoEl: document.querySelector('#background_video'),
@@ -66,7 +112,7 @@ $(document).ready(function () {
   //video
 
   /* Hero Video Header - Mouse Effect */
-  var image,
+  let image,
     appending,
     imageCanvas,
     imageCanvasContext,
@@ -84,7 +130,7 @@ $(document).ready(function () {
   }
 
   function onMouseMove(event) {
-    var scroll = 0;
+    let scroll = 0;
     if (!$(".search-popup").length)
       scroll = $(document).scrollTop();
     points.push({
@@ -97,7 +143,7 @@ $(document).ready(function () {
   function resizeCanvases() {
     if (!("disableRubber" in window)) {
       setTimeout(function () {
-        var c = setInterval(function () {
+        let c = setInterval(function () {
           if ($(".hero-header canvas").length) {
             imageCanvas.width = lineCanvas.width = $(".hero-header canvas").parent().width();
             imageCanvas.height = lineCanvas.height = $(".hero-header canvas").parent().height();
@@ -112,7 +158,7 @@ $(document).ready(function () {
 
   function tick() {
     points = points.filter(function (point) {
-      var age = Date.now() - point.time;
+      let age = Date.now() - point.time;
       return age < pointLifetime;
     });
     drawLineCanvas();
@@ -121,23 +167,23 @@ $(document).ready(function () {
   }
 
   function drawLineCanvas() {
-    var minimumLineWidth = 150;
-    var maximumLineWidth = 150;
-    var lineWidthRange = maximumLineWidth - minimumLineWidth;
-    var maximumSpeed = 50;
+    let minimumLineWidth = 150;
+    let maximumLineWidth = 150;
+    let lineWidthRange = maximumLineWidth - minimumLineWidth;
+    let maximumSpeed = 50;
     lineCanvasContext.clearRect(0, 0, lineCanvas.width, lineCanvas.height);
     lineCanvasContext.lineCap = 'round';
     lineCanvasContext.shadowBlur = 20;
     lineCanvasContext.shadowColor = '#000';
-    for (var i = 1; i < points.length; i++) {
-      var point = points[i];
-      var previousPoint = points[i - 1];
-      var distance = getDistanceBetween(point, previousPoint);
-      var speed = Math.max(0, Math.min(maximumSpeed, distance));
-      var percentageLineWidth = (maximumSpeed - speed) / maximumSpeed;
+    for (let i = 1; i < points.length; i++) {
+      let point = points[i];
+      let previousPoint = points[i - 1];
+      let distance = getDistanceBetween(point, previousPoint);
+      let speed = Math.max(0, Math.min(maximumSpeed, distance));
+      let percentageLineWidth = (maximumSpeed - speed) / maximumSpeed;
       lineCanvasContext.lineWidth = minimumLineWidth + percentageLineWidth * lineWidthRange;
-      var age = Date.now() - point.time;
-      var opacity = (pointLifetime - age) / pointLifetime;
+      let age = Date.now() - point.time;
+      let opacity = (pointLifetime - age) / pointLifetime;
       lineCanvasContext.strokeStyle = 'rgba(0, 0, 0, ' + opacity + ')';
       lineCanvasContext.beginPath();
       lineCanvasContext.moveTo(previousPoint.x, previousPoint.y);
@@ -151,10 +197,10 @@ $(document).ready(function () {
   }
 
   function drawImageCanvas() {
-    var top = 0,
+    let top = 0,
       left = 0;
-    var width = imageCanvas.width;
-    var height = imageCanvas.width / image.naturalWidth * image.naturalHeight;
+    let width = imageCanvas.width;
+    let height = imageCanvas.width / image.naturalWidth * image.naturalHeight;
     if (height < imageCanvas.height) {
       width = imageCanvas.height / image.naturalHeight * image.naturalWidth;
       height = imageCanvas.height;
@@ -189,10 +235,10 @@ $(document).ready(function () {
 
   function setCanvasEffect() {
     if (!("disableRubber" in window)) {
-      var href = window.location.href;
-      var dir = href.substring(0, href.lastIndexOf('/')) + "/";
-      var bgImage;
-      var cElement;
+      let href = window.location.href;
+      let dir = href.substring(0, href.lastIndexOf('/')) + "/";
+      let bgImage;
+      let cElement;
       if ($(".h-video").length)
         cElement = $(".h-video");
       else if ($(".h-slideshow").length)
@@ -213,7 +259,7 @@ $(document).ready(function () {
   }
 
   /* Prepare Interface */
-  var he_ = $(".hero-header");
+  let he_ = $(".hero-header");
   he_.prepend('<div class="hero-image"></div>');
   he_.prepend('<div class="overlay"></div>');
   he_.prepend('<div class="dot-overlay"></div>');

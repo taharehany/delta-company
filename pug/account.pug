@@ -1,0 +1,96 @@
+extends index
+
+block website_title
+    title aqary | login and register
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/backgrounds/broad.jpg')")
+        div(class="container")
+            ol(class="breadcrumb")
+                //- li(class="breadcrumb-item")
+                    a(href="index.html") Home
+                li(class="breadcrumb-item active" aria-current="page") login and register
+    //breadcrumb
+
+    // login and register
+    section(class="login-register")
+        div(class="container")
+            div(class="form-area")
+                //- div(class="main-title")
+                    h2 register or login
+                        span(class="line")
+                div(class="contact-box")
+                    div(class="form-content")
+                        nav
+                            #nav-tab(class="nav nav-tabs", role="tablist")
+                                button(class="nav-link active", id="nav-register-tab" data-bs-toggle="tab", data-bs-target="#nav-register", type="button", role="tab", aria-controls="nav-register", aria-selected="true") register
+
+                                button(class="nav-link", id="nav-login-tab" data-bs-toggle="tab", data-bs-target="#nav-login", type="button", role="tab", aria-controls="nav-login", aria-selected="false") login
+                        div(class="tab-content" id="nav-tabContent")
+                            div(class="tab-pane fade show active", id="nav-register" role="tabpanel", aria-labelledby="nav-register-tab") 
+                                form(class="g-3 needs-validation" action="" novalidate)
+                                    div(class="row")
+                                        div(class="col-lg-12")
+                                            div(class="form-group input-group flex-nowrap")
+                                                span(class="input-group-text bi bi-person")
+                                                input(type="text" class="form-control" placeholder="Name" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group input-group flex-nowrap")
+                                                i(class="input-group-text bi bi-envelope")
+                                                input(type="number" class="form-control" placeholder="Number" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group input-group flex-nowrap")
+                                                div(class="input-group has-validation")
+                                                    i(class="input-group-text bi bi-envelope")
+                                                    input(type="email" class="form-control" placeholder="Email" required)
+                                                    div(class="invalid-tooltip")
+                                                        | email error
+                                        div(class="col-lg-12")
+                                            div(class="form-group input-group flex-nowrap")
+                                                div(class="input-group has-validation")
+                                                    select(class="form-control select" placeholder="select", required)
+                                                        option(value="" disabled selected) user type
+                                                        option(value="") optoin 1
+                                                        option(value="") optoin 2 
+                                                        option(value="") optoin 3
+                                        div(class="col-lg-12")
+                                            div(class="form-group input-group flex-nowrap")
+                                                i(class="input-group-text bi bi-shield-lock")
+                                                input(type="password" class="form-control" placeholder="Password" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group input-group flex-nowrap")
+                                                i(class="input-group-text bi bi-shield-lock")
+                                                input(type="password" class="form-control" placeholder="Confirm Password" required)
+                                        div(class="col-lg-12 mb-2")
+                                            div(class="form-check")
+                                                input(input class="form-check-input" type="checkbox" id="gridCheck1")
+                                                label(class="form-check-label", for="gridCheck1")
+                                                    | Remember me
+                                        div(class="col-lg-12 text-center")
+                                            div(class="form-group")
+                                                button(class="btn btn-danger hvr-sweep-to-top" type="submit") register now
+
+                            div(class="tab-pane fade", id="nav-login" role="tabpanel", aria-labelledby="nav-login-tab") 
+                                form(class="g-3 needs-validation" action="" novalidate)
+                                    div(class="row")
+                                        div(class="col-lg-12")
+                                            div(class="form-group input-group flex-nowrap")
+                                                div(class="input-group has-validation")
+                                                    i(class="input-group-text bi bi-envelope")
+                                                    input(type="email" class="form-control" placeholder="Email" required)
+                                                    div(class="invalid-tooltip")
+                                                        | email error
+                                        div(class="col-lg-12")
+                                            div(class="form-group input-group flex-nowrap")
+                                                i(class="input-group-text bi bi-shield-lock")
+                                                input(type="password" class="form-control" placeholder="Password" required)
+                                        div(class="col-lg-12 mb-2")
+                                            div(class="form-check")
+                                                input(input class="form-check-input" type="checkbox" id="gridCheck1")
+                                                label(class="form-check-label", for="gridCheck1")
+                                                    | Remember me
+                                        div(class="col-lg-12 text-center")
+                                            div(class="form-group")
+                                                button(class="btn btn-danger hvr-sweep-to-top" type="submit") login
+    // login and register 

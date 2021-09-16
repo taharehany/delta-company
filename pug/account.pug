@@ -16,12 +16,9 @@ block home_block
     // login and register
     section(class="login-register")
         div(class="container")
-            div(class="form-area")
-                //- div(class="main-title")
-                    h2 register or login
-                        span(class="line")
-                div(class="contact-box")
-                    div(class="form-content")
+            div(class="login-register-area")
+                div(class="login-register-box")
+                    div(class="login-register-content")
                         nav
                             #nav-tab(class="nav nav-tabs", role="tablist")
                                 button(class="nav-link active", id="nav-register-tab" data-bs-toggle="tab", data-bs-target="#nav-register", type="button", role="tab", aria-controls="nav-register", aria-selected="true") register
@@ -37,7 +34,7 @@ block home_block
                                                 input(type="text" class="form-control" placeholder="Name" required)
                                         div(class="col-lg-12")
                                             div(class="form-group input-group flex-nowrap")
-                                                i(class="input-group-text bi bi-envelope")
+                                                i(class="input-group-text bi bi-telephone")
                                                 input(type="number" class="form-control" placeholder="Number" required)
                                         div(class="col-lg-12")
                                             div(class="form-group input-group flex-nowrap")

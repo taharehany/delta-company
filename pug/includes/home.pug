@@ -54,8 +54,10 @@ section(class="hero-header h-video transparent")
                         div(class="col-12")
                             div(class="buttons-area")
                                 button(class="btn" class="submit" type="submit")
-                                    i(class="bi bi-search")
+                                    div(class="spinner-border text-light", role="status")
+                                        span(class="visually-hidden") Loading...
                                     | search
+                                    i(class="bi bi-search")
                                 button(class="btn btn-outline-light" class="reset" type="reset")
                                     | reset
 //hero
@@ -65,14 +67,13 @@ section(class="search")
     div(class="container")
         div(class="filtration")
             div(class="row")
-                div(class="col-9")
+                div(class="col-sm-9")
                     //- nav
                         div(class="nav-wrapper")
                             div(class="col s12")
                                 a(href="#!", class="breadcrumb") First
                                 a(href="#!", class="breadcrumb") Second
                                 a(href="#!", class="breadcrumb") Third
-                
                     div(class="result")
                         p(class="d-inline-block") 88 found 
                         div(class="vr")
@@ -83,7 +84,7 @@ section(class="search")
                             i(class="material-icons") view_headline
                         //- a(href="#!" class="rearrange_to_4") 
                             i(class="material-icons") view_comfy
-                div(class="col-3")
+                div(class="col-sm-3")
                     select(class="select float-end")
                         option(disabled, selected, class="hidden-option") sort by
                         option(value="1") new first
@@ -194,53 +195,97 @@ section(class="properties")
                         a(href="properties.html" class="btn") view all
 //properties
 
-//hot
+//hot properties
 section(class="hot")
     div(class="container")
         div(class="main-title")
             h2 Find Out What's Hot!
                 span(class="line")
         div(class="row")
-            div(class="col-md-4 col-lg-3")
+            div(class="col-sm-6 col-md-4 col-lg-3")
                 div(class="hot-box")
                     a(href="#!") 
                         div(class="hot-image")
                             img(src="images/hot/01.jpg", alt="")
                         div(class="hot-details")
                             h2 new cairo
-            div(class="col-md-4 col-lg-3")
+            div(class="col-sm-6 col-md-4 col-lg-3")
                 div(class="hot-box")
                     a(href="#!") 
                         div(class="hot-image")
                             img(src="images/hot/02.jpg", alt="")
                         div(class="hot-details")
                             h2 Nasr city
-            div(class="col-md-4 col-lg-3")
+            div(class="col-sm-6 col-md-4 col-lg-3")
                 div(class="hot-box")
                     a(href="#!") 
                         div(class="hot-image")
                             img(src="images/hot/03.jpg", alt="")
                         div(class="hot-details")
                             h2 Jiza
-            div(class="col-md-4 col-lg-3")
+            div(class="col-sm-6 col-md-4 col-lg-3")
                 div(class="hot-box")
                     a(href="#!") 
                         div(class="hot-image")
                             img(src="images/hot/04.jpg", alt="")
                         div(class="hot-details")
                             h2 badr city
-            div(class="col-md-4 col-lg-3")
+            div(class="col-sm-6 col-md-4 col-lg-3")
                 div(class="hot-box")
                     a(href="#!") 
                         div(class="hot-image")
                             img(src="images/hot/03.jpg", alt="")
                         div(class="hot-details")
                             h2 new cairo
-            div(class="col-md-4 col-lg-3")
+            div(class="col-sm-6 col-md-4 col-lg-3")
                 div(class="hot-box")
                     a(href="#!") 
                         div(class="hot-image")
                             img(src="images/hot/04.jpg", alt="")
                         div(class="hot-details")
                             h2 new cairo
-//hot
+//hot properties
+
+//featured properties
+section(class="featured-properties")
+    div(class="container")
+        div(class="main-title")
+            h2 featured properties!
+                span(class="line")
+        div(class="featured-slider")
+            div(class="item")
+                img(src="images/backgrounds/bg.jpg", class="img-fluid" alt="")
+                div(class="item-details")
+                    div(class="stars", style="--rating: 3.5;", aria-label="Rating of this product is 2.3 out of 5.")
+                    h3 title of property
+                    div(class="item-btn")
+                        a(href="properties.html" class="btn") view all
+            div(class="item")
+                img(src="images/backgrounds/bg.jpg", class="img-fluid" alt="")
+                div(class="item-details")
+                    div(class="stars", style="--rating: 4.5;", aria-label="Rating of this product is 2.3 out of 5.")
+                    h3 title of property
+                    div(class="item-btn")
+                        a(href="properties.html" class="btn") view all
+            div(class="item")
+                img(src="images/backgrounds/bg.jpg", class="img-fluid" alt="")
+                div(class="item-details")
+                    div(class="stars", style="--rating: 3;", aria-label="Rating of this product is 2.3 out of 5.")
+                    h3 title of property
+                    div(class="item-btn")
+                        a(href="properties.html" class="btn") view all
+            div(class="item")
+                img(src="images/backgrounds/bg.jpg", class="img-fluid" alt="")
+                div(class="item-details")
+                    div(class="stars", style="--rating: 4.8;", aria-label="Rating of this product is 2.3 out of 5.")
+                    h3 title of property
+                    div(class="item-btn")
+                        a(href="properties.html" class="btn") view all
+            div(class="item")
+                img(src="images/backgrounds/bg.jpg", class="img-fluid" alt="")
+                div(class="item-details")
+                    div(class="stars", style="--rating: 5;", aria-label="Rating of this product is 2.3 out of 5.")
+                    h3 title of property
+                    div(class="item-btn")
+                        a(href="properties.html" class="btn") view all
+//featured properties

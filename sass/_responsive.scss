@@ -3,29 +3,105 @@
 }
 
 @media screen and (max-width: 1199px) {
-    
+    header {
+        
+    }
 }
 
 @media screen and (max-width: 991px) {
-    
+    header {
+        .navbar {
+        padding: 10px 0;
+        }
+        .hamburger-menu {
+            display: inline-block;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
-    
+    section.featured-properties {
+        .featured-slider {
+            .item {
+                img {
+                    height: 17rem
+                }
+                .item-details {
+                    padding: 10px 30px;
+
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+                .btn {
+                    padding: 5px 20px;
+                    font-size: 14px
+                }
+            }
+        }
+    }
+
+    .single-property-page .single-property-images .slider-for .item img {
+        height: 15rem;
+    }
+    .main-breadcrumb {
+        padding: 6rem 0 2.5rem;
+    }
 }
 
 @media screen and (max-width: 670px) {
-    
+    .single-property-page .single-property-details ul li {
+        width: 100%;
+    }
+    .single-property-page .single-property-features ul li {
+        width: 100%
+    }
+    .single-property-page .property-content aside {
+        margin-top: 25px;
+    }
 }
 
 @media screen and (max-width: 575px) {
-    
+    section.search .result {
+        margin-bottom: 15px
+    }
+    section.contact .form-area {
+        padding: 40px 20px;
+    }
 }
 
 @media screen and (max-width: 500px) {
+    .hero-header {
+        .hero-content {
+            .hero-text {
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
     
 }
 
 @media screen and (max-width: 400px) {
-    
+    section.featured-properties {
+        .featured-slider {
+            .item {
+                img {
+                    height: 15rem
+                }
+                .item-details {
+                    padding: 10px 20px;
+
+                    h3 {
+                        font-size: 14px;
+                    }
+                }
+                .btn {
+                    padding: 5px 20px;
+                    font-size: 14px
+                }
+            }
+        }
+    }
 }

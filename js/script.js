@@ -1,6 +1,22 @@
 $(document).ready(function () {
   "use strict";
 
+  $(".side-navigation .sub-menu > a").click(function (e) {
+    $(".side-navigation ul ul").slideUp(), $(this).next().is(":visible") || $(this).next().slideDown(),
+      e.stopPropagation()
+  })
+
+  //fixed header
+  $(window).scroll(function () {
+    let scroll = $(window).scrollTop();
+
+    if (scroll >= 5) {
+      $("header .navbar.main-nav").addClass("fixed");
+    } else {
+      $("header .navbar.main-nav").removeClass("fixed");
+    }
+  });
+
   //dropdown dropkick select
   $(".select").dropkick({
     mobile: true
@@ -35,7 +51,7 @@ $(document).ready(function () {
   //validate form
   (function () {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
+    let forms = document.querySelectorAll('.needs-validation')
 
     // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
@@ -49,7 +65,20 @@ $(document).ready(function () {
           form.classList.add('was-validated')
         }, false)
       })
-  })()
+  })();
+
+  //check if input file is more than ... images
+  $(".advertise input[type='file']").change(function () {
+    let fileUpload = $(".advertise input[type='file']");
+    // console.log(fileUpload[0].files[0]);
+    if (parseInt(fileUpload.get(0).files.length) > 2) {
+      // alert("You can only upload a maximum of 5 files");
+      $(this).parent().find(".invalid-tooltip").css("display", "block").text("must be less than 3 images")
+      fileUpload.val("");
+    } else {
+      $(this).parent().find(".invalid-tooltip").css("display", "none")
+    }
+  });
 
 
   //single property slider
@@ -57,7 +86,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    fade: true,
+    fade: false,
     autoplay: true,
     autoplaySpeed: 2000,
     asNavFor: '.slider-nav'
@@ -72,6 +101,46 @@ $(document).ready(function () {
     focusOnSelect: true,
     centerMode: true,
     centerPadding: '30px',
+    responsive: [{
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 2,
+      }
+    }
+  ]
+  });
+
+  //featured property slider
+  $('.featured-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: false,
+    autoplay: true,
+    autoplaySpeed: 20000,
+    dots: false,
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: '250px',
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          centerPadding: '100px',
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          centerPadding: '100px',
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: '50px',
+        }
+      }
+    ]
   });
 
   $('a[data-slide]').click(function (e) {

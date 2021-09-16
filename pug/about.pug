@@ -1,0 +1,35 @@
+extends index
+
+block website_title
+    title aqary | about
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/backgrounds/broad.jpg')")
+        div(class="container")
+            ol(class="breadcrumb")
+                li(class="breadcrumb-item")
+                    a(href="index.html") Home
+                li(class="breadcrumb-item active" aria-current="page") about
+    //breadcrumb
+
+    // about
+    section(class="about")
+        div(class="container")
+            div(class="about-content")
+                div(class="row")
+                    div(class="col-md-12 col-lg-6")
+                        div(class="about-box")
+                            i(class="bi bi-eye")
+                            div(class="main-title")
+                                h2 our vision
+                                    span(class="line")
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eligendi odio, velit error in perferendis numquam ex quisquam eveniet? Optio odio ipsum, delectus soluta nobis voluptatibus placeat velit aliquid ab.
+                    div(class="col-md-12 col-lg-6")
+                        div(class="about-box")
+                            i(class="bi bi-building")
+                            div(class="main-title")
+                                h2 our mission
+                                    span(class="line")
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eligendi odio, velit error in perferendis numquam ex quisquam eveniet? Optio odio ipsum, delectus soluta nobis voluptatibus placeat velit aliquid ab.
+    // about 

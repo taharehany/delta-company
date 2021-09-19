@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="description here">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.png"><!--[if lt IE 9]>
+    <link rel="shortcut icon" href="../images/favicon.png"><!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
 </script>
 <![endif]-->
-    <title>aqary | login and register</title>
+    <title>aqary | make property</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <div class="main-wrapper">
@@ -23,16 +23,16 @@
         <div class="top-bar"> 
           <div class="container">
             <div class="top-bar-content"> 
-              <div class="lang"><a href="arabic/index.html">Ar</a> | <a href="#!">En</a></div>
+              <div class="lang"><a href="#!">Ar</a> | <a href="../index.html">En</a></div>
               <div class="btn-area">
                 <!--if user login--><a class="notification position-relative" href="notifications.html"><i class="bi bi-bell"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span></a>
                 <div class="account">
                   <div class="dropdown">
                     <button id="accountDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <div class="icon"><img src="images/profile.png" alt=""></div>
+                      <div class="icon"><img src="../images/profile.png" alt=""></div>
                     </button>
                     <ul class="user-content dropdown-menu" aria-labelledby="accountDropdown">
-                      <div class="user-icon"><img src="images/profile.png" alt=""></div>
+                      <div class="user-icon"><img src="../images/profile.png" alt=""></div>
                       <div class="user-text">
                         <p>Mohamed Khaled</p><span>Web Developer</span>
                       </div>
@@ -46,7 +46,7 @@
           </div>
         </div>
         <nav class="navbar main-nav navbar-expand-lg navbar-light bg-light">
-          <div class="container"><a class="navbar-brand" href="index.html"> <img src="images/logo.webp" alt=""></a>
+          <div class="container"><a class="navbar-brand" href="index.html"> <img src="../images/logo.webp" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false" aria-label="Toggle navigation">
               <div class="hamburger-menu"><span></span><span></span><span></span></div>
             </button>
@@ -118,121 +118,90 @@
       </header>
       <!--header-->
       <!--breadcrumb-->
-      <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url('images/backgrounds/broad.jpg')">
+      <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url('../images/backgrounds/broad.jpg')">
         <div class="container">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">login and register</li>
+            <li class="breadcrumb-item active" aria-current="page">make property</li>
           </ol>
         </div>
       </nav>
       <!--breadcrumb-->
-      <!-- login and register-->
-      <section class="login-register">
+      <!--make property-->
+      <section class="make-property">
         <div class="container">
-          <div class="login-register-area">
-            <div class="login-register-box">
-              <div class="login-register-content">
-                <nav>
-                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="true">register</button>
-                    <button class="nav-link" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="false">login</button>
-                  </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab"> 
-                    <form class="g-3 needs-validation" action="" novalidate>
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-person"></i>
-                            <input class="form-control" type="text" placeholder="Name" required>
-                          </div>
-                        </div>
-                        <div class="col-lg-12">
-                          <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-telephone"></i>
-                            <input class="form-control" type="number" placeholder="Number" required>
-                          </div>
-                        </div>
-                        <div class="col-lg-12">
-                          <div class="form-group input-group flex-nowrap">
-                            <div class="input-group has-validation"><i class="input-group-text bi bi-envelope"></i>
-                              <input class="form-control" type="email" placeholder="Email" required>
-                              <div class="invalid-tooltip">email error</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-12">
-                          <div class="form-group input-group flex-nowrap">
-                            <div class="input-group has-validation">
-                              <select class="form-control select" placeholder="select" required>
-                                <option value="" disabled selected>user type</option>
-                                <option value="">optoin 1</option>
-                                <option value="">optoin 2 </option>
-                                <option value="">optoin 3</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-12">
-                          <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-shield-lock"></i>
-                            <input class="form-control" type="password" placeholder="Password" required>
-                          </div>
-                        </div>
-                        <div class="col-lg-12">
-                          <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-shield-lock"></i>
-                            <input class="form-control" type="password" placeholder="Confirm Password" required>
-                          </div>
-                        </div>
-                        <div class="col-lg-12 mb-2">
-                          <div class="form-check">
-                            <input class="form-check-input" input type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1">Remember me</label>
-                          </div>
-                        </div>
-                        <div class="col-lg-12 text-center">
-                          <div class="form-group">
-                            <button class="btn btn-danger hvr-sweep-to-top" type="submit">register now</button>
-                          </div>
+          <div class="make-property-area">
+            <div class="make-property-box">
+              <div class="make-property-content">
+                <form class="g-3 needs-validation" action="" novalidate>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="">your name </label>
+                        <div class="input-group flex-nowrap"><i class="input-group-text bi bi-person"></i>
+                          <input class="form-control" type="text" placeholder="Name" required>
                         </div>
                       </div>
-                    </form>
-                  </div>
-                  <div class="tab-pane fade" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab"> 
-                    <form class="g-3 needs-validation" action="" novalidate>
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class="form-group input-group flex-nowrap">
-                            <div class="input-group has-validation"><i class="input-group-text bi bi-envelope"></i>
-                              <input class="form-control" type="email" placeholder="Email" required>
-                              <div class="invalid-tooltip">email error</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-12">
-                          <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-shield-lock"></i>
-                            <input class="form-control" type="password" placeholder="Password" required>
-                          </div>
-                        </div>
-                        <div class="col-lg-12 mb-2">
-                          <div class="form-check">
-                            <input class="form-check-input" input type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1">Remember me</label>
-                          </div>
-                        </div>
-                        <div class="col-lg-12 text-center">
-                          <div class="form-group">
-                            <button class="btn btn-danger hvr-sweep-to-top" type="submit">login</button>
-                          </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="">your number </label>
+                        <div class="input-group flex-nowrap"><i class="input-group-text bi bi-telephone"></i>
+                          <input class="form-control" type="number" placeholder="Number" required>
                         </div>
                       </div>
-                    </form>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="">your email </label>
+                        <div class="input-group flex-nowrap has-validation"><i class="input-group-text bi bi-envelope"></i>
+                          <input class="form-control" type="email" placeholder="Email" required>
+                          <div class="invalid-tooltip">wrong email</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="">choose area</label>
+                        <div class="input-group input-group flex-nowrap has-validation">
+                          <select class="form-control select" placeholder="select" required>
+                            <option value="" disabled selected>choose area</option>
+                            <option value="">optoin 1</option>
+                            <option value="">optoin 2 </option>
+                            <option value="">optoin 3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="">space of property</label>
+                        <div class="input-group flex-nowrap"><i class="input-group-text bi bi-building"></i>
+                          <input class="form-control" type="number" placeholder="space in numbers(meter)" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="">choose images </label>
+                        <div class="input-group flex-nowrap has-validation">
+                          <input class="form-control" type="file" multiple maxlength="2" required>
+                          <div class="invalid-tooltip">must choose one file at least</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                      <div class="form-group">
+                        <button class="btn btn-danger hvr-sweep-to-top" type="submit">send now</button>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- login and register -->
+      <!--make property-->
       <!--footer part-->
       <footer>
         <div class="container"> 
@@ -290,13 +259,13 @@
       <!--footer part-->
     </div>
     <!--scripts-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/fancybox.umd.js"></script>
-    <script src="js/dropkick.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/bideo.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/fancybox.umd.js"></script>
+    <script src="../js/dropkick.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/bideo.js"></script>
+    <script src="../js/script.js"></script>
     <script>
       $(document).ready(function () {
           "use strict";
@@ -317,11 +286,11 @@
               // Array of objects containing the src and type
               // of different video formats to add
               src: [{
-                  src: 'videos/video.mp4',
+                  src: '../videos/video.mp4',
                   type: 'video/mp4'
               },
               {
-                  src: 'videos/video.webm',
+                  src: '../videos/video.webm',
                   type: 'video/webm;codecs="vp8, vorbis"'
               }
               ],

@@ -23,7 +23,7 @@
         <div class="top-bar"> 
           <div class="container">
             <div class="top-bar-content"> 
-              <div class="lang"><a href="">Ar</a> | <a href="">En</a></div>
+              <div class="lang"><a href="arabic/index.html">Ar</a> | <a href="#!">En</a></div>
               <div class="btn-area">
                 <!--if user login--><a class="notification position-relative" href="notifications.html"><i class="bi bi-bell"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span></a>
                 <div class="account">
@@ -36,7 +36,7 @@
                       <div class="user-text">
                         <p>Mohamed Khaled</p><span>Web Developer</span>
                       </div>
-                      <div class="user-buttons"><a class="btn hvr-sweep-to-top" href="#">account</a><a class="btn hvr-sweep-to-top" href="signin.html">logout</a></div>
+                      <div class="user-buttons"><a class="btn hvr-sweep-to-top" href="profile.html">profile</a><a class="btn hvr-sweep-to-top" href="account.html">logout</a></div>
                     </ul>
                   </div>
                 </div>
@@ -65,6 +65,8 @@
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">pages</a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                     <li><a class="dropdown-item" href="about.html">about</a></li>
+                    <li><a class="dropdown-item" href="notifications.html">notifications</a></li>
+                    <li><a class="dropdown-item" href="profile.html">profile</a></li>
                     <li><a class="dropdown-item" href="contact.html">contact</a></li>
                     <li><a class="dropdown-item" href="account.html">login and register</a></li>
                     <li><a class="dropdown-item" href="properties.html">properties</a></li>
@@ -98,6 +100,9 @@
                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">pages</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                       <li><a class="dropdown-item" href="about.html">about</a></li>
+                      <li><a class="dropdown-item" href="account.html">account</a></li>
+                      <li><a class="dropdown-item" href="notifications.html">notifications</a></li>
+                      <li><a class="dropdown-item" href="profile.html">profile</a></li>
                       <li><a class="dropdown-item" href="contact.html">contact</a></li>
                       <li><a class="dropdown-item" href="account.html">login and register</a></li>
                       <li><a class="dropdown-item" href="properties.html">properties</a></li>
@@ -263,5 +268,41 @@
     <script src="js/slick.min.js"></script>
     <script src="js/bideo.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+          "use strict";
+      
+          //video
+          let bv = new Bideo();
+          bv.init({
+              // Video element
+              videoEl: document.querySelector('#background_video'),
+              // Container element
+              container: document.querySelector('body'),
+              // Resize
+              resize: true,
+              // autoplay: false,
+              isMobile: window.matchMedia('(max-width: 768px)').matches,
+              playButton: document.querySelector('#play'),
+              pauseButton: document.querySelector('#pause'),
+              // Array of objects containing the src and type
+              // of different video formats to add
+              src: [{
+                  src: 'videos/video.mp4',
+                  type: 'video/mp4'
+              },
+              {
+                  src: 'videos/video.webm',
+                  type: 'video/webm;codecs="vp8, vorbis"'
+              }
+              ],
+              // What to do once video loads (initial frame)
+              onLoad: function () {
+              document.querySelector('#video_cover').style.display = 'none';
+              }
+          });
+          //video
+      });
+    </script>
   </body>
 </html>

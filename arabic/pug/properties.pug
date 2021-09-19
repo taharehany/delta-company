@@ -1,0 +1,195 @@
+extends index
+
+block website_title
+    title aqary | all properties
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/backgrounds/broad.jpg')")
+        div(class="container")
+            ol(class="breadcrumb")
+                //- li(class="breadcrumb-item")
+                    a(href="index.html") Home
+                li(class="breadcrumb-item active", aria-current="page") all properties
+    //breadcrumb
+
+    //properties
+    section(class="properties properties-page")
+        div(class="container")
+            div(class="property-content")
+                div(class="row")
+                    div(class="col-md-4 col-lg-3")
+                        div(class="filter-properties")
+                            form(action="" method="") 
+                                div(class="type")
+                                    div(class="subtitle") 
+                                        h3 Property type
+                                    div(class="form-check")
+                                        input(class="form-check-input", id="propertyTypeRadio1" type="radio", name="propertyTypeRadio")
+                                        label(class="form-check-label", for="propertyTypeRadio1")
+                                            | option 1
+                                    div(class="form-check")
+                                        input(class="form-check-input", id="propertyTypeRadio2" type="radio", name="propertyTypeRadio")
+                                        label(class="form-check-label", for="propertyTypeRadio2")
+                                            | option 2
+                                    div(class="form-check")
+                                        input(class="form-check-input", id="propertyTypeRadio3" type="radio", name="propertyTypeRadio")
+                                        label(class="form-check-label", for="propertyTypeRadio3")
+                                            | option 3
+                                    div(class="form-check")
+                                        input(class="form-check-input", id="propertyTypeRadio4" type="radio", name="propertyTypeRadio", checked)
+                                        label(class="form-check-label", for="propertyTypeRadio4")
+                                            | option 4
+                                hr
+                                div(class="checkboxs")
+                                    div(class="subtitle") 
+                                        h3 check boxs
+                                    div(class="form-check")
+                                        input(class="form-check-input", id="propertyCheckBox1" type="checkbox", value="" checked)
+                                        label(class="form-check-label", for="propertyCheckBox1")
+                                            | checkbox 1
+                                    div(class="form-check")
+                                        input(class="form-check-input", id="propertyCheckBox2" type="checkbox", value="")
+                                        label(class="form-check-label", for="propertyCheckBox2")
+                                            | checkbox 2
+                                    div(class="form-check")
+                                        input(class="form-check-input", id="propertyCheckBox3" type="checkbox", value="")
+                                        label(class="form-check-label", for="propertyCheckBox3")
+                                            | checkbox 3
+                                    div(class="form-check")
+                                        input(class="form-check-input", id="propertyCheckBox4" type="checkbox", value="")
+                                        label(class="form-check-label", for="propertyCheckBox4")
+                                            | checkbox 4
+                                    hr
+                                    div(class="property-dropdowns")
+                                        div(class="subtitle") 
+                                            h3 dropdowns
+                                        div(class="form-group position-relative")
+                                            div(class="input-group has-validation")
+                                                select(class="select", placeholder="select", required)
+                                                    option(value="" disabled selected) dropdown name
+                                                    option(value="") optoin 1
+                                                    option(value="") optoin 2 
+                                                    option(value="") optoin 3
+                                    div(class="property-buttons")
+                                        button(class="btn" class="submit" type="submit")
+                                            i(class="bi bi-search")
+                                            | search
+                                        button(class="btn btn-outline-light" class="reset" type="reset")
+                                            | reset
+                    div(class="col-md-8 col-lg-9")
+                        div(class="row")
+                            div(class="col-md-12 col-lg-4")
+                                div(class="property-box")
+                                    div(class="property-image")
+                                        img(src="../images/backgrounds/hero.jpg", alt="")
+                                        span(class="images-number") 
+                                            i(class="bi bi-images")
+                                            | 2
+                                    div(class="property-details")
+                                        a(href="#!")
+                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            p(class="location")
+                                                i(class="bi-pin")
+                                                | Egypt, Cairo
+                                            p(class="price") 150000 EGP
+                                        a(href="single-property.html" class="btn") view
+                                        //- a(href="#!" class="btn" class="fav")
+                                            i(class="bi bi-heart")
+                            div(class="col-md-12 col-lg-4")
+                                div(class="property-box")
+                                    div(class="property-image")
+                                        img(src="../images/property/02.jpg", alt="")
+                                        span(class="images-number") 
+                                            i(class="bi bi-images")
+                                            | 10
+                                    div(class="property-details")
+                                        a(href="#!")
+                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            p(class="location")
+                                                i(class="bi-pin")
+                                                | Egypt, Cairo
+                                            p(class="price") 150000 EGP
+                                        a(href="single-property.html" class="btn") view
+                            div(class="col-md-12 col-lg-4")
+                                div(class="property-box")
+                                    div(class="property-image")
+                                        img(src="../images/property/03.jpg", alt="")
+                                        span(class="images-number") 
+                                            i(class="bi bi-images")
+                                            | 5
+                                    div(class="property-details")
+                                        a(href="#!")
+                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            p(class="location")
+                                                i(class="bi-pin")
+                                                | Egypt, Cairo
+                                            p(class="price") 150000 EGP
+                                        a(href="single-property.html" class="btn") view
+                            div(class="col-md-12 col-lg-4")
+                                div(class="property-box")
+                                    div(class="property-image")
+                                        img(src="../images/property/04.jpg", alt="")
+                                        span(class="images-number") 
+                                            i(class="bi bi-images")
+                                            | 25
+                                    div(class="property-details")
+                                        a(href="#!")
+                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            p(class="location")
+                                                i(class="bi-pin")
+                                                | Egypt, Cairo
+                                            p(class="price") 150000 EGP
+                                        a(href="single-property.html" class="btn") view
+                            div(class="col-md-12 col-lg-4")
+                                div(class="property-box")
+                                    div(class="property-image")
+                                        img(src="../images/property/01.jpg", alt="")
+                                        span(class="images-number") 
+                                            i(class="bi bi-images")
+                                            | 21
+                                    div(class="property-details")
+                                        a(href="#!")
+                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            p(class="location")
+                                                i(class="bi-pin")
+                                                | Egypt, Cairo
+                                            p(class="price") 150000 EGP
+                                        a(href="single-property.html" class="btn") view
+                            div(class="col-md-12 col-lg-4")
+                                div(class="property-box")
+                                    div(class="property-image")
+                                        img(src="../images/property/02.jpg", alt="")
+                                        span(class="images-number") 
+                                            i(class="bi bi-images")
+                                            | 15
+                                    div(class="property-details")
+                                        a(href="#!")
+                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            p(class="location")
+                                                i(class="bi-pin")
+                                                | Egypt, Cairo
+                                            p(class="price") 150000 EGP
+                                        a(href="single-property.html" class="btn") view
+                            div(class="col-12")
+                                nav(aria-label="Page navigation" class="navigation")
+                                    ul(class="pagination")
+                                        li(class="page-item")
+                                            a(class="page-link arr", href="#!", aria-label="Previous")
+                                                span(aria-hidden="true") &laquo;
+                                        li(class="page-item active")
+                                            a(class="page-link", href="#!") 1
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 2
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 3
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 4
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 5
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 6
+                                        li(class="page-item")
+                                            a(class="page-link arr", href="#!", aria-label="Next")
+                                                span(aria-hidden="true") &raquo;
+    //properties

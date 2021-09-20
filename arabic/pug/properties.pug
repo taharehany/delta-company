@@ -1,7 +1,7 @@
 extends index
 
 block website_title
-    title aqary | all properties
+    title عقاري | جميع العقارات
 
 block home_block
     //breadcrumb
@@ -10,7 +10,7 @@ block home_block
             ol(class="breadcrumb")
                 //- li(class="breadcrumb-item")
                     a(href="index.html") Home
-                li(class="breadcrumb-item active", aria-current="page") all properties
+                li(class="breadcrumb-item active", aria-current="page")  جميع العقارات
     //breadcrumb
 
     //properties
@@ -23,60 +23,60 @@ block home_block
                             form(action="" method="") 
                                 div(class="type")
                                     div(class="subtitle") 
-                                        h3 Property type
+                                        h3 نوع العقار
                                     div(class="form-check")
                                         input(class="form-check-input", id="propertyTypeRadio1" type="radio", name="propertyTypeRadio")
                                         label(class="form-check-label", for="propertyTypeRadio1")
-                                            | option 1
+                                            | الخيار 1
                                     div(class="form-check")
                                         input(class="form-check-input", id="propertyTypeRadio2" type="radio", name="propertyTypeRadio")
                                         label(class="form-check-label", for="propertyTypeRadio2")
-                                            | option 2
+                                            | الخيار 2
                                     div(class="form-check")
                                         input(class="form-check-input", id="propertyTypeRadio3" type="radio", name="propertyTypeRadio")
                                         label(class="form-check-label", for="propertyTypeRadio3")
-                                            | option 3
+                                            | الخيار 3
                                     div(class="form-check")
                                         input(class="form-check-input", id="propertyTypeRadio4" type="radio", name="propertyTypeRadio", checked)
                                         label(class="form-check-label", for="propertyTypeRadio4")
-                                            | option 4
+                                            | الخيار 4
                                 hr
                                 div(class="checkboxs")
                                     div(class="subtitle") 
-                                        h3 check boxs
+                                        h3 اختر
                                     div(class="form-check")
                                         input(class="form-check-input", id="propertyCheckBox1" type="checkbox", value="" checked)
                                         label(class="form-check-label", for="propertyCheckBox1")
-                                            | checkbox 1
+                                            | علامة 1
                                     div(class="form-check")
                                         input(class="form-check-input", id="propertyCheckBox2" type="checkbox", value="")
                                         label(class="form-check-label", for="propertyCheckBox2")
-                                            | checkbox 2
+                                            | علامة 2
                                     div(class="form-check")
                                         input(class="form-check-input", id="propertyCheckBox3" type="checkbox", value="")
                                         label(class="form-check-label", for="propertyCheckBox3")
-                                            | checkbox 3
+                                            | علامة 3
                                     div(class="form-check")
                                         input(class="form-check-input", id="propertyCheckBox4" type="checkbox", value="")
                                         label(class="form-check-label", for="propertyCheckBox4")
-                                            | checkbox 4
+                                            | علامة 4
                                     hr
                                     div(class="property-dropdowns")
                                         div(class="subtitle") 
-                                            h3 dropdowns
+                                            h3 قائمة منسدلة
                                         div(class="form-group position-relative")
                                             div(class="input-group has-validation")
                                                 select(class="select", placeholder="select", required)
-                                                    option(value="" disabled selected) dropdown name
-                                                    option(value="") optoin 1
-                                                    option(value="") optoin 2 
-                                                    option(value="") optoin 3
+                                                    option(value="" disabled selected) عنوان القائمة المنسدلة
+                                                    option(value="") الخيار 1
+                                                    option(value="") الخيار 2 
+                                                    option(value="") الخيار 3
                                     div(class="property-buttons")
                                         button(class="btn" class="submit" type="submit")
                                             i(class="bi bi-search")
-                                            | search
+                                            | بحث
                                         button(class="btn btn-outline-light" class="reset" type="reset")
-                                            | reset
+                                            | إعادة ضبط
                     div(class="col-md-8 col-lg-9")
                         div(class="row")
                             div(class="col-md-12 col-lg-4")
@@ -88,12 +88,12 @@ block home_block
                                             | 2
                                     div(class="property-details")
                                         a(href="#!")
-                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            h2(class="title") لوريم
                                             p(class="location")
                                                 i(class="bi-pin")
-                                                | Egypt, Cairo
-                                            p(class="price") 150000 EGP
-                                        a(href="single-property.html" class="btn") view
+                                                | القاهرة، مصر
+                                            p(class="price") 150000 ج.م
+                                        a(href="single-property.html" class="btn") عرض
                                         //- a(href="#!" class="btn" class="fav")
                                             i(class="bi bi-heart")
                             div(class="col-md-12 col-lg-4")
@@ -105,12 +105,12 @@ block home_block
                                             | 10
                                     div(class="property-details")
                                         a(href="#!")
-                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            h2(class="title") وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية 
                                             p(class="location")
                                                 i(class="bi-pin")
-                                                | Egypt, Cairo
-                                            p(class="price") 150000 EGP
-                                        a(href="single-property.html" class="btn") view
+                                                | القاهرة، مصر
+                                            p(class="price") 150000 ج.م
+                                        a(href="single-property.html" class="btn") عرض
                             div(class="col-md-12 col-lg-4")
                                 div(class="property-box")
                                     div(class="property-image")
@@ -120,12 +120,12 @@ block home_block
                                             | 5
                                     div(class="property-details")
                                         a(href="#!")
-                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            h2(class="title") وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية
                                             p(class="location")
                                                 i(class="bi-pin")
-                                                | Egypt, Cairo
-                                            p(class="price") 150000 EGP
-                                        a(href="single-property.html" class="btn") view
+                                                | القاهرة، مصر
+                                            p(class="price") 150000 ج.م
+                                        a(href="single-property.html" class="btn") عرض
                             div(class="col-md-12 col-lg-4")
                                 div(class="property-box")
                                     div(class="property-image")
@@ -135,12 +135,12 @@ block home_block
                                             | 25
                                     div(class="property-details")
                                         a(href="#!")
-                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            h2(class="title") وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية
                                             p(class="location")
                                                 i(class="bi-pin")
-                                                | Egypt, Cairo
-                                            p(class="price") 150000 EGP
-                                        a(href="single-property.html" class="btn") view
+                                                | القاهرة، مصر
+                                            p(class="price") 150000 ج.م
+                                        a(href="single-property.html" class="btn") عرض
                             div(class="col-md-12 col-lg-4")
                                 div(class="property-box")
                                     div(class="property-image")
@@ -150,12 +150,12 @@ block home_block
                                             | 21
                                     div(class="property-details")
                                         a(href="#!")
-                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            h2(class="title") وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية
                                             p(class="location")
                                                 i(class="bi-pin")
-                                                | Egypt, Cairo
-                                            p(class="price") 150000 EGP
-                                        a(href="single-property.html" class="btn") view
+                                                | القاهرة، مصر
+                                            p(class="price") 150000 ج.م
+                                        a(href="single-property.html" class="btn") عرض
                             div(class="col-md-12 col-lg-4")
                                 div(class="property-box")
                                     div(class="property-image")
@@ -165,12 +165,12 @@ block home_block
                                             | 15
                                     div(class="property-details")
                                         a(href="#!")
-                                            h2(class="title") Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            h2(class="title") وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية
                                             p(class="location")
                                                 i(class="bi-pin")
-                                                | Egypt, Cairo
-                                            p(class="price") 150000 EGP
-                                        a(href="single-property.html" class="btn") view
+                                                | القاهرة، مصر
+                                            p(class="price") 150000 ج.م
+                                        a(href="single-property.html" class="btn") عرض
                             div(class="col-12")
                                 nav(aria-label="Page navigation" class="navigation")
                                     ul(class="pagination")

@@ -1,7 +1,7 @@
 extends index
 
 block website_title
-    title aqary | make property
+    title عقاري | عمل إعلان
 
 block home_block
     //breadcrumb
@@ -10,7 +10,7 @@ block home_block
             ol(class="breadcrumb")
                 //- li(class="breadcrumb-item")
                     a(href="index.html") Home
-                li(class="breadcrumb-item active" aria-current="page") make property
+                li(class="breadcrumb-item active" aria-current="page") عمل إعلان
     //breadcrumb
 
     //make property
@@ -23,47 +23,47 @@ block home_block
                             div(class="row")
                                 div(class="col-lg-12")
                                     div(class="form-group")
-                                        label(for="") your name 
+                                        label(for="") الاسم
                                         div(class="input-group flex-nowrap")
                                             i(class="input-group-text bi bi-person")
-                                            input(type="text" class="form-control" placeholder="Name" required)
+                                            input(type="text" class="form-control" placeholder="الاسم" required)
                                 div(class="col-lg-12")
                                     div(class="form-group")
-                                        label(for="") your number 
+                                        label(for="") الهاتف
                                         div(class="input-group flex-nowrap")
                                             i(class="input-group-text bi bi-telephone")
-                                            input(type="number" class="form-control" placeholder="Number" required)
+                                            input(type="number" class="form-control" placeholder="الهاتف" required)
                                 div(class="col-lg-12")
                                     div(class="form-group")
-                                        label(for="") your email 
+                                        label(for="") الإيميل
                                         div(class="input-group flex-nowrap has-validation")
                                             i(class="input-group-text bi bi-envelope")
-                                            input(type="email" class="form-control" placeholder="Email" required)
+                                            input(type="email" class="form-control" placeholder="الإيميل" required)
                                             div(class="invalid-tooltip")
-                                                | wrong email
+                                                | خطأ
                                 div(class="col-lg-12")
                                     div(class="form-group")
-                                        label(for="") choose area
+                                        label(for="") اختر منطقة الإعلان
                                         div(class="input-group input-group flex-nowrap has-validation")
                                             select(class="form-control select" placeholder="select", required)
-                                                option(value="" disabled selected) choose area
-                                                option(value="") optoin 1
-                                                option(value="") optoin 2 
-                                                option(value="") optoin 3
+                                                option(value="" disabled selected) اختر منطقة
+                                                option(value="") الخيار 1
+                                                option(value="") الخيار 2 
+                                                option(value="") الخيار 3
                                 div(class="col-lg-12")
                                     div(class="form-group")
-                                        label(for="") space of property
+                                        label(for="") مساحة العقار
                                         div(class="input-group flex-nowrap")
                                             i(class="input-group-text bi bi-building")
-                                            input(type="number" class="form-control" placeholder="space in numbers(meter)" required)
+                                            input(type="number" class="form-control" placeholder="مساحة العقار بالمتر المربع" required)
                                 div(class="col-lg-12")
                                     div(class="form-group")
-                                        label(for="") choose images 
+                                        label(for="") اخنر صورا للعقار
                                         div(class="input-group flex-nowrap has-validation")
                                             input(type="file", multiple maxlength="2" class="form-control" required)
                                             div(class="invalid-tooltip")
-                                                | must choose one file at least
+                                                | يجب اختيار صورة واحدة على الأقل
                                 div(class="col-lg-12 text-center")
                                     div(class="form-group")
-                                        button(class="btn btn-danger hvr-sweep-to-top" type="submit") send now
+                                        button(class="btn btn-danger hvr-sweep-to-top" type="submit") إرسال الآن
     //make property

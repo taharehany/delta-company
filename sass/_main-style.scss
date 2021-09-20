@@ -42,6 +42,14 @@ a {
 	}
 }
 
+.nothing {
+	font-size: 28px;
+	font-weight: 600;
+	color: $dark_color;
+	text-transform: capitalize;
+	text-align: center
+}
+
 .main-breadcrumb {
 	background-size: cover;
 	padding: 10rem 0 5rem;
@@ -64,8 +72,9 @@ a {
 		justify-content: center;
 
 		.breadcrumb-item {
-			font-size: 22px;
+			font-size: 26px;
 			text-transform: capitalize;
+			font-weight: 600;
 
 			a {
 				color: $main_color;
@@ -175,7 +184,7 @@ header {
 				.user-content {
 					padding: 15px;
 					text-align: center;
-					width: 250px;
+					width: auto;
 					@include transition(all ease .3s);
 					top: 9px !important;
 					box-shadow: 0 10px 50px 0 rgb(13 38 59 / 10%);
@@ -206,6 +215,8 @@ header {
 							overflow: hidden;
 							text-overflow: ellipsis;
 							max-width: 100%;
+							font-weight: 600;
+							font-size: 18px;
 						}
 
 						span {
@@ -224,6 +235,7 @@ header {
 							padding: 5px 20px;
 							font-size: 15px;
 							text-transform: capitalize;
+							white-space: nowrap;
 
 							&:first-child {
 								margin-inline-end: 5px;
@@ -1445,6 +1457,10 @@ section.featured-properties {
 				list-style: none;
 				width: 50%;
 				margin-bottom: 10px;
+
+				strong {
+					margin-inline-end: 5px
+				}
 			}
 		}
 	}
@@ -2241,6 +2257,7 @@ section.profile {
 		//table page
 		.table-area {
 			padding: 5px;
+
 			table {
 				overflow: visible;
 				border-collapse: separate;
@@ -2251,6 +2268,7 @@ section.profile {
 					display: flex;
 					align-items: center;
 					color: gray;
+
 					&:hover {
 						color: $main_color
 					}
@@ -2340,6 +2358,21 @@ section.profile {
 }
 
 //profile
+
+//error
+.error {
+	h2 {
+		color: $main_color;
+		font-size: 9rem;
+		position: relative;
+		line-height: 1;
+		font-weight: 600;
+	}
+
+	.back {
+		color: $main_color;
+	}
+}
 
 /* footer part */
 footer {
@@ -2556,6 +2589,7 @@ footer {
 
 				a {
 					color: #fff;
+					margin-inline-start: 5px;
 				}
 			}
 		}

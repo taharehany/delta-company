@@ -68,6 +68,15 @@
     section.contact .form-area {
         padding: 40px 20px;
     }
+    section.notifications .notifications-content .notifications-box {
+        .image {
+            margin-bottom: 10px
+        }
+        .alert {
+            display: block;
+            padding: 10px
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {

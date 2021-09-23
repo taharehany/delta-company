@@ -1,0 +1,178 @@
+extend index 
+
+block website_title 
+    title events | details
+
+block home_block
+    div(class="cover-pic")
+        img(src="../img/cover.jpg", class="img-fluid", alt="...")
+    div(class="container mb-4 pb-2 list-bp")
+        div(class="row")
+            div(class="col-xl-12 col-lg-12")
+                div(class="bg-white info-header eheader shadow rounded mb-4")
+                    div(class="d-flex align-items-center justify-content-between py-3 px-4 border-bottom")
+                        div(class="eheader-title")
+                            h3(class="text-gray-900 mb-1 mt-0 font-weight-bold") المؤتمر السعودي الثالث للتغذية بين الطب والحياة
+                            p(class="mb-0")
+                                small(class="text-muted")
+                                    i(class="fas fa-map-marker-alt fa-fw fa-sm mr-1")
+                                    | فندق بارك حياة جدة قاعة اللازورد
+                        div(class="eheader-btn")
+                            a(href="#", class="d-sm-inline-block btn btn-primary mr-2 shadow-sm")
+                                i(class="fas fa-share-alt")
+                            a(href="payment.html", class="d-sm-inline-block btn btn-danger shadow-sm")
+                                | اشترك الآن 400 ر.س
+                    div(class="d-flex align-items-center justify-content-between py-3 px-4")
+                        div
+                            p(class="mb-0 text-gray-900")
+                                i(class="fas fa-calendar-alt fa-sm fa-fw mr-1")
+                                | الأحد 15 ديسمبر 4 مساء
+                        //- div
+                            p(class="mb-0 text-gray-600")
+                                i(class="fas fa-film fa-sm fa-fw mr-1")
+                                | Classical, Rock, Sufi | English, Hindi | 12+
+        div(class="row")
+            div(class="col-xl-3 col-lg-3")
+                div(class="bg-white p-3 widget shadow rounded mb-4")
+                    h3(class="h6 mb-2 mt-0 font-weight-bold text-gray-900") المحاضرون 
+                        span(class="small") (اليوم الأول)
+                    div(class="artist-list mb-3")
+                        a(class="d-flex align-items-center", href="#")
+                            div(class="dropdown-list-image mr-3")
+                                img(class="rounded-circle", src="../img/avatar.jpg", alt="")
+                                div(class="status-indicator bg-success")
+                            div(class="font-weight-bold")
+                                div(class="text-truncate") د. مها بشرى
+                                div(class="small text-gray-600") الحمية الغذائية
+                    div(class="artist-list mb-3")
+                        a(class="d-flex align-items-center", href="#")
+                            div(class="dropdown-list-image mr-3")
+                                img(class="rounded-circle", src="../img/avatar.jpg", alt="")
+                                div(class="status-indicator bg-success")
+                            div(class="font-weight-bold")
+                                div(class="text-truncate") أ. شيماء زاهر
+                                div(class="small text-gray-600")  الحمية الغذائية وخسارة الوزن
+                div(class="bg-white p-3 widget shadow rounded mb-4")
+                    h3(class="h6 mb-2 mt-0 font-weight-bold text-gray-900") المحاضرون 
+                        span(class="small") (اليوم الثاني)
+                    div(class="artist-list mb-3")
+                        a(class="d-flex align-items-center", href="#")
+                            div(class="dropdown-list-image mr-3")
+                                img(class="rounded-circle", src="../img/avatar.jpg", alt="")
+                                div(class="status-indicator bg-success")
+                            div(class="font-weight-bold")
+                                div(class="text-truncate") د. همام قنديل
+                                div(class="small text-gray-600") الطب
+                    div(class="artist-list mb-3")
+                        a(class="d-flex align-items-center", href="#")
+                            div(class="dropdown-list-image mr-3")
+                                img(class="rounded-circle", src="../img/avatar.jpg", alt="")
+                                div(class="status-indicator bg-success")
+                            div(class="font-weight-bold")
+                                div(class="text-truncate") أ. محمد خالد
+                                div(class="small text-gray-600") أمراض الأيض
+                div(class="bg-white p-3 widget shadow rounded mb-4")
+                    h3(class="h6 mb-3 mt-0 font-weight-bold text-gray-900") التقييم
+                    div(class="artist-list")
+                        div(class="font-weight-bold")
+                            div(class="rating" data-rate-value="2")
+            div(class="col-xl-6 col-lg-6")
+                div(class="bg-white p-3 widget shadow rounded mb-4")
+                    ul#myTab(class="nav nav-tabs", role="tablist")
+                        li(class="nav-item")
+                            a#home-tab(class="nav-link active", data-toggle="tab", href="#home", role="tab", aria-controls="home", aria-selected="true") معلومات عن الإيفنت
+                        li(class="nav-item")
+                            a#profile-tab(class="nav-link", data-toggle="tab", href="#profile", role="tab", aria-controls="profile", aria-selected="false")
+                                | التاريخ والوقت
+                        li(class="nav-item")
+                            a#contact-tab(class="nav-link", data-toggle="tab", href="#contact", role="tab", aria-controls="contact", aria-selected="false") أسئلة وأجوبة
+                    #myTabContent(class="tab-content")
+                        #home(class="tab-pane fade show active", role="tabpanel", aria-labelledby="home-tab")
+                            h6(class="mt-0 mb-3") المؤتمر السعودي الثالث للتغذية بين الطب والحياة
+                            p برعاية معالي وزير الصحة السعودي تقيم الشئون الصحية بمحافظة جدة ممثلة بادارة التغذية مؤتمرها الثالث للتغذية بين الطب والحياة والمعتمد من قبل الهيئة السعودية للتخصصات الصحية حيث يتحدث بالمؤتمر نخبة من المتميزين في هذا المجال الحيوي من داخل وخارج المملكة من الجامعات والمستشفيات التخصصية والحكومية والقطاع الخاص كما سيصاحب المؤتمر معرض مصاحب يعرض فيه كل ما هو جديد ومفيد .
+                            ul
+                                li المؤتمر السعودي الثالث للتغذية بين الطب والحياة
+                                li الجامعات والمستشفيات التخصصية والحكومية والقطاع الخاص كما
+                                li الصحية حيث يتحدث بالمؤتمر نخبة من المتميزين
+                            p(class="mb-0") برعاية معالي وزير الصحة السعودي تقيم الشئون الصحية بمحافظة جدة ممثلة بادارة التغذية مؤتمرها الثالث للتغذية بين الطب والحياة والمعتمد من قبل الهيئة السعودية للتخصصات الصحية حيث يتحدث بالمؤتمر نخبة من المتميزين في هذا المجال الحيوي من داخل وخارج المملكة من الجامعات والمستشفيات التخصصية والحكومية والقطاع الخاص كما سيصاحب المؤتمر معرض مصاحب يعرض فيه كل ما هو جديد ومفيد .
+                        #profile(class="tab-pane fade", role="tabpanel", aria-labelledby="profile-tab")
+                            h5(class="mt-0 mb-3") الاثنين, 31 ديسمبر, 2018, 11:59 مساء
+                            p برعاية معالي وزير الصحة السعودي تقيم الشئون الصحية بمحافظة جدة ممثلة بادارة التغذية مؤتمرها الثالث للتغذية بين الطب والحياة والمعتمد من قبل الهيئة السعودية للتخصصات الصحية حيث يتحدث بالمؤتمر نخبة من المتميزين في هذا المجال الحيوي من داخل وخارج المملكة من الجامعات والمستشفيات التخصصية والحكومية والقطاع الخاص كما سيصاحب المؤتمر معرض مصاحب يعرض فيه كل ما هو جديد ومفيد .
+                            h5(class="mt-0 mb-3")
+                                | الاثنين, 31 ديسمبر, 2018, 11:59 مساء
+                            p برعاية معالي وزير الصحة السعودي تقيم الشئون الصحية بمحافظة جدة ممثلة بادارة التغذية مؤتمرها الثالث للتغذية بين الطب والحياة والمعتمد من قبل الهيئة السعودية للتخصصات الصحية حيث يتحدث بالمؤتمر نخبة من المتميزين في هذا المجال الحيوي من داخل وخارج المملكة من الجامعات والمستشفيات التخصصية والحكومية والقطاع الخاص كما سيصاحب المؤتمر معرض مصاحب يعرض فيه كل ما هو جديد ومفيد .
+                        #contact(class="tab-pane fade", role="tabpanel", aria-labelledby="contact-tab")
+                            #accordionExample(class="accordion")
+                                div(class="card")
+                                    #headingOne(class="card-header")
+                                        h2(class="mb-0")
+                                            button(class="btn btn-link", type="button", data-toggle="collapse", data-target="#collapseOne", aria-expanded="true", aria-controls="collapseOne")
+                                                | السؤال الأول #1
+                                    #collapseOne(class="collapse show", aria-labelledby="headingOne", data-parent="#accordionExample")
+                                        div(class="card-body")
+                                            | المؤسسة لها نشاطات متعددة قائمة وتحت الإنشاء داخل وخارج المملكة ويشرفها ويسعدها تقديم أي مشورة والإجابة عن أي استفسار من خلال التواصل معنا .
+                                div(class="card")
+                                    #headingTwo(class="card-header")
+                                        h2(class="mb-0")
+                                            button(class="btn btn-link collapsed", type="button", data-toggle="collapse", data-target="#collapseTwo", aria-expanded="false", aria-controls="collapseTwo")
+                                                | السؤال الثاني #2
+                                    #collapseTwo(class="collapse", aria-labelledby="headingTwo", data-parent="#accordionExample")
+                                        div(class="card-body")
+                                            | المؤسسة لها نشاطات متعددة قائمة وتحت الإنشاء داخل وخارج المملكة ويشرفها ويسعدها تقديم أي مشورة والإجابة عن أي استفسار من خلال التواصل معنا .
+                                div(class="card")
+                                    #headingThree(class="card-header")
+                                        h2(class="mb-0")
+                                            button(class="btn btn-link collapsed", type="button", data-toggle="collapse", data-target="#collapseThree", aria-expanded="false", aria-controls="collapseThree")
+                                                | السؤال الثالث #3
+                                    #collapseThree(class="collapse", aria-labelledby="headingThree", data-parent="#accordionExample")
+                                        div(class="card-body")
+                                            | المؤسسة لها نشاطات متعددة قائمة وتحت الإنشاء داخل وخارج المملكة ويشرفها ويسعدها تقديم أي مشورة والإجابة عن أي استفسار من خلال التواصل معنا .
+            div(class="col-xl-3 col-lg-3")
+                div(class="bg-white p-3 widget shadow rounded mb-4 event-info")
+                    h3(class="h6 mb-3 mt-0 font-weight-bold text-gray-900") معلومات
+                    p
+                        b النوع: 
+                        | متضمن
+                    p
+                        b القسم: 
+                        | المحادثات
+                    p
+                        b الدولة: 
+                        | السعودية
+                    p
+                        b المدينة: 
+                        | الرياض
+                    p
+                        b المكان: 
+                        | فندق
+                    p
+                        b الأقسام: 
+                        span(class="badge badge-danger text-white") طبيب
+                        span(class="badge badge-danger text-white") طالب
+                        span(class="badge badge-danger text-white") طبيب
+                        span(class="badge badge-danger text-white") طالب
+                        span(class="badge badge-danger text-white") طبيب
+                        span(class="badge badge-danger text-white") طالب
+                        span(class="badge badge-danger text-white") طبيب
+                        span(class="badge badge-danger text-white") طالب
+                    p
+                        b الساعات: 
+                        | 20
+                    p
+                        b من: 
+                        | 5:30 مساء
+                    p
+                        b إلى: 
+                        | 10:20 مساء
+                    p
+                        b وصف الخدمة: 
+                        | متضمن
+                    //- p(class="text-gray-600")
+                    //-     i(class="fas fa-mobile fa-fw")
+                    //-     | +00 12354 89564
+                    //- p(class="mb-0 text-gray-600")
+                    //-     i(class="fas fa-envelope-open fa-fw")
+                    //-     a(href="", class="") email@email.com
+                div(class="bg-white p-3 widget shadow rounded mb-4")
+                    h3(class="h6 mb-3 mt-0 font-weight-bold text-gray-900") الخريطة
+                    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1082318.0625961951!2d45.862399456772515!3d24.717945023774018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sin!4v1625041998494!5m2!1sen!2sin", width="100%", height="185", frameborder="0", style="border:0;", allowfullscreen="")

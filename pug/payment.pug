@@ -1,0 +1,109 @@
+extend index 
+
+block website_title 
+    title Events | Contact
+    
+block home_block
+    section(class="py-4 bg-light  inner-header")
+        div(class="container")
+            div(class="row d-flex align-items-center")
+                div(class="col-lg-6 col-md-6")
+                    h4(class="mt-0 mb-0 text-dark")
+                        | Event Subscribe
+                div(class="col-lg-6 col-md-6 text-right")
+                    div(class="breadcrumbs")
+                        p(class="mb-0")
+                            a(href="#")
+                                i(class="icofont-ui-home")
+                                | Home
+                                | /
+                            span Event Subscribe
+    section(class="faq-page py-5 bg-light border-top subscribe")
+        div(class="container")
+            div(class="row justify-content-center")
+                div(class="col-xl-10 col-lg-10")
+                    div(class="bg-white p-3 widget shadow rounded mb-4")
+                        ul#myTab(class="nav nav-tabs justify-content-center", role="tablist")
+                            li(class="nav-item")
+                                a#credit-tab(class="nav-link active", data-toggle="tab", href="#credit", role="tab", aria-controls="home", aria-selected="true")
+                                    i(class="fab fa-cc-visa mr-2")
+                                    | Credit Card 
+                            li(class="nav-item")
+                                a#paypal-tab(class="nav-link", data-toggle="tab", href="#paypal", role="tab", aria-controls="profile", aria-selected="false")
+                                    i(class="fab fa-paypal mr-2")
+                                    | Paypal
+                        #myTabContent(class="tab-content")
+                            #credit(class="tab-pane fade show active", role="tabpanel", aria-labelledby="credit-tab")
+                                h6(class="mt-0 mb-3") Credit Card enter your card details
+                                hr
+                                form(name="", novalidate="")
+                                    div(class="control-group form-group")
+                                        div(class="controls")
+                                            label Full Name 
+                                                span(class="text-danger") *
+                                            input#name(type="text", placeholder="Full Name", class="form-control", required="", data-validation-required-message="Please enter your name.")
+                                            p(class="help-block")
+                                    div(class="row")
+                                        div(class="control-group form-group col-md-12")
+                                            label Credit Card Number
+                                                span(class="text-danger") *
+                                            div(class="controls")
+                                                input#phone(type="tel", placeholder="Phone Number", class="form-control", required="", data-validation-required-message="Please enter your phone number.")
+                                                div(class="help-block")
+                                        div(class="control-group form-group col-md-4")
+                                            div(class="form-group")
+                                                label(for="exampleInput5") Month 
+                                                    span(class="text-danger") *
+                                                select(class="form-control")
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                        div(class="control-group form-group col-md-4")
+                                            div(class="form-group")
+                                                label(for="exampleInput5") Year 
+                                                    span(class="text-danger") *
+                                                select(class="form-control")
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                        div(class="control-group form-group col-md-4")
+                                            div(class="form-group")
+                                                label(for="exampleInput5") CVV/CVC  
+                                                    span(class="text-danger") *
+                                                select(class="form-control")
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                                    option(value="") test 
+                                        div(class="control-group form-group col-md-12")
+                                            button(type="submit", class="btn btn-primary btn-sm float-right") Subscribe
+                            #paypal(class="tab-pane fade show text-center", role="tabpanel", aria-labelledby="paypal-tab")
+                                a(href="" class="btn btn-primary btn-lg mt-4 mb-4") Go To Paypal 
+            div(class="d-sm-flex align-items-center justify-content-between mt-4 mb-3")
+                h2(class="h5 mb-0") logos
+            div(class="row")
+                div(class="col-xl-12 col-md-12 mb-4")
+                    div(class="collections-slider")
+                        div(class="card c-card border-0 overflow-hidden")
+                            a(href="#")
+                                img(src="img/clients/01.jpg", class="img-fluid", alt="...")
+                        div(class="card c-card border-0 overflow-hidden")
+                            a(href="#")
+                                img(src="img/clients/02.jpg", class="img-fluid", alt="...")
+                        div(class="card c-card border-0 overflow-hidden")
+                            a(href="#")
+                                img(src="img/clients/03.jpg", class="img-fluid", alt="...")
+                        div(class="card c-card border-0 overflow-hidden")
+                            a(href="#")
+                                img(src="img/clients/04.jpg", class="img-fluid", alt="...")
+                        div(class="card c-card border-0 overflow-hidden")
+                            a(href="#")
+                                img(src="img/clients/05.jpg", class="img-fluid", alt="...")
+                        div(class="card c-card border-0 overflow-hidden")
+                            a(href="#")
+                                img(src="img/clients/02.jpg", class="img-fluid", alt="...")
+                        div(class="card c-card border-0 overflow-hidden")
+                            a(href="#")
+                                img(src="img/clients/03.jpg", class="img-fluid", alt="...")

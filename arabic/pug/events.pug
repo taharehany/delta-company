@@ -1,0 +1,383 @@
+extend index 
+
+block website_title 
+    title events | Sports
+
+block home_block
+    section(class="py-4 bg-light inner-header")
+        div(class="container")
+            div(class="row d-flex align-items-center")
+                div(class="col-lg-6 col-md-6")
+                    h4(class="mt-0 mb-0 text-dark")
+                        | Events
+                div(class="col-lg-6 col-md-6 text-right")
+                    div(class="breadcrumbs")
+                        p(class="mb-0")
+                            a(href="#")
+                                i(class="icofont-ui-home")
+                                | Home
+                            | /
+                            span Events
+    div(class="container")
+        div(class="d-flex align-items-center justify-content-between mt-5 mb-3")
+            //- h2(class="h5 mb-0 float-left") Events
+            a(href="#", class="float-right d-sm-inline-block btn btn-sm btn-primary shadow-sm") Reset Filters 
+                i(class="fas fa-times fa-sm text-white-50")
+        div(class="row")
+            div(class="col-xl-3 col-lg-4")
+                div(class="filters mobile-filters shadow rounded bg-white mb-4 d-none d-block d-md-none")
+                    div(class="border-bottom")
+                        a(class="h6 font-weight-bold text-dark d-block m-0 p-3", data-toggle="collapse", href="#mobile-filters", role="button", aria-expanded="false", aria-controls="mobile-filters") Filter By 
+                            i(class="fas fa-angle-down float-right mt-1")
+                    #mobile-filters(class="filters-body collapse multi-collapse")
+                        #accordion
+                            div(class="filters-card border-bottom p-3")
+                                #headingOffer(class="filters-card-header")
+                                    h6(class="mb-0")
+                                        a(href="#", class="btn-link", data-toggle="collapse", data-target="#collapseSort", aria-expanded="true", aria-controls="collapseSort")
+                                            | Sort by Products
+                                            i(class="fas fa-angle-down float-right")
+                                #collapseSort(class="collapse", aria-labelledby="headingOffer", data-parent="#accordion")
+                                    div(class="filters-card-body card-shop-filters")
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan111(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan111") Relevance 
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan112(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan112")
+                                                | Price (Low to High)
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan113(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan113")
+                                                | Price (High to Low)
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan114(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan114")
+                                                | Discount (High to Low)
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan115(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan115")
+                                                | Name (A to Z)
+                            div(class="filters-card border-bottom p-3")
+                                #headingTwo(class="filters-card-header")
+                                    h6(class="mb-0")
+                                        a(href="#", class="btn-link", data-toggle="collapse", data-target="#collapsetwo", aria-expanded="true", aria-controls="collapsetwo")
+                                            | Genre
+                                            i(class="fas fa-angle-down float-right")
+                                #collapsetwo(class="collapse", aria-labelledby="headingTwo", data-parent="#accordion")
+                                    div(class="filters-card-body card-shop-filters")
+                                        form(class="filters-search mb-3")
+                                            div(class="form-group")
+                                                i(class="fas fa-search")
+                                                input(type="text", class="form-control", placeholder="Start typing to search...")
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan116(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan116") Action 
+                                                small(class="text-black-50") 156
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan117(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan117") Adventure 
+                                                small(class="text-black-50") 120
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan118(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan118") Animation 
+                                                small(class="text-black-50") 130
+                                        div(class="mt-2")
+                                            a(href="#", class="link") See all
+                            div(class="filters-card border-bottom p-3")
+                                #headingOne(class="filters-card-header")
+                                    h6(class="mb-0")
+                                        a(href="#", class="btn-link", data-toggle="collapse", data-target="#collapseOne", aria-expanded="true", aria-controls="collapseOne")
+                                            | Select Language
+                                            i(class="fas fa-angle-down float-right")
+                                #collapseOne(class="collapse", aria-labelledby="headingOne", data-parent="#accordion")
+                                    div(class="filters-card-body card-shop-filters")
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan1155(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan1155") Punjabi 
+                                                small(class="text-black-50") 230
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan1166(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan1166") English 
+                                                small(class="text-black-50") 95
+                                        div(class="mt-2")
+                                            a(href="#", class="link") See all
+                            div(class="filters-card border-bottom p-3")
+                                #headingOffer(class="filters-card-header")
+                                    h6(class="mb-0")
+                                        a(href="#", class="btn-link", data-toggle="collapse", data-target="#collapseOffer", aria-expanded="true", aria-controls="collapseOffer")
+                                            | Format
+                                            i(class="fas fa-angle-down float-right")
+                                #collapseOffer(class="collapse", aria-labelledby="headingOffer", data-parent="#accordion")
+                                    div(class="filters-card-body card-shop-filters")
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan1100(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan1100")  2D 
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11111(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11111")
+                                                | 3D
+                                        div(class="mt-2")
+                                            a(href="#", class="link") See all
+                div(class="filters shadow rounded bg-white mb-3 d-none d-sm-none d-md-block")
+                    div(class="filters-header border-bottom p-3")
+                        h6(class="m-0 text-dark") Filter By
+                    div(class="filters-body")
+                        #accordion
+                            div(class="filters-card border-bottom p-3")
+                                #headingTwo(class="filters-card-header")
+                                    h6(class="mb-0")
+                                        a(href="#", class="btn-link", data-toggle="collapse", data-target="#collapsetwo", aria-expanded="true", aria-controls="collapsetwo")
+                                            | Genre
+                                            i(class="fas fa-angle-down float-right")
+                                #collapsetwo(class="collapse show", aria-labelledby="headingTwo", data-parent="#accordion")
+                                    div(class="filters-card-body card-shop-filters")
+                                        form(class="filters-search mb-3")
+                                            div(class="form-group")
+                                                i(class="fas fa-search")
+                                                input(type="text", class="form-control", placeholder="Start typing to search...")
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11q(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11q") Action 
+                                                small(class="text-black-50") 156
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11w(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11w") Adventure 
+                                                small(class="text-black-50") 120
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11e(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11e") Animation 
+                                                small(class="text-black-50") 130
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11r(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11r") Comedy 
+                                                small(class="text-black-50") 120
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11y(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11y")  Crime 
+                                                small(class="text-black-50") 111
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11u(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11u")  Drama 
+                                                small(class="text-black-50") 95
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11i(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11i")  Fantasy 
+                                                small(class="text-black-50") 50
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11p(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11p")  Historical 
+                                                small(class="text-black-50") 32
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11po(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11po")  Romantic 
+                                                small(class="text-black-50") 156
+                                        div(class="mt-2")
+                                            a(href="#", class="link") See all
+                            div(class="filters-card border-bottom p-3")
+                                #headingOne(class="filters-card-header")
+                                    h6(class="mb-0")
+                                        a(href="#", class="btn-link", data-toggle="collapse", data-target="#collapseOne", aria-expanded="true", aria-controls="collapseOne")
+                                            | Select Language
+                                            i(class="fas fa-angle-down float-right")
+                                #collapseOne(class="collapse show", aria-labelledby="headingOne", data-parent="#accordion")
+                                    div(class="filters-card-body card-shop-filters")
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11z(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11z")  Punjabi 
+                                                small(class="text-black-50") 230
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11zz(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11zz")  English 
+                                                small(class="text-black-50") 95
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11zzz(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11zzz")  Hindi 
+                                                small(class="text-black-50") 35
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11x(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11x") Telugu 
+                                                small(class="text-black-50") 46
+                                        div(class="mt-2")
+                                            a(href="#", class="link") See all
+                            div(class="filters-card border-bottom p-3")
+                                #headingOffer(class="filters-card-header")
+                                    h6(class="mb-0")
+                                        a(href="#", class="btn-link", data-toggle="collapse", data-target="#collapseOffer", aria-expanded="true", aria-controls="collapseOffer")
+                                            | Format
+                                            i(class="fas fa-angle-down float-right")
+                                #collapseOffer(class="collapse", aria-labelledby="headingOffer", data-parent="#accordion")
+                                    div(class="filters-card-body card-shop-filters")
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11cc(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11cc")  3D 
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11c(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11c")
+                                                | 2D
+                                        div(class="custom-control custom-checkbox")
+                                            input#osahan11v(type="checkbox", class="custom-control-input")
+                                            label(class="custom-control-label", for="osahan11v")
+                                                | 5D
+                                        div(class="mt-2")
+                                            a(href="#", class="link") See all
+                //- div(class="d-none d-sm-none d-lg-block")
+                    img(class="img-fluid rounded mt-3", src="https://via.placeholder.com/255x623", title="#")
+            div(class="col-xl-9 col-lg-8")
+                div(class="row list-bp events")
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/events/01.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 07
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") Glasgow International Comedy Festival
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Glasgow, Scotland
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/events/02.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 10
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") Vancouver Fashion Week
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Vancouver, Canada
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/events/03.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 15
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") DC Environmental Film Festival
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Washington DC, USA
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/e4.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 22
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") Cape Town International Jazz Festival
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Cape Town, South Africa
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/events/01.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 07
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") Glasgow International Comedy Festival
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Glasgow, Scotland
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/events/02.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 10
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") Vancouver Fashion Week
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Vancouver, Canada
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/events/03.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 15
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") DC Environmental Film Festival
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Washington DC, USA
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/events/04.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 22
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") Cape Town International Jazz Festival
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Cape Town, South Africa
+                    div(class="col-xl-4 col-md-6 mb-4")
+                        div(class="card e-card shadow border-0")
+                            a(href="events-detail.html")
+                                div(class="m-card-cover")
+                                    img(src="../img/events/01.jpg", class="card-img-top", alt="...")
+                                div(class="card-body p-0")
+                                    div(class="row no-gutters align-items-center")
+                                        div(class="col-2 auto py-3 pl-3")
+                                            div(class="bg-white rounded text-center")
+                                                h6(class="text-danger mb-0 font-weight-bold") 07
+                                                small(class="text-muted") OCT
+                                        div(class="col-10 p-3")
+                                            p(class="card-text text-gray-900 mb-1") Glasgow International Comedy Festival
+                                            p(class="card-text")
+                                                small(class="text-muted")
+                                                    i(class="fas fa-map-marker-alt fa-sm ml-1")
+                                                    | Glasgow, Scotland
+                div(class="text-center mt-4 mb-5 col-12")
+                    div(class="spinner-border", role="status")
+                        span(class="sr-only") Loading...

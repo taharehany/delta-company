@@ -1,0 +1,145 @@
+nav(class="navbar navbar-expand navbar-dark topbar static-top shadow-sm bg-dark osahan-nav-top")
+	div(class="container")
+		a(class="navbar-brand", href="index.html")
+			img(src="../img/logo-en.png", alt="")
+		form(class="d-none d-sm-inline-block form-inline mr-auto my-2 my-md-0 mw-100 navbar-search")
+			div(class="input-group")
+				input(type="text", class="form-control bg-white border-0 small", placeholder="بحث في الموقع", aria-label="Search", aria-describedby="basic-addon2")
+				div(class="input-group-append")
+					button(class="btn bg-white", type="button")
+						i(class="fas fa-search fa-sm")
+		ul(class="navbar-nav ml-auto")
+			li(class="nav-item dropdown no-arrow d-sm-none")
+				a#searchDropdown(class="nav-link dropdown-toggle", href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+					i(class="fas fa-search fa-fw")
+				div(class="dropdown-menu dropdown-menu-right p-3 shadow-sm animated--grow-in", aria-labelledby="searchDropdown")
+					form(class="form-inline mr-auto w-100 navbar-search")
+						div(class="input-group")
+							input(type="text", class="form-control bg-light border-0 small", placeholder="بحث عن", aria-label="Search", aria-describedby="basic-addon2")
+							div(class="input-group-append")
+								button(class="btn btn-primary", type="button")
+									i(class="fas fa-search fa-sm")
+			li(class="nav-item dropdown no-arrow mx-1")
+				a#langugeDropdown(class="nav-link" href="#" role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+					i(class="fas fa-globe mr-1 fa-fw")
+					| اللغة
+					//- span(class="badge badge-danger bg-gradient-danger") lang
+				div(class="dropdown-menu language-dropdown dropdown-menu-right shadow-sm animated--grow-in", aria-labelledby="langugeDropdown")
+					a(class="dropdown-item", href="index.html")
+						img(src="../img/sa.png" class="")
+						| العربية
+					a(class="dropdown-item", href="../index.html")
+						img(src="../img/us.png" class="")
+						| الإنجليزية
+			li(class="nav-item dropdown no-arrow mx-1")
+				a#alertsDropdown(class="nav-link dropdown-toggle", href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+					i(class="fas fa-bell fa-fw")
+					span(class="badge badge-danger badge-counter") 8+
+				div(class="dropdown-list dropdown-menu dropdown-menu-right shadow-sm animated--grow-in", aria-labelledby="alertsDropdown")
+					h6(class="dropdown-header")
+						| الإشعارات
+					a(class="dropdown-item d-flex align-items-center", href="#")
+						div(class="mr-3")
+							div(class="icon-circle bg-primary text-white")
+								| تنبيه
+						div
+							div(class="small text-gray-500") ديسمبر 2020
+							span(class="font-weight-bold")
+								| تنبيه: تم تسجيل دخولك إلى الموقع بنجاح
+					a(class="dropdown-item d-flex align-items-center", href="#")
+						div(class="dropdown-list-image mr-3")
+							img(class="rounded-circle w-60", src="../img/avatar.jpg", alt="")
+							div(class="status-indicator bg-success")
+						div
+							div(class="text-truncate") جاري التأكد من البيانات
+							div(class="small text-gray-500") ديسمبر 2020
+					a(class="dropdown-item text-center small text-gray-500", href="#") عرض جميع الإشعارات
+			li(class="nav-item dropdown no-arrow")
+				a#userDropdown(class="nav-link dropdown-toggle pr-0", href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+					//- img(class="img-profile mr-2 rounded-circle", src="../img/s4.png")
+					i(class="fas fa-user-circle fa-fw mr-1 ri")
+					span(class="mr-2 d-none d-lg-inline small") الحساب
+				//- if user out
+				div(class="dropdown-menu dropdown-menu-right shadow-sm animated--grow-in", aria-labelledby="userDropdown")
+					a(class="dropdown-item", href="login.html")
+						i(class="fas fa-sign-in-alt fa-sm fa-fw mr-2 ri")
+						| تسجيل دخول
+					a(class="dropdown-item", href="register.html")
+						i(class="fas fa-user fa-sm fa-fw mr-2 ri")
+						| تسجيل خروج
+				//- if user login
+				//- div(class="dropdown-menu dropdown-menu-right shadow-sm animated--grow-in", aria-labelledby="userDropdown")
+				//- 	a(class="dropdown-item", href="profile.html")
+				//- 		i(class="fas fa-user-circle fa-sm fa-fw mr-2 ri")
+				//- 		| Profile
+				//- 	a(class="dropdown-item", href="profile.html")
+				//- 		i(class="fas fa-heart fa-sm fa-fw mr-2 ri")
+				//- 		| Watchlist
+				//- 	a(class="dropdown-item", href="profile.html")
+				//- 		i(class="fas fa-list-alt fa-sm fa-fw mr-2 ri")
+				//- 		| Your Lists
+				//- 	a(class="dropdown-item", href="profile.html")
+				//- 		i(class="fas fa-cog fa-sm fa-fw mr-2 ri")
+				//- 		| Account Settings
+				//- 	div(class="dropdown-divider")
+				//- 	a(class="dropdown-item", href="#", data-toggle="modal", data-target="#logoutModal")
+				//- 		i(class="fas fa-sign-out-alt fa-sm fa-fw mr-2 ri")
+				//- 		| Logout
+nav(class="navbar navbar-expand-lg navbar-dark bg-dark osahan-nav-mid")
+	div(class="container")
+		ul(class="navbar-nav mr-auto")
+			li(class="nav-item")
+				a(class="nav-link", href="exhibitions.html")
+					i(class="fas fa-fw fa-film")
+					span المعارض
+			li(class="nav-item")
+				a(class="nav-link", href="events.html")
+					i(class="fas fa-fw fa-glass-cheers")
+					span الفعاليات
+			li(class="nav-item")
+				a(class="nav-link", href="people.html")
+					i(class="fas fa-fw fa-users")
+					span المحاضرون
+			li(class="nav-item")
+				a(class="nav-link", href="sports.html")
+					i(class="fas fa-fw fa-futbol")
+					span الشركات
+		a(href="#" class="choose-now")
+			span
+			span
+			span
+			span
+			| Subscribe Now
+		button(class="navbar-toggler navbar-toggler-right", type="button", data-toggle="collapse", data-target="#navbarResponsive", aria-controls="navbarResponsive", aria-expanded="false", aria-label="Toggle navigation")
+			span(class="navbar-toggler-icon")
+		#navbarResponsive(class="collapse navbar-collapse")
+			ul(class="navbar-nav ml-auto")
+				li(class="nav-item")
+					a(class="nav-link", href="offers.html")
+						| العروض
+				li(class="nav-item")
+					a(class="nav-link", href="about.html") من نحن
+				li(class="nav-item")
+					a(class="nav-link", href="contact.html") تواصل معنا
+				li(class="nav-item dropdown")
+					a#navbarDropdownPortfolio(class="nav-link dropdown-toggle", href="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+						| الصفحات
+					div(class="dropdown-menu dropdown-menu-right", aria-labelledby="navbarDropdownPortfolio")
+						a(class="dropdown-item", href="about.html") من نحن
+						a(class="dropdown-item", href="events.html") الفعاليات
+						a(class="dropdown-item", href="events-detail.html") تفاصيل الحدث
+						a(class="dropdown-item", href="people.html") المحاضرون
+						a(class="dropdown-item", href="people-detail.html") تفاصيل المحاضر
+						a(class="dropdown-item", href="404.html") صفحة الخطأ
+						a(class="dropdown-item", href="chating.html") المحادثات
+						a(class="dropdown-item", href="contact.html") تواصل معنا
+						a(class="dropdown-item", href="forgot-password.html") استعادة كلمة السر
+						a(class="dropdown-item", href="my-events.html") أحداثي
+						a(class="dropdown-item", href="payment.html") الدفع
+						a(class="dropdown-item", href="profile.html") الصفحة الشخصية
+						a(class="dropdown-item", href="register.html") التسجيل
+				li(class="nav-item dropdown")
+					a#navbarDropdownBlog(class="nav-link dropdown-toggle", href="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+						| صفحات أخرى
+					div(class="dropdown-menu dropdown-menu-right", aria-labelledby="navbarDropdownBlog")
+						a(class="dropdown-item", href="faq.html") سؤال وجواب

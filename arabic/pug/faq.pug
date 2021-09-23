@@ -1,0 +1,98 @@
+extend index 
+
+block website_title 
+    title Events | Contact
+    
+block home_block
+    section(class="py-4 bg-light inner-header")
+        div(class="container")
+            div(class="row d-flex align-items-center")
+                div(class="col-lg-6 col-md-6")
+                    h4(class="mt-0 mb-0 text-dark")
+                        | FAQ
+                div(class="col-lg-6 col-md-6 text-right")
+                    div(class="breadcrumbs")
+                        p(class="mb-0")
+                            a(href="#")
+                                i(class="icofont-ui-home")
+                                | Home 
+                            | / 
+                            span FAQ
+    section(class="faq-page py-5 bg-light border-top")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12 mx-auto")
+                    div(class="row")
+                        div(class="col-lg-8 col-md-8")
+                            div(class="bg-white p-4 shadow rounded h-100")
+                                #accordionExample(class="accordion")
+                                    div(class="card mb-0")
+                                        #headingOne(class="card-header")
+                                            h6(class="mb-0")
+                                                a(href="#", data-toggle="collapse", data-target="#collapseOne", aria-expanded="true", aria-controls="collapseOne")
+                                                    i(class="icofont icofont-question-square")
+                                                    | Is my order confirmed?
+                                        #collapseOne(class="collapse show", aria-labelledby="headingOne", data-parent="#accordionExample")
+                                            div(class="card-body")
+                                                strong wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch etorigin coffee nulla assumenda shoreditch et. Nihil helvetica, craf.
+                                    div(class="card")
+                                        #headingTwo(class="card-header")
+                                            h6(class="mb-0")
+                                                a(href="#", data-toggle="collapse", data-target="#collapseTwo", aria-expanded="true", aria-controls="collapseTwo")
+                                                    i(class="icofont icofont-question-square")
+                                                    | When will you ship my order?
+                                        #collapseTwo(class="collapse", aria-labelledby="headingTwo", data-parent="#accordionExample")
+                                            div(class="card-body")
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil helvetica, craf.
+                                    div(class="card")
+                                        #headingTwo(class="card-header")
+                                            h6(class="mb-0")
+                                                a(href="#", data-toggle="collapse", data-target="#collapsefour", aria-expanded="true", aria-controls="collapsefour")
+                                                    i(class="icofont icofont-question-square")
+                                                    | When will my order get delivered?
+                                        #collapsefour(class="collapse", aria-labelledby="headingTwo", data-parent="#accordionExample")
+                                            div(class="card-body")
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil helvetica, craf.
+                                    div(class="card")
+                                        #headingThree(class="card-header")
+                                            h6(class="mb-0")
+                                                a(href="#", data-toggle="collapse", data-target="#collapseThree", aria-expanded="true", aria-controls="collapseThree")
+                                                    i(class="icofont icofont-question-square")
+                                                    | How much do you charge for delivery?
+                                        #collapseThree(class="collapse", aria-labelledby="headingThree", data-parent="#accordionExample")
+                                            div(class="card-body")
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil helvetica, craf.
+                        div(class="col-lg-4 col-md-4")
+                            div(class="bg-white p-4 shadow rounded")
+                                div(class="section-header")
+                                    h5(class="heading-design-h5 mb-4")
+                                        | Ask us question
+                                form
+                                    div(class="row")
+                                        div(class="col-sm-12")
+                                            div(class="form-group")
+                                                label(class="control-label") Your Name 
+                                                    span(class="required") *
+                                                input(class="form-control border-form-control", value="", placeholder="Enter Name", type="text")
+                                    div(class="row")
+                                        div(class="col-sm-6")
+                                            div(class="form-group")
+                                                label(class="control-label") Email Address 
+                                                    span(class="required") *
+                                                input(class="form-control border-form-control ", value="", placeholder="ex@gmail.com", type="email")
+                                        div(class="col-sm-6")
+                                            div(class="form-group")
+                                                label(class="control-label") Phone 
+                                                    span(class="required") *
+                                                input(class="form-control border-form-control", value="", placeholder="Enter Phone", type="number")
+                                    div(class="row")
+                                        div(class="col-sm-12")
+                                            div(class="form-group")
+                                                label(class="control-label") Your Message 
+                                                    span(class="required") *
+                                                textarea(class="form-control border-form-control")
+                                    div(class="row")
+                                        div(class="col-sm-12 text-right")
+                                            button(type="button", class="btn btn-outline-primary btn-sm")  Cencel 
+                                            button(type="button", class="btn btn-primary btn-sm")  Send Message 

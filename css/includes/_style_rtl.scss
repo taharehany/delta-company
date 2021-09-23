@@ -1,0 +1,265 @@
+html[dir="rtl"] {
+	body {
+		text-align: initial;
+		font-family: "Tajawal", sans-serif;
+	}
+
+	.topbar {
+		.navbar-brand {
+			margin-left: 2rem;
+			margin-right: 0;
+		}
+		.language-dropdown {
+			img {
+				margin-right: 0;
+				margin-left: 3px;
+			}
+		}
+	}
+
+	.navbar-dark .navbar-nav .nav-link i {
+		margin-right: 0;
+		margin-left: 5px;
+	}
+
+	.navbar-nav {
+		.dropdown-menu {
+			left: 10px;
+			right: auto;
+		}
+	}
+
+	.dropdown-toggle {
+		&::after {
+			margin-left: 0;
+			margin-right: 0.255em;
+		}
+	}
+
+	.dropdown-menu {
+		.dropdown-item {
+			text-align: initial;
+		}
+	}
+
+	.mr-2,
+	.mx-2 {
+		margin-left: 0.5rem !important;
+		margin-right: 0 !important;
+	}
+
+	.mr-1,
+	.mx-1 {
+		margin-right: 0 !important;
+		margin-left: 0.25rem !important;
+	}
+
+	.pl-3,
+	.px-3 {
+		padding-left: 0 !important;
+		padding-right: 1rem !important;
+	}
+
+	.mr-3,
+	.mx-3 {
+		margin-right: 0 !important;
+		margin-left: 1rem !important;
+	}
+
+	.text-right {
+		text-align: left !important;
+	}
+
+	.offer-card img.rounded-circle {
+		right: 15px;
+		left: auto;
+	}
+
+	.card-text {
+		text-align: initial;
+	}
+
+	.faq-page .accordion .card-header a i {
+		margin-right: 0;
+		margin-left: 5px;
+	}
+
+	.custom-control-label {
+		&::before {
+			left: auto;
+			right: -1.5rem;
+		}
+
+		&::after {
+			left: auto;
+			right: -1.5rem;
+		}
+	}
+
+	.custom-control {
+		padding-left: 0;
+		padding-right: 1.5rem;
+	}
+
+	.filters-card-header a i {
+		margin: 2px 0 0 2px;
+	}
+
+	.rating {
+		direction: ltr;
+	}
+
+	// .login-body,
+	// .register-body {
+	//     padding: 7px 7px;
+	// }
+	.footer {
+		ul {
+			li {
+				i {
+					margin-right: 0;
+					margin-left: 5px;
+
+					&.fa-chevron-right {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+
+		.social-icons {
+			a {
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.chat-content {
+		.top_heading {
+			.btn {
+				i {
+					margin-left: 5px;
+					margin-right: 0;
+				}
+			}
+		}
+
+		.messaging {
+			.filter {
+				.select-part i {
+					right: 5px;
+					left: auto;
+				}
+			}
+		}
+
+		.heading {
+			.chat_ib_inside {
+				.close {
+					float: left;
+				}
+			}
+		}
+	}
+
+	.received_withd_msg p {
+		@include borderRadius(30px 0 30px 30px);
+	}
+
+	.chat-content .outgoing_msg {
+		direction: ltr;
+
+		.details {
+			direction: rtl;
+		}
+
+		p {
+			direction: rtl;
+			@include borderRadius(0 30px 30px 30px);
+		}
+	}
+
+	.incoming_msg_img {
+		margin-left: 10px;
+	}
+
+	.outgoing_msg_img {
+		margin-right: 10px;
+	}
+
+	.chat_ib h5 button {
+		float: left;
+	}
+
+	.msg_history {
+		height: 660px;
+	}
+
+	.chat-content {
+		.heading {
+			.chat_ib_inside {
+				.close {
+					i {
+						margin-left: 5px;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.srch_bar .input-group-addon {
+		margin: 0;
+		margin-right: -40px;
+		position: relative;
+	}
+
+	.widget.event-info {
+		p {
+			b {
+				margin-right: 0;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.dropdown-menu {
+		text-align: initial;
+	}
+
+	.ml-auto,
+	.mx-auto {
+		margin-left: 0 !important;
+		margin-right: auto !important;
+	}
+
+	.mr-auto,
+	.mx-auto {
+		margin-left: auto !important;
+		margin-right: 0 !important;
+	}
+	.about-us {
+		.text-left {
+			text-align: right !important;
+		}
+	}
+	.event-detals-scroll {
+		padding: 0 0 0 2px;
+	}
+	.modal-header .close {
+		margin-left: 0;
+	}
+
+	a.choose-now {
+		margin: 10px 6% 10px auto;
+	}
+}
+html[dir="rtl"] {
+	.slick-next {
+		left: 0;
+	}
+	.slick-prev {
+		right: 0;
+	}
+}

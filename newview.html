@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&amp;amp;display=swap" rel="stylesheet">
+    <title>View</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.min.css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/icofont.min.css" rel="stylesheet">
+    <link href="css/osahan.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/flip.min.css" rel="stylesheet">
+    <link href="css/pannellum.css">
+    <link href="css/over-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="panorama panorama-page" id="panorama">
+      <header>
+        <div class="container-fluid">
+          <div class="row justify-content-between justify-content-md-end justify-content-lg-end align-items-center">
+            <div class="col-10 col-md-6 col-lg-4 bar">
+              <div class="t-login"><span id="timer">00d:00h:00m</span><span class="btn-header" id="timer-action">Join Event</span></div>
+            </div>
+            <div class="hemberger" id="berger-btn"><i class="fas fa-bars"></i></div>
+          </div><br>
+          <div class="row justify-content-center">
+            <div class="col-4 col-md-2 col-lg-2 text-center"><img id="img360" src="./assets/imageSmall.png" style="display: none;"></div>
+          </div>
+        </div>
+      </header>
+      <div class="menu" id="menu-popup">
+        <ul class="list-unstyled">
+          <li><a href="#pano45">Reception</a></li>
+          <li><a href="#pano49">AMD Overview</a></li>
+          <li><a href="#pano52">Fluid Story</a></li>
+          <li><a href="#pano55">Masterpiece</a></li>
+          <li><a href="#pano40">Patients Story</a></li>
+          <li><a href="#pano220">Beovu Section</a></li>
+          <li><a href="#pano38">Patient Case</a></li>
+          <li><a href="#pano39">Puzzel Game</a></li>
+          <li><a href="#pano56">Ballroom</a></li>
+        </ul>
+      </div>
+      <footer> 
+        <div class="container-fluid">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-2 col-md-1 col-lg-2">
+              <div class="prev-slide"><a class="btn btn-default" href="#"><i class="fas fa-chevron-left"></i><span> to the exhibition</span></a></div>
+            </div>
+            <div class="col-6 col-md-10 col-lg-7 text-center">
+              <div class="footer-menu">
+                <div class="row justify-content-around align-items-center">
+                  <div class="col-2 col-md-1 col-lg-2 mobile"><a class="btn btn-default" href="#"><i class="fas fa-home"></i><span> Home</span></a></div>
+                  <div class="col-2 col-md-1 col-lg-2 mobile"><a class="btn btn-default " href="#"> <i class="fas fa-clipboard-list">    </i><span>Scedule</span></a></div>
+                  <div class="col-2 col-md-1 col-lg-2 mobile"><a class="btn btn-default" href="#"> <i class="fas fa-comment-alt"></i><span>Chat</span></a></div>
+                  <div class="col-md-1 col-lg-2 col-sm-4  camera"><a class="btn btn-default" href="#"> <i class="fas fa-binoculars"></i><span>Adjust Camera</span></a></div>
+                  <div class="col-2 col-md-1 col-lg-2 mobile">
+                    <button class="btn btn-default" href="#" data-toggle="modal" data-target="#mapModel">  <i class="fas fa-map"></i><span>Map</span></button>
+                    <div class="modal fade" id="mapModel" tabindex="-1" role="dialog" aria-labelledby="mapModelLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55295.06913921891!2d31.134355349999996!3d29.98110195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458459cd739a4bf%3A0x6587a690fdbe07ab!2z2YXZitiv2KfZhiDYp9mE2LHZhdin2YrYqQ!5e0!3m2!1sar!2seg!4v1632056348716!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2 col-md-1 col-lg-2 mobile">
+                    <button class="popup" id="btn-mneu">Go To <i class="fas fa-chevron-up"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-md-1 col-lg-2">
+              <div class="prev-slide"><a class="btn btn-default" href="#"> <span>lecture hall</span><i class="fas fa-chevron-right"></i></a></div>
+            </div>
+          </div>
+          <div class="d-bottom">
+            <p class="m-0 text-center">All Copyrights reserved by Al-Fouad for Exhibitions & Events By Al-Wassaq<a class="text-danger d-block" target="_blank" href="https://www.deltaitech.com/">DeltaITech              </a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- JS library-->
+    <script src="vendor/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="vendor/slick/slick.min.js" type="text/javascript"></script>
+    <script src="js/rocket-loader.min.js" defer type="text/javascript"></script>
+    <script src="js/rater.min.js" defer type="text/javascript"></script>
+    <script src="js/beacon.min.js" defer type="text/javascript"></script>
+    <script src="js/jquery.fancybox.js" defer type="text/javascript"></script>
+    <script src="js/flip.min.js" type="text/javascript"></script>
+    <script src="js/pannellum.js" type="text/javascript"></script>
+    <script src="js/osahan.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      function handleTickInit(tick) {
+          var nextYear = new Date().getFullYear() + 1;
+              Tick.count.down(2021 + "-09-14 17:00:00").onupdate = function (value) {
+              tick.value = value;
+          };
+      }
+      
+      function handleTickInitHome(tick) {
+          var nextYear = new Date().getFullYear() + 1;
+              Tick.count.down(2021 + "-09-15 17:00:00").onupdate = function (value) {
+              tick.value = value;
+          };
+      }
+      
+      pannellum.viewer("panorama", {
+          "autoRotate": -5,
+          "autoLoad": true,
+          "type": "equirectangular",
+          "panorama": "https://raw.githubusercontent.com/taharehany/betamaxfiles/master/images/360.jpg",
+          "autoLoad": true,
+         
+      });
+    </script>
+  </body>
+</html>

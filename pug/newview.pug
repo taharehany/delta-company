@@ -1,0 +1,100 @@
+extend index 
+
+block website_title 
+  title View
+
+block header_block
+block footer_block
+block home_block
+
+  div(class="panorama panorama-page" id="panorama")
+    header
+      div(class="container-fluid")
+        div(class="row justify-content-between justify-content-md-end justify-content-lg-end align-items-center")
+          div(class="col-10 col-md-6 col-lg-4 bar")
+            div(class="t-login")
+              span#timer 00d:00h:00m
+              span#timer-action(class="btn-header") Join Event
+          #berger-btn(class="hemberger")
+            i(class="fas fa-bars")
+        br
+        div(class="row justify-content-center")
+          div(class="col-4 col-md-2 col-lg-2 text-center")
+            img#img360(src="./assets/imageSmall.png", style="display: none;")
+    #menu-popup(class="menu")
+      ul(class="list-unstyled")
+        li
+          a(href="#pano45") Reception
+        li
+          a(href="#pano49") AMD Overview
+        li
+          a(href="#pano52") Fluid Story
+        li
+          a(href="#pano55") Masterpiece
+        li
+          a(href="#pano40") Patients Story
+        li
+          a(href="#pano220") Beovu Section
+        li
+          a(href="#pano38") Patient Case
+        li
+          a(href="#pano39") Puzzel Game
+        li
+          a(href="#pano56") Ballroom
+    footer 
+      div(class="container-fluid")
+        div(class="row justify-content-center align-items-center")
+          div(class="col-2 col-md-1 col-lg-2")
+            div(class="prev-slide")
+              a(href="#" class="btn btn-default")
+                i(class="fas fa-chevron-left")
+                span  to the exhibition
+          div(class="col-6 col-md-10 col-lg-7 text-center")
+            div(class="footer-menu")
+              div(class="row justify-content-around align-items-center")
+                div(class="col-2 col-md-1 col-lg-2 mobile")
+                  a(href="#" class="btn btn-default")
+                    i(class="fas fa-home")
+                    span  Home
+                div(class="col-2 col-md-1 col-lg-2 mobile")
+                  a(href="#" class="btn btn-default ")  
+                    i(class="fas fa-clipboard-list")     
+                    span Scedule
+                div(class="col-2 col-md-1 col-lg-2 mobile")
+                  a(href="#" class="btn btn-default")  
+                    i(class="fas fa-comment-alt")
+                    span Chat
+                div(class="col-md-1 col-lg-2 col-sm-4  camera")
+                  a(href="#" class="btn btn-default")  
+                    i(class="fas fa-binoculars")
+                    span Adjust Camera
+                div(class="col-2 col-md-1 col-lg-2 mobile")
+                  button(href="#" class="btn btn-default" data-toggle="modal" data-target="#mapModel")   
+                    i(class="fas fa-map")
+                    span Map
+                  #mapModel(class="modal fade", tabindex="-1", role="dialog", aria-labelledby="mapModelLabel", aria-hidden="true")
+                    div(class="modal-dialog", role="document")
+                      div(class="modal-content")
+                        div(class="modal-header")
+                          button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+                            span(aria-hidden="true") &times;
+                        div(class="modal-body")
+                          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55295.06913921891!2d31.134355349999996!3d29.98110195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458459cd739a4bf%3A0x6587a690fdbe07ab!2z2YXZitiv2KfZhiDYp9mE2LHZhdin2YrYqQ!5e0!3m2!1sar!2seg!4v1632056348716!5m2!1sar!2seg", width="600", height="450", style="border:0;", allowfullscreen="", loading="lazy")
+                div(class="col-2 col-md-1 col-lg-2 mobile")
+                  button#btn-mneu(class="popup") Go To 
+                    i(class="fas fa-chevron-up")
+          div(class="col-2 col-md-1 col-lg-2")
+            div(class="prev-slide")
+              a(href="#" class="btn btn-default") 
+                span lecture hall
+                i(class="fas fa-chevron-right")
+        div(class="d-bottom")
+              p(class="m-0 text-center") All Copyrights reserved by Al-Fouad for Exhibitions & Events By Al-Wassaq
+                  a(class="text-danger d-block", target="_blank", href="https://www.deltaitech.com/") DeltaITech              
+
+
+
+
+
+
+

@@ -7,7 +7,20 @@ Version: 1.0
 
 (function ($) {
   "use strict"; // Start of use strict
-
+  var btnMneu = document.getElementById('btn-mneu');
+  var menuPopup = document.getElementById('menu-popup');
+  var btnBerger = document.getElementById('berger-btn');
+  
+  btnMneu.addEventListener('click', function(){
+      menuPopup.classList.toggle('toggle')
+  });
+  btnBerger.addEventListener('click', function(){
+      menuPopup.classList.toggle('toggle-flex')
+  })
+  menuPopup.addEventListener('click', function(){
+      menuPopup.classList.toggle('toggle-flex')
+  });
+  
   // Collections Slider
   $('.collections-slider').slick({
     slidesToShow: 5,

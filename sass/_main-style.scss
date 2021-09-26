@@ -51,7 +51,7 @@ p {
 
 .main-breadcrumb {
 	background-size: cover;
-	padding: 10rem 0 5rem;
+	padding: 7rem 0;
 	position: relative;
 	z-index: 1;
 	background-attachment: fixed;
@@ -67,20 +67,33 @@ p {
 		z-index: -1;
 	}
 
+	.breadcrumb-title {
+		text-align: center;
+
+		h2 {
+			text-align: center;
+			color: #fff;
+			font-size: 40px;
+			font-weight: 600;
+			text-transform: capitalize;
+		}
+	}
+
 	.breadcrumb {
 		justify-content: center;
 
 		.breadcrumb-item {
-			font-size: 26px;
+			font-size: 16px;
 			text-transform: capitalize;
 			font-weight: 600;
 
 			a {
-				color: $main_color;
+				color: #fff;
 			}
 
 			&.active {
 				color: #fff;
+				font-weight: 500;
 			}
 
 			&::before {
@@ -322,6 +335,30 @@ header {
 				padding-left: 0;
 				font-size: 15px;
 				text-transform: capitalize;
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: -15px;
+					width: 30px;
+					height: 30px;
+					margin-top: -15px;
+					border-radius: 50%;
+					z-index: -1;
+					background-color: #85B72C;
+					opacity: .3;
+					@include transform(scale(0));
+					@include transition(all linear 0.3s)
+				}
+
+				&:hover,
+				&.active {
+					&::before {
+						@include transform(scale(1));
+					}
+				}
 			}
 		}
 
@@ -606,8 +643,10 @@ section.main-slider {
 			left: 15px;
 		}
 	}
+
 	.owl-theme .owl-nav [class*=owl-] {
 		@include transition(all ease 0.3s);
+
 		&:hover {
 			background: $main_color;
 		}
@@ -694,16 +733,18 @@ section.recipes {
 		row-gap: 25px;
 	}
 
-	.recipes {
+	.recipe-box {
 		.image {
 			@include borderRadius(15px);
 			overflow: hidden;
 			height: 270px;
+
 			img {
 				@extend %fitimage;
 				@include transition(all linear 0.3s);
 			}
 		}
+
 		.text {
 			text-align: center;
 			background-color: #fff;
@@ -719,11 +760,17 @@ section.recipes {
 			.subtitle {
 				color: #222;
 				text-transform: capitalize;
-				font-size: 18px;
-				line-height: 1.5;
+				font-size: 16px;
+				line-height: 1.2;
 				@extend %max_lines;
 				-webkit-line-clamp: 2;
-				min-height: 55px;
+				min-height: 40px;
+				font-weight: 600;
+				@include transition(all linear 0.3s);
+
+				&:hover, &:focus {
+					text-decoration: underline;
+				}
 			}
 
 			.details {
@@ -734,9 +781,11 @@ section.recipes {
 				margin-bottom: 10px;
 				min-height: 70px;
 			}
+
 			hr {
 				background-color: rgb(209, 209, 209);
 			}
+
 			.meta {
 				display: flex;
 				justify-content: center;
@@ -763,6 +812,7 @@ section.recipes {
 					@include transform(rotate(5deg) scale(1.1))
 				}
 			}
+
 			.text {
 				box-shadow: none;
 			}
@@ -771,6 +821,50 @@ section.recipes {
 }
 
 //recipes
+
+//instagram
+section.instagram {
+	padding: $padding_section;
+
+	.instagram-content {
+		.col {
+			padding: 0;
+		}
+
+		.instagram-box {
+			a {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.icon {
+				position: absolute;
+				left: auto;
+				top: 70%;
+				@include transition(all ease 0.3s);
+				opacity: 0;
+
+				i {
+					color: #fff;
+					background-color: rgba(0, 0, 0, .5);
+					padding: 5px;
+					@include borderRadius(50%);
+				}
+			}
+
+			&:hover {
+				.icon {
+					top: 50%;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+//instagram
 
 //global page style
 .navigation {
@@ -810,10 +904,10 @@ section.recipes {
 .error {
 	h2 {
 		color: $main_color;
-		font-size: 9rem;
+		font-size: 12rem;
 		position: relative;
 		line-height: 1;
-		font-weight: 600;
+		font-weight: 800;
 	}
 
 	.back {

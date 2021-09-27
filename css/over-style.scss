@@ -167,103 +167,104 @@ input[type="file"] {
 
 //header
 
-a.choose-now{
-    position: relative;
-    display: inline-block;
-    padding: 10px 25px;
-    margin: 10px auto 10px 6%;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    overflow: hidden;
-	background-color: #f62828;
+a.choose-now {
+	position: relative;
+	display: inline-block;
+	padding: 10px 25px;
+	margin: 10px auto 10px 6%;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+	overflow: hidden;
+	background-color: $second_color;
+	@include borderRadius(15px);
 
-	// &:hover{
-	// 	background: $second_color;
-	// 	color: #050801;
-	// 	box-shadow: 0 0 5px $second_color,
-	// 				0 0 25px $second_color,
-	// 				0 0 50px $second_color,
-	// 				0 0 200px $second_color;
-	// 	 -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-	// }
-	&:nth-child(1){
-		// filter: hue-rotate(270deg);
-	}
-	&:nth-child(2){
-		// filter: hue-rotate(110deg);
-	}
-	span{
+	span {
 		position: absolute;
 		display: block;
 	}
-	span:nth-child(1){
+
+	span:nth-child(1) {
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 2px;
-		background: linear-gradient(90deg,transparent, #fff);
+		background: linear-gradient(90deg, transparent, #fff);
 		animation: animate1 1s linear infinite;
 	}
-	@keyframes animate1{
-		0%{
+
+	@keyframes animate1 {
+		0% {
 			left: -100%;
 		}
-		50%,100%{
+
+		50%,
+		100% {
 			left: 100%;
 		}
 	}
-	span:nth-child(2){
+
+	span:nth-child(2) {
 		top: -100%;
 		right: 0;
 		width: 2px;
 		height: 100%;
-		background: linear-gradient(180deg,transparent, #fff);
+		background: linear-gradient(180deg, transparent, #fff);
 		animation: animate2 1s linear infinite;
 		animation-delay: 0.25s;
 	}
-	@keyframes animate2{
-		0%{
+
+	@keyframes animate2 {
+		0% {
 			top: -100%;
 		}
-		50%,100%{
+
+		50%,
+		100% {
 			top: 100%;
 		}
 	}
-	span:nth-child(3){
+
+	span:nth-child(3) {
 		bottom: 0;
 		right: 0;
 		width: 100%;
 		height: 2px;
-		background: linear-gradient(270deg,transparent, #fff);
+		background: linear-gradient(270deg, transparent, #fff);
 		animation: animate3 1s linear infinite;
 		animation-delay: 0.50s;
 	}
-	@keyframes animate3{
-		0%{
+
+	@keyframes animate3 {
+		0% {
 			right: -100%;
 		}
-		50%,100%{
+
+		50%,
+		100% {
 			right: 100%;
 		}
 	}
-	
-	
-	span:nth-child(4){
+
+
+	span:nth-child(4) {
 		bottom: -100%;
 		left: 0;
 		width: 2px;
 		height: 100%;
-		background: linear-gradient(360deg,transparent, #fff);
+		background: linear-gradient(360deg, transparent, #fff);
 		animation: animate4 1s linear infinite;
 		animation-delay: 0.75s;
 	}
-	@keyframes animate4{
-		0%{
+
+	@keyframes animate4 {
+		0% {
 			bottom: -100%;
 		}
-		50%,100%{
+
+		50%,
+		100% {
 			bottom: 100%;
 		}
 	}
@@ -294,6 +295,7 @@ a.choose-now{
 
 .card {
 	@include transition(all ease 0.3s);
+
 	&:hover {
 		box-shadow: none !important;
 	}
@@ -314,6 +316,7 @@ a.choose-now{
 
 //about us
 .about-us {
+
 	.h2,
 	.h2,
 	.h3,
@@ -328,15 +331,18 @@ a.choose-now{
 	h6 {
 		line-height: 1.6;
 	}
+
 	.about-image {
 		@include borderRadius(50%);
 		overflow: hidden;
 		width: 450px;
 		height: 450px;
 	}
+
 	.video-icon {
 		position: relative;
 	}
+
 	.about-video {
 		position: absolute;
 		left: 0;
@@ -363,16 +369,19 @@ a.choose-now{
 				background-color: #ffa116;
 				width: 60%;
 				height: 60%;
+
 				i {
 					color: #fff;
 				}
 			}
 		}
 	}
+
 	.mission-vission {
 		margin-bottom: 30px;
 		display: grid;
 		grid-template-columns: 80px auto;
+
 		.icon {
 			i {
 				font-size: 60px;
@@ -550,6 +559,7 @@ a.choose-now{
 			height: 150px;
 			@include borderRadius(50%);
 		}
+
 		.people-item-cover {
 			height: 120px;
 			overflow: hidden;
@@ -557,7 +567,7 @@ a.choose-now{
 			background: -moz-linear-gradient(-45deg, #6a11cb 0%, #2575fc 100%);
 			background: -webkit-linear-gradient(-45deg, #6a11cb 0%, #2575fc 100%);
 			background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a11cb', endColorstr='#2575fc',GradientType=1 );
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6a11cb', endColorstr='#2575fc', GradientType=1);
 
 			img {
 				@extend %fitimage;
@@ -601,6 +611,7 @@ a.choose-now{
 		}
 	}
 }
+
 //companies
 
 //personal info
@@ -705,8 +716,9 @@ a.choose-now{
 
 	table {
 		&.dataTable {
-			> thead {
+			>thead {
 				.sorting {
+
 					&:before,
 					&:after {
 						top: 15px;
@@ -1568,18 +1580,51 @@ a.choose-now{
 	max-height: 700px;
 	overflow-y: auto;
 	padding: 0 2px 0 0;
+
 	&::-webkit-scrollbar {
 		width: 5px;
 		height: 5px;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		@include borderRadius(20px);
+	}
+}
+
+.accordion-lecturers {
+	>.card .card-header {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		
+		+ div  {
+			padding-top: 15px;
+		}
+	}
+
+	.card {
+		border: none;
+	}
+
+	.btn-link {
+		padding: 0;
+		text-decoration: none !important;
+		width: 100%;
+		color: #fff;
+		text-align: center;
+		background-color: $second_color;
+
+		i {
+			line-height: 40px;
+		}
+		
 	}
 }
 
 .widget {
 	.video {
 		margin-top: 10px;
+
 		iframe {
 			@include borderRadius(10px)
 		}
@@ -1601,12 +1646,14 @@ a.choose-now{
 		width: auto !important;
 		display: inline-block !important;
 	}
+
 	.tick-content {
 		width: auto;
 		font-size: 30px;
 		font-weight: 600;
 	}
 }
+
 .tick-label {
 	font-size: 16px;
 	text-align: center;
@@ -1614,24 +1661,28 @@ a.choose-now{
 	font-family: "Righteous", sans-serif;
 	text-transform: capitalize;
 }
+
 .tick-group {
 	margin: 0 0.25em;
 	text-align: center;
 }
+
 .tick-flip-panel {
 	color: #ffffff;
 	background-color: #fcb040;
 }
+
 .tick-group {
 	margin: 0 0.2em;
 	text-align: center;
 }
+
 //counter in details page
 
 //panorama
 #panorama {
 	width: 100%;
-	height: 100vh;
+	height: 550px;
 	position: relative;
 
 	.pnlm-render-container {
@@ -1643,8 +1694,10 @@ a.choose-now{
 		width: 100% !important;
 		max-width: 100%;
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+		@include borderRadius(15px);
 	}
 }
+
 //panorama
 
 //counter in home page
@@ -1659,30 +1712,36 @@ a.choose-now{
 		width: auto !important;
 		display: inline-block !important;
 	}
+
 	.tick-content {
 		width: auto;
 		font-size: 30px;
 		font-weight: 600;
 	}
+
 	.tick-label {
 		font-size: 14px;
 		text-align: center;
 		color: #fff;
 		text-transform: capitalize;
 	}
+
 	.tick-group {
 		margin: 0 0.25em;
 		text-align: center;
 	}
+
 	.tick-flip-panel {
 		color: #ffffff;
 		background-color: #fcb040;
 	}
+
 	.tick-group {
 		margin: 0 0.2em;
 		text-align: center;
 	}
 }
+
 //counter in home page
 
 .enter-to-event {
@@ -1691,6 +1750,7 @@ a.choose-now{
 	bottom: 30px;
 	width: 100%;
 	text-align: center;
+
 	.btn-danger {
 		color: #ffffff;
 		background-color: transparent;
@@ -1709,6 +1769,7 @@ a.choose-now{
 		height: 40px;
 		object-fit: cover;
 	}
+
 	a {
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -1731,16 +1792,19 @@ a.choose-now{
 			margin-bottom: 25px;
 		}
 	}
+
 	a.choose-now {
 		padding: 5px 10px;
 		margin: 10px auto 10px 2%;
 	}
+
 	.osahan-nav-mid a.nav-link {
 		font-size: 12px;
 	}
 }
 
 @media (max-width: 992px) {
+
 	.eheader div .btn,
 	.info-header div .btn {
 		margin: 13px 5px 0 0;
@@ -1763,8 +1827,10 @@ a.choose-now{
 			font-size: 18px;
 		}
 	}
+
 	.about-us {
 		padding-bottom: 150px !important;
+
 		.video-icon {
 			margin: auto;
 			width: 450px;
@@ -1774,6 +1840,7 @@ a.choose-now{
 }
 
 @media (max-width: 768px) {
+
 	//header
 	.topbar {
 		.navbar-brand {
@@ -1800,6 +1867,7 @@ a.choose-now{
 	.team-card {
 		margin-bottom: 25px;
 	}
+
 	#panorama {
 		height: 400px;
 	}
@@ -1810,6 +1878,7 @@ a.choose-now{
 }
 
 @media (max-width: 575px) {
+
 	//header
 	.topbar {
 		.navbar-brand {
@@ -1831,22 +1900,27 @@ a.choose-now{
 	.topbar .nav-item .nav-link {
 		padding: 0 5px;
 	}
+
 	.about-us {
 		.video-icon {
 			width: 380px;
 			height: 380px;
 		}
+
 		.about-image {
 			width: 380px;
 			height: 380px;
 		}
+
 		.about-video {
 			width: 150px;
 			height: 150px;
 		}
 	}
+
 	.tick {
 		left: calc(50% - 104px);
+
 		.tick-content {
 			font-size: 18px;
 		}
@@ -1859,225 +1933,20 @@ a.choose-now{
 			display: block;
 			text-align: center;
 		}
+
 		.video-icon {
 			width: 300px;
 			height: 300px;
 		}
+
 		.about-image {
 			width: 300px;
 			height: 300px;
 		}
+
 		.about-video {
 			width: 120px;
 			height: 120px;
 		}
-	}
-}
-// thabet style 
-.panorama-page {
-	@media (max-width:768px) {
-	  height: 100vh !important;	
-	}
-	header{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 100;
-		padding-top: 40px;
-		padding-right: 20px;
-	  .hemberger {
-			background: #6c3e2c;
-			color: #fff;
-			border-radius: 50%;
-			padding: 10px;
-			width: 40px;
-			height: 40px;
-			text-align: center;
-			display: none;
-			@media (max-width: 767px)
-				{
-					display: block;
-					z-index: 999999;
-				}
-		}
-	}
-	.bar 
-	{
-		text-align: end;
-		@media (max-width: 767px) {
-			text-align: left;
-		}
-		.t-login{
-			background-color: #fff;
-			display: inline;
-			border-radius: 20px;
-			padding: 15px 20px;
-			padding-right: 0px;
-			span#timer-action {
-				background: #6c3e2c;
-				color: #fff;
-				text-transform: uppercase;
-				padding: 15px 12px;
-				margin-left: 5px;
-				border-bottom-right-radius: 20px;
-				border-top-right-radius: 20px;
-				cursor: pointer;
-			}
-		}
-	}
-
-	.menu {
-		position: absolute;
-		bottom: 170px;
-		right: 20vw;
-		background: rgb(108 62 44 / 60%);
-		display: inline-block;
-		padding: 0 20px;
-		border-radius: .25em;
-		margin-bottom: 10px;
-		display: none;
-		transition: all .3s ease-in-out;
-		z-index: 1000;
-				@media (max-width: 767px)
-				{
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-					transition: .8s;
-					transform: translateX(100%);
-			   }
-	
-		ul {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			list-style: none;
-			margin: 10px 0px;
-			li {
-				list-style: unset;
-				margin: 5px 0px;
-				a{
-					color: #fff;
-					transition: .3s;
-					padding: 10px 20px;
-					border-radius: 20px;
-					font-size: 20px;
-					&:hover{
-						background: #6c3e2c;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-		
-	}
-	.toggle-flex	{
-		@media (max-width: 767px){
-			display: flex;
-			transform: translateX(0);
-				}
-			}
-	footer{
-		 
-			position: absolute;
-			bottom: 0px;
-			width: 100%;
-			z-index: 100;
-	    .prev-slide{
-			background: #6c3e2c;
-			color: #fff;
-			padding: 8px 20px;
-			border-radius: 20px;
-			text-align: center;
-			cursor: pointer;
-			a{
-				color: #fff;
-			}
-			@media (max-width: 767px){
-				span {
-					  display: none;
-				  }	
-			  }
-			i{
-				@media(max-width:767px){
-					position: absolute;
-					left: 30px;
-					bottom: 10px;
-				}
-			}  
-
-		}
-	
-		.footer-menu {
-			background: #E5E5E3;
-			padding: 5px 12px;
-			border-radius: 20px;
-			a{
-				display: inline;
-				width: 100%;
-				padding: 10px 0px;
-			}
-		}
-		div {
-			span {
-				padding: 0px 10px;
-			}
-			@media (max-width: 767px){
-              span {
-					display: none;
-				}	
-			}
-		}
-		.camera {
-			span {
-				@media (max-width: 767px){
-					display: block;
-				}
-			}
-		}
-
-		button#btn-mneu {
-			background:  #6c3e2c;
-			padding: 5px 20px;
-			border-radius: 20px;
-			font-size: 22px;
-		}
-	}
-	.toggle {
-		display: inline-block;
-		transition: all .3s ease-in-out;
-	}
-	.d-bottom{
-		 color: #fff;
-		 margin:20px 0px;
-	}
-	
-		.mobile{
-		@media (max-width: 767px){
-			display: none;
-		}
-		
-	}
-
-}
-.modal-backdrop
-	{
-		z-index: 9;
-	}
-	#mapModel{
-	.modal-dialog {
-		@media (min-width: 576px)
-	   {
-		max-width: 725px;
-		margin: 1.75rem auto;
-	   }
 	}
 }

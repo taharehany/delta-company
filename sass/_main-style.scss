@@ -8,10 +8,6 @@ a {
 	border-color: $main_color;
 }
 
-p {
-	margin-bottom: 0;
-}
-
 .main-title {
 	margin-bottom: 30px;
 
@@ -22,6 +18,10 @@ p {
 		color: #222;
 		position: relative;
 		text-transform: uppercase;
+
+		.diff-color {
+			color: $main_color
+		}
 
 		.line {
 			background-color: $main_color;
@@ -47,6 +47,12 @@ p {
 	color: $dark_color;
 	text-transform: capitalize;
 	text-align: center
+}
+
+.alert {
+	strong {
+		margin-inline-end: 5px;
+	}
 }
 
 .main-breadcrumb {
@@ -110,7 +116,7 @@ body {
 		position: relative;
 		min-height: 100vh;
 		width: 100%;
-		// overflow: hidden;
+		overflow: hidden;
 	}
 }
 
@@ -138,7 +144,7 @@ header {
 					color: #fff;
 
 					&:hover {
-						color: $dark_color
+						color: $main_color
 					}
 				}
 			}
@@ -148,20 +154,31 @@ header {
 			display: flex;
 			align-items: center;
 
-			.make {
+			.login,
+			.register {
 				&.btn {
 					border: 1px solid #fff;
 					@include borderRadius(20px);
 					font-size: 14px;
-					margin-inline-start: 15px;
+					margin-inline-start: 10px;
 					color: #fff;
 					text-transform: capitalize;
 					@include transition(all ease 0.3s);
+					padding: 4px 20px;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						background-color: #fff;
 						color: $main_color;
+						box-shadow: none;
 					}
+				}
+			}
+
+			.register {
+				&.btn {
+					background-color: $main_color;
+					border-color: $main_color;
 				}
 			}
 
@@ -244,8 +261,8 @@ header {
 							background-color: $main_color;
 							color: #fff;
 							@include borderRadius(20px);
-							padding: 5px 20px;
-							font-size: 15px;
+							padding: 3px 15px;
+							font-size: 14px;
 							text-transform: capitalize;
 							white-space: nowrap;
 
@@ -257,14 +274,112 @@ header {
 				}
 			}
 		}
+
+		.login-modal,
+		.register-modal,
+		.forget-password-modal {
+			.modal-header {
+				h5 {
+					text-transform: capitalize;
+				}
+
+				.btn-close {
+					&:focus {
+						box-shadow: none;
+					}
+				}
+			}
+
+			.modal-body {
+				padding: 2rem 1rem;
+			}
+
+			.form-group {
+				margin-bottom: 15px;
+
+				.btn {
+					background-color: $main_color;
+					padding: 10px 45px;
+					display: inline-block;
+					@include borderRadius(10px);
+					border-color: #fff;
+					box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+					@include transition(all ease 0.3s);
+
+					&:hover {
+						box-shadow: none;
+					}
+				}
+
+				.input-group-text {
+					background-color: $main_color;
+					color: #fff;
+					font-size: 16px;
+					border: none;
+				}
+			}
+
+			.form-control {
+				border: none;
+				@include transition(all ease 0.3s);
+				color: #333;
+				background-color: #f8f8f8;
+				font-size: 14px;
+				padding: 15px;
+				border-bottom: 1px solid transparent;
+				@include borderRadius(5px);
+
+				&:hover,
+				&:focus {
+					box-shadow: none;
+					outline: none;
+					border-color: $main_color;
+				}
+
+				&::placeholder {
+					color: #79859c;
+				}
+			}
+
+			.toggle-link {
+				p {
+					color: #515151;
+					line-height: 1;
+					font-size: 16px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-bottom: 15px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+
+				.btn {
+					padding: 0;
+					color: $dark_color;
+					border: none;
+					line-height: 1;
+					margin-inline-start: 5px;
+					text-transform: capitalize;
+
+					&:hover,
+					&:focus {
+						box-shadow: none;
+						outline: none;
+					}
+				}
+			}
+		}
 	}
 
 	.navbar {
 		padding: 0;
 		background-color: #fff !important;
 		@include transition(all ease 0.1s);
-		// position: fixed;
-		// top: $topbar_height;
+		//position: fixed;
+		//top: $topbar_height;
 		width: 100%;
 		z-index: 99;
 
@@ -480,7 +595,7 @@ header {
 
 					.dropdown-menu {
 						.dropdown-item {
-							// padding: 8px 0;
+							//padding: 8px 0;
 						}
 					}
 
@@ -561,7 +676,6 @@ section.main-slider {
 						border: 1px solid transparent;
 						@include borderRadius(20px);
 						font-size: 14px;
-						margin-inline-start: 15px;
 						color: $main_color;
 						text-transform: capitalize;
 						@include transition(all ease 0.3s);
@@ -612,6 +726,27 @@ section.main-slider {
 		}
 	}
 
+	.owl-theme {
+		.owl-nav [class*=owl-] {
+			@include transition(all ease 0.3s);
+
+			&:hover {
+				background: $main_color;
+			}
+		}
+
+		.owl-dots {
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+
+			.owl-dot.active span,
+			.owl-theme .owl-dots .owl-dot:hover span {
+				background: $main_color;
+			}
+		}
+	}
+
 	.owl-nav {
 		margin-top: 0;
 		position: absolute;
@@ -643,17 +778,37 @@ section.main-slider {
 			left: 15px;
 		}
 	}
-
-	.owl-theme .owl-nav [class*=owl-] {
-		@include transition(all ease 0.3s);
-
-		&:hover {
-			background: $main_color;
-		}
-	}
 }
 
 //main slider
+
+//search
+section.search {
+	padding: 70px 0 0;
+
+	.input-group {
+		.form-control {
+			@include borderRadius(25px);
+			padding: 10px 25px;
+
+			&:focus {
+				box-shadow: none;
+				border-color: $main_color;
+			}
+		}
+		.btn {
+			@include borderRadius(25px);
+			border-color: $main_color;
+			background-color: $main_color;
+			color: #fff;
+			&:hover {
+				background-color: $dark_color;
+				border-color: $dark_color;
+			}
+		}
+	}
+}
+//search
 
 //categories
 section.categories {
@@ -768,7 +923,8 @@ section.recipes {
 				font-weight: 600;
 				@include transition(all linear 0.3s);
 
-				&:hover, &:focus {
+				&:hover,
+				&:focus {
 					text-decoration: underline;
 				}
 			}
@@ -827,7 +983,7 @@ section.instagram {
 	padding: $padding_section;
 
 	.instagram-content {
-		.col {
+		.box {
 			padding: 0;
 		}
 
@@ -837,6 +993,16 @@ section.instagram {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+			}
+
+			.image {
+				width: 100%;
+
+				img {
+					@extend %fitimage;
+					height: 270px;
+					width: 100%;
+				}
 			}
 
 			.icon {
@@ -928,7 +1094,7 @@ footer {
 	}
 
 	.footer-content {
-		// border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		//border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		padding-bottom: 30px;
 
 		.footer-logo {
@@ -945,6 +1111,7 @@ footer {
 			p {
 				color: #c9c9c9;
 				font-size: 14px;
+				margin-bottom: 15px;
 			}
 		}
 

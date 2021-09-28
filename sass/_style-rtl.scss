@@ -1,8 +1,16 @@
 /** rtl styles **/
 html[dir=rtl] {
+    @import "plugins_css/bootstrap.rtl.min";
+    
     body {
         font-family: "Tajawal", sans-serif;
     }
+
+    a {
+        color: initial;
+        text-decoration: none;
+    }
+
     .me-auto {
         margin-left: auto !important;
         margin-right: 0 !important;
@@ -44,16 +52,13 @@ html[dir=rtl] {
         left: 0
     }
 
-    .hero-header {
-        .hero-content {
-            .hero-search {
-                .select-area {
-                    .dk-selected {
-                        padding: 10px 0 10px 1.5em;
-                    }
-                }
-            }
-        }
+    .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+    .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
 
     .login-register {
@@ -79,36 +84,9 @@ html[dir=rtl] {
         margin-left: 0;
     }
 
-    section.featured-properties {
-        direction: ltr;
-        .featured-slider {
-            .item {
-                .item-details {
-                    opacity: 1;
-                    direction: rtl;
-                }
-            }
-            .slick-prev {
-                right: 15px;
-                left: auto
-            }
-            .slick-next {
-                left: 15px;
-                right: auto
-            }
-        }
-    }
-    .single-property-page {
-        .single-property-images {
-            direction: ltr;
-        }
-        .slick-prev {
-            right: 15px;
-            left: auto
-        }
-        .slick-next {
-            left: 15px;
-            right: auto
+    .form-control {
+        &[type="number"], &[type="email"] {
+            direction: rtl !important;
         }
     }
 
@@ -120,16 +98,6 @@ html[dir=rtl] {
     .alert-dismissible .btn-close {
         right: auto;
         left: 0
-    }
-
-    .breadcrumb-item+.breadcrumb-item::before {
-        float: right;
-        padding-left: .5rem;
-    }
-
-    .invalid-tooltip {
-        left: 0;
-        right: auto
     }
 
     .accordion-button::after {

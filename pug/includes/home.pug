@@ -7,43 +7,52 @@ section(class="main-slider")
                 h3 title of food type
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore nobis illum. Harum a voluptates in eius tenetur quidem
                 div(class="item-btn")
-                    a(href="properties.html" class="btn") view all
+                    a(href="single-recipe.html" class="btn") read more
         div(class="item")
             img(src="images/slider/02.jpg", class="img-fluid owl-lazy" data-src="images/slider/02.jpg" alt="")
             div(class="item-details")
                 h3 title of food type
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore nobis illum. Harum a voluptates in eius tenetur quidem
                 div(class="item-btn")
-                    a(href="properties.html" class="btn") view all
+                    a(href="single-recipe.html" class="btn") read more
         div(class="item")
             img(src="images/slider/03.jpg", class="img-fluid owl-lazy" data-src="images/slider/03.jpg" alt="")
             div(class="item-details")
                 h3 title of food type
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore nobis illum. Harum a voluptates in eius tenetur quidem
                 div(class="item-btn")
-                    a(href="properties.html" class="btn") view all
+                    a(href="single-recipe.html" class="btn") read more
         div(class="item")
             img(src="images/slider/04.jpg", class="img-fluid owl-lazy" data-src="images/slider/04.jpg" alt="")
             div(class="item-details")
                 h3 title of food type
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore nobis illum. Harum a voluptates in eius tenetur quidem
                 div(class="item-btn")
-                    a(href="properties.html" class="btn") view all
+                    a(href="single-recipe.html" class="btn") read more
         div(class="item")
             img(src="images/slider/01.jpg", class="img-fluid owl-lazy" data-src="images/slider/01.jpg" alt="")
             div(class="item-details")
                 h3 title of food type
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore nobis illum. Harum a voluptates in eius tenetur quidem
                 div(class="item-btn")
-                    a(href="properties.html" class="btn") view all
+                    a(href="single-recipe.html" class="btn") read more
 //main slider
+
+//search
+section(class="search")
+    div(class="container")
+        form(action="" method="") 
+            div(class="input-group mb-3")
+                input(type="search", class="form-control", id="search-input" placeholder="Put text to search", aria-label="Recipient's username", aria-describedby="search-button")
+                button(class="btn btn-outline-secondary", id="search-button" type="submit") search now
+//search
 
 //categories
 section(class="categories")
     div(class="container")
         div(class="categories-content")
             div(class="row")
-                div(class="col-lg-3")
+                div(class="col-lg-3 col-md-6")
                     div(class="category-outer")
                         a(href="#!") 
                             div(class="category-inner")
@@ -52,7 +61,7 @@ section(class="categories")
                                 div(class="text")
                                     h3(class="subtitle") breakfast
                                     p(class="sum") 252 post
-                div(class="col-lg-3")
+                div(class="col-lg-3 col-md-6")
                     div(class="category-outer")
                         a(href="#!") 
                             div(class="category-inner")
@@ -61,7 +70,7 @@ section(class="categories")
                                 div(class="text")
                                     h3(class="subtitle") cuisine
                                     p(class="sum") 252 post
-                div(class="col-lg-3")
+                div(class="col-lg-3 col-md-6")
                     div(class="category-outer")
                         a(href="#!") 
                             div(class="category-inner")
@@ -70,7 +79,7 @@ section(class="categories")
                                 div(class="text")
                                     h3(class="subtitle") Quick Food
                                     p(class="sum") 252 post
-                div(class="col-lg-3")
+                div(class="col-lg-3 col-md-6")
                     div(class="category-outer")
                         a(href="#!") 
                             div(class="category-inner")
@@ -79,7 +88,7 @@ section(class="categories")
                                 div(class="text")
                                     h3(class="subtitle") dairy
                                     p(class="sum") 252 post
-                div(class="col-lg-3")
+                div(class="col-lg-3 col-md-6")
                     div(class="category-outer")
                         a(href="#!") 
                             div(class="category-inner")
@@ -88,7 +97,7 @@ section(class="categories")
                                 div(class="text")
                                     h3(class="subtitle") pancakes
                                     p(class="sum") 252 post
-                div(class="col-lg-3")
+                div(class="col-lg-3 col-md-6")
                     div(class="category-outer")
                         a(href="#!") 
                             div(class="category-inner")
@@ -97,7 +106,7 @@ section(class="categories")
                                 div(class="text")
                                     h3(class="subtitle") pizza
                                     p(class="sum") 252 post
-                div(class="col-lg-3")
+                div(class="col-lg-3 col-md-6")
                     div(class="category-outer")
                         a(href="#!") 
                             div(class="category-inner")
@@ -106,7 +115,7 @@ section(class="categories")
                                 div(class="text")
                                     h3(class="subtitle") desserts
                                     p(class="sum") 252 post
-                div(class="col-lg-3")
+                div(class="col-lg-3 col-md-6")
                     div(class="category-outer")
                         a(href="#!") 
                             div(class="category-inner")
@@ -126,7 +135,7 @@ section(class="recipes")
             p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore sunt nobis consectetur ab aut, temporibus magnam voluptates corporis reiciendis laudantium vel, nihil itaque at id, maxime expedita exercitationem tenetur suscipit.
         div(class="recipes-content")
             div(class="row")
-                div(class="col-lg-4")
+                div(class="box col-lg-4 col-md-6")
                     div(class="recipe-box")
                         div(class="image")
                             a(href="single-recipe.html") 
@@ -143,7 +152,7 @@ section(class="recipes")
                                 div(class="single")
                                     i(class="bi bi-eye")
                                     span 25 views
-                div(class="col-lg-4")
+                div(class="box col-lg-4 col-md-6")
                     div(class="recipe-box")
                         div(class="image")
                             a(href="single-recipe.html") 
@@ -160,7 +169,7 @@ section(class="recipes")
                                 div(class="single")
                                     i(class="bi bi-eye")
                                     span 25 views
-                div(class="col-lg-4")
+                div(class="box col-lg-4 col-md-6")
                     div(class="recipe-box")
                         div(class="image")
                             a(href="single-recipe.html") 
@@ -177,7 +186,7 @@ section(class="recipes")
                                 div(class="single")
                                     i(class="bi bi-eye")
                                     span 25 views
-                div(class="col-lg-4")
+                div(class="box col-lg-4 col-md-6")
                     div(class="recipe-box")
                         div(class="image")
                             a(href="single-recipe.html") 
@@ -194,7 +203,7 @@ section(class="recipes")
                                 div(class="single")
                                     i(class="bi bi-eye")
                                     span 25 views
-                div(class="col-lg-4")
+                div(class="box col-lg-4 col-md-6")
                     div(class="recipe-box")
                         div(class="image")
                             a(href="single-recipe.html") 
@@ -211,7 +220,7 @@ section(class="recipes")
                                 div(class="single")
                                     i(class="bi bi-eye")
                                     span 25 views
-                div(class="col-lg-4")
+                div(class="box col-lg-4 col-md-6")
                     div(class="recipe-box")
                         div(class="image")
                             a(href="single-recipe.html") 
@@ -235,42 +244,42 @@ section(class="instagram")
     div(class="container")
         div(class="instagram-content")
             div(class="row justify-content-center")
-                div(class="col col-lg-4")
+                div(class="box col-lg-4 col-md-6 col-sm-6")
                     div(class="instagram-box")
                         a(href="#!") 
                             div(class="image")
                                 img(src="images/insta/01.jpg", class="img-fluid" alt="")
                             div(class="icon")
                                 i(class="bi bi-instagram")
-                div(class="col col-lg-4")
+                div(class="box col-lg-4 col-md-6 col-sm-6")
                     div(class="instagram-box")
                         a(href="#!") 
                             div(class="image")
                                 img(src="images/insta/02.jpg", class="img-fluid" alt="")
                             div(class="icon")
                                 i(class="bi bi-instagram")
-                div(class="col col-lg-4")
+                div(class="box col-lg-4 col-md-6 col-sm-6")
                     div(class="instagram-box")
                         a(href="#!") 
                             div(class="image")
                                 img(src="images/insta/03.jpg", class="img-fluid" alt="")
                             div(class="icon")
                                 i(class="bi bi-instagram")
-                div(class="col col-lg-4")
+                div(class="box col-lg-4 col-md-6 col-sm-6")
                     div(class="instagram-box")
                         a(href="#!") 
                             div(class="image")
                                 img(src="images/insta/04.jpg", class="img-fluid" alt="")
                             div(class="icon")
                                 i(class="bi bi-instagram")
-                div(class="col col-lg-4")
+                div(class="box col-lg-4 col-md-6 col-sm-6")
                     div(class="instagram-box")
                         a(href="#!") 
                             div(class="image")
                                 img(src="images/insta/05.jpg", class="img-fluid" alt="")
                             div(class="icon")
                                 i(class="bi bi-instagram")
-                div(class="col col-lg-4")
+                div(class="box col-lg-4 col-md-6 col-sm-6")
                     div(class="instagram-box")
                         a(href="#!") 
                             div(class="image")

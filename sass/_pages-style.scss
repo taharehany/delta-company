@@ -1,3 +1,77 @@
+//about page
+section.about-page {
+    padding: $padding_section;
+    position: relative;
+
+    .main-title {
+        h2 {
+            text-transform: none;
+            margin-bottom: 25px;
+        }
+    }
+
+    .about-content {
+
+        .left-pos,
+        .right-pos {
+            position: absolute;
+            -webkit-animation: up_down 4s infinite alternate;
+            animation: up_down 4s infinite alternate;
+        }
+
+        .left-pos {
+            left: 0;
+            -webkit-animation: up_down 2s infinite alternate-reverse;
+            animation: up_down 2s infinite alternate-reverse;
+        }
+
+        .right-pos {
+            right: -150px;
+        }
+
+        .about-btn {
+            text-align: center;
+
+            .btn {
+                background-color: $main_color;
+                padding: 10px 30px;
+                display: inline-block;
+                border-color: #fff;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                font-size: 18px;
+                @include borderRadius(10px);
+                @include transition(all ease 0.3s);
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    @-webkit-keyframes up_down {
+        0% {
+            @include transform(translateY(0));
+        }
+
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes up_down {
+        0% {
+            @include transform(translateY(0));
+        }
+
+        100% {
+            @include transform(translateY(-20px));
+        }
+    }
+}
+
+//about page
+
 //recipes page
 section.recipes-page {
     .sidebar-widget {
@@ -121,7 +195,7 @@ section.recipes-page {
                 display: inline-block;
                 font-size: 13px;
                 padding: 3px 12px;
-                // border: 1px solid rgba(0, 0, 0, 0.1);
+                //border: 1px solid rgba(0, 0, 0, 0.1);
                 color: #fff;
                 background-color: $main_color;
                 margin: 2px 2px 2px 0;
@@ -374,8 +448,8 @@ section.single-recipe-page {
 
     .sidebar-widget {
         .relative-recipes {
-            // background-color: #f7f7f7;
-            // padding: 15px;
+            //background-color: #f7f7f7;
+            //padding: 15px;
             @include borderRadius(10px);
             margin-bottom: 25px;
 
@@ -396,13 +470,14 @@ section.single-recipe-page {
                         @include borderRadius(10px);
                     }
                 }
+
                 .text {
                     position: absolute;
                     width: 100%;
                     height: 100%;
                     left: 0;
                     top: 0;
-                    background-color: rgba(0,0,0,.5);
+                    background-color: rgba(0, 0, 0, .5);
                     padding: 20px;
                     text-align: center;
                     display: flex;
@@ -441,7 +516,7 @@ section.single-recipe-page {
                 display: inline-block;
                 font-size: 13px;
                 padding: 3px 12px;
-                // border: 1px solid rgba(0, 0, 0, 0.1);
+                //border: 1px solid rgba(0, 0, 0, 0.1);
                 color: #fff;
                 background-color: $main_color;
                 margin: 2px 2px 2px 0;
@@ -467,3 +542,432 @@ section.single-recipe-page {
 }
 
 //single recipe page
+
+//contact page
+section.contact {
+    padding: $padding_section;
+
+    //.main-title {
+
+    //	h2,
+    //	p {
+    //		color: #fff;
+    //	}
+    //}
+
+    .info-area {
+        margin-bottom: 50px;
+        z-index: 9;
+        position: relative;
+        //max-width: 1000px;
+        margin: auto;
+        margin-bottom: 25px;
+
+        .info-box {
+            text-align: center;
+            background-color: #fbfbfb;
+            @include borderRadius(10px);
+            padding: 40px 20px;
+
+            h4 {
+                font-size: 18px;
+                color: #3a3d45;
+                font-weight: 600;
+            }
+
+            i {
+                font-size: 40px;
+                text-align: center;
+                display: block;
+                margin: auto;
+                color: $main_color;
+                margin-bottom: 15px;
+            }
+
+            span {
+                display: block;
+                color: #3a3d45;
+                font-size: 14px;
+            }
+
+            a {
+                color: #3a3d45;
+                text-transform: capitalize;
+                display: block;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .form-area {
+        //max-width: 1000px;
+        margin: auto;
+        background-color: rgb(133 183 57 / 16%);
+        padding: 50px;
+        margin-bottom: 1px;
+        @include borderRadius(10px);
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+
+            .form-content {
+                .form-group {
+                    margin-bottom: 15px;
+
+                    .btn {
+                        background-color: $dark_color;
+                        padding: 10px 45px;
+                        display: inline-block;
+                        @include borderRadius(10px);
+                        border-color: #fff;
+                        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                        color: #fff;
+                    }
+                }
+
+                .form-control {
+                    border: none;
+                    @include transition(all ease 0.3s);
+                    color: #333;
+                    background-color: #fff;
+                    font-size: 14px;
+                    padding: 15px;
+                    border-bottom: 1px solid transparent;
+                    @include borderRadius(5px);
+
+                    &:hover,
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                        border-color: #5a5a5a;
+                    }
+
+                    &::placeholder {
+                        color: #79859c;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                }
+            }
+
+            .successfully {
+                color: #ffffff;
+                padding: 9px 15px;
+                font-size: 16px;
+                margin-bottom: 0;
+                @include borderRadius(20px);
+                margin-top: 25px;
+                box-shadow: 1px 1px 25px -15px #646464;
+                background-color: $main_color;
+            }
+        }
+    }
+}
+
+//contact page
+
+
+//notifications
+section.notifications {
+    padding: $padding_section;
+    background-color: #F0F1F3;
+
+    .notifications-content {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+
+        .notifications-box {
+            width: 100%;
+            border-inline-start: 3px solid $main_color;
+
+            h4 {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 0
+            }
+
+            .time {
+                font-size: 12px;
+                color: #000
+            }
+
+            .alert {
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                align-items: center;
+                padding-right: 0.3rem 1.5rem;
+                margin-bottom: 0;
+
+                .btn-close {
+                    font-size: 12px;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .image {
+                margin-inline-end: 15px;
+                @include borderRadius(50%);
+                overflow: hidden;
+                height: 60px;
+                width: 60px;
+
+                img {
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+//notifications
+
+//profile
+section.profile {
+    padding: $padding_section;
+    background-color: #fbfbfb;
+
+    .profile-content {
+        .tab-content {
+            .subtitle {
+                text-transform: capitalize;
+                font-size: 18px;
+                margin-bottom: 15px
+            }
+
+            .alert {
+                button {
+                    &:focus {
+                        box-shadow: none
+                    }
+                }
+            }
+        }
+
+        .profile-info {
+            overflow: hidden;
+            @include borderRadius(15px);
+            background-color: $main_color;
+            text-align: center;
+            padding: 40px;
+            margin-bottom: 20px;
+
+            .image {
+                width: 80px;
+                height: 80px;
+                margin: auto;
+                @include borderRadius(50%);
+                overflow: hidden;
+                border: 5px solid #fff;
+                margin-bottom: 20px;
+
+                img {
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            h3 {
+                font-size: 18px;
+                color: #fff;
+                font-weight: 600;
+            }
+
+            p {
+                color: #efefef;
+                font-size: 14px;
+                text-transform: capitalize
+            }
+
+            .btn {
+                @include borderRadius(20px);
+                padding: 8px 25px;
+                background-color: $dark_color;
+                border-color: $dark_color
+            }
+        }
+
+        .nav {
+            padding: 25px;
+            @include borderRadius(15px);
+
+            .nav-link {
+                text-align: initial;
+                color: $dark_color;
+                font-size: 15px;
+                text-transform: capitalize;
+
+                &.active {
+                    background-color: $main_color;
+                    color: #fff
+                }
+            }
+        }
+
+        form {
+            padding: 25px;
+            @include borderRadius(15px);
+            background-color: #fff;
+
+            .form-group {
+                margin-bottom: 15px;
+
+                .btn {
+                    background-color: $main_color;
+                    padding: 10px 25px;
+                    display: inline-block;
+                    @include borderRadius(15px);
+                    border-color: #fff;
+                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                    text-transform: capitalize;
+                }
+            }
+
+            .form-control {
+                border: none;
+                @include transition(all ease 0.3s);
+                color: #333;
+                background-color: #f6f6f6;
+                font-size: 14px;
+                padding: 15px;
+                border-bottom: 1px solid transparent;
+                @include borderRadius(5px);
+
+                &:hover,
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                    border-color: $main_color;
+                }
+
+                &::placeholder {
+                    color: #79859c;
+                }
+
+                &:not(:disabled):not([readonly])::file-selector-button {
+                    background-color: #f6f6f6;
+                }
+            }
+        }
+
+        //table page
+        .table-area {
+            padding: 5px;
+
+            table {
+                overflow: visible;
+                border-collapse: separate;
+                border-spacing: 0 10px;
+                min-width: 700px;
+
+                .recipe-name {
+                    display: flex;
+                    align-items: center;
+                    color: gray;
+
+                    &:hover {
+                        color: $main_color
+                    }
+                }
+
+                .image {
+                    width: 35px;
+                    min-width: 35px;
+                    height: 35px;
+                    @include borderRadius(50%);
+                    overflow: hidden;
+                    margin-inline-end: 10px;
+
+                    img {
+                        object-fit: cover;
+                        -o-object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .remove {
+                    background-color: $main_color;
+                    @include borderRadius(20px);
+                    color: #fff;
+                    text-transform: capitalize;
+                    font-size: 12px;
+                    padding: 3px 10px;
+                }
+
+                .spacer {
+                    height: 10px;
+                    background: transparent;
+                }
+
+                .tr-shadow {
+                    @include boxshadow(0px 10px 20px 0px rgba(0, 0, 0, 0.03));
+                }
+
+                &.table {
+                    margin-bottom: 0;
+
+                    thead {
+                        th {
+                            font-size: 16px;
+                            color: #000;
+                            text-transform: capitalize;
+                            border: none;
+                            vertical-align: middle;
+                            padding: 5px 20px;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    tbody {
+                        background: #fff;
+
+                        td {
+                            font-size: 14px;
+                            color: #808080;
+                            vertical-align: middle;
+                            padding: 10px 20px;
+                            border: none;
+
+                            &.desc {
+                                color: #00aeef;
+                            }
+                        }
+
+                        tr {
+                            box-shadow: 0px 2px 5px 0 rgb(0 0 0 / 3%);
+
+                            &.odd,
+                            &.even {
+                                background-color: #fff;
+                                --bs-table-accent-bg: unset;
+                            }
+
+                            &.even {
+                                background-color: #efefef;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//profile

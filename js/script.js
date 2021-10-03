@@ -28,7 +28,7 @@ $(document).ready(function () {
   if (toastTrigger) {
     toastTrigger.addEventListener('click', function () {
       let toast = new bootstrap.Toast(toastLiveExample)
-      toast.show()
+      toast.show();
     })
   }
 

@@ -30,6 +30,11 @@ html[dir=rtl] {
         padding-left: calc(1.5em + .75rem);
         background-position: left calc(.375em + .1875rem) center;
     }
+    
+    .form-control.is-valid, .was-validated .form-control:valid {
+        padding-left: calc(1.5em + .75rem);
+        background-position: left calc(.375em + .1875rem) center;
+    }
 
     .dropdown-toggle {
         &::after {

@@ -20,5 +20,21 @@ html(lang="ar" dir="rtl")
             include includes/header.pug
             block home_block 
                 include includes/home.pug
+            
+            //toast notification adding
+            div(class="position-fixed bottom-0 end-0 p-3", style="z-index: 11")
+                div(class="toast", id="addFavToast" role="alert", aria-live="assertive", aria-atomic="true")
+                    div(class="toast-header")
+                        span(class="me-auto") تم الإضافة إلى المفضلة
+                        button(type="button", class="btn-close btn-close-white", data-bs-dismiss="toast", aria-label="Close")
+            //toast notification adding
+            //toast notification removing
+            div(class="position-fixed bottom-0 end-0 p-3", style="z-index: 11")
+                div(class="toast", id="removeFavToast" role="alert", aria-live="assertive", aria-atomic="true")
+                    div(class="toast-header")
+                        span(class="me-auto") تم الحذف من المفضلة
+                        button(type="button", class="btn-close btn-close-white", data-bs-dismiss="toast", aria-label="Close")
+            //toast notification removing
+
             include includes/footer.pug
         include includes/scripts.pug

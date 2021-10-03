@@ -5,7 +5,7 @@ block website_title
 
 block home_block
     //breadcrumb
-    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url="../images/bgs/broad.jpg')")
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
         div(class="container")
             div(class="breadcrumb-title")
                 h2 profile
@@ -21,7 +21,11 @@ block home_block
         div(class="container")
             div(class="profile-content")
                 div(class="row")
-                    div(class="col-lg-3 col-md-4")
+                    div(class="col-lg-3 col-md-5 flex-column d-flex d-md-block")
+                        div(class="nav flex-column nav-pills shadow", id="profile_tabs" role="tablist", aria-orientation="vertical")
+                            button(class="nav-link active", id="v-pills-1-tab" data-bs-toggle="pill", data-bs-target="#v-pills-1", type="button", role="tab", aria-controls="v-pills-1", aria-selected="false") edit profile
+                            button#v-pills-2-tab(class="nav-link", data-bs-toggle="pill", data-bs-target="#v-pills-2", type="button", role="tab", aria-controls="v-pills-2", aria-selected="false") change password
+                            button#v-pills-3-tab(class="nav-link", data-bs-toggle="pill", data-bs-target="#v-pills-3", type="button", role="tab", aria-controls="v-pills-3", aria-selected="false") favorite recipes
                         div(class="profile-info shadow") 
                             div(class="image") 
                                 img(src="images/profile.png", class="img-fluid" alt="")
@@ -29,18 +33,14 @@ block home_block
                                 h3 mohamed ahmed
                                 p egypt, cairo
                                 a(href="#!" class="btn btn-primary") logout
-                        div(class="nav flex-column nav-pills shadow", id="profile_tabs" role="tablist", aria-orientation="vertical")
-                            button(class="nav-link active", id="v-pills-1-tab" data-bs-toggle="pill", data-bs-target="#v-pills-1", type="button", role="tab", aria-controls="v-pills-1", aria-selected="false") edit profile
-                            button#v-pills-2-tab(class="nav-link", data-bs-toggle="pill", data-bs-target="#v-pills-2", type="button", role="tab", aria-controls="v-pills-2", aria-selected="false") change password
-                            button#v-pills-3-tab(class="nav-link", data-bs-toggle="pill", data-bs-target="#v-pills-3", type="button", role="tab", aria-controls="v-pills-3", aria-selected="false") favorite recipes
-                    div(class="col-lg-9 col-md-8")
+                    div(class="col-lg-9 col-md-7")
                         form(class="g-3 shadow" action="" novalidate)
                             div(class="tab-content" id="profile_tabsContent")
                                 div(class="tab-pane fade show active", id="v-pills-1" role="tabpanel", aria-labelledby="v-pills-1-tab") 
                                     div(class="row")
                                         div(class="col-lg-12")
                                             h3(class="subtitle") edit profile
-                                            div(class="alert alert-warning alert-dismissible fade show", role="alert")
+                                            div(class="alert alert-danger alert-dismissible fade show", role="alert")
                                                 strong Holy guacamole!
                                                 | You should check in on some of those fields below.
                                                 button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")

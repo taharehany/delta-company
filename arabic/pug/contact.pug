@@ -1,19 +1,19 @@
 extends index
 
 block website_title
-    title #{website_title} | contact
+    title #{website_title} | تواصل معنا
 
 block home_block
     //breadcrumb
     nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
         div(class="container")
             div(class="breadcrumb-title")
-                h2 contact
+                h2 تواصل معنا
             nav(aria-label="breadcrumb")
                 ol(class="breadcrumb")
                     li(class="breadcrumb-item")
-                        a(href="#") Home
-                    li(class="breadcrumb-item active", aria-current="page") contact
+                        a(href="#") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") تواصل معنا
     //breadcrumb
 
     //contact
@@ -24,46 +24,46 @@ block home_block
                     div(class="col-md-4 col-lg-4")
                         div(class="info-box")
                             i(class="bi bi-envelope") 
-                            h4 email
+                            h4 الإيميل
                             a(href="mailto:") mail@yahoo.com
                     div(class="col-md-4 col-lg-4")   
                         div(class="info-box")
                             i(class="bi bi-telephone")
-                            h4 phone
+                            h4 الهاتف
                             a(href="tel:" dir="ltr") +201988209222
                     div(class="col-md-4 col-lg-4")
                         div(class="info-box")
                             i(class="bi bi-pin-map")
-                            h4 location
-                            span 6th of October city
+                            h4 الموقع
+                            span القاهرة، مدينة نصر
             div(class="form-area")
                 div(class="main-title")
-                    h2 contact us now!
+                    h2 تواصل معنا الآن
                         span(class="line")
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat consequuntur quia iure sed, suscipit nihil libero dignissimos fuga debitis
+                    p هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
                 div(class="contact-box")
                     div(class="form-content")
                         form(class="g-3 needs-validation", action="" novalidate)
                             div(class="row")
                                 div(class="col-lg-12")
                                     div(class="form-group position-relative")
-                                        input(type="text", class="form-control", placeholder="Name" required)
+                                        input(type="text", class="form-control", placeholder="الاسم" required)
                                 div(class="col-lg-12")
                                     div(class="form-group position-relative")
-                                        input(type="number", class="form-control", placeholder="Number" required)
+                                        input(type="number", class="form-control", placeholder="الهاتف" required)
                                 div(class="col-lg-12")
                                     div(class="form-group position-relative")
                                         div(class="input-group has-validation")
-                                            input(type="email", class="form-control", placeholder="Email" required)
+                                            input(type="email", class="form-control", placeholder="الإيميل" required)
                                             div(class="invalid-tooltip")
-                                                | email error
+                                                | خطأ
                                 div(class="col-lg-12")
                                     div(class="form-group position-relative")
-                                        textarea(rows="6" placeholder="Type your message" class="form-control" required)
+                                        textarea(rows="6" placeholder="اكتب رسالتك" class="form-control" required)
                                 div(class="col-lg-12 text-center")
                                     div(class="form-group position-relative")
-                                        button(class="btn btn-danger hvr-sweep-to-top" type="submit") Send
+                                        button(class="btn btn-danger hvr-sweep-to-top" type="submit") إرسال
                                 div(class="col-lg-12")
                                     div(class="text-center")
-                                        p(class="successfully") Message Sent Successfully 
+                                        p(class="successfully") تم إرسال الرسالة بنجاح
     //contact 

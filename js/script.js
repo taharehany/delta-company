@@ -1,25 +1,40 @@
 $(document).ready(function () {
   "use strict";
 
-  //fixed header
-  //$(window).scroll(function () {
+  // fixed header
+  // $(window).scroll(function () {
   //  let scroll = $(window).scrollTop();
 
-  //  if (scroll >= 5) {
+  //  if (scroll >= 2) {
   //    $("header .navbar.main-nav").addClass("fixed");
   //  } else {
   //    $("header .navbar.main-nav").removeClass("fixed");
   //  }
-  //});
+  // });
 
   //dropdown dropkick select
   $(".select").dropkick({
     mobile: true
   });
 
+  // toast notification
+  let toastTrigger = $('.fav-btn');
+  let toastAdding = $('#addFavToast');
+  let toastRemoving = $('#removeFavToast');
+  toastTrigger.on('click', function () {
+    $(this).toggleClass("added").find("i").toggleClass("bi-heart bi-heart-fill")
+
+    if (toastTrigger && $(this).hasClass("added")) {
+      let toast = new bootstrap.Toast(toastAdding)
+      toast.show();
+    } else {
+        let toast = new bootstrap.Toast(toastRemoving)
+        toast.show();
+    }
+  });
+
   //validate form
   (function () {
-    //Fetch all the forms we want to apply custom Bootstrap validation styles to
     let forms = document.querySelectorAll('.needs-validation')
 
     //Loop over them and prevent submission
@@ -40,25 +55,24 @@ $(document).ready(function () {
   $('.main-slider-carousel').owlCarousel({
     center: true,
     loop: true,
-    margin: 1,
+    margin: 2,
+    autoplay: true,
+    autoplayTimeout: 4000,  
     nav: true,
     rtl: true,
     dots: false,
     lazyLoad: true,
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
-      992: {
-        items: 3,
-        nav: true,
+      0: {
+        items: 1,
       },
       768: {
         items: 1,
-        nav: true,
       },
-      0: {
-        items: 1,
-        nav: false,
-        dots: true,
+      
+      992: {
+        items: 3,
       }
     }
   });

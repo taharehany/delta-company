@@ -81,3 +81,9 @@ $topbar_height: 57px;
     -webkit-box-orient: vertical;
     display: -webkit-box;
 }
+%max_one_line {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

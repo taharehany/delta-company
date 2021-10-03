@@ -34,6 +34,7 @@ section.about-page {
 
             .btn {
                 background-color: $main_color;
+                color: #fff;
                 padding: 10px 30px;
                 display: inline-block;
                 border-color: #fff;
@@ -547,14 +548,6 @@ section.single-recipe-page {
 section.contact {
     padding: $padding_section;
 
-    //.main-title {
-
-    //	h2,
-    //	p {
-    //		color: #fff;
-    //	}
-    //}
-
     .info-area {
         margin-bottom: 50px;
         z-index: 9;
@@ -568,6 +561,29 @@ section.contact {
             background-color: #fbfbfb;
             @include borderRadius(10px);
             padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+
+            &:hover {
+                &::after {
+                    height: 100%;
+                }
+                h4, span, a {
+                    color: #fff;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 0;
+                background-color: $dark_color;
+                @include transition(all ease 0.5s);
+                z-index: -1;
+            }
 
             h4 {
                 font-size: 18px;
@@ -700,7 +716,7 @@ section.notifications {
                 color: #000
             }
 
-            .alert {
+            &.alert {
                 display: grid;
                 grid-template-columns: repeat(3, auto);
                 align-items: center;
@@ -764,7 +780,6 @@ section.profile {
             background-color: $main_color;
             text-align: center;
             padding: 40px;
-            margin-bottom: 20px;
 
             .image {
                 width: 80px;
@@ -799,19 +814,22 @@ section.profile {
                 @include borderRadius(20px);
                 padding: 8px 25px;
                 background-color: $dark_color;
-                border-color: $dark_color
+                border-color: $dark_color;
+                color: #fff
             }
         }
 
         .nav {
             padding: 25px;
             @include borderRadius(15px);
+            margin-bottom: 20px;
 
             .nav-link {
                 text-align: initial;
                 color: $dark_color;
                 font-size: 15px;
                 text-transform: capitalize;
+                @include borderRadius(15px);
 
                 &.active {
                     background-color: $main_color;
@@ -830,7 +848,8 @@ section.profile {
 
                 .btn {
                     background-color: $main_color;
-                    padding: 10px 25px;
+                    padding: 8px 20px;
+                    font-size: 14px;
                     display: inline-block;
                     @include borderRadius(15px);
                     border-color: #fff;
@@ -859,17 +878,18 @@ section.profile {
                 &::placeholder {
                     color: #79859c;
                 }
-
+                
                 &:not(:disabled):not([readonly])::file-selector-button {
                     background-color: #f6f6f6;
                 }
             }
         }
-
+        
         //table page
         .table-area {
             padding: 5px;
-
+            margin-bottom: 15px;
+            
             table {
                 overflow: visible;
                 border-collapse: separate;
@@ -922,7 +942,6 @@ section.profile {
 
                 &.table {
                     margin-bottom: 0;
-
                     thead {
                         th {
                             font-size: 16px;

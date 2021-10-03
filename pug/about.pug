@@ -1,0 +1,105 @@
+extend index
+block website_title 
+    title  about us  
+block index    
+    section#main-banner-page(class="position-relative page-header about-header parallax section-nav-smooth")
+        div(class="overlay overlay-dark opacity-6")
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-6 offset-lg-3")
+                    div(class="page-titles whitecolor text-center padding_top padding_bottom")
+                        h2(class="font-bold") about us
+            div(class="gradient-bg title-wrap")
+                div(class="row")
+                    div(class="col-lg-12 col-md-12 whitecolor")
+                        h3(class="float-left") About Our Company
+                        ul(class="breadcrumb top10 bottom10 float-right")
+                            li(class="breadcrumb-item hover-light")
+                                a(href="index.html") Home
+                            li(class="breadcrumb-item hover-light") About
+    section#ourfaq(class="bglight position-relative padding")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12 text-center animated wow fadeIn", data-wow-delay="300ms")
+                    h2(class="heading bottom30 darkcolor font-light2") aljazea company
+                        span(class="divider-center")
+                    div(class="col-md-8 offset-md-2")
+                        p(class="heading_space") Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolores explicabo laudantium, omnis provident quam reiciendis voluptatum?
+                h2(class="d-none") Tabs
+                div(class="col-md-12 col-sm-12")
+                    #accordion
+                        div(class="card")
+                            div(class="card-header")
+                                a(class="card-link darkcolor", data-toggle="collapse", href="#collapseOne") Our vision
+                            #collapseOne(class="collapse show", data-parent="#accordion")
+                                div(class="card-body")
+                                    p(class="bottom20") to be one of the biggest industrial companies in mean region. 
+                        div(class="card")
+                            div(class="card-header")
+                                a(class="collapsed card-link darkcolor", data-toggle="collapse", href="#collapseTwo") Our mission
+                            #collapseTwo(class="collapse", data-parent="#accordion")
+                                div(class="card-body")
+                                    p Developing the group through proper strategic investment and accretion of the company's progress by providing them with the best financial and administrative resources as well as to invest in new products to enhance the company's value and benefit from the competitive advantages of the groub.
+                        div(class="card")
+                            div(class="card-header")
+                                a(class="collapsed card-link darkcolor", data-toggle="collapse", href="#collapseThree") About us
+                            #collapseThree(class="collapse", data-parent="#accordion")
+                                div(class="card-body")
+                                    p Through the effort and continuous hard work of its team, Aljazea Industrial was able to achieve a quantum leap at the level of providing products and services con- formed to the highest quality and efficiency standards that are comparable to their counterparts from major international companies enhancing its position as a lead- ing industrial and economic group that enjoys reliability and excellence.
+    section#our-process(class="padding bgprimary")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12 col-sm-12 text-center")
+                    div(class="heading-title whitecolor wow fadeInUp", data-wow-delay="300ms")
+                        span Quisque tellus risus, adipisci 
+                        h2(class="font-normal") Our Work Process 
+            div(class="row")
+                ul(class="process-wrapp")
+                    li(class="whitecolor wow fadeIn", data-wow-delay="300ms")
+                        span(class="pro-step bottom20") 01
+                        p(class="fontbold bottom20") World Wide
+                        p(class="mt-n2 mt-sm-0") Quisque tellus risus, adipisci viverra bibendum urna.
+                    li(class="whitecolor wow fadeIn", data-wow-delay="400ms")
+                        span(class="pro-step bottom20") 02
+                        p(class="fontbold bottom20") Shipping
+                        p(class="mt-n2 mt-sm-0") Quisque tellus risus, adipisci viverra bibendum urna.
+                    li(class="whitecolor wow fadeIn active", data-wow-delay="500ms")
+                        span(class="pro-step bottom20") 03
+                        p(class="fontbold bottom20") Local Cargo
+                        p(class="mt-n2 mt-sm-0") Quisque tellus risus, adipisci viverra bibendum urna.
+                    li(class="whitecolor wow fadeIn", data-wow-delay="600ms")
+                        span(class="pro-step bottom20") 04
+                        p(class="fontbold bottom20") Air Freight
+                        p(class="mt-n2 mt-sm-0") Quisque tellus risus, adipisci viverra bibendum urna.
+                    li(class="whitecolor wow fadeIn", data-wow-delay="700ms")
+                        span(class="pro-step bottom20") 05
+                        p(class="fontbold bottom20") Ware Houses
+                        p(class="mt-n2 mt-sm-0") Quisque tellus risus, adipisci viverra bibendum urna.
+
+    // Partners
+    section#our-partners(class="padding_bottom padding_top bglight")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12 text-center heading_space wow fadeIn", data-wow-delay="300ms", style="visibility: visible; animation-delay: 300ms; animation-name: fadeIn;")
+                    h2(class="heading bottom30 darkcolor font-light2")
+                        span(class="font-weight-normal") organisations 
+                        span(class="divider-center")
+                    div(class="col-md-8 offset-md-2")
+                        p(class="mb-n3") A member of the largest international organizations and bodies specialized in the field of air and sea freight and logistics services
+            div(class="row")
+                h2(class="d-none") Partners Carousel
+                div(class="col-md-12 col-sm-12")
+                    #partners-slider(class="owl-carousel")
+                        div(class="item")
+                            div(class="logo-item")
+                                img(alt="", src="logistic/images/member/01.png")
+                        div(class="item")
+                            div(class="logo-item")
+                                img(alt="", src="logistic/images/member/02.png")
+                        div(class="item")
+                            div(class="logo-item")
+                                img(alt="", src="logistic/images/member/03.png")
+                        div(class="item")
+                            div(class="logo-item")
+                                img(alt="", src="logistic/images/member/04.png")
+    // Partners ends

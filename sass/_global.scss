@@ -1,8 +1,7 @@
 //global variables 
-$main_color: #E31C25;
-$dark_color: #1D2228;
-$padding_section: 70px 0;
-$topbar_height: 57px;
+$main_color: var(--main-color);
+$dark_color: var(--dark-color);
+$padding_section: 100px 0;
 //global styles
 
 //mixins
@@ -33,11 +32,25 @@ $topbar_height: 57px;
 @mixin animation($anim) {
     animation: $anim;
     -webkit-animation: $anim;
+    -moz-animation: $anim;
+    -ms-animation: $anim;
+    -o-animation: $anim;
+}
+
+@mixin animationDelay($anim) {
+    -webkit-animation-delay: $anim;
+    -moz-animation-delay: $anim;
+    -ms-animation-delay: $anim;
+    -o-animation-delay: $anim;
+    animation-delay: $anim;
 }
 
 @mixin boxshadow($shadow) {
     box-shadow: $shadow;
     -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
 }
 
 //mixins
@@ -95,27 +108,16 @@ $topbar_height: 57px;
 
 //main title
 .main-title {
-    margin-bottom: 25px;
+    margin-bottom: 4rem;
     position: relative;
-    background-image: url(../images/bgs/title_pattern.png);
-    background-repeat: repeat;
-    height: 35px;
-    line-height: 35px;
 
     h2 {
-        font-size: 16px;
-        color: #fff;
+        font-size: 45px;
+        color: $dark_color;
         position: relative;
         text-transform: uppercase;
+        font-weight: 600;
         margin-bottom: 0;
-
-        >span {
-            line-height: 35px;
-            background-color: var(--main-color);
-            padding: 0 15px;
-            height: 100%;
-            display: inline-block;
-        }
 
         .diff-color {
             color: var(--main-color);
@@ -243,6 +245,7 @@ $topbar_height: 57px;
             list-style: none;
         }
     }
+
     .pick-color {
         width: 100%;
     }

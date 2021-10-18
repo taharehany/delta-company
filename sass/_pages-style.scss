@@ -11,8 +11,8 @@
         .page-item {
             &.active {
                 .page-link {
-                    background-color: var(--main-color);
-                    border-color: var(--main-color);
+                    background-color: $main_color;
+                    border-color: $main_color;
                     color: #fff;
                 }
             }
@@ -23,9 +23,9 @@
 
                 &:focus:not(.arrow) {
                     color: #fff;
-                    background-color: var(--main-color);
+                    background-color: $main_color;
                     box-shadow: 0 0 5px 0 rgb(13 110 253 / 25%);
-                    border-color: var(--main-color);
+                    border-color: $main_color;
                 }
 
                 &.arrow {

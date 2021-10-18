@@ -12,6 +12,11 @@ $(document).ready(function () {
     }
   });
 
+  //dropdown dropkick select
+  $(".select").dropkick({
+    mobile: true
+  });
+
   //main slider owl
   $('.main-slider-carousel').owlCarousel({
     loop: true,

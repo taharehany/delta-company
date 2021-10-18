@@ -2,7 +2,7 @@
 section(class="main-slider")
     div(class="main-slider-carousel owl-carousel owl-theme")
         div(class="item")
-            img(class="img-fluid" data-src="images/slider/02.jpg" alt="")
+            img(class="img-fluid" data-src="images/slider/01.jpg" alt="")
             div(class="item-details")
                 div(class="container")
                     div(class="item-text")
@@ -24,7 +24,7 @@ section(class="main-slider")
                                 a(href="#!" class="btn")
                                     span read more
         div(class="item")
-            img(class="img-fluid" data-src="images/slider/02.jpg" alt="")
+            img(class="img-fluid" data-src="images/slider/03.jpg" alt="")
             div(class="item-details")
                 div(class="container")
                     div(class="item-text")
@@ -35,3 +35,168 @@ section(class="main-slider")
                                 a(href="#!" class="btn")
                                     span read more
 //main slider
+
+//about us
+section(class="about")
+    div(class="container")
+        div(class="content")
+            div(class="row")
+                div(class="col-lg-6")
+                    div(class="about-image")
+                        div(class="img1")
+                            img(class="img-fluid" data-src="images/about/01.jpg" alt="")
+                        div(class="img2")
+                            img(class="img-fluid" data-src="images/about/02.jpg" alt="")
+                        div(class="img3")
+                            img(class="img-fluid" data-src="images/about/03.png" alt="")
+                div(class="col-lg-6")
+                    div(class="main-title")
+                        span(class="top-title") Take it as simple is that
+                        h2 transformers gym
+                        span(class="bottom-title") Kick your feet up! With a gym designed around you, we think you’ll love it here.
+                    div(class="about-text")
+                        p When you’re ready to try a new restaurant, you might ask your friends for recommendations, read a good review, or check out the menu before you spend your money and time there. If you enjoy your first meal, you’ll return again and again, but if your thoughts was less than great, then first visit will also be your last. Finding the suitable gym is a lot like finding new restaurant. A good gym will fit your own personality and motivate you to come back and exercise on a regular basis.
+                    div(class="about-btn")
+                        div(class="outer-btn")
+                            a(href="#!" class="btn")
+                                span read more
+//about us
+
+//team
+section(class="team")
+    div(class="container")
+        div(class="main-title")
+            div(class="side-text") transformers
+            h2 our team
+        div(class="content")
+            div(class="row")
+                div(class="col-lg-4 col-md-12")
+                    div(class="team-box")
+                        div(class="image")
+                            a(href="#!") 
+                                img(class="img-fluid" data-src="images/team/team1.jpg" alt="")
+                        div(class="details")
+                            span(class="title") Bodybuilding Coach
+                            a(href="#!" class="name") Mohamed Abo El Ella
+                div(class="col-lg-4 col-md-12")
+                    div(class="team-box")
+                        div(class="image")
+                            a(href="#!") 
+                                img(class="img-fluid" data-src="images/team/team2.jpg" alt="")
+                        div(class="details")
+                            span(class="title") Bodybuilding Coach
+                            a(href="#!" class="name") Mohamed Abo El Ella
+                div(class="col-lg-4 col-md-12")
+                    div(class="team-box")
+                        div(class="image")
+                            a(href="#!") 
+                                img(class="img-fluid" data-src="images/team/team3.jpg" alt="")
+                        div(class="details")
+                            span(class="title") Bodybuilding Coach
+                            a(href="#!" class="name") Mohamed Abo El Ella
+//team
+
+//bmi calculate
+section(class="bmi")
+    div(class="container")
+        div(class="content")
+            div(class="row")
+                div(class="col-lg-6")
+                    div(class="main-title")
+                        span(class="top-title") Body mass index
+                        h2 What is your bmi
+                    div(class="bmi-form")
+                        form(class="g-3 needs-validation", action="" novalidate)
+                            div(class="row")
+                                div(class="col-lg-6")
+                                    div(class="form-group position-relative")
+                                        input(type="number", class="form-control", placeholder="Height" required)
+                                div(class="col-lg-6")
+                                    div(class="form-group position-relative")
+                                        input(type="number", class="form-control", placeholder="Weight / kg" required)
+                                div(class="col-lg-6")
+                                    div(class="form-group position-relative")
+                                        input(type="number", class="form-control", placeholder="Age" required)
+                                div(class="col-lg-6")
+                                    div(class="select-area")
+                                        select(class="select")
+                                            option(disabled, selected, class="hidden-option") Gender
+                                            option(value="1") male
+                                            option(value="2") female
+                                div(class="col-lg-12")
+                                    div(class="select-area")
+                                        select(class="select")
+                                            option(disabled, selected, class="hidden-option") Select an activity factor
+                                            option(value="1") factor 01
+                                            option(value="2") factor 02
+                    div(class="bmi-btn")
+                        div(class="outer-btn")
+                            a(href="#!" class="btn")
+                                span calculate
+                div(class="col-lg-6")
+                    div(class="bmi-result")
+                        table(class="table table-dark table-hover")
+                            thead
+                                tr(class="bmi-heading")
+                                    th(class="pt-class") BMI
+                                    th Weight Status
+                            tbody
+                                tr
+                                    td Below 18.5
+                                    td Underweight
+                                tr
+                                    td 18.5 - 24.9
+                                    td Healthy
+                                tr
+                                    td 25.0 - 29.9
+                                    td Overweight
+                                tr
+                                    td 30.0 - and Above
+                                    td Obese
+                        div(class="bmi-info")
+                            span
+                                strong BMR 
+                                | Metabolic Rate / 
+                                strong BMI 
+                                | Body Mass Index
+//bmi calculate
+
+//video
+section(class="video")
+    div(class="side-text") Video
+    div(class="outer-container")
+        div(class="inner-container")
+            div(class="video-box")
+                figure(class="video-image")
+                    img(src="images/bgs/video-img.jpg", alt="")
+                a(href="https://www.youtube.com/watch?v=kxPCFljwJws", data-fancybox="gallery" class="lightbox-image overlay-box")
+                    span(class="bi bi-caret-right-fill")
+                        i(class="ripple")
+//video
+
+//classes
+//- section(class="classes")
+    div(class="container")
+        div(class="content")
+            div(class="row")
+                div(class="col-lg-12")
+                    div(class="classes-result")
+                        table(class="table")
+                            thead
+                                tr(class="classes-heading")
+                                    th(class="pt-class") classes
+                                    th Weight Status
+                            tbody
+                                tr
+                                    td Below 18.5
+                                    td Underweight
+                                tr
+                                    td 18.5 - 24.9
+                                    td Healthy
+                                tr
+                                    td 25.0 - 29.9
+                                    td Overweight
+                                tr
+                                    td 30.0 - and Above
+                                    td Obese
+//classes

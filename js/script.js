@@ -21,8 +21,8 @@ $(document).ready(function () {
   $('.main-slider-carousel').owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 400000,
-    items:1,
+    autoplayTimeout: 4000,
+    items: 1,
     nav: true,
     dots: false,
     // animateOut: 'slideOutUp',
@@ -35,9 +35,33 @@ $(document).ready(function () {
       768: {
         items: 1,
       },
-      
+
       992: {
         items: 1,
+      }
+    }
+  });
+
+  //clients slider owl
+  $('.clients-carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 400000,
+    items: 5,
+    nav: false,
+    dots: false,
+    margin: 50,
+    navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
+    responsive: {
+      0: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+
+      992: {
+        items: 5,
       }
     }
   });
@@ -56,6 +80,25 @@ $(document).ready(function () {
       scrollTop: 0
     }, 0);
   });
+
+  //validate form
+  (function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    let forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })();
 
   //store theme colors in local storage 
   if (!localStorage.getItem("main_color")) {

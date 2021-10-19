@@ -1,0 +1,84 @@
+extend index
+
+block website_title
+    title #{website_title} | packages
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 packages
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") packages
+    //breadcrumb
+    
+    //packages
+    section(class="packages")
+        div(class="container")
+            div(class="main-title")
+                span(class="top-title") choose what you want
+                h2 our packages
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-4 box")
+                        div(class="packages-box" style="background-image: url(images/packages/01.jpg);")
+                            div(class="type")
+                                h3 Basic Plan
+                                p Here Goes Some Descripation
+                            div(class="price")
+                                h5(class="per") for 1 month
+                                span 500
+                                    sup EGP
+                            div(class="details")
+                                ul
+                                    li Free Hand
+                                    li Gym Fitness
+                                    li(class="line-through") Weight Loss
+                                    li(class="line-through") Personal Trainer
+                            div(class="packages-btn")
+                                div(class="outer-btn")
+                                    a(href="#!" class="btn")
+                                        span select now
+                    div(class="col-lg-4 box")
+                        div(class="packages-box" style="background-image: url(images/packages/02.jpg);")
+                            div(class="type")
+                                h3 Standard Plan
+                                p Here Goes Some Descripation
+                            div(class="price")
+                                h5(class="per") for 6 month
+                                span 1500
+                                    sup EGP
+                            div(class="details")
+                                ul
+                                    li Free Hand
+                                    li Gym Fitness
+                                    li Weight Loss
+                                    li(class="line-through") Personal Trainer
+                            div(class="packages-btn")
+                                div(class="outer-btn")
+                                    a(href="#!" class="btn")
+                                        span select now
+                    div(class="col-lg-4 box")
+                        div(class="packages-box" style="background-image: url(images/packages/03.jpg);")
+                            div(class="type")
+                                h3 Ultimate Plan
+                                p Here Goes Some Descripation
+                            div(class="price")
+                                h5(class="per") for 1 year
+                                span 2000
+                                    sup EGP
+                            div(class="details")
+                                ul
+                                    li Free Hand
+                                    li Gym Fitness
+                                    li Weight Loss
+                                    li Personal Trainer
+                            div(class="packages-btn")
+                                div(class="outer-btn")
+                                    a(href="#!" class="btn")
+                                        span select now
+    //packages

@@ -81,19 +81,19 @@
     </div>
     <div class="content">
       <div class="row">
-        <div class="col-lg-4 col-md-12">
+        <div class="col-lg-4 col-md-6 box">
           <div class="team-box">
             <div class="image"><a href="#!"> <img class="img-fluid" data-src="images/team/team1.jpg" alt=""/></a></div>
             <div class="details"><span class="title">Bodybuilding Coach</span><a class="name" href="#!">Mohamed Abo El Ella</a></div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-12">
+        <div class="col-lg-4 col-md-6 box">
           <div class="team-box">
             <div class="image"><a href="#!"> <img class="img-fluid" data-src="images/team/team2.jpg" alt=""/></a></div>
             <div class="details"><span class="title">Bodybuilding Coach</span><a class="name" href="#!">Mohamed Abo El Ella</a></div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-12">
+        <div class="col-lg-4 col-md-6 box">
           <div class="team-box">
             <div class="image"><a href="#!"> <img class="img-fluid" data-src="images/team/team3.jpg" alt=""/></a></div>
             <div class="details"><span class="title">Bodybuilding Coach</span><a class="name" href="#!">Mohamed Abo El Ella</a></div>
@@ -109,55 +109,6 @@
   <div class="container">
     <div class="content">
       <div class="row">
-        <div class="col-lg-6">
-          <div class="main-title"><span class="top-title">Body mass index</span>
-            <h2>What is your bmi</h2>
-          </div>
-          <div class="bmi-form">
-            <form class="needs-validation" action="" novalidate="novalidate">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group position-relative">
-                    <input class="form-control" type="number" placeholder="Height" required="required"/>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group position-relative">
-                    <input class="form-control" type="number" placeholder="Weight / kg" required="required"/>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group position-relative">
-                    <input class="form-control" type="number" placeholder="Age" required="required"/>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="select-area">
-                    <select class="select">
-                      <option class="hidden-option" disabled="disabled" selected="selected">Gender</option>
-                      <option value="1">male</option>
-                      <option value="2">female</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="select-area">
-                    <select class="select">
-                      <option class="hidden-option" disabled="disabled" selected="selected">Select an activity factor</option>
-                      <option value="1">factor 01</option>
-                      <option value="2">factor 02</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="bmi-btn">
-                <div class="outer-btn">
-                  <button class="btn" type="submit"><span>calculate</span></button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
         <div class="col-lg-6">
           <div class="bmi-result">
             <table class="table table-dark table-hover">
@@ -186,7 +137,50 @@
                 </tr>
               </tbody>
             </table>
-            <div class="bmi-info"><span><strong>BMR </strong>Metabolic Rate / <strong>BMI </strong>Body Mass Index</span></div>
+            <div class="bmi-info">
+              <p><strong>your BMI result:</strong><span class="bmi-text"></span></p>
+              <p> <strong>your BMI number:</strong><span class="bmi-number"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-title"><span class="top-title">Body mass index</span>
+            <h2>What is your bmi</h2>
+          </div>
+          <div class="bmi-form">
+            <form class="needs-validation" action="" novalidate="novalidate">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="form-group position-relative">
+                    <input class="form-control height" type="number" max="250" min="50" placeholder="Height (cm)" required="required"/>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="form-group position-relative">
+                    <input class="form-control weight" type="number" max="1000" min="1" placeholder="Weight (kg)" required="required"/>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="form-group position-relative">
+                    <input class="form-control age" type="number" max="200" min="1" placeholder="Age (year)" required="required"/>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="select-area">
+                    <select class="select gender">
+                      <option class="hidden-option" disabled="disabled" selected="selected">Gender</option>
+                      <option value="male">male</option>
+                      <option value="female">female</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="bmi-btn">
+                <div class="outer-btn">
+                  <button class="btn calculate" type="submit"><span>calculate</span></button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -228,73 +222,75 @@
     <div class="content">
       <div class="row">
         <div class="col-lg-12">
-          <table class="table">
-            <tbody>
-              <tr>
-                <th scope="row">Saturday</th>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                <td> </td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">sunday</th>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-                <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">monday</th>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> </td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Tuesday</th>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> </td>
-                <td> </td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Wednesday</th>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> </td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-                <td><span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-              </tr>
-              <tr>
-                <th scope="row">Thursday</th>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> </td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td> </td>
-                <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-              </tr>
-              <tr>
-                <th scope="row">Friday</th>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-                <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-                <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Saturday</th>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                  <td> </td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">sunday</th>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                  <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">monday</th>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> </td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Tuesday</th>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> </td>
+                  <td> </td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Wednesday</th>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> </td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                  <td><span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Thursday</th>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> </td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td> </td>
+                  <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Friday</th>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                  <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                  <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

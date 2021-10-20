@@ -18,15 +18,15 @@ $(document).ready(function () {
   });
 
   //main slider owl
-  $('.main-slider-carousel').owlCarousel({
+  $(".main-slider-carousel").owlCarousel({
     loop: true,
     autoplay: true,
     autoplayTimeout: 4000,
     items: 1,
     nav: true,
     dots: false,
-    // animateOut: 'slideOutUp',
-    // animateIn: 'slideOutUp',
+    // animateOut: "slideOutUp",
+    // animateIn: "slideOutUp",
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
       0: {
@@ -43,10 +43,10 @@ $(document).ready(function () {
   });
 
   //clients slider owl
-  $('.clients-carousel').owlCarousel({
+  $(".clients-carousel").owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 400000,
+    autoplayTimeout: 3000,
     items: 5,
     nav: false,
     dots: false,
@@ -69,9 +69,9 @@ $(document).ready(function () {
   //to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 500) {
-      $('#toTop').fadeIn(100);
+      $("#toTop").fadeIn(100);
     } else {
-      $('#toTop').fadeOut(100);
+      $("#toTop").fadeOut(100);
     }
   });
 
@@ -84,18 +84,19 @@ $(document).ready(function () {
   //validate form
   (function () {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    let forms = document.querySelectorAll('.needs-validation')
+    let forms = document.querySelectorAll(".needs-validation")
 
     // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
       .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
+        form.addEventListener("submit", function (event) {
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
+          } else {
+            event.preventDefault()
           }
-
-          form.classList.add('was-validated')
+          form.classList.add("was-validated")
         }, false)
       })
   })();
@@ -142,8 +143,58 @@ $(document).ready(function () {
 
   //lazyload images
   $("img").Lazy({
-    scrollDirection: 'vertical',
-    effect: 'fadeIn',
+    scrollDirection: "vertical",
+    effect: "fadeIn",
     visibleOnly: true,
   });
+
+
+
+  //bmi calculate
+  let age = $(".age");
+  let height = $(".height");
+  let weight = $(".weight");
+  let gender = $(".dk-selected");
+  let bmiForm = $(".bmi-form form");
+
+  $(".calculate").on("click", function (e) {
+    validateForm();
+  });
+
+  function validateForm() {
+    if (age.val() == "" || height.val() == "" || weight.val() == "" || !gender.attr("aria-activedescendant")) {
+      // alert("All fields are required!");
+    } else {
+      countBmi();
+    }
+  }
+
+  function countBmi() {
+    let bmiArray = [age.val(), height.val(), weight.val()];
+    if (gender.attr("aria-activedescendant") == "dk0-male") {
+      bmiArray.push("male");
+    } else if (gender.attr("aria-activedescendant") == "dk0-female") {
+      bmiArray.push("female");
+    }
+
+    // bmiForm.reset();
+
+    let bmiEquation = Number(bmiArray[2]) / (Number(bmiArray[1]) / 100 * Number(bmiArray[1]) / 100);
+
+    let result = "";
+    if (bmiEquation < 18.5) {
+      result = "Underweight";
+    } else if (18.5 <= bmiEquation && bmiEquation <= 24.9) {
+      result = "Healthy";
+    } else if (25 <= bmiEquation && bmiEquation <= 29.9) {
+      result = "Overweight";
+    } else if (30 <= bmiEquation && bmiEquation <= 34.9) {
+      result = "Obese";
+    } else if (35 <= bmiEquation) {
+      result = "Extremely obese";
+    }
+
+    $(".bmi-info .bmi-text").text(result);
+    $(".bmi-info .bmi-number").text(parseFloat(bmiEquation).toFixed(2));
+  }
 });

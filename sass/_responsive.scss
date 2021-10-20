@@ -8,15 +8,137 @@
             display: inline-block;
         }
     }
+
+    .main-title {
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    section.about {
+        .content {
+            .about-image {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    section.video {
+        .side-text {
+            font-size: 60px;
+        }
+
+        .outer-container {
+            .video-box {
+                .overlay-box {
+                    span {
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        margin-top: -35px;
+                        margin-left: -35px;
+                    }
+                }
+            }
+        }
+
+        .ripple {
+
+            &::before,
+            &::after {
+                width: 70px !important;
+                height: 70px !important;
+            }
+        }
+    }
+
+    .bmi-result {
+        margin-bottom: 25px;
+    }
+    section.classes {
+        .content {
+            table {
+                tbody {
+                    td {
+                        .title {
+                            font-size: 14px;
+                        }
+                    }
+                    tr {
+                        th {
+                            width: 160px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.contact-info {
+        .content {
+            display: block;
+        }
+    }
+    section.contact-in-page {
+        .social-links {
+            margin-bottom: 25px;
+        }
+    }
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    header {
+        .top-part {
+            .content {
+                .some-info {
+                    .info {
+                        &:nth-child(1) {
+                            display: none;
+                        }
+
+                        &:nth-child(2) {
+                            border-inline-end: none;
+                        }
+
+                        &:nth-child(3) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 670px) {}
 
 @media screen and (max-width: 575px) {
     .main-title h2 {
         font-size: 14px;
+    }
+
+    .modals {
+        .modal-dialog {
+            margin: 2rem 1rem;
+        }
+    }
+    section.contact-info {
+        .content {
+            .image {
+                img {
+                    // max-height: 200px;
+                }
+            }
+            .info-box {
+                grid-template-columns: 30px auto;
+                .icon {
+                    i {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
     }
 }
 

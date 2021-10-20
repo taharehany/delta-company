@@ -23,7 +23,7 @@
       <header> 
         <div class="top-part"> 
           <div class="container">
-            <div class="top-part-content"> 
+            <div class="content"> 
               <div class="some-info">
                 <div class="info"><span class="icon"><i class="bi bi-pin-map"> </i></span>
                   <p>‎Ma`Adi, Al Qahirah, Egypt</p>
@@ -35,15 +35,15 @@
                   <p>‎<a href="mailto:test@gmail.com">test@gmail.com</a></p>
                 </div>
               </div>
-              <div class="text">
-                <p>welcome to our website</p>
+              <div class="btn-area">
+                <button class="btn register" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">register</button>
               </div>
             </div>
           </div>
         </div>
         <!--navbar desktop-->
         <nav class="navbar main-nav navbar-expand-lg">
-          <div class="container"><a class="navbar-brand" href="index.html"> <img class="img-fluid" data-src="images/logo-2.png" alt=""></a>
+          <div class="container"><a class="navbar-brand" href="index.html"> <img class="img-fluid" data-src="images/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false" aria-label="Toggle navigation">
               <div class="hamburger-menu"><span></span><span></span><span></span></div>
             </button>
@@ -51,25 +51,26 @@
               <ul class="navbar-nav">
                 <li class="nav-item active"><a class="nav-link" aria-current="page" href="index.html">home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                <li class="nav-item"><a class="nav-link" href="packeges.html">packeges</a></li>
+                <li class="nav-item"><a class="nav-link" href="packages.html">packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">team</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">contact us</a></li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">pages</a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                     <li><a class="dropdown-item" href="about.html">about</a></li>
-                    <li><a class="dropdown-item" href="packeges.html">packeges</a></li>
+                    <li><a class="dropdown-item" href="packages.html">packages</a></li>
                     <li><a class="dropdown-item" href="contact.html">contact us</a></li>
+                    <li><a class="dropdown-item" href="team.html">team</a></li>
                   </ul>
                 </li>
               </ul>
             </div>
-            <div class="btn-area"><a class="btn btn-primary" href="#!">call us now </a></div>
           </div>
         </nav>
         <!--navbar desktop-->
         <!--side menu in mobile only-->
         <div class="offcanvas offcanvas-start" id="side_menu" data-bs-scroll="true" tabindex="-1" aria-labelledby="side_menu_label">
           <div class="offcanvas-header">
-            <button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-label="Close"></button>
+            <button class="btn-close btn-close-dark" type="button" data-bs-dismiss="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <div class="navbar">
@@ -77,13 +78,15 @@
                 <ul class="navbar-nav">
                   <li class="nav-item active"><a class="nav-link" aria-current="page" href="index.html">home</a></li>
                   <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-                  <li class="nav-item"><a class="nav-link" href="packeges.html">packeges</a></li>
+                  <li class="nav-item"><a class="nav-link" href="packages.html">packages</a></li>
+                  <li class="nav-item"><a class="nav-link" href="team.html">team</a></li>
                   <li class="nav-item"><a class="nav-link" href="contact.html">contact us</a></li>
                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">pages</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                       <li><a class="dropdown-item" href="about.html">about</a></li>
-                      <li><a class="dropdown-item" href="packeges.html">packeges</a></li>
+                      <li><a class="dropdown-item" href="packages.html">packages</a></li>
                       <li><a class="dropdown-item" href="contact.html">contact us</a></li>
+                      <li><a class="dropdown-item" href="team.html">team</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -93,6 +96,148 @@
         </div>
       </header>
       <!--header-->
+      <!--register modal-->
+      <div class="modals">
+        <div class="modal register-modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">register</h5>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body inter-form">
+                <form class="g-3 needs-validation" action="" novalidate>
+                  <div class="row"></div>
+                  <div class="col-lg-12">
+                    <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-person"></i>
+                      <input class="form-control" type="text" placeholder="Name" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group input-group flex-nowrap">
+                      <div class="input-group has-validation"><i class="input-group-text bi bi-envelope"></i>
+                        <input class="form-control" type="email" placeholder="Email" required>
+                        <div class="invalid-tooltip">email error</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-shield-lock"></i>
+                      <input class="form-control" type="password" placeholder="Password" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-shield-lock"></i>
+                      <input class="form-control" type="password" placeholder="Confirm Password" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 mb-2">
+                    <div class="form-check">
+                      <input class="form-check-input" input type="checkbox" id="registerRem">
+                      <label class="form-check-label" for="registerRem">Remember me</label>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                      <div class="form-group">
+                        <button class="btn btn-danger" type="submit">register now</button>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 text-center toggle-link">
+                      <p>have an account?
+                        <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">login now</button>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--register modal-->
+        <!--login modal-->
+        <div class="modal login-modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">login</h5>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form class="g-3 needs-validation" action="" novalidate>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group input-group flex-nowrap">
+                        <div class="input-group has-validation"><i class="input-group-text bi bi-envelope"></i>
+                          <input class="form-control" type="email" placeholder="Email" required>
+                          <div class="invalid-tooltip">email error</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group input-group flex-nowrap"><i class="input-group-text bi bi-shield-lock"></i>
+                        <input class="form-control" type="password" placeholder="Password" required>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" input type="checkbox" id="loginRem">
+                        <label class="form-check-label" for="loginRem">Remember me</label>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group btns">
+                        <button class="btn btn-danger" type="submit">login now</button>
+                        <button class="forget-btn" type="button" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">Forget password?</button>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 text-center toggle-link">
+                      <p>Don't have an account?
+                        <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">Create One</button>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--login modal-->
+        <!--forget password modal-->
+        <div class="modal forget-password-modal fade" id="forgetPasswordModal" tabindex="-1" aria-labelledby="forgetPasswordModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="forgetPasswordModalLabel">forget password</h5>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form class="g-3 needs-validation" action="" novalidate>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group input-group flex-nowrap">
+                        <div class="input-group has-validation"><i class="input-group-text bi bi-envelope"></i>
+                          <input class="form-control" type="email" placeholder="Email" required>
+                          <div class="invalid-tooltip">email error</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                      <div class="form-group">
+                        <button class="btn btn-danger" type="submit">send now</button>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 text-center toggle-link">
+                      <p>Don't have an account?
+                        <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">Create One</button>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--forget password modal-->
+      </div>
       <!--main slider-->
       <section class="main-slider">
         <div class="main-slider-carousel owl-carousel owl-theme">
@@ -175,19 +320,19 @@
           </div>
           <div class="content">
             <div class="row">
-              <div class="col-lg-4 col-md-12">
+              <div class="col-lg-4 col-md-6 box">
                 <div class="team-box">
                   <div class="image"><a href="#!"> <img class="img-fluid" data-src="images/team/team1.jpg" alt=""></a></div>
                   <div class="details"><span class="title">Bodybuilding Coach</span><a class="name" href="#!">Mohamed Abo El Ella</a></div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-12">
+              <div class="col-lg-4 col-md-6 box">
                 <div class="team-box">
                   <div class="image"><a href="#!"> <img class="img-fluid" data-src="images/team/team2.jpg" alt=""></a></div>
                   <div class="details"><span class="title">Bodybuilding Coach</span><a class="name" href="#!">Mohamed Abo El Ella</a></div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-12">
+              <div class="col-lg-4 col-md-6 box">
                 <div class="team-box">
                   <div class="image"><a href="#!"> <img class="img-fluid" data-src="images/team/team3.jpg" alt=""></a></div>
                   <div class="details"><span class="title">Bodybuilding Coach</span><a class="name" href="#!">Mohamed Abo El Ella</a></div>
@@ -203,55 +348,6 @@
         <div class="container">
           <div class="content">
             <div class="row">
-              <div class="col-lg-6">
-                <div class="main-title"><span class="top-title">Body mass index</span>
-                  <h2>What is your bmi</h2>
-                </div>
-                <div class="bmi-form">
-                  <form class="needs-validation" action="" novalidate>
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="form-group position-relative">
-                          <input class="form-control" type="number" placeholder="Height" required>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="form-group position-relative">
-                          <input class="form-control" type="number" placeholder="Weight / kg" required>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="form-group position-relative">
-                          <input class="form-control" type="number" placeholder="Age" required>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="select-area">
-                          <select class="select">
-                            <option class="hidden-option" disabled selected>Gender</option>
-                            <option value="1">male</option>
-                            <option value="2">female</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="select-area">
-                          <select class="select">
-                            <option class="hidden-option" disabled selected>Select an activity factor</option>
-                            <option value="1">factor 01</option>
-                            <option value="2">factor 02</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bmi-btn">
-                      <div class="outer-btn">
-                        <button class="btn" type="submit"><span>calculate</span></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
               <div class="col-lg-6">
                 <div class="bmi-result">
                   <table class="table table-dark table-hover">
@@ -280,7 +376,50 @@
                       </tr>
                     </tbody>
                   </table>
-                  <div class="bmi-info"><span><strong>BMR </strong>Metabolic Rate / <strong>BMI </strong>Body Mass Index</span></div>
+                  <div class="bmi-info">
+                    <p><strong>your BMI result:</strong><span class="bmi-text"></span></p>
+                    <p> <strong>your BMI number:</strong><span class="bmi-number"></span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="main-title"><span class="top-title">Body mass index</span>
+                  <h2>What is your bmi</h2>
+                </div>
+                <div class="bmi-form">
+                  <form class="needs-validation" action="" novalidate>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group position-relative">
+                          <input class="form-control height" type="number" max="250" min="50" placeholder="Height (cm)" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group position-relative">
+                          <input class="form-control weight" type="number" max="1000" min="1" placeholder="Weight (kg)" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group position-relative">
+                          <input class="form-control age" type="number" max="200" min="1" placeholder="Age (year)" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="select-area">
+                          <select class="select gender">
+                            <option class="hidden-option" disabled selected>Gender</option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bmi-btn">
+                      <div class="outer-btn">
+                        <button class="btn calculate" type="submit"><span>calculate</span></button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -322,73 +461,75 @@
           <div class="content">
             <div class="row">
               <div class="col-lg-12">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <th scope="row">Saturday</th>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                      <td> </td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">sunday</th>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                      <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">monday</th>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> </td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Tuesday</th>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> </td>
-                      <td> </td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Wednesday</th>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> </td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                      <td><span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Thursday</th>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> </td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td> </td>
-                      <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Friday</th>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                      <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                      <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-responsive">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Saturday</th>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                        <td> </td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">sunday</th>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                        <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">monday</th>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> </td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Tuesday</th>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> </td>
+                        <td> </td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Wednesday</th>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> </td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                        <td><span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Thursday</th>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> </td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td> </td>
+                        <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Friday</th>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                        <td> <span class="title">Crossfit Class</span><span class="cap">Mohame Adel</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                        <td> <span class="title">GYM OPEN</span><span class="time">11:00 - 12:00</span></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -458,7 +599,7 @@
             <div class="row">
               <div class="col-lg-4 col-md-6">
                 <div class="footer-box">
-                  <div class="about"><a href="index.html"> <img class="img-fluid mb-4" data-src="images/footer-logo.png" alt=""></a>
+                  <div class="about"><a href="index.html"> <img class="img-fluid mb-4" data-src="images/logo.png" alt=""></a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium!</p>
                   </div>
                   <div class="social-links">

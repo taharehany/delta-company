@@ -1596,8 +1596,8 @@ a.choose-now {
 		background-color: transparent;
 		border: none;
 		padding: 0;
-		
-		+ div  {
+
+		+div {
 			padding-top: 15px;
 		}
 	}
@@ -1617,7 +1617,7 @@ a.choose-now {
 		i {
 			line-height: 40px;
 		}
-		
+
 	}
 }
 
@@ -1625,8 +1625,15 @@ a.choose-now {
 	.video {
 		margin-top: 10px;
 
-		iframe {
+		iframe,
+		video {
 			@include borderRadius(10px)
+		}
+
+		.card-text {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
 		}
 	}
 }

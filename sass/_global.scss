@@ -275,6 +275,10 @@ $padding_section: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    video {
+        max-width: 100%;
+    }
 }
 
 //loader

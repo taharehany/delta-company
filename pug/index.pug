@@ -17,6 +17,13 @@ html(lang="en")
         include includes/styles.pug
     body
         div(class="main-wrapper")
+            //PreLoader
+            div(class="loader")
+                video(width="auto", height="auto" muted autoplay loop)
+                    source(src="video/loading.webm", type="video/mp4")
+                    source(src="videos/video.ogg", type="video/ogg")
+                    | Your browser does not support the video tag.
+            //PreLoader
             include includes/header.pug
             block home_block 
                 include includes/home.pug

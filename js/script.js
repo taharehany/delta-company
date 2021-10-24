@@ -206,5 +206,5 @@ $(document).ready(function () {
 });
 
 $(window).on("load", function () {
-  $('.loader').delay(500).fadeOut(5000000);
+  $('.loader').delay(500).fadeOut(500);
 });

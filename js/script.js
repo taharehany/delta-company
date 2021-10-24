@@ -2,15 +2,15 @@ $(document).ready(function () {
   "use strict";
 
   // fixed header
-  $(window).scroll(function () {
-    let scroll = $(window).scrollTop();
+  // $(window).scroll(function () {
+  //   let scroll = $(window).scrollTop();
 
-    if (scroll > 1) {
-      $("header").addClass("fixed");
-    } else {
-      $("header").removeClass("fixed");
-    }
-  });
+  //   if (scroll > 1) {
+  //     $("header").addClass("fixed");
+  //   } else {
+  //     $("header").removeClass("fixed");
+  //   }
+  // });
 
   //dropdown dropkick select
   $(".select").dropkick({

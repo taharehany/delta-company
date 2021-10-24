@@ -807,6 +807,8 @@ section.about {
 				z-index: -1;
 				margin-top: -35%;
 				text-align: right;
+				height: 380px;
+				@extend %fitimage;
 			}
 
 			.img3 {

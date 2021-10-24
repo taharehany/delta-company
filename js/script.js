@@ -12,8 +12,7 @@ $(document).ready(function () {
     }
   });
 
-  //loading
-  $('.loader').delay(500).fadeOut(500);
+
 
   //dropdown dropkick select
   $(".select").dropkick({
@@ -204,4 +203,8 @@ $(document).ready(function () {
     $(".bmi-info .bmi-text").text(result);
     $(".bmi-info .bmi-number").text(parseFloat(bmiEquation).toFixed(2));
   }
+});
+
+$(window).on("load", function () {
+  $('.loader').delay(500).fadeOut(500);
 });

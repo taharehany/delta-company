@@ -2,15 +2,18 @@ $(document).ready(function () {
   "use strict";
 
   // fixed header
-  // $(window).scroll(function () {
-  //   let scroll = $(window).scrollTop();
+  $(window).scroll(function () {
+    let scroll = $(window).scrollTop();
 
-  //   if (scroll > 1) {
-  //     $("header").addClass("fixed");
-  //   } else {
-  //     $("header").removeClass("fixed");
-  //   }
-  // });
+    if (scroll > 1) {
+      $("header").addClass("fixed");
+    } else {
+      $("header").removeClass("fixed");
+    }
+  });
+
+  //loading
+  $('.loader').delay(500).fadeOut(500);
 
   //dropdown dropkick select
   $(".select").dropkick({
@@ -39,7 +42,7 @@ $(document).ready(function () {
         items: 1,
         nav: true,
       },
-      
+
       992: {
         items: 1,
       }

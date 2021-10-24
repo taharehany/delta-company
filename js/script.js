@@ -25,17 +25,21 @@ $(document).ready(function () {
     items: 1,
     nav: true,
     dots: false,
+    smartSpeed: 2000,
     // animateOut: "slideOutUp",
     // animateIn: "slideOutUp",
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
       0: {
         items: 1,
+        nav: false,
+        dots: true,
       },
       768: {
         items: 1,
+        nav: true,
       },
-
+      
       992: {
         items: 1,
       }

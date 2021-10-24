@@ -665,7 +665,7 @@ section.main-slider {
 	}
 
 	.owl-stage {
-		transition: ease 0.5s !important;
+		transition: ease 1s !important;
 	}
 }
 
@@ -867,16 +867,16 @@ section.team {
 		}
 	}
 
-	@supports (grid-row-gap: 55px) {
+	@supports (grid-row-gap: 25px) {
 		.row {
-			grid-row-gap: 55px;
+			grid-row-gap: 25px;
 		}
 	}
 
-	@supports not (grid-row-gap: 55px) {
+	@supports not (grid-row-gap: 25px) {
 		.content {
 			.box {
-				margin-bottom: 55px;
+				margin-bottom: 25px;
 			}
 		}
 	}
@@ -885,7 +885,7 @@ section.team {
 		position: absolute;
 		left: 0;
 		width: 100%;
-		top: -35px;
+		top: -60%;
 		opacity: 0.1;
 		font-size: 55px;
 		color: transparent;
@@ -1036,7 +1036,7 @@ section.bmi {
 
 			.bmi-text,
 			.bmi-number {
-				background: #31a831;
+				background: $main_color;
 				border-radius: 20px;
 				color: #fff;
 				padding: 0px 10px;

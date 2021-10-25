@@ -1,0 +1,42 @@
+extend index
+
+block website_title
+    title #{website_title} | about
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 about
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") about
+    //breadcrumb
+    
+    //about page
+    section(class="about-in-page")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-6 box")
+                        div(class="main-title")
+                            h2 our message
+                        div(class="text")
+                            p When you’re ready to try a new restaurant, you might ask your friends for recommendations, read a good review, or check out the menu before you spend your money and time there. If you enjoy your first meal, you’ll return again and again, but if your thoughts was less than great, then first visit will also be your last. Finding the suitable gym is a lot like finding new restaurant. A good gym will fit your own personality and motivate you to come back and exercise on a regular basis.
+                            ul
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                li Proin sit amet diam et elit dictum sodales.
+                                li Suspendisse tempus felis a libero mollis ultrices.
+                    div(class="col-lg-6")
+                        div(class="image")
+                            img(class="img-fluid", src="images/about/about-img1.jpg", alt="about-img")
+                    div(class="col-lg-6")
+                        div(class="image")
+                            img(class="img-fluid", src="images/about/about-img2.jpg", alt="about-img")
+                    div(class="col-lg-6 box")
+                        div(class="text")
+                            p When considering a particular gym, please set up a tour around everything inside that gym and bring out a list of questions you need answers for it.Try to set up this tour during the time you usually exercise. More often than not, the staff will give you a free 3 days pass so you can try out the equipment, classes, and nutrition Tips that match your body composition. Other than a free service, there are key criteria to consider before you sign a long-term contract. Keep these questions in mind as you begin your research.
+    //about page

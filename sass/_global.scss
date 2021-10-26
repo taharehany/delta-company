@@ -106,45 +106,6 @@ $padding_section: 100px 0;
 
 //placeholder selectors
 
-//fontface
-@font-face {
-    font-family: "Muli Regular";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Muli Regular"), url("../webfonts/Muli-Regular.woff") format("woff");
-}
-@font-face {
-    font-family: "Muli Light";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Muli Light"), url("../webfonts/Muli-Light.woff") format("woff");
-}
-@font-face {
-    font-family: "Muli ExtraLight";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Muli ExtraLight"), url("../webfonts/Muli-ExtraLight.woff") format("woff");
-}
-@font-face {
-    font-family: "Muli SemiBold";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Muli SemiBold"), url("../webfonts/Muli-SemiBold.woff") format("woff");
-}
-@font-face {
-    font-family: "Muli Bold";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Muli Bold"), url("../webfonts/Muli-Bold.woff") format("woff");
-}
-@font-face {
-    font-family: "Muli ExtraBold";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Muli ExtraBold"), url("../webfonts/Muli-ExtraBold.woff") format("woff");
-}
-//fontface
-
 //main title
 .main-title {
     margin-bottom: 4rem;

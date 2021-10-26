@@ -444,6 +444,12 @@ section.about-in-page {
 section.services-in-page {
     @extend .services;
 
+    .main-title {
+        h2 {
+            text-align: initial;
+        }
+    }
+
     @supports (grid-row-gap: 25px) {
         .row {
             grid-row-gap: 25px;

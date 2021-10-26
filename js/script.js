@@ -95,33 +95,6 @@ $(document).ready(function () {
     $(":root").css("--dark-color", localStorage.getItem("dark_color"));
   }
 
-  //change theme colors on choose one
-  $(".main-color li").on("click", function () {
-    localStorage.setItem("main_color", $(this).data("color"));
-    $(":root").css("--main-color", localStorage.getItem("main_color"));
-  });
-
-  $(".dark-color li").on("click", function () {
-    localStorage.setItem("dark_color", $(this).data("color"));
-    $(":root").css("--dark-color", localStorage.getItem("dark_color"));
-  });
-
-  //change colors on pick color from input
-  $(".main-color .pick-color").on("change", function () {
-    $(":root").css("--main-color", $(this).val());
-    localStorage.setItem("main_color", $(this).val());
-  });
-
-  $(".dark-color .pick-color").on("change", function () {
-    $(":root").css("--dark-color", $(this).val());
-    localStorage.setItem("dark_color", $(this).val());
-  });
-
-  //show setting theme colors on click icon
-  $(".theme-colors .show-icon").on("click", function () {
-    $(".theme-colors").toggleClass("move");
-  });
-
   //lazyload images
   $("img").Lazy({
     scrollDirection: "vertical",

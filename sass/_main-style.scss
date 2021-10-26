@@ -10,35 +10,6 @@ body {
 	}
 }
 
-.modal-backdrop.show {
-	opacity: .7;
-}
-
-a {
-	text-decoration: none;
-}
-
-.form-check-input:checked {
-	background-color: $main_color;
-	border-color: $main_color;
-}
-
-.toast-header {
-	background-color: $main_color;
-
-	span {
-		color: #fff
-	}
-}
-
-.alert {
-	font-size: 14px;
-
-	strong {
-		margin-inline-end: 5px;
-	}
-}
-
 //global style
 
 //header
@@ -412,7 +383,8 @@ header {
 			}
 		}
 
-		.form-control, .form-select {
+		.form-control,
+		.form-select {
 			border: none;
 			@include transition(all ease 0.3s);
 			color: #333;
@@ -551,12 +523,13 @@ section.main-slider {
 					.item-text {
 						max-width: 850px;
 						margin: auto;
+						direction: initial;
 					}
 
 					.title {
 						text-transform: uppercase;
 						color: #fff;
-						font-size: 50px;
+						font-size: 36px;
 						margin-bottom: 25px;
 						font-weight: 700;
 						@extend %max_lines;
@@ -565,11 +538,11 @@ section.main-slider {
 
 					p {
 						color: #ffffff;
-						font-size: 20px;
+						font-size: 18px;
 						margin-bottom: 25px;
 						line-height: 1.4em;
 						@extend %max_lines;
-						-webkit-line-clamp: 5;
+						-webkit-line-clamp: 3;
 					}
 				}
 			}
@@ -878,6 +851,7 @@ section.services {
 				left: 0;
 				background-color: #fff;
 				padding: 15px;
+				min-width: 200px;
 
 				&::before {
 					content: "";
@@ -889,19 +863,15 @@ section.services {
 				}
 
 				.title {
-					font-size: 14px;
-					font-weight: 400;
-					margin-bottom: 5px;
-					display: block;
-				}
+					max-width: 250px;
 
-				.title {
 					a {
 						color: #222222;
 						font-size: 18px;
 						font-weight: 700;
 						text-transform: capitalize;
-						display: block;
+						@extend %max_lines;
+						-webkit-line-clamp: 1;
 					}
 				}
 
@@ -919,6 +889,7 @@ section.services {
 				}
 			}
 		}
+
 		.services-btn {
 			@extend .item-btn;
 			text-align: center;
@@ -945,6 +916,111 @@ section.services {
 }
 
 //services
+
+//blogs
+section.blogs {
+	padding: $padding_section;
+	background-color: #fff;
+
+	.main-title {
+		text-align: center
+	}
+
+	.content {
+		.blogs-box {
+			@include transition(all ease 0.3s);
+
+			.image {
+				img {
+					height: 300px;
+					@extend %fitimage;
+				}
+			}
+
+			&:hover {
+				@include boxshadow(0 2px 10px rgb(0 0 0 / 10%));
+			}
+
+			.details {
+				padding: 30px;
+				background-color: #f8f8f8;
+
+				.meta {
+					padding: 0;
+
+					li {
+						position: relative;
+						display: inline-block;
+						color: #999;
+						font-size: 14px;
+						text-transform: capitalize;
+
+						i {
+							margin-inline-end: 5px;
+						}
+					}
+				}
+
+				.title {
+					margin-bottom: 24px;
+
+					a {
+						font-size: 16px;
+						text-transform: capitalize;
+						color: #222;
+						font-weight: 600;
+						@extend %max_lines;
+						-webkit-line-clamp: 2;
+						min-height: 48px;
+
+						&:hover {
+							color: $main_color;
+						}
+					}
+				}
+
+				.btns {
+					.btn {
+						text-transform: capitalize;
+						background-color: $main_color;
+						color: #fff;
+						@include borderRadius(0);
+						padding: 10px 35px;
+
+						&:hover {
+							background-color: $dark_color
+						}
+					}
+				}
+			}
+		}
+
+		.blogs-btn {
+			@extend .item-btn;
+			text-align: center;
+			margin-top: 40px;
+
+			.btn {
+				border-color: $dark_color;
+				color: $dark_color;
+
+				&:hover {
+					color: #fff;
+				}
+
+				span {
+
+					&::before,
+					&::after {
+						border-bottom: 55px solid $dark_color;
+					}
+				}
+			}
+		}
+	}
+}
+
+//blogs
 
 //global select
 .select-area {
@@ -1017,6 +1093,7 @@ section.services {
 //contact
 section.contact {
 	padding: $padding_section;
+	background-color: #f8f8f8;
 
 	.content {
 		.contact-form {
@@ -1066,6 +1143,12 @@ section.contact {
 					}
 				}
 			}
+		}
+
+		.successfully {
+			font-size: 16px;
+			margin-bottom: 25px;
+			color: #058100;
 		}
 	}
 }
@@ -1139,6 +1222,7 @@ footer {
 					@extend %max_lines;
 					-webkit-line-clamp: 5;
 				}
+
 				.footer-logo {
 					img {
 						max-width: 250px;
@@ -1229,6 +1313,8 @@ footer {
 					a {
 						color: #fff;
 						text-transform: uppercase;
+						@extend %max_lines;
+						-webkit-line-clamp: 1;
 
 						&.btn {
 							padding-left: 0;
@@ -1273,9 +1359,9 @@ footer {
 			p {
 				margin-bottom: 0;
 				color: #fff;
-				font-size: 15px;
+				font-size: 14px;
 				margin: 0;
-
+				text-transform: capitalize;
 
 				a {
 					color: $main_color;

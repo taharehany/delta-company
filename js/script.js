@@ -25,6 +25,7 @@ $(document).ready(function () {
     items: 1,
     nav: true,
     dots: false,
+    rtl: true,
     smartSpeed: 2000,
     // animateOut: "slideOutUp",
     // animateIn: "slideOutUp",
@@ -45,31 +46,7 @@ $(document).ready(function () {
       }
     }
   });
-
-  //clients slider owl
-  $(".clients-carousel").owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    items: 5,
-    nav: false,
-    dots: false,
-    margin: 50,
-    navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
-    responsive: {
-      0: {
-        items: 2,
-      },
-      768: {
-        items: 3,
-      },
-
-      992: {
-        items: 5,
-      }
-    }
-  });
-
+  
   //to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 500) {

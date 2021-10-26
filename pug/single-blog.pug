@@ -1,0 +1,67 @@
+extend index
+
+block website_title
+    title #{website_title} | single blog
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 single blog
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") single blog
+    //breadcrumb
+    
+    //single blog
+    section(class="single-blog")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-8")
+                        div(class="blog-box")
+                            div(class="image")
+                                img(class="img-fluid" data-src="images/blogs/02.jpg" alt="")
+                            div(class="details")
+                                div(class="title")
+                                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                div(class="text")
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias 
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    h4 this is title 1
+                                    ul 
+                                        li Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatibus dolore aliquam dicta repudiandae temporibus obcaecati quas velit consequatur iure, doloremque praesentium vero porro reprehenderit sit, laboriosam minima eveniet voluptates!
+                                        li Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatibus dolore aliquam dicta repudiandae temporibus obcaecati quas velit consequatur iure, doloremque praesentium vero porro reprehenderit sit, laboriosam minima eveniet voluptates!
+                                        li Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatibus dolore aliquam dicta repudiandae temporibus obcaecati quas velit consequatur iure, doloremque praesentium vero porro reprehenderit sit, laboriosam minima eveniet voluptates!
+                                        li Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatibus dolore aliquam dicta repudiandae temporibus obcaecati quas velit consequatur iure, doloremque praesentium vero porro reprehenderit sit, laboriosam minima eveniet voluptates!
+                                    h4 this is title 2
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias 
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias 
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias 
+                    div(class="col-lg-4")
+                        div(class="side-widget")
+                            div(class="other-blogs")
+                                div(class="title")
+                                    h4 All blogs
+                                ul 
+                                    li 
+                                        a(href="#!") this is title blog 01
+                                    li 
+                                        a(href="#!") this is title blog 02
+                                    li 
+                                        a(href="#!") this is title blog 03
+                                    li 
+                                        a(href="#!") this is title blog 04
+                            div(class="help")
+                                div(class="title")
+                                    h4 How We Can Help You!
+                                p labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                a(class="btn", href="contact.html") Contact Us
+    //single blog 

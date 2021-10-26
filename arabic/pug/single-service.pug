@@ -1,0 +1,52 @@
+extend index
+
+block website_title
+    title #{website_title} | صفحة الخدمة
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 صفحة الخدمة
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") صفحة الخدمة
+    //breadcrumb
+    
+    //single services
+    section(class="single-service")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-8")
+                        div(class="service-box")
+                            div(class="image")
+                                img(class="img-fluid" data-src="../images/services/01.jpg" alt="")
+                            div(class="details")
+                                div(class="title")
+                                    h3 ترتبط المحاماة بالحياة القانونية ، كما تعيش في المحاكم وفي المجتمع ويقع على المحامي واجب خماسي الأبعاد
+                                div(class="text")
+                                    p ترتبط المحاماة بالحياة القانونية ، كما تعيش في المحاكم وفي المجتمع ويقع على المحامي واجب خماسي الأبعاد: واجبه نحو موكله ، وواجب نحو خصمه ، وواجب نحو المحكمة ، وواجب تجاه نفسه ، وواجبه تجاه النظام القانوني في الدولة.
+                    div(class="col-lg-4")
+                        div(class="side-widget")
+                            div(class="other-services")
+                                div(class="title")
+                                    h4 جميع الخدمات
+                                ul 
+                                    li 
+                                        a(href="#!") هنا عنوان الخدمة 01
+                                    li 
+                                        a(href="#!") هنا عنوان الخدمة 02
+                                    li 
+                                        a(href="#!") هنا عنوان الخدمة 03
+                                    li 
+                                        a(href="#!") هنا عنوان الخدمة 04
+                            div(class="help")
+                                div(class="title")
+                                    h4 كيف يمكننا مساعدتك!
+                                p ترتبط المحاماة بالحياة القانونية ، كما تعيش في المحاكم وفي المجتمع ويقع على المحامي واجب خماسي الأبعاد: واجبه نحو موكله ، وواجب نحو خصمه ، وواجب نحو المحكمة ، وواجب تجاه نفسه ، وواجبه تجاه النظام القانوني في الدولة.
+                                a(class="btn", href="contact.html") تواصل معنا
+    //single services   

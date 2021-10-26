@@ -226,6 +226,41 @@ $padding_section: 100px 0;
 
 //if no data
 
+//global styles
+.btn, .btn-close {
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+dl, ol, ul {
+    padding: 0;
+    padding-inline-start: 20px;
+}
+
+.modal-backdrop.show {
+	opacity: .7;
+}
+
+a {
+	text-decoration: none;
+}
+
+.form-check-input:checked {
+	background-color: $main_color;
+	border-color: $main_color;
+}
+
+.alert {
+	font-size: 14px;
+
+	strong {
+		margin-inline-end: 5px;
+	}
+}
+//global styles
+
 //theme colors
 .theme-colors {
     position: fixed;

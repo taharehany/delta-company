@@ -1,0 +1,145 @@
+extend index
+
+block website_title
+    title #{website_title} | services
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 services
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") services
+    //breadcrumb
+    
+    //services
+    section(class="services-in-page")
+        div(class="container")
+            div(class="main-title")
+                h2 our services
+            div(class="content")
+                div(class="nav flex-column nav-pills", id="v-pills-tab" role="tablist", aria-orientation="vertical")
+                    button#v-pills-1-tab(class="nav-link active", data-bs-toggle="pill", data-bs-target="#v-pills-1", type="button", role="tab", aria-controls="v-pills-1", aria-selected="true") 
+                        span first type
+                    button#v-pills-2-tab(class="nav-link", data-bs-toggle="pill", data-bs-target="#v-pills-2", type="button", role="tab", aria-controls="v-pills-2", aria-selected="false")
+                        span second type
+                div(class="tab-content" id="v-pills-tabContent")
+                    div(class="tab-pane fade show active", id="v-pills-1" role="tabpanel", aria-labelledby="v-pills-1-tab") 
+                        div(class="row")
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/01.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/02.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/03.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/04.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/05.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/06.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                    div(class="tab-pane fade", id="v-pills-2" role="tabpanel", aria-labelledby="v-pills-2-tab") 
+                        div(class="row")
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/01.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/02.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/03.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/04.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/05.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") Real Estate Systems
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") details
+    //services

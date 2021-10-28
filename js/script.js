@@ -12,9 +12,13 @@ $(document).ready(function () {
     }
   });
 
-  //dropdown dropkick select
-  $(".select").dropkick({
-    mobile: true
+  //wow animate
+  new WOW().init({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 200,
+    mobile: true,
+    live: true
   });
 
   //main slider owl
@@ -46,7 +50,7 @@ $(document).ready(function () {
       }
     }
   });
-  
+
   //to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 500) {
@@ -84,7 +88,7 @@ $(document).ready(function () {
 
   //store theme colors in local storage 
   if (!localStorage.getItem("main_color")) {
-    $(":root").css("--main-color", "#BF0000");
+    $(":root").css("--main-color", "#e3ac2b");
   } else {
     $(":root").css("--main-color", localStorage.getItem("main_color"));
   }

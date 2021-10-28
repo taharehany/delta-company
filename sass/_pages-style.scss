@@ -364,11 +364,7 @@ section.about-in-page {
     }
 
     .content {
-        .box {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-
+        .row {
             &:nth-child(even) {
                 direction: rtl;
 
@@ -376,6 +372,11 @@ section.about-in-page {
                     direction: initial;
                 }
             }
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
         }
 
         .text {
@@ -501,7 +502,8 @@ section.services-in-page {
                         height: 0;
                         border-style: solid;
                         border-width: 30px 0 30px 30px;
-                        border-color: transparent transparent transparent #6b0000;
+                        border-color: transparent transparent transparent $main_color;
+                        opacity: 0.4;
                     }
                 }
             }
@@ -699,6 +701,7 @@ section.contact-in-page {
                     display: block;
                     margin-bottom: 8px;
                     color: $main_color;
+                    text-transform: capitalize;
                 }
 
                 p,

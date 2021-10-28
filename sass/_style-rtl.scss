@@ -77,6 +77,7 @@ html[dir=rtl] {
         right: 0;
         left: auto;
     }
+
     section.about-in-page .content .box:nth-child(even) {
         .text {
             direction: rtl;
@@ -87,7 +88,7 @@ html[dir=rtl] {
         left: -30px;
         right: auto;
         border-width: 30px 30px 30px 0;
-        border-color: transparent #a50000 transparent transparent;
+        border-color: transparent $main_color transparent transparent;
     }
 
     .form-select {
@@ -172,15 +173,33 @@ html[dir=rtl] {
         right: 0;
     }
 
-    .side-widget .other-services .title h4::after, .side-widget .single-blog .content .other-blogs .title h4::after, .single-blog .content .side-widget .other-blogs .title h4::after {
-        right:  0;
-        left:  auto;
+    .side-widget .other-services .title h4::after,
+    .side-widget .single-blog .content .other-blogs .title h4::after,
+    .single-blog .content .side-widget .other-blogs .title h4::after {
+        right: 0;
+        left: auto;
     }
 
-    .side-widget .other-services ul li a::before, .side-widget .single-blog .content .other-blogs ul li a::before, .single-blog .content .side-widget .other-blogs ul li a::before {
+    .side-widget .other-services ul li a::before,
+    .side-widget .single-blog .content .other-blogs ul li a::before,
+    .single-blog .content .side-widget .other-blogs ul li a::before {
         right: 0;
         left: auto;
         @include transform(rotate(180deg) translateY(50%))
+    }
+
+    section.about-in-page {
+        .content {
+            .row {
+                &:nth-child(even) {
+                    direction: ltr;
+
+                    .text {
+                        direction: rtl;
+                    }
+                }
+            }
+        }
     }
 
     footer {

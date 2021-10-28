@@ -2,6 +2,7 @@
 body {
 	font-family: "Poppins", sans-serif;
 	background-color: #fff;
+	overflow-x: hidden;
 
 	.main-wrapper {
 		position: relative;
@@ -26,7 +27,7 @@ header {
 	}
 
 	.top-part {
-		background-color: $dark_color;
+		background-color: #87171A;
 
 		.content {
 			display: flex;
@@ -135,6 +136,10 @@ header {
 					.nav-link {
 						color: $main_color;
 					}
+				}
+
+				&:last-child {
+					padding-inline-end: 0;
 				}
 
 				.nav-link {
@@ -750,7 +755,7 @@ section.about {
 
 			p {
 				@extend %max_lines;
-				-webkit-line-clamp: 7;
+				-webkit-line-clamp: 5;
 			}
 		}
 

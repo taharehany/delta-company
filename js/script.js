@@ -12,15 +12,6 @@ $(document).ready(function () {
     }
   });
 
-  //wow animate
-  new WOW().init({
-    boxClass: 'wow',
-    animateClass: 'animated',
-    offset: 200,
-    mobile: true,
-    live: true
-  });
-
   //main slider owl
   $(".main-slider-carousel").owlCarousel({
     loop: true,
@@ -109,4 +100,13 @@ $(document).ready(function () {
 
 $(window).on("load", function () {
   $('.loader').delay(500).fadeOut(500);
+
+  //wow animate
+  new WOW().init({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 200,
+    mobile: true,
+    live: true
+  });
 });

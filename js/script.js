@@ -102,11 +102,12 @@ $(window).on("load", function () {
   $('.loader').delay(500).fadeOut(500);
 
   //wow animate
-  new WOW().init({
-    boxClass: 'wow',
-    animateClass: 'animated',
-    offset: 200,
-    mobile: true,
-    live: true
-  });
+  wow = new WOW({
+    boxClass: 'wow', // default
+    animateClass: 'animated', // default
+    offset: 0, // default
+    mobile: false, // default
+    live: true // default
+  })
+  wow.init();
 });

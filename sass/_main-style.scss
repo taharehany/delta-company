@@ -496,7 +496,7 @@ section.main-slider {
 
 				&::after {
 					content: "";
-					background-color: rgba(0, 0, 0, 0.5);
+					// background-color: rgba(0, 0, 0, 0.5);
 					position: absolute;
 					left: 0;
 					top: 0;
@@ -539,6 +539,7 @@ section.main-slider {
 						font-weight: 700;
 						@extend %max_lines;
 						-webkit-line-clamp: 2;
+						text-shadow: 2px 2px 5px #020202;
 					}
 
 					p {
@@ -548,6 +549,7 @@ section.main-slider {
 						line-height: 1.4em;
 						@extend %max_lines;
 						-webkit-line-clamp: 3;
+						text-shadow: 2px 2px 5px #020202;
 					}
 				}
 			}
@@ -636,16 +638,16 @@ section.main-slider {
 		@include transition(all ease 0.3s);
 		padding: 0;
 		background: none;
-		color: #fff;
+		color: #000;
 		position: relative;
-		background-color: transparent;
+		background-color: #fff;
 		border: 1px solid #fff;
 		overflow: hidden;
 
 		&:focus,
 		&:active,
 		&:hover {
-			color: #000;
+			color: #fff;
 			box-shadow: none;
 
 			span {
@@ -671,7 +673,7 @@ section.main-slider {
 			&::after {
 				position: absolute;
 				content: "";
-				border-bottom: 55px solid #ffffff;
+				border-bottom: 55px solid $main_color;
 				@include transition(all ease 0.3s);
 				z-index: -1;
 			}

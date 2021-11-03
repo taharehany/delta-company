@@ -207,4 +207,12 @@ $(window).on("load", function () {
     live: true // default
   })
   // wow.init();
+
+  //counter up
+  $(".counter").counterUp({
+    delay: 10,
+    time: 1000,
+    offset: 50,
+    beginAt: 100,
+  });
 });

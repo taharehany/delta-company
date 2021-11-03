@@ -1,0 +1,85 @@
+extend index
+
+block website_title
+    title #{website_title} | about
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 about
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") about
+    //breadcrumb
+    
+    //about page
+    section(class="about-in-page")
+        div(class="container")
+            div(class="main-title wow slideInUp" data-wow-duration="1.3s" data-wow-delay=".3s")
+                span(class="top-title") we introduce better services
+                h2 Building a healthy community for all.
+            div(class="content")
+                div(class="about-text wow slideInUp" data-wow-duration="1.3s" data-wow-delay=".4s")
+                    p We care for the growing needs of our community. We build systems for providing health services for individuals, families, communities and populations in general.
+                div(class="about-boxs")
+                    div(class="row")
+                        div(class="col-lg-4 col-12 col")
+                            div(class="single-box")
+                                div(class="icon")
+                                    img(src="images/icons/book.png", class="img-fluid" alt="")
+                                div(class="number")
+                                    span 6500
+                                        sup +
+                                div(class="text")
+                                    h3 Worldwide Branches
+                                    p Bring best quality health services to ones who are in need worldwide.
+                        div(class="col-lg-4 col-12 col")
+                            div(class="single-box")
+                                div(class="icon")
+                                    img(src="images/icons/folder.png", class="img-fluid" alt="")
+                                div(class="number")
+                                    span 1000
+                                        sup +
+                                div(class="text")
+                                    h3 Hospital Established
+                                    p Bring best quality health services to ones who are in need worldwide.
+                        div(class="col-lg-4 col-12 col")
+                            div(class="single-box")
+                                div(class="icon")
+                                    img(src="images/icons/placeholder.png", class="img-fluid" alt="")
+                                div(class="number")
+                                    span  300
+                                        sup +
+                                div(class="text")
+                                    h3 Local Partners
+                                    p Bring best quality health services to ones who are in need worldwide.
+    //about page
+
+    //video
+    section(class="video-in-page" style="background-image:url('images/bgs/vid-bg.jpg')")
+        div(class="container")
+            div(class="content")
+                div(class="vid-icon")
+                    a(href="https://www.youtube.com/watch?v=kxPCFljwJws" data-fancybox="gallery") 
+                        i(class="bi bi-play-fill")
+                div(class="vid-text")
+                    p We do whatever it takes to bring you peace
+                    h2 Changing home care for the better.
+    //video
+
+    //clients
+    section(class="clients")
+        div(class="container")
+            div(class="content")
+                div(class="clients-carousel owl-carousel owl-theme")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/01.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/02.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/03.png" alt="")
+    //clients

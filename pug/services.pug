@@ -1,0 +1,84 @@
+extend index
+
+block website_title
+    title #{website_title} | services
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 services
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") services
+    //breadcrumb
+    
+    //services
+    section(class="services-in-page")
+        div(class="container")
+            div(class="main-title")
+                span(class="top-title") our services
+                h2 family first services
+                p Read the most popular medical news and articles in health care industries to catch up with the latest policies and trends.
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay="0s")
+                            //- div(class="trending-label")
+                                i(class="bi bi-star-fill")
+                            div(class="image")
+                                a(href="single-service.html") 
+                                    img(class="img-fluid" data-src="images/services/01.jpg" alt="")
+                            div(class="details")
+                                h3(class="title")
+                                    a(href="single-service.html") Daily Home Care
+                                p We send a doctor to visit the patient at home to diagnose and treat
+                                div(class="btns")
+                                    a(href="single-service.html" class="btn details-btn") more details
+                                        i(class="bi bi-chevron-double-right")
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay="0s")
+                            div(class="trending-label")
+                                i(class="bi bi-star-fill")
+                            div(class="image")
+                                a(href="single-service.html") 
+                                    img(class="img-fluid" data-src="images/services/02.jpg" alt="")
+                            div(class="details")
+                                h3(class="title")
+                                    a(href="single-service.html") Hourly Home Care
+                                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis molestiae iste laboriosam illum debitis facere quasi beatae eum officiis est sequi, et id doloremque libero eveniet veritatis consectetur magni corporis.
+                                div(class="btns")
+                                    a(href="single-service.html" class="btn details-btn") more details
+                                        i(class="bi bi-chevron-double-right")
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay="0s")
+                            //- div(class="trending-label")
+                                i(class="bi bi-star-fill")
+                            div(class="image")
+                                a(href="single-service.html") 
+                                    img(class="img-fluid" data-src="images/services/03.jpg" alt="")
+                            div(class="details")
+                                h3(class="title")
+                                    a(href="single-service.html") Specialized Care
+                                p We send a doctor to visit the patient at home to diagnose and treat
+                                div(class="btns")
+                                    a(href="single-service.html" class="btn details-btn") more details
+                                        i(class="bi bi-chevron-double-right")
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay="0s")
+                            //- div(class="trending-label")
+                                i(class="bi bi-star-fill")
+                            div(class="image")
+                                a(href="single-service.html") 
+                                    img(class="img-fluid" data-src="images/services/04.jpg" alt="")
+                            div(class="details")
+                                h3(class="title")
+                                    a(href="single-service.html") Advanced Care
+                                p We send a doctor to visit the patient at home to diagnose and treat
+                                div(class="btns")
+                                    a(href="single-service.html" class="btn details-btn") more details
+                                        i(class="bi bi-chevron-double-right")
+    //services

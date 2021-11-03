@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
   });
 
-
+  
 
   //dropdown dropkick select
   $(".select").dropkick({
@@ -205,6 +205,6 @@ $(document).ready(function () {
   }
 });
 
-$(window).on("load", function () {
+$(window).on("load", function() {
   $('.loader').delay(500).fadeOut(500);
 });

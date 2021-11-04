@@ -1,12 +1,37 @@
 @media screen and (max-width: 1500px) {}
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1199px) {
+    header {
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 991px) {
     header {
         .navbar {
             padding: 10px 0;
+
+            .navbar-toggler {
+                order: 2;
+            }
+
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
+
         .hamburger-menu {
             display: inline-block;
         }
@@ -18,8 +43,15 @@
 
     section.about {
         .content {
-            .about-image {
-                margin-bottom: 3rem;
+            .main-title {
+                text-align: center;
+                margin-bottom: 25px;
+                max-width: 100%;
+            }
+
+            .about-text {
+                text-align: center;
+                padding-top: 0;
             }
         }
     }
@@ -119,20 +151,6 @@
         }
     }
 
-    section.main-slider {
-        .main-slider-carousel {
-            .owl-item {
-                .item {
-                    .item-details {
-                        p {
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .item-btn {
         .btn {
             span {
@@ -178,7 +196,7 @@
 
 @media screen and (max-width: 575px) {
     .main-title h2 {
-        font-size: 35px;
+        font-size: 26px;
     }
 
     .modals {
@@ -267,6 +285,49 @@
         }
     }
 
+    section.about-in-page .main-title h2 {
+        font-size: 20px;
+    }
+
+    section.video-in-page .content .vid-text h2 {
+        font-size: 30px;
+    }
+
+    section.about-tabs {
+        padding-top: 50px;
+
+        .content {
+            margin-top: 0;
+
+            .tab-content {
+                margin-top: 35px;
+
+                .tab-pane {
+                    padding: 0;
+                }
+            }
+
+            .nav {
+                display: block;
+
+                .nav-item {
+                    display: block;
+                    margin: 0 0 10px 0;
+
+                    .nav-link {
+                        width: 100%;
+                        background-color: #f5f5f5;
+
+                        &.active {
+                            @include boxshadow(0 4px 20px rgb(115 115 115 / 14%));
+                            background-color: $second_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .modals .login-modal .form-group .btn,
     .modals .register-modal .form-group .btn,
     .modals .forget-password-modal .form-group .btn {
@@ -276,6 +337,18 @@
     section.team .side-text,
     section.team-in-page .side-text {
         font-size: 8vw;
+    }
+
+    section.subscribe {
+        .main-title {
+            .heading {
+                font-size: 30px;
+            }
+        }
+
+        .subscribe-form {
+            padding: 70px 25px;
+        }
     }
 }
 
@@ -292,6 +365,51 @@
         }
     }
 
+    section.main-slider {
+        .main-slider-carousel {
+            .owl-item {
+                .slider-item {
+                    .item-details {
+                        text-align: center;
+                        padding: 0;
+
+                        .title {
+                            font-size: 24px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+
+                        .item-text {
+                            padding: 30px 15px;
+                            background-color: rgba(255, 255, 255, .8);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-info {
+        .content {
+            .info-box {
+                grid-template-columns: 50px auto;
+            }
+
+            .links {
+                padding-top: 10px;
+                margin-bottom: 40px;
+
+                a {
+                    font-size: 14px;
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+        }
+    }
+
     #toTop {
         bottom: 42px;
 
@@ -303,7 +421,7 @@
 
     footer {
         .footer-content {
-            padding-bottom: 70px;
+            padding-bottom: 50px;
 
             .footer-box {
                 .about {
@@ -328,6 +446,14 @@
 
 @media screen and (max-width: 400px) {
     header {
+        .navbar {
+            .navbar-brand {
+                img {
+                    max-width: 130px;
+                }
+            }
+        }
+
         .top-part {
             .top-part-content {
                 .text {
@@ -348,17 +474,7 @@
         }
     }
 
-    section.services .content .service-box,
-    section.services .single-blog .content .blog-box,
-    .single-blog section.services .content .blog-box,
-    section.single-service .content .service-box,
-    section.single-service .single-blog .content .blog-box,
-    .single-blog section.single-service .content .blog-box,
-    section.single-blog .content .service-box,
-    section.single-blog .content .blog-box,
-    section.services-in-page .content .service-box,
-    section.services-in-page .single-blog .content .blog-box,
-    .single-blog section.services-in-page .content .blog-box {
-        padding-inline-start: 0;
+    .main-title h2 {
+        font-size: 20px;
     }
 }

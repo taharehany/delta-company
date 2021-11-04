@@ -1,0 +1,63 @@
+extend index
+
+block website_title
+    title #{website_title} | المقال
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 المقال
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") المقال
+    //breadcrumb
+    
+    //single blog
+    section(class="single-blog")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-8")
+                        div(class="blog-box")
+                            div(class="image")
+                                img(class="img-fluid" data-src="../images/blogs/02.jpg" alt="")
+                            div(class="details")
+                                div(class="title")
+                                    h3 عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                div(class="text")
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة 
+                                    h4 هنا عنوان فرعي
+                                    ul 
+                                        li عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                        li عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                        li عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                    h4 هنا عنوان فرعي
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميمeligendi iure!
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميمeligendi iure!
+                    div(class="col-lg-4")
+                        div(class="side-widget")
+                            div(class="other-blogs")
+                                div(class="title")
+                                    h4 مقالات ذات صلة
+                                ul 
+                                    li 
+                                        a(href="#!") هنا عنوان مقال ذا صلة 01
+                                    li 
+                                        a(href="#!") هنا عنوان مقال ذا صلة 02
+                                    li 
+                                        a(href="#!") هنا عنوان مقال ذا صلة 03
+                                    li 
+                                        a(href="#!") هنا عنوان مقال ذا صلة 04
+                            div(class="help")
+                                div(class="title")
+                                    h4 كيف يمكننا مساعدتك؟!
+                                p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                a(class="btn", href="contact.html") تواصل معنا
+    //single blog 

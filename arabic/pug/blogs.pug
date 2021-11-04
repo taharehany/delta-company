@@ -1,0 +1,128 @@
+extend index
+
+block website_title
+    title #{website_title} | المقالات
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 المقالات
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") المقالات
+    //breadcrumb
+    
+    //blogs page
+    section(class="blogs-in-page")
+        div(class="container")
+            div(class="main-title")
+                span(class="top-title") أحدث المقالات
+                h2 المزيد من المقالات
+                p اقرأ أكثر الأخبار والمقالات الطبية شيوعًا في صناعات الرعاية الصحية لمواكبة أحدث السياسات والاتجاهات.
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="blogs-box")
+                            div(class="image")
+                                a(href="single-blog.html") 
+                                    img(class="img-fluid" data-src="../images/blogs/01.jpg" alt="")
+                            div(class="details")
+                                div(class="read-more")
+                                    a(href="single-blog.html")
+                                        i(class="bi bi-arrow-right")
+                                ul(class="meta")
+                                    li(class="date")
+                                        i(class="bi bi-calendar")
+                                        | أغسطس 18, 2018
+                                h3(class="title")
+                                    a(href="single-blog.html") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="blogs-box")
+                            div(class="image")
+                                a(href="single-blog.html") 
+                                    img(class="img-fluid" data-src="../images/blogs/02.jpg" alt="")
+                            div(class="details")
+                                div(class="read-more")
+                                    a(href="single-blog.html")
+                                        i(class="bi bi-arrow-right")
+                                ul(class="meta")
+                                    li(class="date")
+                                        i(class="bi bi-calendar")
+                                        | أغسطس 18, 2018
+                                h3(class="title")
+                                    a(href="single-blog.html") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="blogs-box")
+                            div(class="image")
+                                a(href="single-blog.html") 
+                                    img(class="img-fluid" data-src="../images/blogs/03.jpg" alt="")
+                            div(class="details")
+                                div(class="read-more")
+                                    a(href="single-blog.html")
+                                        i(class="bi bi-arrow-right")
+                                ul(class="meta")
+                                    li(class="date")
+                                        i(class="bi bi-calendar")
+                                        | أغسطس 18, 2018
+                                h3(class="title")
+                                    a(href="single-blog.html") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="blogs-box")
+                            div(class="image")
+                                a(href="single-blog.html") 
+                                    img(class="img-fluid" data-src="../images/blogs/04.jpg" alt="")
+                            div(class="details")
+                                div(class="read-more")
+                                    a(href="single-blog.html")
+                                        i(class="bi bi-arrow-right")
+                                ul(class="meta")
+                                    li(class="date")
+                                        i(class="bi bi-calendar")
+                                        | أغسطس 18, 2018
+                                h3(class="title")
+                                    a(href="single-blog.html") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="col-lg-4 col-md-6 box")
+                        div(class="blogs-box")
+                            div(class="image")
+                                a(href="single-blog.html") 
+                                    img(class="img-fluid" data-src="../images/blogs/01.jpg" alt="")
+                            div(class="details")
+                                div(class="read-more")
+                                    a(href="single-blog.html")
+                                        i(class="bi bi-arrow-right")
+                                ul(class="meta")
+                                    li(class="date")
+                                        i(class="bi bi-calendar")
+                                        | أغسطس 18, 2018
+                                h3(class="title")
+                                    a(href="single-blog.html") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                //pagination
+                nav(aria-label="Page navigation" class="navigation")
+                    ul(class="pagination")
+                        li(class="page-item")
+                            a(class="page-link arrow", href="#!", aria-label="Previous")
+                                span(aria-hidden="true") &laquo;
+                        li(class="page-item active")
+                            a(class="page-link", href="#!") 1
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 2
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 3
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 4
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 5
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 6
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 7
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 8
+                        li(class="page-item")
+                            a(class="page-link arrow", href="#!", aria-label="Next")
+                                span(aria-hidden="true") &raquo;
+    //blogs page

@@ -1,0 +1,30 @@
+extend index
+
+block website_title
+    title #{website_title} | خطأ 404
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 خطأ
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") خطأ
+    //breadcrumb
+
+    //error 404
+    div(class="error")
+        div(class="container")
+            div(class="text-center mx-auto") 
+                h2 4
+                    span(class="diff-color") 
+                        span(class="num") 0
+                    | 4
+                p(class="lead text-gray-800 mb-4") لم يتم العثور على الصفحة
+                a(href="index.html" class="btn back") الصفحة الرئيسية
+    //error 404
+

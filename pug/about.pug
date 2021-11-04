@@ -71,6 +71,32 @@ block home_block
                     h2 Changing home care for the better.
     //video
 
+    //about tabs
+    section(class="about-tabs")
+        div(class="container")
+            div(class="content")
+                ul(class="nav nav-pills", role="tablist")
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link active", id="about-1-tab" data-bs-toggle="pill", data-bs-target="#about-1", type="button", role="tab", aria-controls="about-1", aria-selected="true") vision
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="about-2-tab" data-bs-toggle="pill", data-bs-target="#about-2", type="button", role="tab", aria-controls="about-2", aria-selected="false") mission
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="about-3-tab" data-bs-toggle="pill", data-bs-target="#about-3", type="button", role="tab", aria-controls="about-3", aria-selected="false") values
+                div(class="tab-content")
+                    div(class="tab-pane fade show active", id="about-1" role="tabpanel", aria-labelledby="about-1-tab") 
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                    div(class="tab-pane fade", id="about-2" role="tabpanel", aria-labelledby="about-2-tab") 
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                    div(class="tab-pane fade", id="about-3" role="tabpanel", aria-labelledby="about-3-tab") 
+                        h4 Loyalty
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit?
+                        h4 Collaboration
+                        p Lorem ipsum dolor sit, amet  voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit?
+                        h4 Excellence
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore
+                        h4 Innovative
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore
+
     //clients
     section(class="clients")
         div(class="container")

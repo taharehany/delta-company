@@ -64,17 +64,19 @@ $(document).ready(function () {
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
       0: {
-        items: 2,
+        items: 1,
         nav: false,
         dots: true,
       },
       768: {
-        items: 3,
-        nav: true,
+        items: 2,
       },
 
       992: {
-        items: 4,
+        items: 3,
+      },
+      1200: {
+        items: 3,
       }
     }
   });
@@ -93,6 +95,9 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 2,
+      },
+      575: {
+        items: 3,
       },
       768: {
         items: 3,
@@ -118,13 +123,13 @@ $(document).ready(function () {
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
       0: {
+        items: 1,
+      },
+      575: {
         items: 2,
-        nav: false,
-        dots: true,
       },
       768: {
         items: 3,
-        nav: true,
       },
 
       992: {

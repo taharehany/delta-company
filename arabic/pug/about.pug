@@ -1,0 +1,111 @@
+extend index
+
+block website_title
+    title #{website_title} | من نحن
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 من نحن
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") من نحن
+    //breadcrumb
+    
+    //about page
+    section(class="about-in-page")
+        div(class="container")
+            div(class="main-title wow slideInUp" data-wow-duration="1.3s" data-wow-delay=".3s")
+                span(class="top-title") نحن نقدم أفضل الخدمات
+                h2 بناء مجتمع صحي لجميع الأفراد.
+            div(class="content")
+                div(class="about-text wow slideInUp" data-wow-duration="1.3s" data-wow-delay=".4s")
+                    p نحن نهتم بالاحتياجات المتزايدة لمجتمعنا. نبني أنظمة لتقديم الخدمات الصحية للأفراد والأسر والمجتمعات والسكان بشكل عام.
+                div(class="about-boxs")
+                    div(class="row")
+                        div(class="col-lg-4 col-12 col")
+                            div(class="single-box")
+                                div(class="icon")
+                                    img(src="../images/icons/book.png", class="img-fluid" alt="")
+                                div(class="number")
+                                    span(class="counter") 6500
+                                    sup +
+                                div(class="text")
+                                    h3 عنوان النص 1
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                        div(class="col-lg-4 col-12 col")
+                            div(class="single-box")
+                                div(class="icon")
+                                    img(src="../images/icons/folder.png", class="img-fluid" alt="")
+                                div(class="number")
+                                    span(class="counter") 1000
+                                    sup +
+                                div(class="text")
+                                    h3 عنوان النص 2
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                        div(class="col-lg-4 col-12 col")
+                            div(class="single-box")
+                                div(class="icon")
+                                    img(src="../images/icons/placeholder.png", class="img-fluid" alt="")
+                                div(class="number")
+                                    span(class="counter") 300
+                                    sup +
+                                div(class="text")
+                                    h3 عنوان النص 3
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+    //about page
+
+    //video
+    section(class="video-in-page" style="background-image:url('../images/bgs/vid-bg.jpg')")
+        div(class="container")
+            div(class="content")
+                div(class="vid-icon")
+                    a(href="https://www.youtube.com/watch?v=kxPCFljwJws" data-fancybox="gallery") 
+                        i(class="bi bi-play-fill")
+                div(class="vid-text")
+                    p نحن نفعل كل ما يلزم لتحقيق السلام لك
+                    h2 تغيير الرعاية المنزلية للأفضل.
+    //video
+
+    //about tabs
+    section(class="about-tabs")
+        div(class="container")
+            div(class="content")
+                ul(class="nav nav-pills", role="tablist")
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link active", id="about-1-tab" data-bs-toggle="pill", data-bs-target="#about-1", type="button", role="tab", aria-controls="about-1", aria-selected="true") الرؤية
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="about-2-tab" data-bs-toggle="pill", data-bs-target="#about-2", type="button", role="tab", aria-controls="about-2", aria-selected="false") الرسالة
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="about-3-tab" data-bs-toggle="pill", data-bs-target="#about-3", type="button", role="tab", aria-controls="about-3", aria-selected="false") القيم
+                div(class="tab-content")
+                    div(class="tab-pane fade show active", id="about-1" role="tabpanel", aria-labelledby="about-1-tab") 
+                        p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="tab-pane fade", id="about-2" role="tabpanel", aria-labelledby="about-2-tab") 
+                        p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="tab-pane fade", id="about-3" role="tabpanel", aria-labelledby="about-3-tab") 
+                        h4 عنوان فرعي 01
+                        p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                        h4 عنوان فرعي 02
+                        p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                        h4 عنوان فرعي 03
+                        p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                        h4 عنوان فرعي 04
+                        p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+
+    //clients
+    section(class="clients")
+        div(class="container")
+            div(class="content")
+                div(class="clients-carousel owl-carousel owl-theme")
+                    div(class="item")
+                        img(class="img-fluid" data-src="../images/clients/01.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="../images/clients/02.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="../images/clients/03.png" alt="")
+    //clients

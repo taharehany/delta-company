@@ -1,7 +1,7 @@
 /** rtl styles **/
 html[dir=rtl] {
     body {
-        font-family: 'Noto Kufi Arabic', sans-serif;
+        font-family: 'El Messiri', sans-serif;
     }
 
     .breadcrumb-item+.breadcrumb-item::before {
@@ -9,17 +9,26 @@ html[dir=rtl] {
         padding-left: 5px
     }
 
-    .modal-header .btn-close {
-        margin-left: 0
-    }
-
     header {
         .navbar {
+            .lang {
+                .lang-content {
+                    text-align: right;
+                }
+            }
+
+            .dropdown-toggle {
+                &::before {
+                    right: auto;
+                    left: 0
+                }
+            }
+
             .navbar-nav {
                 .nav-link {
                     &::before {
-                        right: -15px;
-                        left: auto
+                        right: auto;
+                        left: 0;
                     }
                 }
 
@@ -63,14 +72,27 @@ html[dir=rtl] {
         }
     }
 
-    section.about {
-        .content {
-            .about-image {
-                .img2 {
-                    text-align: left;
+    section.main-slider {
+        .slider-item {
+            .item-details {
+                .item-text {
+                    direction: rtl;
                 }
             }
         }
+    }
+
+    section.why-us {
+        .content {
+            .why-box {
+                direction: rtl;
+            }
+        }
+    }
+
+    section.blogs .content .blogs-box .details,
+    section.blogs-in-page .content .blogs-box .details {
+        direction: rtl;
     }
 
     section.about-in-page .content .text ul li::before {
@@ -175,7 +197,8 @@ html[dir=rtl] {
 
     .side-widget .other-services .title h4::after,
     .side-widget .single-blog .content .other-blogs .title h4::after,
-    .single-blog .content .side-widget .other-blogs .title h4::after {
+    .single-blog .content .side-widget .other-blogs .title h4::after,
+    .side-widget .side-contact .title h4::after {
         right: 0;
         left: auto;
     }
@@ -186,6 +209,13 @@ html[dir=rtl] {
         right: 0;
         left: auto;
         @include transform(rotate(180deg) translateY(50%))
+    }
+
+    .bi.bi-chevron-double-right,
+    .bi.bi-arrow-right {
+        &::before {
+            @include transform(rotate(180deg))
+        }
     }
 
     section.about-in-page {

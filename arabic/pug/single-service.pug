@@ -1,0 +1,73 @@
+extend index
+
+block website_title
+    title #{website_title} | خدمة
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 خدمة
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") خدمة
+    //breadcrumb
+    
+    //single services
+    section(class="single-service")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-8")
+                        div(class="service-box")
+                            div(class="image")
+                                img(class="img-fluid" data-src="../images/services/01.jpg" alt="")
+                            div(class="details")
+                                div(class="title")
+                                    h3 عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم
+                                div(class="text")
+                                    p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.
+                    div(class="col-lg-4")
+                        div(class="side-widget")
+                            div(class="other-services")
+                                div(class="title")
+                                    h4 خدمات ذات صلة
+                                ul 
+                                    li 
+                                        a(href="#!") this is title service 01
+                                    li 
+                                        a(href="#!") this is title service 02
+                                    li 
+                                        a(href="#!") this is title service 03
+                                    li 
+                                        a(href="#!") this is title service 04
+                            div(class="side-contact")
+                                div(class="title")
+                                    h4 تبحث عن استشارة؟
+                                form(class="needs-validation" action="" method="" novalidate)
+                                    div(class="form-group position-relative")
+                                        label(for="") الاسم *
+                                        input(type="text" class="form-control" placeholder="الاسم" required)
+                                    div(class="form-group position-relative")
+                                        label(for="") الإيميل *
+                                        input(type="email" class="form-control" placeholder="الإيميل" required)
+                                    div(class="form-group position-relative")
+                                        label(for="") الهاتف *
+                                        input(type="number" class="form-control" placeholder="الهاتف" required)
+                                    div(class="form-group")
+                                        label(for="") قم بالاختيار *
+                                        select(class="form-select") 
+                                            option(disabled, selected) اختر
+                                            option(value="1") الخيار 01
+                                            option(value="2") الخيار 02
+                                    div(class="btns")
+                                        button(class="btn" type="submit") أرسل الآن
+                            div(class="help")
+                                div(class="title")
+                                    h4 كيف يمكننا مساعدتك؟!
+                                p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                a(class="btn", href="contact.html") تواصل معنا
+    //single services   

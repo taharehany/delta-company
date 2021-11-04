@@ -1956,4 +1956,31 @@ a.choose-now {
 			height: 120px;
 		}
 	}
+
+	.bg-gradient-primary {
+		padding: 10px 0;
+	}
+
+	.sign-logo {
+		img {
+			max-width: 170px !important;
+		}
+	}
+
+	.login-body {
+
+		.mb-4,
+		.my-4 {
+			margin-bottom: 1rem !important;
+		}
+		.h4 {
+			font-size: 16px;
+		}
+		form.user .form-control-user {
+			padding: 1.2rem 1rem;
+		}
+		hr {
+			margin-top: 0.5rem;
+		}
+	}
 }

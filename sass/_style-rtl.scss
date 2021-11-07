@@ -90,6 +90,16 @@ html[dir=rtl] {
         }
     }
 
+    .testimonial {
+        .testimonial-box {
+            direction: rtl;
+
+            .quote {
+                @include transform(scaleX(-1))
+            }
+        }
+    }
+
     section.blogs .content .blogs-box .details,
     section.blogs-in-page .content .blogs-box .details {
         direction: rtl;

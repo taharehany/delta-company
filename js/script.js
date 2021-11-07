@@ -109,8 +109,8 @@ $(document).ready(function () {
     }
   });
 
-  //blogs slider owl
-  $(".blogs-carousel").owlCarousel({
+  //testimonial  slider owl
+  $(".testimonial-carousel").owlCarousel({
     loop: true,
     autoplay: true,
     autoplayTimeout: 5000,
@@ -118,7 +118,7 @@ $(document).ready(function () {
     nav: false,
     dots: true,
     rtl: true,
-    smartSpeed: 2000,
+    smartSpeed: 1000,
     margin: 20,
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
@@ -126,14 +126,14 @@ $(document).ready(function () {
         items: 1,
       },
       575: {
-        items: 2,
+        items: 1,
       },
       768: {
-        items: 3,
+        items: 1,
       },
 
       992: {
-        items: 3,
+        items: 2,
       }
     }
   });

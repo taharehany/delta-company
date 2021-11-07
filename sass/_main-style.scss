@@ -1066,7 +1066,7 @@ section.why-us {
 
 //contact
 section.contact {
-	padding: $padding_section;
+	padding: 100px 0 60px 0;
 	background-color: #fff;
 	background-image: url(../images/bgs/contact-bg.png);
 	background-size: cover;
@@ -1151,9 +1151,8 @@ section.contact {
 
 //clients
 section.clients {
-	padding: 50px 0;
+	padding: 50px 0 90px 0;
 	background-color: #fff;
-	border-top: 1px solid #f3f3f3;
 
 	.content {
 		.item {
@@ -1267,8 +1266,8 @@ section.subscribe {
 
 //subscribe
 
-//blogs
-section.blogs {
+//testimonial
+section.testimonial {
 	padding: $padding_section;
 	background-color: #f7f7f7;
 	background-image: url(../images/bgs/pattern-bg.png);
@@ -1279,165 +1278,67 @@ section.blogs {
 	}
 
 	.content {
-		.blogs-box {
+		.testimonial-box {
 			@include transition(all ease 0.3s);
 			direction: initial;
+			background-color: transparent;
 
-			&:hover {
-				@include boxshadow(0 2px 10px rgb(0 0 0 / 10%));
+			&:hover {}
 
-				.read-more {
-					a {
-						opacity: 1;
-						@include transform(scale(1));
+			.heading {
+				display: flex;
+				align-items: center;
+				margin-bottom: 30px;
+
+				.text {
+					h3 {
+						font-size: 22px;
+						font-weight: 700;
+						margin-bottom: 2px;
+						color: #223645;
+						text-transform: capitalize;
+					}
+
+					p {
+						font-size: 14px;
+						color: $gray;
+						text-transform: capitalize;
+						margin-bottom: 0;
 					}
 				}
-			}
 
-			.image {
-				padding: 20px;
-				background-color: #fff;
+				.image {
+					width: 70px;
+					height: 70px;
+					@include borderRadius(50%);
+					overflow: hidden;
+					margin-inline-end: 15px;
 
-				img {
-					height: 250px;
-					@extend %fitimage;
-				}
-			}
-
-			.read-more {
-				margin-top: -50px;
-				text-align: center;
-				margin-bottom: 10px;
-
-				i {
-					font-size: 20px;
-				}
-
-				a {
-					display: inline-block;
-					position: relative;
-					z-index: 3;
-					opacity: 0;
-					@include transform(scale(0.95));
-					@include transition(all ease 0.3s);
-					color: #fff;
-					width: 50px;
-					height: 50px;
-					line-height: 50px;
-					border-radius: 50%;
-					font-size: 16px;
-					font-weight: 500;
-					background-color: $main_color;
-					text-align: center;
-
-					&:hover {
-
-						&::after,
-						&::before {
-							@include animation(circle-2 1.05s infinite);
-						}
-					}
-
-					&::after,
-					&::before {
-						content: "";
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						@include transform(translate(-50%, -50%));
-						border-radius: 50%;
-						background-color: $main_color;
-					}
-
-					&::before {
-						z-index: 2;
-						width: 66px;
-						height: 66px;
-						opacity: 0.21;
-					}
-
-					&::after {
-						z-index: 1;
-						width: 82px;
-						height: 82px;
-						opacity: 0.09;
+					img {
+						@extend %fitimage;
 					}
 				}
 			}
 
 			.details {
-				padding: 0 20px 20px;
-				background-color: #fff;
+				display: flex;
+				align-items: flex-start;
+				padding-inline-end: 15px;
 
-				.meta {
-					padding: 0;
-
-					li {
-						position: relative;
-						display: inline-block;
-						color: #999;
-						font-size: 14px;
-						text-transform: capitalize;
-
-						i {
-							margin-inline-end: 5px;
-						}
-					}
+				p {
+					font-size: 18px;
+					font-weight: 600;
+					font-style: normal;
+					margin-bottom: 2px;
+					color: #223645;
+					@extend %max_lines;
+					-webkit-line-clamp: 5;
 				}
 
-				.title {
-					margin-bottom: 0;
-
-					a {
-						font-size: 16px;
-						text-transform: capitalize;
-						color: #222;
-						font-weight: 600;
-						@extend %max_lines;
-						-webkit-line-clamp: 2;
-						min-height: 40px;
-
-						&:hover {
-							color: $main_color;
-						}
-					}
-				}
-
-				.btns {
-					.btn {
-						text-transform: capitalize;
-						background-color: $main_color;
-						color: #fff;
-						@include borderRadius(0);
-						padding: 10px 35px;
-
-						&:hover {
-							background-color: $dark_color
-						}
-					}
-				}
-			}
-		}
-
-		.blogs-btn {
-			@extend .item-btn;
-			text-align: center;
-			margin-top: 40px;
-
-			.btn {
-				border-color: $dark_color;
-				color: $dark_color;
-
-				&:hover {
-					color: #fff;
-				}
-
-				span {
-
-					&::before,
-					&::after {
-						border-bottom: 55px solid $dark_color;
-					}
+				.quote {
+					width: 30px;
+					display: inline-block;
+					margin-inline-end: 20px
 				}
 			}
 		}
@@ -1446,12 +1347,12 @@ section.blogs {
 	.owl-theme {
 		.owl-nav [class*=owl-] {
 			@include transition(all ease 0.3s);
-
+			
 			&:hover {
 				background: $main_color;
 			}
 		}
-
+		
 		.owl-nav {
 			+.owl-dots {
 				width: 100%;
@@ -1490,7 +1391,7 @@ section.blogs {
 	}
 }
 
-//blogs
+//testimonial
 
 //footer
 footer {

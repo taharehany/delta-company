@@ -113,17 +113,19 @@
                 .heading {
                     text-align: center;
                     display: block;
+
                     .image {
                         margin: auto;
                         margin-bottom: 10px;
                     }
                 }
+
                 .details {
                     display: block;
                     text-align: center;
                     padding-inline-end: 0;
 
-                    .quote{
+                    .quote {
                         margin-inline-end: 0;
                         margin-bottom: 15px;
                     }
@@ -216,6 +218,10 @@
     section.bmi .content .bmi-result table th {
         padding: 15px;
         font-size: 14px;
+    }
+
+    section.video-in-page {
+        padding: 100px 0;
     }
 }
 
@@ -375,11 +381,21 @@
             padding: 70px 25px;
         }
     }
+
+    section.why-us .content {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 500px) {
     header {
         .navbar {
+            .navbar-brand {
+                img {
+                    max-width: 170px;
+                }
+            }
+
             .navbar-nav {
                 .nav-item {
                     .dropdown-menu {
@@ -419,12 +435,22 @@
     .contact-info {
         .content {
             .info-box {
-                grid-template-columns: 50px auto;
+                display: block;
+                text-align: center;
+
+                .info {
+                    padding-inline-start: 0;
+                }
+
+                .icon {
+                    margin-bottom: 20px;
+                }
             }
 
             .links {
                 padding-top: 10px;
                 margin-bottom: 40px;
+                text-align: center;
 
                 a {
                     font-size: 14px;
@@ -433,6 +459,11 @@
                 }
             }
         }
+    }
+
+    section.contact-in-page .content .contact-form .form-group label {
+        margin-bottom: 10px;
+        font-size: 13px;
     }
 
     #toTop {

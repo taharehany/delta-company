@@ -23,7 +23,7 @@ header {
 
 	&.fixed {
 		top: -54px;
-		box-shadow: 0 4px 20px 0 rgb(115 115 115 / 14%), 0 7px 10px -5px rgb(126 126 126 / 40%);
+		@include boxshadow(0 4px 20px 0 rgb(115 115 115 / 14%));
 	}
 
 	.top-part {
@@ -48,6 +48,12 @@ header {
 
 			.some-info {
 				display: flex;
+
+				marquee {
+					direction: ltr;
+					max-width: 550px;
+					border-inline-end: 1px solid #555555;
+				}
 
 				.info {
 					display: grid;
@@ -85,9 +91,10 @@ header {
 			}
 
 			.links {
+				white-space: nowrap;
 				a {
 					color: #666;
-					margin-inline-end: 20px;
+					margin-inline-end: 15px;
 
 					&:last-child {
 						margin-inline-end: 0;
@@ -109,7 +116,7 @@ header {
 
 		.navbar-brand {
 			padding: 0;
-			padding-inline-end: 30px;
+			padding-inline-end: 15px;
 			margin: 0;
 
 			img {
@@ -128,7 +135,7 @@ header {
 
 		.phone-number {
 			display: flex;
-			padding: 0 30px;
+			padding: 0 15px;
 			border-left: 1px solid #ddd;
 			border-right: 1px solid #ddd;
 
@@ -142,6 +149,10 @@ header {
 			}
 
 			.text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
 				span {
 					display: block;
 					font-size: 14px;
@@ -641,19 +652,8 @@ section.about {
 
 	.content {
 		.main-title {
-			margin-bottom: 4rem;
-			position: relative;
-
-			&::after {
-				display: block;
-				position: absolute;
-				bottom: -35px;
-				left: 0;
-				width: 64px;
-				height: 8px;
-				background-image: url(../images/bgs/decor-title-2.svg);
-				content: '';
-			}
+			margin-bottom: 1rem;
+			text-align: initial;
 
 			.top-title {
 				display: block;
@@ -666,6 +666,10 @@ section.about {
 			h2 {
 				color: $dark_color;
 				margin-bottom: 20px;
+
+				&::after {
+					display: none;
+				}
 			}
 
 			.bottom-title {
@@ -679,9 +683,16 @@ section.about {
 
 		.about-image {
 			position: relative;
+			margin-inline-end: 45px;
+			background-color: rgba(141, 215, 247, 0.5);
+			height: 30rem;
 
 			img {
 				width: 100%;
+				position: relative;
+				top: -30px;
+				right: -30px;
+				@extend %fitimage;
 			}
 		}
 
@@ -727,16 +738,12 @@ section.activities {
 	.main-title {
 		margin-bottom: 3rem;
 		position: relative;
-
-		&::after {
-			display: block;
-			position: absolute;
-			bottom: -15px;
-			left: 0;
-			width: 64px;
-			height: 8px;
-			background-image: url(../images/bgs/decor-title-2.svg);
-			content: '';
+		text-align: initial;
+		h2 {
+			&::after {
+				left: 0;
+				margin: 0;
+			}
 		}
 
 		.top-title {
@@ -799,23 +806,6 @@ section.activities {
 //videos
 section.videos {
 	padding: $padding_section;
-
-	.main-title {
-		position: relative;
-		text-align: center;
-
-		&::after {
-			display: block;
-			position: absolute;
-			bottom: -15px;
-			left: 50%;
-			margin-left: -32px;
-			width: 64px;
-			height: 8px;
-			background-image: url(../images/bgs/decor-title-2.svg);
-			content: '';
-		}
-	}
 
 	.content {
 		.video-box {
@@ -897,12 +887,14 @@ section.cta {
 		}
 
 		.text {
+			padding-inline-end: 10px;
 			h3 {
 				color: #222222;
 				font-size: 36px;
 				font-weight: 700;
 				line-height: 1.2;
 				margin-bottom: 0;
+				text-transform: capitalize;
 			}
 		}
 
@@ -942,7 +934,7 @@ section.coming-auction {
 	background-color: $second_color;
 	background-image: url(../images/bgs/bg_coming.jpg);
 	z-index: 1;
-	margin-bottom: 250px;
+	margin-bottom: 100px;
 
 	&::after {
 		display: block;
@@ -1048,10 +1040,95 @@ section.coming-auction {
 
 //coming auction
 
+//contact
+section.contact {
+	padding: $padding_section;
+	background-color: #fff;
+	background-image: url(../images/bgs/contact-bg.png);
+	background-size: cover;
+
+	.content {
+		background-color: transparent;
+
+		.image {
+			height: 100%;
+
+			img {
+				@extend %fitimage;
+			}
+		}
+
+		.contact-form {
+			max-width: 50vw;
+			margin: auto;
+
+			.form-group {
+				margin-bottom: 20px;
+
+				label {
+					display: block;
+					margin-bottom: 15px;
+					font-weight: 600;
+					text-transform: capitalize;
+					font-size: 14px;
+				}
+
+				.form-control,
+				.form-select {
+					display: block;
+					width: 100%;
+					line-height: 28px;
+					padding: 10px 15px;
+					color: #222222;
+					font-size: 14px;
+					font-weight: 400;
+					border-radius: 0px;
+					background-color: #f3f3f3;
+					border-color: #f3f3f3;
+
+					&:focus {
+						border-color: $dark_color;
+						box-shadow: none;
+					}
+				}
+
+				textarea {
+					height: auto !important;
+				}
+			}
+		}
+
+		.contact-btn {
+			.btn {
+				border-color: $main_color;
+				background-color: $main_color;
+				color: #fff;
+				width: 100%;
+				padding: 12px;
+
+				&:hover {
+					color: #fff;
+					border-color: $dark_color;
+					background-color: $dark_color;
+				}
+			}
+		}
+
+		.successfully {
+			font-size: 16px;
+			margin-bottom: 25px;
+			color: #058100;
+		}
+	}
+}
+
+//contact
+
 //footer
 footer {
 	background-color: $dark_color;
 	padding: 60px 0 0;
+	background-image: url(../images/bgs/pattern_dashed.png);
 
 	.row {
 		row-gap: 20px;

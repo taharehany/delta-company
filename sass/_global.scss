@@ -112,6 +112,7 @@ $padding_section: 100px 0;
 .main-title {
     margin-bottom: 4rem;
     position: relative;
+    text-align: center;
 
     h2 {
         font-size: 36px;
@@ -120,6 +121,19 @@ $padding_section: 100px 0;
         text-transform: capitalize;
         font-weight: 600;
         margin-bottom: 20px;
+        position: relative;
+
+        &::after {
+            display: block;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            margin-inline-start: -32px;
+            width: 64px;
+            height: 8px;
+            background-image: url(../images/bgs/decor-title-2.svg);
+            content: '';
+        }
 
         .diff-color {
             color: var(--main-color);
@@ -242,6 +256,7 @@ a {
         margin-inline-end: 5px;
     }
 }
+
 .alert-dismissible .btn-close {
     left: auto;
 }

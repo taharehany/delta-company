@@ -1,4 +1,4 @@
-//global page style
+//navigation
 .navigation {
     margin-bottom: 25px;
 
@@ -36,4 +36,521 @@
     }
 }
 
-//global page style
+//navigation
+
+//breadcrumb
+.main-breadcrumb {
+    padding: 7rem 0;
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: -1;
+    }
+
+    .breadcrumb-title {
+        text-align: center;
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+    .breadcrumb {
+        justify-content: center;
+
+        .breadcrumb-item {
+            font-size: 16px;
+            text-transform: capitalize;
+            font-weight: 600;
+
+            a {
+                color: #fff;
+            }
+
+            &.active {
+                color: #fff;
+                font-weight: 500;
+            }
+
+            &::before {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+//breadcrumb
+
+//about page
+section.about-in-page {
+    @extend .about;
+
+    .content {
+        .about-image {
+            margin-inline-end: 60px;
+            margin-block-end: 20px;
+            float: left;
+
+            img {
+                max-width: 500px;
+            }
+        }
+
+        .about-text {
+            margin-bottom: 0;
+
+            p {
+                display: block;
+                overflow: visible;
+                text-overflow: initial;
+            }
+
+            h2,
+            h3,
+            h4,
+            h5 {
+                text-transform: capitalize;
+                color: #222;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+//about page
+
+//auctioneers page
+section.auctioneers {
+    padding: $padding_section;
+    background-color: #f1f1f1;
+
+    .content {
+        nav {
+            text-align: center;
+            margin-bottom: 40px
+        }
+
+        .nav-tabs {
+            border-bottom: 0;
+            background-color: #fff;
+            @include borderRadius(30px);
+            overflow: hidden;
+            display: inline-flex;
+            position: relative;
+
+            .nav-link {
+                @include borderRadius(30px);
+                padding: 15px 50px;
+                background-color: transparent;
+                border: none;
+                color: #222;
+                text-transform: capitalize;
+                font-weight: 600;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $main_color;
+                    @include transition(all ease 0.3s);
+                    @include borderRadius(30px);
+                    z-index: -1;
+                }
+
+                &.active {
+                    color: #ffffff;
+
+                    &::after {
+                        left: 0;
+                    }
+
+                }
+            }
+        }
+
+        .auctioneers-images {
+
+            .box {
+                margin-bottom: 25px;
+            }
+
+            .image {
+                height: 100%;
+                position: relative;
+                @include boxshadow(0 4px 20px 0 rgb(115 115 115 / 14%));
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: #fff;
+                    font-size: 50px;
+                    @extend %center;
+                    @include transition(all ease 0.3s);
+                    cursor: pointer;
+                    opacity: 0;
+                }
+
+                img {
+                    object-fit: contain;
+                    -o-object-fit: contain;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+//auctioneers page
+
+//certificates page
+section.certificates {
+    padding: $padding_section;
+
+    .content {
+        .certificates-images {
+
+            .box {
+                margin-bottom: 25px;
+            }
+
+            .image {
+                height: 100%;
+                position: relative;
+                @include boxshadow(0 4px 20px 0 rgb(115 115 115 / 14%));
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: #fff;
+                    font-size: 50px;
+                    @extend %center;
+                    @include transition(all ease 0.3s);
+                    cursor: pointer;
+                    opacity: 0;
+                }
+
+                img {
+                    object-fit: contain;
+                    -o-object-fit: contain;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+//certificates page
+
+//videos page
+section.videos-in-page {
+    @extend .videos;
+
+    .content {
+        .video-box {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+//videos page
+
+//error
+.error {
+    padding: $padding_section;
+
+    h2 {
+        color: $dark_color;
+        font-size: 12rem;
+        position: relative;
+        line-height: 1;
+        font-weight: 700;
+        @extend %center;
+
+        .diff-color {
+            position: relative;
+            color: $main_color;
+            line-height: 1.2;
+
+            &::before {
+                position: absolute;
+                top: calc(100% - 30px);
+                left: 50%;
+                margin-left: -30px;
+                content: '';
+                width: 60px;
+                height: 15px;
+                background-color: #dfe0e0;
+                border-radius: 50%;
+                @include animation(zoom-bounce 1.5s ease infinite);
+            }
+
+            .num {
+                @include animation(bounce 1.5s ease infinite);
+                display: block;
+            }
+        }
+
+        img {
+            max-width: 150px;
+        }
+    }
+
+    .lead {
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: capitalize
+    }
+
+    .back {
+        color: #fff;
+        background-color: $main_color;
+        @include borderRadius(0);
+        @include transition(all ease .3s);
+
+        &:hover {
+            background-color: $dark_color;
+        }
+    }
+}
+
+//error
+
+//contact page
+section.contact-in-page {
+    padding: $padding_section;
+    background-color: #fff;
+
+    .main-title {
+        text-align: initial;
+        margin-bottom: 25px;
+
+        h2 {
+            margin-bottom: 30px;
+
+            &::after {
+                left: 0;
+                margin: 0
+            }
+        }
+    }
+
+    .content {
+        .contact-form {
+            @include boxshadow(0 5px 24px 6px rgb(0 0 0 / 6%));
+            padding: 55px;
+
+            .form-group {
+                margin-bottom: 20px;
+
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    font-size: 12px;
+                }
+
+                .form-control,
+                .form-select {
+                    display: block;
+                    width: 100%;
+                    line-height: 28px;
+                    padding: 10px 25px;
+                    color: #222222;
+                    font-size: 14px;
+                    font-weight: 400;
+                    border-radius: 0px;
+                    background-color: #fff;
+                    border-color: #e5e5e5;
+
+                    &:focus {
+                        border-color: $dark_color;
+                        box-shadow: none;
+                    }
+                }
+
+                textarea {
+                    height: auto !important;
+                }
+            }
+        }
+
+        .contact-btn {
+            .btn {
+                border-color: $main_color;
+                background-color: $main_color;
+                color: #fff;
+                width: 100%;
+                padding: 12px;
+                @include borderRadius(0);
+
+                &:hover {
+                    color: #fff;
+                    background-color: $dark_color;
+                    border-color: $dark_color;
+                }
+            }
+        }
+
+        .successfully {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #058100;
+        }
+    }
+}
+
+.contact-info {
+    background-color: $main_color;
+    height: 100%;
+    padding: 25px;
+
+    .content {
+        background-color: transparent;
+        margin: auto;
+        z-index: 1;
+        position: relative;
+
+        .details {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .title {
+                color: #fff;
+                font-weight: 600;
+                font-size: 20px;
+                position: relative;
+                padding-left: 40px;
+                margin-bottom: 30px;
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 30px;
+                    height: 8px;
+                    margin-top: -4px;
+                    background-image: url(../images/bgs/decor-title-left.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    content: '';
+                }
+            }
+        }
+
+        .info-box {
+            display: grid;
+            grid-template-columns: 60px auto;
+            border-bottom: 1px dashed #ebebeb;
+            margin-bottom: 20px;
+            padding: 20px 0 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+            }
+
+            .icon {
+                i {
+                    font-size: 45px;
+                    color: $second_color;
+                }
+            }
+
+            .info {
+                padding-inline-start: 20px;
+
+                h4 {
+                    font-size: 16px;
+                    display: block;
+                    margin-bottom: 10px;
+                    color: #fff;
+                    text-transform: capitalize;
+                }
+
+                p,
+                a {
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .links {
+            padding-top: 30px;
+
+            a {
+                font-size: 15px;
+                text-align: center;
+                height: 35px;
+                width: 35px;
+                color: #fff;
+                border: 1px solid #eee;
+                @include borderRadius(50%);
+                position: relative;
+                @extend %center;
+                display: inline-flex;
+                margin-inline-end: 10px;
+                @include transition(all ease .3s);
+
+                &:last-child {
+                    margin-inline-end: 0;
+                }
+
+                &:hover {
+                    background-color: $second_color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+//contact page

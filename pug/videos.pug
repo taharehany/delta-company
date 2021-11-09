@@ -1,0 +1,45 @@
+extend index
+
+block website_title
+    title #{website_title} | videos
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/bg_crumb.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 videos
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") videos
+    //breadcrumb
+
+    //videos page
+    section(class="videos-in-page")
+        div(class="container")
+            div(class="main-title")
+                span(class="top-title") the company videos
+                h2 our videos
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-4")
+                        div(class="video-box ratio ratio-1x1")
+                            iframe(src="http://www.youtube.com/embed/qZipBQ7TFAI", title="YouTube video", allowfullscreen)
+                    div(class="col-lg-4")
+                        div(class="video-box ratio ratio-1x1")
+                            iframe(src="http://www.youtube.com/embed/RfaGrK7y1sY", title="YouTube video", allowfullscreen)
+                    div(class="col-lg-4")
+                        div(class="video-box ratio ratio-1x1")
+                            iframe(src="http://www.youtube.com/embed/mR6zBlqcc7s", title="YouTube video", allowfullscreen)
+                    div(class="col-lg-4")
+                        div(class="video-box ratio ratio-1x1")
+                            iframe(src="http://www.youtube.com/embed/qZipBQ7TFAI", title="YouTube video", allowfullscreen)
+                    div(class="col-lg-4")
+                        div(class="video-box ratio ratio-1x1")
+                            iframe(src="http://www.youtube.com/embed/RfaGrK7y1sY", title="YouTube video", allowfullscreen)
+                    div(class="col-lg-4")
+                        div(class="video-box ratio ratio-1x1")
+                            iframe(src="http://www.youtube.com/embed/mR6zBlqcc7s", title="YouTube video", allowfullscreen)
+    //videos page

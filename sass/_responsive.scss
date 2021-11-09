@@ -1,9 +1,55 @@
 @media screen and (max-width: 1500px) {}
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1199px) {
+    header {
+        .top-part {
+            .content {
+                padding: 0;
+            }
+        }
+
+        .navbar {
+            padding: 0;
+
+            .navbar-nav {
+                .nav-item {
+                    padding: 0 0.5rem;
+                }
+            }
+
+            .navbar-brand {
+                img {
+                    max-width: 200px;
+                }
+            }
+
+            .phone-number {
+                .text {
+                    span {
+                        font-size: 12px;
+                    }
+
+                    a {
+                        font-size: 18px;
+                    }
+                }
+
+                .icon {
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 991px) {
     header {
+        .navbar {
+            .navbar-toggler {
+                order: 2;
+            }
+        }
+
         .hamburger-menu {
             display: inline-block;
         }
@@ -12,7 +58,15 @@
 
 @media screen and (max-width: 767px) {}
 
-@media screen and (max-width: 670px) {}
+@media screen and (max-width: 670px) {
+    header {
+        .navbar {
+            .phone-number {
+                display: none;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 575px) {
     .main-title h2 {

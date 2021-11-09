@@ -939,19 +939,13 @@ section.why-us {
 			}
 
 			.title {
-				a {
-					font-size: 16px;
-					text-transform: capitalize;
-					color: #fff;
-					font-weight: 600;
-					@extend %max_lines;
-					-webkit-line-clamp: 1;
-					min-height: 20px;
-
-					&:hover {
-						color: $main_color;
-					}
-				}
+				font-size: 16px;
+				text-transform: capitalize;
+				color: #fff;
+				font-weight: 600;
+				@extend %max_lines;
+				-webkit-line-clamp: 1;
+				min-height: 20px;
 			}
 
 			p {

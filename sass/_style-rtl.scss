@@ -70,6 +70,10 @@ html[dir=rtl] {
                 }
             }
         }
+        .dropdown-menu[data-bs-popper] {
+            right: 0;
+            left: auto
+        }
     }
 
     section.main-slider {
@@ -221,10 +225,12 @@ html[dir=rtl] {
         @include transform(rotate(180deg) translateY(50%))
     }
 
-    .bi.bi-chevron-double-right,
-    .bi.bi-arrow-right {
-        &::before {
-            @include transform(rotate(180deg))
+    section.services, section.subscribe {
+        .bi.bi-chevron-double-right,
+        .bi.bi-arrow-right {
+            &::before {
+                @include transform(rotate(180deg))
+            }
         }
     }
 

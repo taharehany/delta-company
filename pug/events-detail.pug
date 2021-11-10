@@ -4,6 +4,27 @@ block website_title
     title Events | Contact
     
 block home_block
+    // Modal
+    div(class="modal subscribe-modal fade", id="staticBackdropSubscribe" data-backdrop="static", data-keyboard="false", tabindex="-1", aria-labelledby="staticBackdropLabel", aria-hidden="true")
+        div(class="modal-dialog")
+            div(class="modal-content")
+                div(class="modal-header")
+                    h5(class="modal-title") Modal title
+                    button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+                        span(aria-hidden="true") &times;
+                div(class="modal-body")
+                    div(class="image")
+                        img(src="img/cover.jpg", class="img-fluid" alt="")
+                    div(class="text")
+                        h3 Lorem ipsum dolor sit amet
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    div(class="form-check")
+                        input(class="form-check-input", id="agreeSubscribe" type="checkbox", value="")
+                        label(class="form-check-label", for="agreeSubscribe")
+                            | Default checkbox
+                div(class="modal-footer")
+                    a(href="payment.html" class="btn btn-primary proceed-btn") Agree and proceed
+                    button(type="button", class="btn btn-secondary", data-dismiss="modal") Close
     div(class="cover-pic")
         img(src="img/cover.jpg", class="img-fluid", alt="...")
     div(class="container mb-4 pb-2 list-bp")
@@ -20,7 +41,7 @@ block home_block
                         div(class="eheader-btn")
                             //- a(href="#", class="d-sm-inline-block btn btn-primary mr-2 shadow-sm")
                             //-     i(class="fas fa-share-alt")
-                            a(href="payment.html", class="d-sm-inline-block btn btn-danger shadow-sm")
+                            button(type="button", class="d-sm-inline-block btn btn-danger shadow-sm", data-toggle="modal", data-target="#staticBackdropSubscribe")
                                 | Subscribe 250 S.R
                     div(class="d-flex align-items-center justify-content-between py-3 px-4")
                         div

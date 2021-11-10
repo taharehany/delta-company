@@ -97,6 +97,31 @@
       </div>
     </nav>
     <!--End of header section-->
+    <!-- Modal-->
+    <div class="modal subscribe-modal fade" id="staticBackdropSubscribe" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="image"><img class="img-fluid" src="img/cover.jpg" alt=""></div>
+            <div class="text">
+              <h3>Lorem ipsum dolor sit amet</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" id="agreeSubscribe" type="checkbox" value="">
+              <label class="form-check-label" for="agreeSubscribe">Default checkbox</label>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn btn-primary proceed-btn" href="payment.html">Agree and proceed</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="cover-pic"><img class="img-fluid" src="img/cover.jpg" alt="..."></div>
     <div class="container mb-4 pb-2 list-bp">
       <div class="row">
@@ -107,7 +132,9 @@
                 <h3 class="text-gray-900 mb-1 mt-0 font-weight-bold">The 3rd Saudi Conference on Nutrition among Medicine & Life </h3>
                 <p class="mb-0"><small class="text-muted"><i class="fas fa-map-marker-alt fa-fw fa-sm mr-1"></i>Saudi, Qaseem</small></p>
               </div>
-              <div class="eheader-btn"><a class="d-sm-inline-block btn btn-danger shadow-sm" href="payment.html">Subscribe 250 S.R</a></div>
+              <div class="eheader-btn">
+                <button class="d-sm-inline-block btn btn-danger shadow-sm" type="button" data-toggle="modal" data-target="#staticBackdropSubscribe">Subscribe 250 S.R</button>
+              </div>
             </div>
             <div class="d-flex align-items-center justify-content-between py-3 px-4">
               <div>

@@ -173,6 +173,15 @@ Version: 1.0
     $('[data-toggle="tooltip"]').tooltip()
   });
 
+  $(".subscribe-modal .proceed-btn").on("click", function (e) {
+    if(!$("#agreeSubscribe").is(":checked")) {
+      e.preventDefault();
+      $("#agreeSubscribe + label").css("color", "red")
+    } else {
+      $("#agreeSubscribe + label").css("color", "#2575fc")
+    }
+  });
+
 })(jQuery); // End of use strict
 
 //page view

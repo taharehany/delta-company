@@ -177,7 +177,7 @@ a.choose-now {
 	text-transform: uppercase;
 	transition: 0.5s;
 	overflow: hidden;
-	background-color: $second_color;
+	background-color: #f00;
 	@include borderRadius(15px);
 
 	span {
@@ -1531,6 +1531,70 @@ a.choose-now {
 
 //thanks
 
+//subscribe modal
+.subscribe-modal {
+	.modal-content {
+		.close {
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.modal-title {
+			text-transform: capitalize;
+		}
+	}
+
+	.modal-body {
+		.image {
+			img {
+				max-height: 15rem;
+				width: 100%;
+				object-fit: cover;
+				-o-object-fit: cover;
+			}
+		}
+
+		.text {
+			text-transform: capitalize;
+			margin: 10px 0;
+
+			h3 {
+				font-weight: 600;
+				font-size: 20px;
+			}
+
+			p {
+				font-size: 16px;
+
+			}
+		}
+
+		.form-check {
+			label {
+				font-size: 14px;
+				user-select: none;
+				color: #2575fc;
+			}
+
+			.form-check-input {
+				margin-top: 0.2rem;
+			}
+		}
+	}
+
+	.modal-footer {
+		justify-content: flex-start;
+
+		.btn {
+			text-transform: capitalize;
+			font-size: 14px;
+		}
+	}
+}
+
+//subscribe modal
+
 //footer
 .footer {
 	h6 {
@@ -1775,6 +1839,7 @@ a.choose-now {
 		width: 40px;
 		height: 40px;
 		object-fit: cover;
+		-o-object-fit: cover;
 	}
 
 	a {
@@ -1973,12 +2038,15 @@ a.choose-now {
 		.my-4 {
 			margin-bottom: 1rem !important;
 		}
+
 		.h4 {
 			font-size: 16px;
 		}
+
 		form.user .form-control-user {
 			padding: 1.2rem 1rem;
 		}
+
 		hr {
 			margin-top: 0.5rem;
 		}

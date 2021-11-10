@@ -9,6 +9,7 @@ html[dir="rtl"] {
 			margin-left: 2rem;
 			margin-right: 0;
 		}
+
 		.language-dropdown {
 			img {
 				margin-right: 0;
@@ -239,14 +240,17 @@ html[dir="rtl"] {
 		margin-left: auto !important;
 		margin-right: 0 !important;
 	}
+
 	.about-us {
 		.text-left {
 			text-align: right !important;
 		}
 	}
+
 	.event-detals-scroll {
 		padding: 0 0 0 2px;
 	}
+
 	.modal-header .close {
 		margin-left: 0;
 	}
@@ -254,14 +258,33 @@ html[dir="rtl"] {
 	a.choose-now {
 		margin: 10px 6% 10px auto;
 	}
+
 	.enter-to-event .btn-danger {
 		font-family: "Tajawal", sans-serif;
 	}
+
+	.subscribe-modal {
+		.form-check {
+			padding-right: 1.25rem;
+			padding-left: 0;
+
+			.form-check-input {
+				margin-right: -1.25rem;
+				margin-left: 0;
+			}
+		}
+
+		.btn-primary {
+			margin-inline-end: 10px;
+		}
+	}
 }
+
 html[dir="rtl"] {
 	.slick-next {
 		left: 0;
 	}
+
 	.slick-prev {
 		right: 0;
 	}

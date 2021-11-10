@@ -1,4 +1,10 @@
-@media screen and (max-width: 1500px) {}
+@media screen and (max-width: 1500px) {
+    section.cta {
+        .content {
+            padding: 0 5%;
+        }
+    }
+}
 
 @media screen and (max-width: 1199px) {
     header {
@@ -40,6 +46,49 @@
             }
         }
     }
+
+    section.coming-auction {
+        .content {
+            .box {
+                padding: 35px 20px;
+            }
+        }
+    }
+
+    section.cta {
+        .content {
+            grid-template-columns: 15% 40% 25% 20%;
+
+            .image {
+                img {
+                    width: 150px;
+                }
+            }
+
+            .text h3 {
+                font-size: 24px;
+            }
+
+            .cta-btn {
+                width: auto;
+
+                .btn {
+                    height: auto;
+                    padding: 14px 30px;
+                    width: auto;
+                    line-height: normal;
+                }
+            }
+
+            .call {
+                .phone {
+                    a {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -48,98 +97,272 @@
             .navbar-toggler {
                 order: 2;
             }
+
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
 
         .hamburger-menu {
             display: inline-block;
         }
     }
-}
 
-@media screen and (max-width: 767px) {}
+    section.about .content .about-image,
+    section.about-in-page .content .about-image {
+        margin-bottom: 25px;
+        max-height: 30rem;
+        height: auto;
+        max-height: 100%;
+        margin-inline-end: 40px;
 
-@media screen and (max-width: 670px) {
-    header {
-        .navbar {
-            .phone-number {
-                display: none;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    section.activities {
+        .activities-image {
+            padding-top: 25px;
+
+            img {
+                width: 100%;
             }
         }
     }
-}
 
-@media screen and (max-width: 575px) {
-    .main-title h2 {
-        font-size: 14px;
-    }
-}
+    section.cta {
+        .content {
+            display: block;
+            text-align: center;
+            padding: 15px;
 
-@media screen and (max-width: 500px) {
-    header {
-        .navbar {
-            .navbar-nav {
-                .nav-item {
-                    .dropdown-menu {
-                        min-width: auto;
+            .image {
+                margin-bottom: 25px;
+                margin-inline-end: 0
+            }
+
+            .cta-btn {
+                width: auto;
+                text-align: center;
+                display: block;
+            }
+
+            .call {
+                padding: 0;
+                display: block;
+                border: none;
+
+                .phone {
+                    margin-bottom: 20px;
+
+                    a {
+                        font-size: 30px;
                     }
                 }
             }
         }
     }
 
-    #toTop {
-        bottom: 42px;
+    section.about-in-page {
+        .content {
+            .about-image {
+                float: none;
+            }
+        }
+    }
+}
 
-        button {
-            width: 35px;
-            height: 35px;
+@media screen and (max-width: 767px) {
+    section.main-slider {
+        .main-slider-carousel {
+            .owl-item {
+                .item {
+                    .item-details {
+                        padding: 0;
+
+                        .item-text {
+                            padding: 15px;
+                        }
+
+                        .title {
+                            h1 {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
-    footer {
-        .footer-content {
-            padding-bottom: 70px;
+    .main-breadcrumb {
+        padding: 4rem 0;
+    }
 
-            .footer-box {
-                .about {
-                    p {
+    .map {
+        iframe {
+            height: 300px !important;
+        }
+    }
+
+    section.contact-in-page .content .contact-form .form-group .form-control,
+    section.contact-in-page .content .contact-form .form-group .form-select {
+        padding: 8px 15px;
+    }
+    }
+
+    @media screen and (max-width: 670px) {
+        header {
+            .navbar {
+                .phone-number {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        .main-title {
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        section.auctioneers {
+            .content {
+                .nav-tabs {
+                    .nav-link {
+                        padding: 12px 15px;
                         font-size: 12px;
                     }
                 }
+            }
+        }
 
-                h3+p {
-                    font-size: 12px;
+        section.contact-in-page {
+            margin: 10px;
+
+            .content {
+                .contact-form {
+                    padding: 30px 15px 15px;
                 }
             }
         }
     }
 
-    .error {
-        h2 {
-            font-size: 8rem;
-        }
-    }
-}
+    @media screen and (max-width: 500px) {
+        header {
+            .navbar {
+                .navbar-brand {
+                    padding: 10px 0;
 
-@media screen and (max-width: 400px) {
-    header {
-        .top-part {
-            .top-part-content {
-                .text {
-                    p {
-                        font-size: 10px;
+                    img {
+                        max-width: 170px;
                     }
                 }
 
-                .icons {
-                    a {
-                        height: 30px;
-                        width: 30px;
-                        line-height: 30px;
-                        font-size: 14px;
+                .navbar-nav {
+                    .nav-item {
+                        .dropdown-menu {
+                            min-width: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.main-slider {
+            .main-slider-carousel {
+                .owl-item {
+                    .item {
+                        .item-details {
+                            .item-text {
+                                padding: 20px 0;
+
+                                .title {
+                                    h1 {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #toTop {
+            bottom: 42px;
+
+            button {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        .contact-info {
+            .content {
+                .info-box {
+                    grid-template-columns: 40px auto;
+                    margin-bottom: 10px;
+                    padding: 10px 0 10px;
+                }
+            }
+        }
+
+        footer {
+            .footer-content {
+                padding-bottom: 70px;
+
+                .footer-box {
+                    .about {
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+
+                    h3+p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .error {
+            h2 {
+                font-size: 8rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        header {
+            .top-part {
+                .content {
+                    .links {
+                        a {
+                            margin-inline-end: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar {
+            .lang {
+                .icon {
+                    img {
+                        display: none;
                     }
                 }
             }
         }
     }
-}

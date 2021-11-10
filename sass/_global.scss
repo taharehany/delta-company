@@ -3,7 +3,7 @@ $main_color: var(--main-color);
 $second_color: var(--second-color);
 $dark_color: var(--dark-color);
 $gray: #7a8a9e;
-$padding_section: 100px 0;
+$padding_section: 70px 0;
 //global styles
 
 //mixins
@@ -99,6 +99,13 @@ $padding_section: 100px 0;
     display: -webkit-box;
 }
 
+%max_lines_none {
+    overflow: visible;
+    text-overflow: unset;
+    -webkit-box-orient: unset;
+    display: unset;
+}
+
 %max_one_line {
     max-width: 100%;
     text-overflow: ellipsis;
@@ -128,7 +135,7 @@ $padding_section: 100px 0;
             position: absolute;
             bottom: -15px;
             left: 50%;
-            margin-inline-start: -32px;
+            margin-left: -32px;
             width: 64px;
             height: 8px;
             background-image: url(../images/bgs/decor-title-2.svg);
@@ -347,7 +354,7 @@ a {
     width: 100%;
     height: 100%;
     z-index: 999999;
-    background-color: #EDEDED;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -9,6 +9,12 @@ $(document).ready(function () {
     $(this).removeClass("change")
   });
 
+  //if dir is rtl
+  (function () {
+    if($("html").attr("dir") == "rtl") {
+      $("marquee").attr("direction", "right")
+    }
+  })();
 
   // fixed header
   $(window).scroll(function () {
@@ -25,19 +31,23 @@ $(document).ready(function () {
   $('.main-slider-carousel').owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 4000,
-    items:1,
+    autoplayTimeout: 40000,
+    items: 1,
+    rtl: true,
     nav: true,
     dots: false,
     navText: ["<i class='bi bi-chevron-left'></i>", "<i class='bi bi-chevron-right'></i>"],
     responsive: {
       0: {
         items: 1,
+        nav: false,
+        dots: true,
       },
       768: {
         items: 1,
+        nav: true,
       },
-      
+
       992: {
         items: 1,
       }
@@ -84,4 +94,8 @@ $(document).ready(function () {
     effect: "fadeIn",
     visibleOnly: false,
   });
+});
+
+$(window).on("load", function () {
+  $('.loader').delay(500).fadeOut(500);
 });

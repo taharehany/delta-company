@@ -51,7 +51,7 @@ header {
 
 				marquee {
 					direction: ltr;
-					max-width: 550px;
+					max-width: 420px;
 					border-inline-end: 1px solid #555555;
 				}
 
@@ -92,6 +92,7 @@ header {
 
 			.links {
 				white-space: nowrap;
+
 				a {
 					color: #666;
 					margin-inline-end: 15px;
@@ -152,14 +153,16 @@ header {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				max-width: 175px;
 
 				span {
-					display: block;
 					font-size: 14px;
+					@extend %max_lines;
+					-webkit-line-clamp: 1;
 				}
 
 				a {
-					font-size: 24px;
+					font-size: 20px;
 					font-weight: 600;
 					color: #222;
 				}
@@ -481,6 +484,7 @@ section.main-slider {
 
 	.main-slider-carousel {
 		.owl-item {
+			direction: ltr;
 			&.active {
 				* {
 					-webkit-animation-duration: 1s;
@@ -553,23 +557,22 @@ section.main-slider {
 							background-image: url(../images/bgs/decor-title-2.svg);
 							content: '';
 						}
-
-						// &::after {
-						// 	display: block;
-						// 	width: 100%;
-						// 	max-width: 500px;
-						// 	height: 25px;
-						// 	margin: 45px auto 0;
-						// 	background-image: url(../images/bgs/decor-lines.svg);
-						// 	content: '';
-						// }
 					}
 
 					.title {
 						text-transform: capitalize;
 						color: #fff;
-						font-size: 40px;
-						font-weight: 600;
+						@extend %max_lines;
+						-webkit-line-clamp: 3;
+
+						h1 {
+							font-size: 40px;
+							font-weight: 600;
+						}
+					}
+
+					.desc {
+						margin-bottom: 10px;
 						@extend %max_lines;
 						-webkit-line-clamp: 3;
 					}
@@ -578,8 +581,6 @@ section.main-slider {
 						color: #ffffff;
 						font-size: 20px;
 						line-height: 1.4em;
-						@extend %max_lines;
-						-webkit-line-clamp: 5;
 					}
 				}
 			}
@@ -656,16 +657,19 @@ section.about {
 			text-align: initial;
 
 			.top-title {
-				display: block;
 				color: #555555;
 				font-size: 18px;
 				font-weight: 500;
 				margin-bottom: 15px;
+				@extend %max_lines;
+				-webkit-line-clamp: 2;
 			}
 
 			h2 {
 				color: $dark_color;
 				margin-bottom: 20px;
+				@extend %max_lines;
+				-webkit-line-clamp: 3;
 
 				&::after {
 					display: none;
@@ -684,6 +688,7 @@ section.about {
 		.about-image {
 			position: relative;
 			margin-inline-end: 45px;
+			margin-inline-start: 45px;
 			background-color: rgba(141, 215, 247, 0.5);
 			height: 30rem;
 
@@ -701,11 +706,8 @@ section.about {
 			font-size: 16px;
 			line-height: 1.8em;
 			margin-bottom: 35px;
-
-			p {
-				@extend %max_lines;
-				-webkit-line-clamp: 7;
-			}
+			@extend %max_lines;
+			-webkit-line-clamp: 7;
 		}
 
 		.about-btn {
@@ -739,6 +741,7 @@ section.activities {
 		margin-bottom: 3rem;
 		position: relative;
 		text-align: initial;
+
 		h2 {
 			&::after {
 				left: 0;
@@ -796,6 +799,8 @@ section.activities {
 				color: #222;
 				text-transform: capitalize;
 				margin: 0;
+				@extend %max_lines;
+				-webkit-line-clamp: 2;
 			}
 		}
 	}
@@ -810,7 +815,8 @@ section.videos {
 	.content {
 		.video-box {
 			border-bottom: 5px solid $main_color;
-			@include boxshadow(0 5px 20px rgb(99 98 97 / 8%))
+			@include boxshadow(0 5px 20px rgb(99 98 97 / 8%));
+			margin-bottom: 25px;
 		}
 	}
 
@@ -865,6 +871,7 @@ section.cta {
 			grid-template-columns: 60px auto;
 			border-inline-start: 1px solid #222222;
 			padding: 0 40px;
+			align-items: center;
 
 			i {
 				font-size: 50px;
@@ -879,7 +886,7 @@ section.cta {
 
 				a {
 					color: #222;
-					font-size: 30px;
+					font-size: 26px;
 					font-weight: 600;
 					line-height: 1;
 				}
@@ -888,9 +895,10 @@ section.cta {
 
 		.text {
 			padding-inline-end: 10px;
+
 			h3 {
 				color: #222222;
-				font-size: 36px;
+				font-size: 28px;
 				font-weight: 700;
 				line-height: 1.2;
 				margin-bottom: 0;
@@ -950,7 +958,7 @@ section.coming-auction {
 
 	.content {
 		position: relative;
-		max-width: 50vw;
+		max-width: 990px;
 		margin: auto;
 
 		.box {
@@ -989,6 +997,7 @@ section.coming-auction {
 					font-weight: 600;
 					color: #222;
 					margin: 0 10px;
+					display: inline-block;
 				}
 			}
 		}
@@ -1059,7 +1068,7 @@ section.contact {
 		}
 
 		.contact-form {
-			max-width: 50vw;
+			max-width: 990px;
 			margin: auto;
 
 			.form-group {

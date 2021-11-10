@@ -1,0 +1,52 @@
+extend index
+
+block website_title
+    title #{website_title} | شهادات
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bg_crumb.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 شهادات
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") شهادات
+    //breadcrumb
+
+    //certificates page
+    section(class="certificates")
+        div(class="container")
+            div(class="content")
+                div(class="main-title")
+                    span(class="top-title") شهادات
+                    h2 شهادات الشركة
+                div(class="certificates-images")
+                    div(class="row")
+                        div(class="col-lg-4 box")
+                            a(href="../images/certificates/01.jpg" data-fancybox="gallery") 
+                                div(class="image")
+                                    img(class="img-fluid" data-src="../images/certificates/01.jpg" alt="")
+                        div(class="col-lg-4 box")
+                            a(href="../images/certificates/02.jpg" data-fancybox="gallery") 
+                                div(class="image")
+                                    img(class="img-fluid" data-src="../images/certificates/02.jpg" alt="")
+                        div(class="col-lg-4 box")
+                            a(href="../images/certificates/03.jpg" data-fancybox="gallery") 
+                                div(class="image")
+                                    img(class="img-fluid" data-src="../images/certificates/03.jpg" alt="")
+                        div(class="col-lg-4 box")
+                            a(href="../images/certificates/04.jpg" data-fancybox="gallery") 
+                                div(class="image")
+                                    img(class="img-fluid" data-src="../images/certificates/04.jpg" alt="")
+                        div(class="col-lg-4 box")
+                            a(href="../images/certificates/05.jpg" data-fancybox="gallery") 
+                                div(class="image")
+                                    img(class="img-fluid" data-src="../images/certificates/05.jpg" alt="")
+                        div(class="col-lg-4 box")
+                            a(href="../images/certificates/06.jpg" data-fancybox="gallery") 
+                                div(class="image")
+                                    img(class="img-fluid" data-src="../images/certificates/06.jpg" alt="")
+    //certificates page

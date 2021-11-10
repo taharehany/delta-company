@@ -1,0 +1,72 @@
+extend index
+
+block website_title
+    title #{website_title} | مزادات
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bg_crumb.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 مزادات
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") مزادات
+    //breadcrumb
+
+    //auctioneers page
+    section(class="auctioneers")
+        div(class="container")
+            div(class="content")
+                div(class="main-title")
+                    span(class="top-title") مزادات
+                    h2 مزادات الشرق الأوسط
+                nav
+                    #nav-tab(class="nav nav-tabs", role="tablist")
+                        button(class="nav-link active", id="auctioneers-tab-1" data-bs-toggle="tab", data-bs-target="#auctioneers-1", type="button", role="tab", aria-controls="auctioneers-1", aria-selected="true") مزادات سابقة
+                        button(class="nav-link", id="auctioneers-tab-2" data-bs-toggle="tab", data-bs-target="#auctioneers-2", type="button", role="tab", aria-controls="auctioneers-2", aria-selected="false") مزادات قادمة
+                div(class="auctioneers-images")
+                    div(class="tab-content")
+                        div(class="tab-pane fade show active", id="auctioneers-1" role="tabpanel", aria-labelledby="auctioneers-tab-1")
+                            div(class="row")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/01.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/01.jpg" alt="")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/02.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/02.jpg" alt="")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/03.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/03.jpg" alt="")
+                        div(class="tab-pane fade", id="auctioneers-2" role="tabpanel", aria-labelledby="auctioneers-tab-2")
+                            div(class="row")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/01.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/01.jpg" alt="")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/02.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/02.jpg" alt="")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/03.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/03.jpg" alt="")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/04.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/04.jpg" alt="")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/05.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/05.jpg" alt="")
+                                div(class="col-lg-4 box")
+                                    a(href="../images/auctioneers/06.jpg" data-fancybox="gallery") 
+                                        div(class="image")
+                                            img(class="img-fluid" data-src="../images/auctioneers/06.jpg" alt="")
+    //auctioneers page

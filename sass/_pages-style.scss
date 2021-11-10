@@ -101,6 +101,16 @@ section.about-in-page {
     @extend .about;
 
     .content {
+        .main-title {
+            .top-title {
+                -webkit-line-clamp: 3;
+            }
+
+            h2 {
+                -webkit-line-clamp: 5;
+            }
+        }
+
         .about-image {
             margin-inline-end: 60px;
             margin-block-end: 20px;
@@ -113,6 +123,7 @@ section.about-in-page {
 
         .about-text {
             margin-bottom: 0;
+            @extend %max_lines_none;
 
             p {
                 display: block;
@@ -275,6 +286,7 @@ section.certificates {
                     object-fit: contain;
                     -o-object-fit: contain;
                     height: 100%;
+                    width: 100%;
                 }
             }
         }
@@ -289,7 +301,7 @@ section.videos-in-page {
 
     .content {
         .video-box {
-            margin-bottom: 25px;
+            // margin-bottom: 25px;
         }
     }
 }
@@ -463,7 +475,7 @@ section.contact-in-page {
                 font-weight: 600;
                 font-size: 20px;
                 position: relative;
-                padding-left: 40px;
+                padding-inline-start: 40px;
                 margin-bottom: 30px;
 
                 &::before {

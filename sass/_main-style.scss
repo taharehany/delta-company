@@ -125,6 +125,10 @@ header {
 			}
 		}
 
+		.dropdown-menu {
+			min-width: 8rem;
+		}
+
 		.navbar-toggler {
 			margin-inline-start: 15px;
 
@@ -485,6 +489,7 @@ section.main-slider {
 	.main-slider-carousel {
 		.owl-item {
 			direction: ltr;
+
 			&.active {
 				* {
 					-webkit-animation-duration: 1s;

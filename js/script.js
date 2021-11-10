@@ -31,7 +31,7 @@ $(document).ready(function () {
   $('.main-slider-carousel').owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 40000,
+    autoplayTimeout: 4000,
     items: 1,
     rtl: true,
     nav: true,

@@ -1539,6 +1539,7 @@ footer {
 					line-height: 1.7em;
 					@extend %max_lines;
 					-webkit-line-clamp: 5;
+					text-align: justify;
 				}
 
 				.btn {

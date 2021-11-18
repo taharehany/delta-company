@@ -1,0 +1,264 @@
+extend index
+
+block website_title
+    title #{website_title} | جميع السيارات
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/offer-bg.webp')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 جميع السيارات
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") جميع السيارات
+    //breadcrumb
+
+    //search
+    section(class="search-in-page")
+        div(class="container")
+            div(class="content")
+                p(class="result") النتيجة: 0 سيارة 
+                form(action="" method="") 
+                    div(class="row")
+                        div(class="col-lg-2 col-md-6")
+                            div(class="select-area")
+                                select(class="nice-select")
+                                    option(disabled, selected, class="hidden-option") السنة
+                                    option(value="1") الخيار 1
+                                    option(value="2") الخيار 2
+                                    option(value="3") الخيار 3
+                                    option(value="4") الخيار 4
+                        div(class="col-lg-2 col-md-6")
+                            div(class="select-area")
+                                select(class="nice-select")
+                                    option(disabled, selected, class="hidden-option") اسم السيارة
+                                    option(value="1") الخيار 1
+                                    option(value="2") الخيار 2
+                                    option(value="3") الخيار 3
+                                    option(value="4") الخيار 4
+                        div(class="col-lg-2 col-md-6")
+                            div(class="select-area")
+                                select(class="nice-select")
+                                    option(disabled, selected, class="hidden-option") الموديل
+                                    option(value="1") الخيار 1
+                                    option(value="2") الخيار 2
+                                    option(value="3") الخيار 3
+                                    option(value="4") الخيار 4
+                        div(class="col-lg-2 col-md-6")
+                            div(class="select-area")
+                                select(class="nice-select")
+                                    option(disabled, selected, class="hidden-option") المحرك
+                                    option(value="1") الخيار 1
+                                    option(value="2") الخيار 2
+                                    option(value="3") الخيار 3
+                                    option(value="4") الخيار 4
+                        div(class="col-lg-2 col-md-6")
+                            div(class="select-area")
+                                select(class="nice-select")
+                                    option(disabled, selected, class="hidden-option") اللون
+                                    option(value="1") الخيار 1
+                                    option(value="2") الخيار 2
+                                    option(value="3") الخيار 3
+                                    option(value="4") الخيار 4
+                        div(class="col-lg-2 col-md-6")
+                            div(class="select-area")
+                                select(class="nice-select")
+                                    option(disabled, selected, class="hidden-option") السرعة
+                                    option(value="1") الخيار 1
+                                    option(value="2") الخيار 2
+                                    option(value="3") الخيار 3
+                                    option(value="4") الخيار 4
+                        div(class="col-lg-12")
+                            div(class="slider-wrapper")
+                                label(for="" class="form-label") السعر:
+                                input(class="input-range", value="" data-slider-id="ex12cSlider", type="text", data-slider-step="500", data-slider-value="0, 100000", data-slider-min="1000", data-slider-max="500000", data-slider-range="true", data-slider-tooltip_split="true")
+                            div(class="buttons-area")
+                                button(class="btn" class="submit" type="submit")
+                                    | بحث
+                                    i(class="bi bi-search")
+    //search
+
+    //cars
+    section(class="cars")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-3 col-md-6")
+                        div(class="car-box")
+                            div(class="image")
+                                img(src="images/feature/01.webp" class="img-fluid")
+                                div(class="overlay")
+                                    div(class="icons")
+                                        a(href="images/feature/01.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                            i(class="bi bi-arrows-fullscreen")
+                                        a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                            i(class="bi bi-link-45deg")
+                                ul(class="details")
+                                    li 
+                                        i(class="bi bi-calendar")
+                                        | 2021
+                                    li 
+                                        i(class="bi bi-speedometer")
+                                        | 885442
+                                div(class="status")
+                                    span مستعمل
+                            div(class="text")
+                                a(href="car.html") 
+                                    h3(class="title") 2013 Toyota Tacoma
+                                div(class="separator")
+                                p(class="price") 23,900.00
+                                    sup ر.س
+                    div(class="col-lg-3 col-md-6")
+                        div(class="car-box")
+                            div(class="image")
+                                img(src="images/feature/01.webp" class="img-fluid")
+                                div(class="overlay")
+                                    div(class="icons")
+                                        a(href="images/feature/01.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                            i(class="bi bi-arrows-fullscreen")
+                                        a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                            i(class="bi bi-link-45deg")
+                                ul(class="details")
+                                    li 
+                                        i(class="bi bi-calendar")
+                                        | 2021
+                                    li 
+                                        i(class="bi bi-speedometer")
+                                        | 885442
+                                div(class="status")
+                                    span جديد
+                            div(class="text")
+                                a(href="car.html") 
+                                    h3(class="title") 2013 Toyota Tacoma
+                                div(class="separator")
+                                p(class="price") 23,900.00
+                                    sup ر.س
+                    div(class="col-lg-3 col-md-6")
+                        div(class="car-box")
+                            div(class="image")
+                                img(src="images/feature/01.webp" class="img-fluid")
+                                div(class="overlay")
+                                    div(class="icons")
+                                        a(href="images/feature/01.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                            i(class="bi bi-arrows-fullscreen")
+                                        a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                            i(class="bi bi-link-45deg")
+                                ul(class="details")
+                                    li 
+                                        i(class="bi bi-calendar")
+                                        | 2021
+                                    li 
+                                        i(class="bi bi-speedometer")
+                                        | 885442
+                                div(class="status")
+                                    span مستعمل
+                            div(class="text")
+                                a(href="car.html") 
+                                    h3(class="title") 2013 Toyota Tacoma
+                                div(class="separator")
+                                p(class="price") 23,900.00
+                                    sup ر.س
+                    div(class="col-lg-3 col-md-6")
+                        div(class="car-box")
+                            div(class="image")
+                                img(src="images/feature/01.webp" class="img-fluid")
+                                div(class="overlay")
+                                    div(class="icons")
+                                        a(href="images/feature/01.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                            i(class="bi bi-arrows-fullscreen")
+                                        a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                            i(class="bi bi-link-45deg")
+                                ul(class="details")
+                                    li 
+                                        i(class="bi bi-calendar")
+                                        | 2021
+                                    li 
+                                        i(class="bi bi-speedometer")
+                                        | 885442
+                                div(class="status")
+                                    span مستعمل
+                            div(class="text")
+                                a(href="car.html") 
+                                    h3(class="title") 2013 Toyota Tacoma
+                                div(class="separator")
+                                p(class="price") 23,900.00
+                                    sup ر.س
+                    div(class="col-lg-3 col-md-6")
+                        div(class="car-box")
+                            div(class="image")
+                                img(src="images/feature/01.webp" class="img-fluid")
+                                div(class="overlay")
+                                    div(class="icons")
+                                        a(href="images/feature/01.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                            i(class="bi bi-arrows-fullscreen")
+                                        a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                            i(class="bi bi-link-45deg")
+                                ul(class="details")
+                                    li 
+                                        i(class="bi bi-calendar")
+                                        | 2021
+                                    li 
+                                        i(class="bi bi-speedometer")
+                                        | 885442
+                                div(class="status")
+                                    span مستعمل
+                            div(class="text")
+                                a(href="car.html") 
+                                    h3(class="title") 2013 Toyota Tacoma
+                                div(class="separator")
+                                p(class="price") 23,900.00
+                                    sup ر.س
+                    div(class="col-lg-3 col-md-6")
+                        div(class="car-box")
+                            div(class="image")
+                                img(src="images/feature/01.webp" class="img-fluid")
+                                div(class="overlay")
+                                    div(class="icons")
+                                        a(href="images/feature/01.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                            i(class="bi bi-arrows-fullscreen")
+                                        a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                            i(class="bi bi-link-45deg")
+                                ul(class="details")
+                                    li 
+                                        i(class="bi bi-calendar")
+                                        | 2021
+                                    li 
+                                        i(class="bi bi-speedometer")
+                                        | 885442
+                                div(class="status")
+                                    span مستعمل
+                            div(class="text")
+                                a(href="car.html") 
+                                    h3(class="title") 2013 Toyota Tacoma
+                                div(class="separator")
+                                p(class="price") 23,900.00
+                                    sup ر.س
+                //pagination
+                nav(aria-label="Page navigation" class="navigation")
+                    ul(class="pagination")
+                        li(class="page-item")
+                            a(class="page-link arrow", href="#!", aria-label="Previous")
+                                span(aria-hidden="true") &laquo;
+                        li(class="page-item active")
+                            a(class="page-link", href="#!") 1
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 2
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 3
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 4
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 5
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 6
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 7
+                        li(class="page-item")
+                            a(class="page-link", href="#!") 8
+                        li(class="page-item")
+                            a(class="page-link arrow", href="#!", aria-label="Next")
+                                span(aria-hidden="true") &raquo;
+    //cars

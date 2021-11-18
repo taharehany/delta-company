@@ -1,0 +1,265 @@
+extend index
+
+block website_title
+    title #{website_title} | تفاصيل السيارة
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/offer-bg.webp')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 تفاصيل السيارة
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") تفاصيل السيارة
+    //breadcrumb
+
+    //single car
+    section(class="single-car")
+        div(class="container")
+            div(class="main-title")
+                h2 2007 FORD MUSTANG DELUXE
+                p تاجر السيارات هو سمة ووردبريس المتميزة الأكثر جاذبية وإبداعًا وحداثة ومتعددة الأغراض. مناسبة لأي مواقع تجار سيارات أو مواقع أعمال أو شركات. تم إنشاء السمة خصيصًا لتجار السيارات وبائعي السيارات ومحطات خدمة السيارات وورش الميكانيكا وتجار السيارات بالتجزئة.
+            div(class="content")
+                div(class="share")
+                    p مشاركة: 
+                    a(href="#!")
+                        i(class="bi bi-facebook")
+                    a(href="#!")
+                        i(class="bi bi-twitter")
+                    a(href="#!")
+                        i(class="bi bi-instagram")
+                    a(href="#!")
+                        i(class="bi bi-linkedin")
+                div(class="row")
+                    div(class="col-lg-8")
+                        div(class="single-car-box")
+                            div(class="single-car-images")
+                                div(class="slider-for")
+                                    div(class="item")
+                                        a(data-fancybox="demo", data-src="images/car/01.jpg", data-caption="")
+                                            img(src="images/car/01.jpg", class="img-fluid" alt="")
+                                    div(class="item")
+                                        a(data-fancybox="demo", data-src="images/car/02.jpg", data-caption="")
+                                            img(src="images/car/02.jpg", class="img-fluid" alt="")
+                                    div(class="item")
+                                        a(data-fancybox="demo", data-src="images/car/03.jpg", data-caption="")
+                                            img(src="images/car/03.jpg", class="img-fluid" alt="")
+                                    div(class="item")
+                                        a(data-fancybox="demo", data-src="images/car/04.jpg", data-caption="")
+                                            img(src="images/car/04.jpg", class="img-fluid" alt="")
+                                div(class="slider-nav")
+                                    div(class="item")
+                                        img(src="images/car/01.jpg", class="img-fluid" alt="")
+                                    div(class="item")
+                                        img(src="images/car/02.jpg", class="img-fluid" alt="")
+                                    div(class="item")
+                                        img(src="images/car/03.jpg", class="img-fluid" alt="")
+                                    div(class="item")
+                                        img(src="images/car/04.jpg", class="img-fluid" alt="")                            
+                            //features
+                            div(class="single-car-features")
+                                div(class="subtitle") 
+                                    h3 Features
+                                    span(class="line")
+                                ul(class="m-0")
+                                    li Attic
+                                    li Dishwasher
+                                    li Fireplace
+                                    li Garden
+                                    li Gym
+                                    li High ceilings
+                                    li Microwave
+                                    li Patio
+                                    li Swimming Pool
+                            //details
+                            div(class="single-car-text")
+                                div(class="subtitle") 
+                                    h3 details
+                                    span(class="line")
+                                p How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction. If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire. During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.
+                            //video
+                            div(class="single-car-video")
+                                div(class="subtitle") 
+                                    h3 video
+                                    span(class="line")
+                                div(class="video") 
+                                    div(class="ratio ratio-16x9")
+                                        iframe(src="https://www.youtube.com/embed/LXb3EKWsInQ", title="YouTube video", allowfullscreen)
+                    div(class="col-lg-4")
+                        aside 
+                            div(class="single-car-details")
+                                div(class="subtitle") 
+                                    h3 Features
+                                    span(class="line")
+                                ul(class="p-0 m-0")
+                                    li 
+                                        strong car type: 
+                                        span appartment
+                                    li 
+                                        strong City: 
+                                        span cairo
+                                    li 
+                                        strong Neighborhood: 
+                                        span nasr city
+                                    li 
+                                        strong Bedrooms: 
+                                        span 2
+                                    li 
+                                        strong car size: 
+                                        span 122 m
+                                            sup 2
+                                    li 
+                                        strong Offer type: 
+                                        span appartment
+                                    li 
+                                        strong Street: 
+                                        span appartment
+                                    li 
+                                        strong Bathrooms: 
+                                        span appartment
+                                    li 
+                                        strong year: 
+                                        span 2002
+    //single cars
+
+    //related cars
+    section(class="related-cars")
+        div(class="container")
+            div(class="content")
+                div(class="related-cars-carousel owl-carousel owl-theme")
+                    div(class="related-cars-box")
+                        div(class="image")
+                            img(src="images/feature/01.webp" class="img-fluid")
+                            div(class="overlay")
+                                div(class="icons")
+                                    a(href="images/feature/01.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                        i(class="bi bi-arrows-fullscreen")
+                                    a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                        i(class="bi bi-link-45deg")
+                            ul(class="details")
+                                li 
+                                    i(class="bi bi-calendar")
+                                    | 2021
+                                li 
+                                    i(class="bi bi-speedometer")
+                                    | 885442
+                        div(class="text")
+                            a(href="car.html") 
+                                h3(class="title") 2013 Toyota Tacoma
+                            div(class="separator")
+                            p(class="price") 23,900.00
+                                sup ر.س
+                    div(class="related-cars-box")
+                        div(class="image")
+                            img(src="images/feature/02.webp" class="img-fluid")
+                            div(class="overlay")
+                                div(class="icons")
+                                    a(href="images/feature/02.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                        i(class="bi bi-arrows-fullscreen")
+                                    a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                        i(class="bi bi-link-45deg")
+                            ul(class="details")
+                                li 
+                                    i(class="bi bi-calendar")
+                                    | 2021
+                                li 
+                                    i(class="bi bi-speedometer")
+                                    | 885442
+                        div(class="text")
+                            a(href="car.html") 
+                                h3(class="title") 2013 Toyota Tacoma
+                            div(class="separator")
+                            p(class="price") 23,900.00
+                                sup ر.س
+                    div(class="related-cars-box")
+                        div(class="image")
+                            img(src="images/feature/03.webp" class="img-fluid")
+                            div(class="overlay")
+                                div(class="icons")
+                                    a(href="images/feature/03.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                        i(class="bi bi-arrows-fullscreen")
+                                    a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                        i(class="bi bi-link-45deg")
+                            ul(class="details")
+                                li 
+                                    i(class="bi bi-calendar")
+                                    | 2021
+                                li 
+                                    i(class="bi bi-speedometer")
+                                    | 885442
+                        div(class="text")
+                            a(href="car.html") 
+                                h3(class="title") 2013 Toyota Tacoma
+                            div(class="separator")
+                            p(class="price") 23,900.00
+                                sup ر.س
+                    div(class="related-cars-box")
+                        div(class="image")
+                            img(src="images/feature/04.webp" class="img-fluid")
+                            div(class="overlay")
+                                div(class="icons")
+                                    a(href="images/feature/04.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                        i(class="bi bi-arrows-fullscreen")
+                                    a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                        i(class="bi bi-link-45deg")
+                            ul(class="details")
+                                li 
+                                    i(class="bi bi-calendar")
+                                    | 2021
+                                li 
+                                    i(class="bi bi-speedometer")
+                                    | 885442
+                        div(class="text")
+                            a(href="car.html") 
+                                h3(class="title") 2013 Toyota Tacoma
+                            div(class="separator")
+                            p(class="price") 23,900.00
+                                sup ر.س
+                    div(class="related-cars-box")
+                        div(class="image")
+                            img(src="images/feature/05.webp" class="img-fluid")
+                            div(class="overlay")
+                                div(class="icons")
+                                    a(href="images/feature/05.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                        i(class="bi bi-arrows-fullscreen")
+                                    a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                        i(class="bi bi-link-45deg")
+                            ul(class="details")
+                                li 
+                                    i(class="bi bi-calendar")
+                                    | 2021
+                                li 
+                                    i(class="bi bi-speedometer")
+                                    | 885442
+                        div(class="text")
+                            a(href="car.html") 
+                                h3(class="title") 2013 Toyota Tacoma
+                            div(class="separator")
+                            p(class="price") 23,900.00
+                                sup ر.س
+                    div(class="related-cars-box")
+                        div(class="image")
+                            img(src="images/feature/06.webp" class="img-fluid")
+                            div(class="overlay")
+                                div(class="icons")
+                                    a(href="images/feature/06.webp" data-fancybox="gallery" data-toggle="tooltip" data-placement="top" title="عرض") 
+                                        i(class="bi bi-arrows-fullscreen")
+                                    a(href="single-car.html" data-toggle="tooltip" data-placement="top" title="تفاصيل السيارة") 
+                                        i(class="bi bi-link-45deg")
+                            ul(class="details")
+                                li 
+                                    i(class="bi bi-calendar")
+                                    | 2021
+                                li 
+                                    i(class="bi bi-speedometer")
+                                    | 885442
+                        div(class="text")
+                            a(href="car.html") 
+                                h3(class="title") 2013 Toyota Tacoma
+                            div(class="separator")
+                            p(class="price") 23,900.00
+                                sup ر.س
+    //feature

@@ -1,0 +1,168 @@
+extend index
+
+block website_title
+    title #{website_title} | من نحن
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/offer-bg.webp')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 من نحن
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") من نحن
+    //breadcrumb
+    
+    //welcome
+    section(class="welcome")
+        div(class="container")
+            div(class="main-title" data-wow-duration="1.3s" data-wow-delay=".3s")
+                span(class="top-title") أهلا بكم في موقعنا
+                h2 الحل السريع للسيارات
+                div(class="separator")
+                p تاجر السيارات هو سمة ووردبريس المتميزة الأكثر جاذبية وإبداعًا وحداثة ومتعددة الأغراض. مناسبة لأي مواقع تجار سيارات أو مواقع أعمال أو شركات. تم إنشاء السمة خصيصًا لتجار السيارات وبائعي السيارات ومحطات خدمة السيارات وورش الميكانيكا وتجار السيارات بالتجزئة.
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-3 col-md-6 col")
+                        div(class="welcome-box")
+                            div(class="icon")
+                                img(src="images/welcome/01.png", class="img-fluid" alt="")
+                            div(class="text")
+                                h3 عنوان النص 1
+                                p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="col-lg-3 col-md-6 col")
+                        div(class="welcome-box")
+                            div(class="icon")
+                                img(src="images/welcome/02.png", class="img-fluid" alt="")
+                            div(class="text")
+                                h3 عنوان النص 1
+                                p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="col-lg-3 col-md-6 col")
+                        div(class="welcome-box")
+                            div(class="icon")
+                                img(src="images/welcome/03.png", class="img-fluid" alt="")
+                            div(class="text")
+                                h3 عنوان النص 1
+                                p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                    div(class="col-lg-3 col-md-6 col")
+                        div(class="welcome-box")
+                            div(class="icon")
+                                img(src="images/welcome/04.png", class="img-fluid" alt="")
+                            div(class="text")
+                                h3 عنوان النص 1
+                                p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+    //welcome
+
+    //video
+    section(class="video" style="background-image: url(images/bgs/vid-big-bg.webp);")
+        div(class="container")
+            div(class="main-title")
+                h2 تريد ان تعرف المزيد عنا؟ قم بتشغيل الفيديو الترويجي الآن!
+            div(class="content")
+                div(class="video-box")
+                    figure(class="video-image")
+                        img(src="images/bgs/feature-bg.webp" alt="")
+                    a(href="https://www.youtube.com/watch?v=kxPCFljwJws" data-fancybox="gallery" class="overlay-box")
+                        i(class="bi bi-caret-right-fill")
+    //video
+
+    //facts
+    section(class="facts")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-3 col-md-6 col-12")
+                        div(class="facts-box")
+                            div(class="icon")
+                                img(src="images/welcome/04.png", class="img-fluid" alt="")
+                            div(class="text")
+                                h3 سيارات في المخازن
+                            div(class="number")
+                                sup +
+                                span(class="counter") 240
+                    div(class="col-lg-3 col-md-6 col-12")
+                        div(class="facts-box")
+                            div(class="icon")
+                                img(src="images/welcome/02.png", class="img-fluid" alt="")
+                            div(class="text")
+                                h3 تقييمات العملاء
+                            div(class="number")
+                                sup +
+                                span(class="counter") 240
+                    div(class="col-lg-3 col-md-6 col-12")
+                        div(class="facts-box")
+                            div(class="icon")
+                                img(src="images/welcome/03.png", class="img-fluid" alt="")
+                            div(class="text")
+                                h3 عملاء سعداء
+                            div(class="number")
+                                sup +
+                                span(class="counter") 250
+                    div(class="col-lg-3 col-md-6 col-12")
+                        div(class="facts-box")
+                            div(class="icon")
+                                img(src="images/welcome/01.png", class="img-fluid" alt="")
+                            div(class="text")
+                                h3 سيارات مباعة
+                            div(class="number")
+                                sup +
+                                span(class="counter") 350
+    //facts
+
+    //testimonial
+    section(class="testimonial")
+        div(class="container")
+            div(class="main-title")
+                span(class="top-title") ماذا يقول عملاؤنا السعداء عنا
+                h2 آراء العملاء فيما نقدمه 
+                div(class="separator")
+            div(class="content")
+                div(class="testimonial-carousel owl-carousel owl-theme")
+                    div(class="testimonial-box")
+                        div(class="image")
+                            a(href="single-blog.html") 
+                                img(class="img-fluid" data-src="images/testimonial/01.jpg" alt="")
+                        div(class="text")
+                            h3 محمد أحمد
+                        div(class="details")
+                            img(src="images/testimonial/quote.svg", class="img-fluid quote" alt="")
+                            p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.
+                    div(class="testimonial-box")
+                        div(class="image")
+                            a(href="single-blog.html") 
+                                img(class="img-fluid" data-src="images/testimonial/01.jpg" alt="")
+                        div(class="text")
+                            h3 محمد أحمد
+                        div(class="details")
+                            img(src="images/testimonial/quote.svg", class="img-fluid quote" alt="")
+                            p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.
+                    div(class="testimonial-box")
+                        div(class="image")
+                            a(href="single-blog.html") 
+                                img(class="img-fluid" data-src="images/testimonial/01.jpg" alt="")
+                        div(class="text")
+                            h3 محمد أحمد
+                        div(class="details")
+                            img(src="images/testimonial/quote.svg", class="img-fluid quote" alt="")
+                            p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.
+    //testimonial
+
+    //clients
+    section(class="clients")
+        div(class="container")
+            div(class="main-title")
+                span(class="top-title") عملاء في جميع أنحاء العالم
+                h2 عملائنا
+                div(class="separator")
+            div(class="content")
+                div(class="clients-carousel owl-carousel owl-theme")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/01.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/02.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/03.png" alt="")
+    //clients

@@ -170,6 +170,18 @@
             }
         }
     }
+
+    section.offers {
+        .content {
+            .offer-box {
+                .image {
+                    img {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 670px) {}
@@ -277,6 +289,7 @@
             font-size: 8rem;
         }
     }
+
     section.single-offer {
         .content {
             .single-offer-box {

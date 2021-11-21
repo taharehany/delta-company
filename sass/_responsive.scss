@@ -182,6 +182,20 @@
             }
         }
     }
+
+    section.feature {
+        .content {
+            padding: 0;
+
+            .feature-box {
+                .image {
+                    img {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 670px) {}

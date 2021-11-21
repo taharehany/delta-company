@@ -25,8 +25,7 @@
             text-align: center;
             color: #fff;
             font-size: 40px;
-            font-weight: 600;
-            text-transform: capitalize;
+            margin-bottom: 25px;
         }
     }
 
@@ -331,6 +330,7 @@ section.cars {
             @include transition(all ease 0.3s);
             text-align: center;
             position: relative;
+            margin-bottom: 25px;
 
             &:hover {
                 .image {
@@ -428,7 +428,7 @@ section.cars {
             }
 
             .text {
-                background-color: #fff;
+                background-color: #f8f8f8;
                 padding: 20px;
 
                 .title {
@@ -672,6 +672,21 @@ section.single-car {
                 }
             }
         }
+
+        .btn-part {
+            @extend .item-btn;
+            text-align: initial;
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+            .btn {
+                padding: 5px 20px 10px;
+
+                &:first-child {
+                    margin-inline-end: 10px
+                }
+            }
+        }
     }
 }
 
@@ -680,6 +695,7 @@ section.single-car {
 //related cars
 section.related-cars {
     padding: $padding_section;
+
     .main-title {
         text-align: initial;
 
@@ -779,7 +795,7 @@ section.related-cars {
         }
 
         .text {
-            background-color: #fff;
+            background-color: #f8f8f8;
             padding: 20px;
 
             .title {
@@ -802,6 +818,335 @@ section.related-cars {
 }
 
 //related cars
+
+//car type
+section.car-type {
+    padding: $padding_section;
+
+    .content {
+        @include boxshadow(0 5px 30px rgb(0 0 0 / 5%));
+        padding: 50px 30px 30px;
+
+        .car {
+            position: relative;
+            border: 1px solid #f1f1f1;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+
+            &:hover {
+                .number {
+                    background-color: #DB2D2E;
+                    color: #fff;
+                }
+            }
+
+
+            .title {
+                margin-bottom: 10px;
+
+                h3 {
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: #323232;
+                }
+            }
+
+            .image {
+                img {
+                    height: 60px;
+                }
+            }
+
+            .number {
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                background-color: #fff;
+                border: 1px solid #f1f1f1;
+                @include borderRadius(50%);
+                width: 30px;
+                height: 30px;
+                @extend %center;
+                @include transition(all ease 0.3s)
+            }
+
+            a {
+                color: #222222;
+            }
+        }
+    }
+}
+
+//car type
+
+//form request
+section.form-request {
+    padding: $padding_section;
+
+    .content {
+        max-width: 880px;
+        margin: auto;
+        @include boxshadow(0 5px 30px rgb(0 0 0 / 5%));
+        padding: 30px;
+
+        form {
+            .form-group {
+                margin-bottom: 20px;
+
+                label {
+                    display: block;
+                    margin-bottom: 15px;
+                    text-transform: capitalize;
+                    font-size: 14px;
+                }
+
+                .form-control,
+                .form-select {
+                    display: block;
+                    width: 100%;
+                    line-height: 28px;
+                    padding: 10px 15px;
+                    color: #222222;
+                    font-size: 14px;
+                    font-weight: 400;
+                    border-radius: 0px;
+                    background-color: #f6f6f6;
+                    border-color: #f6f6f6;
+
+                    &:focus {
+                        border-color: $dark_color;
+                        box-shadow: none;
+                    }
+                }
+
+                .nice-select {
+                    background-color: #f6f6f6;
+                    border-color: #f6f6f6;
+                    float: none;
+                    height: auto;
+                    line-height: normal;
+                    padding: 10px 15px;
+                    width: 100%;
+
+                    &::after {
+                        left: 12px;
+                        right: auto;
+                    }
+
+                    .list {
+                        left: 0;
+                        right: 0;
+                        max-height: 250px;
+                        overflow-y: auto;
+                    }
+                }
+            }
+        }
+
+        .successfully {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #058100;
+        }
+
+        .contact-btn {
+            @extend .item-btn;
+
+            .btn {
+                border-color: $main_color;
+                background-color: $main_color;
+                color: #fff;
+                width: 100%;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+//form request
+
+//offers
+section.offers {
+    padding: $padding_section;
+    background-color: #f1f1f1;
+
+    .content {
+        .offer-box {
+            margin-bottom: 25px;
+
+            .image {
+                padding: 5px;
+                background-color: #fff;
+
+                img {
+                    @extend %fitimage;
+                    height: 11rem;
+                }
+            }
+
+            .details {
+                padding: 15px;
+                background-color: #fff;
+                text-align: center;
+
+                .title {
+                    font-size: 16px;
+                    color: $main_color;
+                    font-weight: 600;
+                    @extend %max_lines;
+                    -webkit-line-clamp: 1;
+                    line-height: normal;
+                }
+
+                .separator {
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    @extend %max_lines;
+                    -webkit-line-clamp: 2;
+                    min-height: 55px;
+                }
+
+                ul {
+                    padding: 0;
+
+                    li {
+                        list-style: none;
+                        font-size: 16px;
+
+                        i {
+                            color: $main_color;
+                        }
+                    }
+                }
+
+                .btn-part {
+                    @extend .item-btn;
+
+                    .btn {
+                        padding: 5px 20px 10px;
+                    }
+                }
+            }
+
+            .tick {
+                direction: ltr;
+                width: auto;
+                margin-bottom: 25px;
+
+                .tick-group {
+                    width: auto;
+                    display: inline-block;
+                }
+
+                .tick-content {
+                    width: auto;
+                    font-weight: 600;
+                }
+            }
+
+            .tick-label {
+                font-size: 16px;
+                text-align: center;
+                color: #fff;
+                text-transform: capitalize;
+            }
+
+            .tick-group {
+                margin: 0 0.25em;
+                text-align: center;
+            }
+
+            .tick-flip-panel {
+                color: #ffffff;
+                background-color: $dark_color;
+            }
+
+            .tick-group {
+                margin: 0 0.2em;
+                text-align: center;
+            }
+
+        }
+    }
+}
+
+//offers
+
+//single offer
+section.single-offer {
+    padding: $padding_section;
+    background-color: #f1f1f1;
+
+    .content {
+        .single-offer-box {
+            background-color: #fff;
+
+            .image {
+                margin-bottom: 25px;
+
+                img {}
+            }
+
+            .details {
+                text-align: center;
+                padding: 25px;
+
+                ul {
+                    text-align: initial;
+
+                    li {
+                        font-size: 18px;
+                    }
+                }
+
+                .btn-part {
+                    @extend .item-btn;
+
+                    .btn {
+                        padding: 5px 20px 10px;
+                    }
+                }
+            }
+
+            .tick-container {
+                margin-bottom: 25px;
+
+                .tick-content {
+                    font-size: 3vw !important;
+                }
+            }
+
+            .tick {
+                direction: ltr;
+
+                .tick-content {
+                    width: auto;
+                    font-weight: 600;
+                }
+
+                .tick-group {
+                    margin: 0 0.2em;
+                    text-align: center;
+                }
+
+                .tick-flip-panel {
+                    color: #ffffff;
+                    background-color: $main_color;
+                }
+            }
+        }
+    }
+}
+
+//single offer
 
 //contact page
 section.contact-in-page {

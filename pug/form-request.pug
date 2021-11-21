@@ -1,0 +1,113 @@
+extend index
+
+block website_title
+    title #{website_title} | اطلب السعر
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/offer-bg.webp')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 اطلب السعر
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") اطلب السعر
+    //breadcrumb
+
+    //form request
+    section(class="form-request")
+        div(class="container")
+            div(class="content")
+                div(class="alert alert-danger alert-dismissible fade show", role="alert")
+                    strong يوجد خطأ!
+                    | تفقد جميع حقول الإدخال
+                    button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
+                form(action="" method="POST")
+                    div(class="row")
+                        div(class="col-12")
+                            div(class="form-group")
+                                label(for="") الاسم *
+                                input(type="text" class="form-control" placeholder="الاسم" required)
+                        div(class="col-12")
+                            div(class="form-group")
+                                label(for="") الهاتف *
+                                input(type="number" class="form-control" placeholder="الهاتف" required)
+                        div(class="col-12")
+                            div(class="form-group")
+                                label(for="") طراز السيارة *
+                                select(class="nice-select")
+                                    option(value="" selected disabled) ---
+                                    option(value="") شانجان
+                                    option(value="") شفروليه
+                                    option(value="") فورد
+                                    option(value="") جيلي
+                                    option(value="") جي ام سي
+                                    option(value="") هوندا
+                                    option(value="") هيونداي
+                                    option(value="") ايسوزو
+                                    option(value="") كيا
+                                    option(value="") مازدا
+                        div(class="col-12")
+                            div(class="form-group")
+                                label(for="") السيارة المطلوبة *
+                                select(class="nice-select")
+                                    option(value="" selected disabled) ---
+                                    option(value="") شانجان
+                                    option(value="") شفروليه
+                                    option(value="") فورد
+                                    option(value="") جيلي
+                                    option(value="") جي ام سي
+                                    option(value="") هوندا
+                                    option(value="") هيونداي
+                                    option(value="") ايسوزو
+                                    option(value="") كيا
+                                    option(value="") مازدا
+                        div(class="col-12")
+                            div(class="form-group")
+                                label(for="") الراتب الشهري *
+                                select(class="nice-select")
+                                    option(value="" selected disabled) ---
+                                    option(value="") أقل من 5000 ر.س
+                                    option(value="") من 5000 ر.س إلى 10000 ر.س
+                                    option(value="") أعلى من 10000 ر.س
+                        div(class="col-12")
+                            div(class="form-group")
+                                label(for="") اضف باقة اكسسوارات *
+                                select(class="nice-select")
+                                    option(value="" selected disabled) ---
+                                    option(value="") نعم
+                                    option(value="") لا
+                        div(class="col-12")
+                            div(class="form-group")
+                                label(for="") المدينة *
+                                select(class="nice-select")
+                                    option(value="") ---
+                                    option(value="Jeddah") جدة
+                                    option(value="Makkah") مكة المكرمة
+                                    option(value="Taif") الطائف
+                                    option(value="Jizan") جيزان
+                                    option(value="Khamis") خميس مشيط
+                                    option(value="Yanbu") ينبع
+                                    option(value="Buraidah") بريدة
+                                    option(value="Madinah") المدينة المنورة
+                                    option(value="Al Ahsa") الأحساء
+                                    option(value="Riyadh") الرياض
+                                    option(value="Tabuk") تبوك
+                                    option(value="Dammam") الدمام
+                        div(class="col-12")
+                            div(class="form-group")
+                                label(for="") الوقت المفضل للتواصل *
+                                select(class="nice-select")
+                                    option(value="") ---
+                                    option(value="") صباحا
+                                    option(value="") مساء
+                                    option(value="") في أي وقت
+                    div(class="contact-btn")
+                        div(class="outer-btn")
+                            button(class="btn" type="submit")
+                                span أرسل الآن
+                        div(class="text-center mt-2")
+                            p(class="successfully") تم إرسال رسالتك بنجاح
+    //form request

@@ -1,0 +1,88 @@
+extend index
+
+block website_title
+    title #{website_title} | العروض
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/offer-bg.webp')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 العروض
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") العروض
+    //breadcrumb
+
+    //offers
+    section(class="offers")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-3 col-md-6")
+                        div(class="offer-box")
+                            div(class="image")
+                                img(data-src="images/offers/01.jpg" class="img-fluid")
+                            div(class="details")
+                                a(href="car.html") 
+                                    h3(class="title") عنوان العرض هنا
+                                div(class="separator")
+                                p هنا شرح للعرض باختصار
+                                div(class="tick", data-did-init="handleTickInit1")
+                                    div(class="tick-content" data-repeat="true", data-layout="horizontal center fit", data-transform="preset(d, h, m, s) -> delay")
+                                        div(class="tick-group")
+                                            div(data-key="value", data-repeat="true", data-transform="pad(00) -> split -> delay")
+                                                span(data-view="flip")
+                                div(class="btn-part")
+                                    a(href="single-offer.html" class="btn") عرض التفاصيل
+                    div(class="col-lg-3 col-md-6")
+                        div(class="offer-box")
+                            div(class="image")
+                                img(data-src="images/offers/02.jpg" class="img-fluid")
+                            div(class="details")
+                                a(href="car.html") 
+                                    h3(class="title") عنوان العرض هنا
+                                div(class="separator")
+                                p هنا شرح للعرض باختصار
+                                div(class="tick", data-did-init="handleTickInit2")
+                                    div(class="tick-content" data-repeat="true", data-layout="horizontal center fit", data-transform="preset(d, h, m, s) -> delay")
+                                        div(class="tick-group")
+                                            div(data-key="value", data-repeat="true", data-transform="pad(00) -> split -> delay")
+                                                span(data-view="flip")
+                                div(class="btn-part")
+                                    a(href="single-offer.html" class="btn") عرض التفاصيل
+                    div(class="col-lg-3 col-md-6")
+                        div(class="offer-box")
+                            div(class="image")
+                                img(data-src="images/offers/03.webp" class="img-fluid")
+                            div(class="details")
+                                a(href="car.html") 
+                                    h3(class="title") عنوان العرض هنا
+                                div(class="separator")
+                                p هنا شرح للعرض باختصار
+                                div(class="tick", data-did-init="handleTickInit3")
+                                    div(class="tick-content" data-repeat="true", data-layout="horizontal center fit", data-transform="preset(d, h, m, s) -> delay")
+                                        div(class="tick-group")
+                                            div(data-key="value", data-repeat="true", data-transform="pad(00) -> split -> delay")
+                                                span(data-view="flip")
+                                div(class="btn-part")
+                                    a(href="single-offer.html" class="btn") عرض التفاصيل
+                    div(class="col-lg-3 col-md-6")
+                        div(class="offer-box")
+                            div(class="image")
+                                img(data-src="images/offers/01.jpg" class="img-fluid")
+                            div(class="details")
+                                a(href="car.html") 
+                                    h3(class="title") عنوان العرض هنا
+                                div(class="separator")
+                                p هنا شرح للعرض باختصار
+                                div(class="tick", data-did-init="handleTickInit4")
+                                    div(class="tick-content" data-repeat="true", data-layout="horizontal center fit", data-transform="preset(d, h, m, s) -> delay")
+                                        div(class="tick-group")
+                                            div(data-key="value", data-repeat="true", data-transform="pad(00) -> split -> delay")
+                                                span(data-view="flip")
+                                div(class="btn-part")
+                                    a(href="single-offer.html" class="btn") عرض التفاصيل
+    //offers

@@ -148,7 +148,7 @@ $(document).ready(function () {
     autoplayTimeout: 50000,
     items: 4,
     nav: false,
-    dots: false,
+    dots: true,
     rtl: true,
     smartSpeed: 2000,
     margin: 20,
@@ -251,16 +251,6 @@ $(document).ready(function () {
 $(window).on("load", function () {
   $('.loader').delay(500).fadeOut(500);
 
-  //wow animate
-  // wow = new WOW({
-  //   boxClass: 'wow', // default
-  //   animateClass: 'animated', // default
-  //   offset: 0, // default
-  //   mobile: false, // default
-  //   live: true // default
-  // })
-  // wow.init();
-
   //counter up
   $(".counter").counterUp({
     delay: 10,
@@ -269,3 +259,29 @@ $(window).on("load", function () {
     beginAt: 100,
   });
 });
+
+//offers counter
+function handleTickInit1(tick) {
+  var nextYear = new Date().getFullYear() + 1;
+  Tick.count.down(2021 + "-11-22 24:00:00").onupdate = function (value) {
+    tick.value = value;
+  };
+}
+function handleTickInit2(tick) {
+  var nextYear = new Date().getFullYear() + 1;
+  Tick.count.down(2021 + "-11-25 24:00:00").onupdate = function (value) {
+    tick.value = value;
+  };
+}
+function handleTickInit3(tick) {
+  var nextYear = new Date().getFullYear() + 1;
+  Tick.count.down(2021 + "-11-24 24:00:00").onupdate = function (value) {
+    tick.value = value;
+  };
+}
+function handleTickInit4(tick) {
+  var nextYear = new Date().getFullYear() + 1;
+  Tick.count.down(2021 + "-11-27 24:00:00").onupdate = function (value) {
+    tick.value = value;
+  };
+}

@@ -212,6 +212,18 @@
             }
         }
     }
+
+    section.single-offer {
+        .content {
+            .single-offer-box {
+                .tick-container {
+                    .tick-content {
+                        font-size: 4vw !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -265,6 +277,17 @@
             font-size: 8rem;
         }
     }
+    section.single-offer {
+        .content {
+            .single-offer-box {
+                .tick-container {
+                    .tick-content {
+                        font-size: 6vw !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -299,5 +322,11 @@
 
     .main-title h2 {
         font-size: 20px;
+    }
+
+    section.form-request {
+        .content {
+            padding: 15px;
+        }
     }
 }

@@ -178,13 +178,15 @@ $padding_section: 70px 0;
 
 section {
     &:hover {
-        .separator {
-            &::before {
-                width: 100px;
-            }
-
-            &::after {
-                width: 50px;
+        .main-title {
+            .separator {
+                &::before {
+                    width: 100px;
+                }
+    
+                &::after {
+                    width: 50px;
+                }
             }
         }
     }

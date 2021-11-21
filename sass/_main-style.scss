@@ -197,6 +197,8 @@ header {
 					.dropdown-menu[data-bs-popper] {
 						margin: 0;
 						min-width: 225px;
+						// width: 80%;
+						// margin: 0 10%;
 					}
 				}
 
@@ -593,13 +595,6 @@ section.main-slider {
 		&:active,
 		&:hover {
 			background-color: $dark_color;
-		}
-
-		&.diff {
-			background-color: transparent;
-			color: #000;
-			text-decoration: underline;
-			border: none;
 		}
 	}
 }

@@ -23,6 +23,12 @@
   <body>
     <div class="main-wrapper">
       <!--PreLoader-->
+      <div class="loader">
+        <video width="auto" height="auto" muted autoplay loop>
+          <source src="video/loading.webm" type="video/mp4">
+          <source src="videos/video.ogg" type="video/ogg">Your browser does not support the video tag.
+        </video>
+      </div>
       <!--PreLoader-->
       <!--header-->
       <header> 
@@ -50,7 +56,8 @@
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">الصفحات</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="about.html">من نحن</a></li>
-                    <li><a class="dropdown-item" href="services.html">الخدمات</a></li>
+                    <li><a class="dropdown-item" href="cars.html">السيارات</a></li>
+                    <li><a class="dropdown-item" href="single-car.html">تفاصيل السيارة</a></li>
                     <li><a class="dropdown-item" href="contact.html">تواصل معنا</a></li>
                   </ul>
                 </li>
@@ -70,12 +77,20 @@
                 <ul class="navbar-nav">
                   <li class="nav-item active"><a class="nav-link" aria-current="page" href="index.html">الرئيسية</a></li>
                   <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-                  <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">سيارات</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="single-car.html">سيارة 1</a></li>
+                      <li><a class="dropdown-item" href="single-car.html">سيارة 2</a></li>
+                      <li><a class="dropdown-item" href="single-car.html">سيارة 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="cars.html">جميع السيارات</a></li>
                   <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">الصفحات</a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="about.html">من نحن</a></li>
-                      <li><a class="dropdown-item" href="services.html">الخدمات</a></li>
+                      <li><a class="dropdown-item" href="cars.html">السيارات</a></li>
+                      <li><a class="dropdown-item" href="single-car.html">تفاصيل السيارة</a></li>
                       <li><a class="dropdown-item" href="contact.html">تواصل معنا</a></li>
                     </ul>
                   </li>
@@ -111,36 +126,36 @@
           </div>
           <div class="content">
             <div class="row">
-              <div class="col-lg-3 col-md-6 col">
+              <div class="col-lg-3 col-md-6">
                 <div class="welcome-box">
-                  <div class="icon"><img class="img-fluid" src="images/welcome/01.png" alt=""></div>
+                  <div class="icon"><img class="img-fluid" data-src="images/welcome/01.png" alt=""></div>
                   <div class="text">
                     <h3>عنوان النص 1</h3>
                     <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم</p>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col">
+              <div class="col-lg-3 col-md-6">
                 <div class="welcome-box">
-                  <div class="icon"><img class="img-fluid" src="images/welcome/02.png" alt=""></div>
+                  <div class="icon"><img class="img-fluid" data-src="images/welcome/02.png" alt=""></div>
                   <div class="text">
                     <h3>عنوان النص 1</h3>
                     <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم</p>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col">
+              <div class="col-lg-3 col-md-6">
                 <div class="welcome-box">
-                  <div class="icon"><img class="img-fluid" src="images/welcome/03.png" alt=""></div>
+                  <div class="icon"><img class="img-fluid" data-src="images/welcome/03.png" alt=""></div>
                   <div class="text">
                     <h3>عنوان النص 1</h3>
                     <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم</p>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col">
+              <div class="col-lg-3 col-md-6">
                 <div class="welcome-box">
-                  <div class="icon"><img class="img-fluid" src="images/welcome/04.png" alt=""></div>
+                  <div class="icon"><img class="img-fluid" data-src="images/welcome/04.png" alt=""></div>
                   <div class="text">
                     <h3>عنوان النص 1</h3>
                     <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم</p>
@@ -160,7 +175,7 @@
           </div>
           <div class="content">
             <div class="video-box">
-              <figure class="video-image"><img src="images/bgs/feature-bg.webp" alt=""></figure><a class="overlay-box" href="https://www.youtube.com/watch?v=kxPCFljwJws" data-fancybox="gallery"><i class="bi bi-caret-right-fill"></i></a>
+              <figure class="video-image"><img data-src="images/bgs/feature-bg.webp" alt=""></figure><a class="overlay-box" href="https://www.youtube.com/watch?v=kxPCFljwJws" data-fancybox="gallery"><i class="bi bi-caret-right-fill"></i></a>
             </div>
           </div>
         </div>
@@ -173,7 +188,7 @@
             <div class="row">
               <div class="col-lg-3 col-md-6 col-12">
                 <div class="facts-box">
-                  <div class="icon"><img class="img-fluid" src="images/welcome/04.png" alt=""></div>
+                  <div class="icon"><img class="img-fluid" data-src="images/welcome/04.png" alt=""></div>
                   <div class="text">
                     <h3>سيارات في المخازن</h3>
                   </div>
@@ -182,7 +197,7 @@
               </div>
               <div class="col-lg-3 col-md-6 col-12">
                 <div class="facts-box">
-                  <div class="icon"><img class="img-fluid" src="images/welcome/02.png" alt=""></div>
+                  <div class="icon"><img class="img-fluid" data-src="images/welcome/02.png" alt=""></div>
                   <div class="text">
                     <h3>تقييمات العملاء</h3>
                   </div>
@@ -191,7 +206,7 @@
               </div>
               <div class="col-lg-3 col-md-6 col-12">
                 <div class="facts-box">
-                  <div class="icon"><img class="img-fluid" src="images/welcome/03.png" alt=""></div>
+                  <div class="icon"><img class="img-fluid" data-src="images/welcome/03.png" alt=""></div>
                   <div class="text">
                     <h3>عملاء سعداء</h3>
                   </div>
@@ -200,7 +215,7 @@
               </div>
               <div class="col-lg-3 col-md-6 col-12">
                 <div class="facts-box">
-                  <div class="icon"><img class="img-fluid" src="images/welcome/01.png" alt=""></div>
+                  <div class="icon"><img class="img-fluid" data-src="images/welcome/01.png" alt=""></div>
                   <div class="text">
                     <h3>سيارات مباعة</h3>
                   </div>
@@ -222,29 +237,29 @@
           <div class="content">
             <div class="testimonial-carousel owl-carousel owl-theme">
               <div class="testimonial-box">
-                <div class="image"><a href="single-blog.html"> <img class="img-fluid" data-src="images/testimonial/01.jpg" alt=""></a></div>
+                <div class="image"><a href="single-blog.html"> <img class="img-fluid" data-src="images/icons/person.webp" alt=""></a></div>
                 <div class="text">
                   <h3>محمد أحمد</h3>
                 </div>
-                <div class="details"><img class="img-fluid quote" src="images/testimonial/quote.svg" alt="">
+                <div class="details"><img class="img-fluid quote" data-src="images/testimonial/quote.svg" alt="">
                   <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.</p>
                 </div>
               </div>
               <div class="testimonial-box">
-                <div class="image"><a href="single-blog.html"> <img class="img-fluid" data-src="images/testimonial/01.jpg" alt=""></a></div>
+                <div class="image"><a href="single-blog.html"> <img class="img-fluid" data-src="images/icons/person.webp" alt=""></a></div>
                 <div class="text">
                   <h3>محمد أحمد</h3>
                 </div>
-                <div class="details"><img class="img-fluid quote" src="images/testimonial/quote.svg" alt="">
+                <div class="details"><img class="img-fluid quote" data-src="images/testimonial/quote.svg" alt="">
                   <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.</p>
                 </div>
               </div>
               <div class="testimonial-box">
-                <div class="image"><a href="single-blog.html"> <img class="img-fluid" data-src="images/testimonial/01.jpg" alt=""></a></div>
+                <div class="image"><a href="single-blog.html"> <img class="img-fluid" data-src="images/icons/person.webp" alt=""></a></div>
                 <div class="text">
                   <h3>محمد أحمد</h3>
                 </div>
-                <div class="details"><img class="img-fluid quote" src="images/testimonial/quote.svg" alt="">
+                <div class="details"><img class="img-fluid quote" data-src="images/testimonial/quote.svg" alt="">
                   <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.</p>
                 </div>
               </div>
@@ -280,7 +295,7 @@
         <div class="container">
           <div class="footer-content">
             <div class="row">
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-5">
                 <div class="footer-box">
                   <div class="text"><a class="footer-logo" href="index.html"> <img class="img-fluid mb-4" data-src="images/logo.svg" alt=""></a>
                     <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.</p>
@@ -291,7 +306,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-3">
                 <div class="footer-box">
                   <h3>لينكات ذات صلة</h3>
                   <ul class="map-links">
@@ -303,7 +318,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-12">
+              <div class="col-lg-4">
                 <div class="footer-box">
                   <h3>معلومات التواصل</h3>
                   <div class="contact">
@@ -333,7 +348,6 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/wow.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/range.js"></script>
     <script src="js/slick.min.js"></script>

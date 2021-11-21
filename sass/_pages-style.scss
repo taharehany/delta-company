@@ -545,6 +545,25 @@ section.single-car {
 
             .single-car-images {
                 direction: ltr;
+                position: relative;
+
+                .video-icon {
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    background-color: #DB2D2E;
+                    z-index: 1;
+                    color: #fff;
+                    padding: 10px 20px;
+
+                    a {
+                        color: #fff;
+                    }
+
+                    i {
+                        margin-inline-end: 10px;
+                    }
+                }
 
                 .slider-for {
                     .item {
@@ -581,7 +600,7 @@ section.single-car {
 
                 .slick-prev,
                 .slick-next {
-                    background-color: rgba(255, 255, 255, 0.7);
+                    background-color: rgba(255, 255, 255, 0.85);
                     width: 40px;
                     height: 40px;
 
@@ -602,8 +621,6 @@ section.single-car {
             }
 
             .single-car-features {
-                background-color: #f9f9f9;
-                padding: 15px;
 
                 .subtitle {
                     @extend .subtitle;
@@ -646,101 +663,11 @@ section.single-car {
 
         aside {
             .single-car-details {
-                padding: 15px;
+                // padding: 15px;
 
-                ul {
-                    li {
-                        list-style: none;
-                        margin-bottom: 5px;
-                        display: table;
-                        width: 100%;
-                        border-bottom: 1px solid rgb(238, 238, 238);
-                        padding-bottom: 5px;
-
-                        strong {
-                            margin-inline-end: 5px;
-                            display: table-cell;
-                            width: 40%;
-                            font-size: 14px;
-                        }
-
-                        span {
-                            font-size: 14px;
-                            display: table-cell;
-                        }
-                    }
-                }
-            }
-
-            .related-cars {
-                padding: 15px;
-
-                .subtitle {
-                    @extend .subtitle;
-                }
-
-                .row {
-                    row-gap: calc(var(--bs-gutter-x) * 0.4);
-
-                    >* {
-                        padding-right: calc(var(--bs-gutter-x) * 0.2);
-                        padding-left: calc(var(--bs-gutter-x) * 0.2);
-                    }
-                }
-
-                .car-box {
-                    border: 1px solid #eee;
-                    overflow: hidden;
-
-                    .car-image {
-                        position: relative;
-
-                        img {
-                            height: 120px;
-                            width: 100%;
-                            object-fit: cover;
-                            -o-object-fit: cover;
-                        }
-                    }
-
-                    .car-details {
-                        padding: 15px;
-                        background-color: #fff;
-
-                        a {
-                            text-decoration: none;
-                        }
-
-                        .title {
-                            color: #222;
-                            font-size: 16px;
-                            margin: 0;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                        }
-
-                        .location {
-                            color: #555;
-                            margin-block-start: 0.5em;
-                            margin-block-end: 0.5em;
-                            font-size: 14px;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-
-                            i {
-                                margin-inline-end: 5px;
-                                vertical-align: middle;
-                                font-size: 14px;
-                            }
-                        }
-
-                        .price {
-                            color: $main_color;
-                            margin-bottom: 0;
-                            font-size: 14px;
-                        }
+                .table {
+                    td {
+                        font-size: 14px;
                     }
                 }
             }
@@ -752,6 +679,16 @@ section.single-car {
 
 //related cars
 section.related-cars {
+    padding: $padding_section;
+    .main-title {
+        text-align: initial;
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600
+        }
+    }
+
     .related-cars-box {
         @include transition(all ease 0.3s);
         text-align: center;

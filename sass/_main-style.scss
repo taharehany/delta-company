@@ -863,6 +863,9 @@ section.cta {
 		}
 
 		.image {
+			display: flex;
+			align-items: flex-end;
+
 			img {
 				width: 100%;
 				@include transition(all ease 0.3s);
@@ -886,6 +889,7 @@ section.cta {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			padding: 25px 0;
 
 			.icon {
 				width: 90px;
@@ -908,7 +912,6 @@ section.cta {
 
 				a {
 					font-size: 30px;
-					line-height: 46px;
 					font-weight: 600;
 					color: $main_color;
 				}
@@ -1359,8 +1362,8 @@ section.video {
 					text-align: center;
 					border-radius: 50%;
 					display: inline-block;
-					margin-top: -55px;
-					margin-left: -55px;
+					margin-top: -35px;
+					margin-left: -35px;
 					@include transition(all ease 0.3s);
 					background-color: #ffffff;
 					outline: 2px solid #fff;
@@ -1383,7 +1386,7 @@ section.video {
 
 //facts
 section.facts {
-	padding: 350px 0 70px;
+	padding: 20% 0 70px;
 
 	.content {
 		.facts-box {
@@ -1605,33 +1608,32 @@ section.testimonial {
 			}
 		}
 	}
+}
+.owl-theme {
+	.owl-nav [class*=owl-] {
+		@include transition(all ease 0.3s);
 
-	.owl-theme {
-		.owl-nav [class*=owl-] {
-			@include transition(all ease 0.3s);
-
-			&:hover {
-				background: $main_color;
-			}
+		&:hover {
+			background: $main_color;
 		}
+	}
 
-		.owl-nav {
-			+.owl-dots {
-				width: 100%;
-				margin-top: 20px;
+	.owl-nav {
+		+.owl-dots {
+			width: 100%;
+			margin-top: 20px;
 
-				.owl-dot {
-					span {
-						background-color: #999999;
-						margin: 5px;
-					}
+			.owl-dot {
+				span {
+					background-color: #999999;
+					margin: 5px;
 				}
+			}
 
-				.owl-dot.active span,
-				.owl-theme .owl-dots .owl-dot:hover span {
-					background: $main_color;
-					width: 20px;
-				}
+			.owl-dot.active span,
+			.owl-theme .owl-dots .owl-dot:hover span {
+				background: $main_color;
+				width: 20px;
 			}
 		}
 	}

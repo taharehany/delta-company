@@ -252,13 +252,13 @@ $(window).on("load", function () {
   $('.loader').delay(500).fadeOut(500);
 
   //wow animate
-  wow = new WOW({
-    boxClass: 'wow', // default
-    animateClass: 'animated', // default
-    offset: 0, // default
-    mobile: false, // default
-    live: true // default
-  })
+  // wow = new WOW({
+  //   boxClass: 'wow', // default
+  //   animateClass: 'animated', // default
+  //   offset: 0, // default
+  //   mobile: false, // default
+  //   live: true // default
+  // })
   // wow.init();
 
   //counter up

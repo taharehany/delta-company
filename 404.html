@@ -23,6 +23,12 @@
   <body>
     <div class="main-wrapper">
       <!--PreLoader-->
+      <div class="loader">
+        <video width="auto" height="auto" muted autoplay loop>
+          <source src="video/loading.webm" type="video/mp4">
+          <source src="videos/video.ogg" type="video/ogg">Your browser does not support the video tag.
+        </video>
+      </div>
       <!--PreLoader-->
       <!--header-->
       <header> 
@@ -50,7 +56,8 @@
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">الصفحات</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="about.html">من نحن</a></li>
-                    <li><a class="dropdown-item" href="services.html">الخدمات</a></li>
+                    <li><a class="dropdown-item" href="cars.html">السيارات</a></li>
+                    <li><a class="dropdown-item" href="single-car.html">تفاصيل السيارة</a></li>
                     <li><a class="dropdown-item" href="contact.html">تواصل معنا</a></li>
                   </ul>
                 </li>
@@ -70,12 +77,20 @@
                 <ul class="navbar-nav">
                   <li class="nav-item active"><a class="nav-link" aria-current="page" href="index.html">الرئيسية</a></li>
                   <li class="nav-item"><a class="nav-link" href="about.html">من نحن</a></li>
-                  <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">سيارات</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="single-car.html">سيارة 1</a></li>
+                      <li><a class="dropdown-item" href="single-car.html">سيارة 2</a></li>
+                      <li><a class="dropdown-item" href="single-car.html">سيارة 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="cars.html">جميع السيارات</a></li>
                   <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">الصفحات</a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="about.html">من نحن</a></li>
-                      <li><a class="dropdown-item" href="services.html">الخدمات</a></li>
+                      <li><a class="dropdown-item" href="cars.html">السيارات</a></li>
+                      <li><a class="dropdown-item" href="single-car.html">تفاصيل السيارة</a></li>
                       <li><a class="dropdown-item" href="contact.html">تواصل معنا</a></li>
                     </ul>
                   </li>
@@ -121,7 +136,7 @@
         <div class="container">
           <div class="footer-content">
             <div class="row">
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-5">
                 <div class="footer-box">
                   <div class="text"><a class="footer-logo" href="index.html"> <img class="img-fluid mb-4" data-src="images/logo.svg" alt=""></a>
                     <p>عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.</p>
@@ -132,7 +147,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-3">
                 <div class="footer-box">
                   <h3>لينكات ذات صلة</h3>
                   <ul class="map-links">
@@ -144,7 +159,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-12">
+              <div class="col-lg-4">
                 <div class="footer-box">
                   <h3>معلومات التواصل</h3>
                   <div class="contact">
@@ -174,7 +189,6 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/wow.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/range.js"></script>
     <script src="js/slick.min.js"></script>

@@ -24,7 +24,7 @@ $(document).ready(function () {
   $(".main-slider-carousel").owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 15000,
+    autoplayTimeout: 12000,
     items: 1,
     nav: false,
     dots: true,
@@ -57,12 +57,12 @@ $(document).ready(function () {
   $(".feature-carousel").owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 50000,
+    autoplayTimeout: 4000,
     items: 4,
     nav: true,
     dots: false,
     rtl: true,
-    smartSpeed: 2000,
+    smartSpeed: 1000,
     margin: 20,
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
@@ -145,12 +145,12 @@ $(document).ready(function () {
   $(".related-cars-carousel").owlCarousel({
     loop: true,
     autoplay: true,
-    autoplayTimeout: 50000,
+    autoplayTimeout: 5000,
     items: 4,
     nav: false,
     dots: true,
     rtl: true,
-    smartSpeed: 2000,
+    smartSpeed: 1000,
     margin: 20,
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
@@ -179,7 +179,7 @@ $(document).ready(function () {
     arrows: true,
     fade: false,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     asNavFor: '.slider-nav'
   });
 

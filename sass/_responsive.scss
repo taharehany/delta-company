@@ -196,6 +196,16 @@
             }
         }
     }
+
+    section.related-cars {
+        .related-cars-box {
+            .image {
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 670px) {}

@@ -880,6 +880,50 @@ section.car-type {
 
 //car type
 
+//finance
+section.finance {
+    padding: $padding_section;
+
+    .content {
+        @include boxshadow(0 5px 30px rgb(0 0 0 / 5%));
+        padding: 50px 30px 30px;
+
+        .box {
+            position: relative;
+            border: 1px solid #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 25px;
+
+            .image {
+                img {
+                    height: 80px;
+                }
+            }
+        }
+
+        .finance-btn {
+			@extend .item-btn;
+
+			.btn {
+				border-color: $main_color;
+				background-color: $main_color;
+				color: #fff;
+                padding: 10px 30px 15px;
+                font-weight: 600;
+				// width: 100%;
+
+				&:hover {
+					color: #fff;
+					border-color: $dark_color;
+				}
+			}
+		}
+    }
+}
+
+//finance
+
 //form request
 section.form-request {
     padding: $padding_section;

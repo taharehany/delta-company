@@ -246,10 +246,6 @@ $(document).ready(function () {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   });
-});
-
-$(window).on("load", function () {
-  $('.loader').delay(500).fadeOut(500);
 
   //counter up
   $(".counter").counterUp({
@@ -258,6 +254,10 @@ $(window).on("load", function () {
     offset: 50,
     beginAt: 100,
   });
+});
+
+$(window).on("load", function () {
+  $('.loader').delay(500).fadeOut(500);
 });
 
 //offers counter

@@ -12,7 +12,7 @@ section(class="main-slider")
                         img(data-src="images/slider/02.png" alt="")
                         img(data-src="images/slider/03.png" alt="")
                     div(class="item-btn")
-                        a(href="#!" class="btn") معرفة المزيد
+                        a(href="about.html" class="btn") معرفة المزيد
         div(class="slider-item")
             div(class="container h-100")
                 div(class="item-content")
@@ -24,7 +24,7 @@ section(class="main-slider")
                         img(data-src="images/slider/02.png" alt="")
                         img(data-src="images/slider/last.png" alt="")
                     div(class="item-btn")
-                        a(href="#!" class="btn") معرفة المزيد
+                        a(href="about.html" class="btn") معرفة المزيد
         div(class="slider-item")
             div(class="container h-100")
                 div(class="item-content")
@@ -36,7 +36,7 @@ section(class="main-slider")
                         img(data-src="images/slider/02.png" alt="")
                         img(data-src="images/slider/03.png" alt="")
                     div(class="item-btn")
-                        a(href="#!" class="btn") معرفة المزيد
+                        a(href="about.html" class="btn") معرفة المزيد
 //main slider
 
 //search
@@ -380,15 +380,13 @@ section(class="recent-vehicle")
         div(class="content")
             ul(class="nav nav-pills", role="tablist")
                 li(class="nav-item", role="presentation")
-                    button(class="nav-link active", id="vehicle-1-tab" data-bs-toggle="pill", data-bs-target="#vehicle-1", type="button", role="tab", aria-controls="vehicle-1", aria-selected="true") all
+                    button(class="nav-link active", id="vehicle-1-tab" data-bs-toggle="pill", data-bs-target="#vehicle-1", type="button", role="tab", aria-controls="vehicle-1", aria-selected="true") الجميع
                 li(class="nav-item", role="presentation")
-                    button(class="nav-link", id="vehicle-2-tab" data-bs-toggle="pill", data-bs-target="#vehicle-2", type="button", role="tab", aria-controls="vehicle-2", aria-selected="false") audi
+                    button(class="nav-link", id="vehicle-2-tab" data-bs-toggle="pill", data-bs-target="#vehicle-2", type="button", role="tab", aria-controls="vehicle-2", aria-selected="false") تجارية
                 li(class="nav-item", role="presentation")
-                    button(class="nav-link", id="vehicle-3-tab" data-bs-toggle="pill", data-bs-target="#vehicle-3", type="button", role="tab", aria-controls="vehicle-3", aria-selected="false") bentley
+                    button(class="nav-link", id="vehicle-3-tab" data-bs-toggle="pill", data-bs-target="#vehicle-3", type="button", role="tab", aria-controls="vehicle-3", aria-selected="false") عائلية
                 li(class="nav-item", role="presentation")
-                    button(class="nav-link", id="vehicle-4-tab" data-bs-toggle="pill", data-bs-target="#vehicle-4", type="button", role="tab", aria-controls="vehicle-4", aria-selected="false") bmw
-                li(class="nav-item", role="presentation")
-                    button(class="nav-link", id="vehicle-4-tab" data-bs-toggle="pill", data-bs-target="#vehicle-4", type="button", role="tab", aria-controls="vehicle-4", aria-selected="false") ferrari
+                    button(class="nav-link", id="vehicle-4-tab" data-bs-toggle="pill", data-bs-target="#vehicle-4", type="button", role="tab", aria-controls="vehicle-4", aria-selected="false") سيدان
             div(class="tab-content")
                 div(class="tab-pane fade show active", id="vehicle-1" role="tabpanel", aria-labelledby="vehicle-1-tab") 
                     div(class="images")
@@ -466,6 +464,22 @@ section(class="recent-vehicle")
                                     i(class="bi bi-plus")
                             div(class="details")
                                 h3 2020 audi a4 prestige
+                div(class="tab-pane fade", id="vehicle-4" role="tabpanel", aria-labelledby="vehicle-4-tab") 
+                    div(class="images")
+                        div(class="box")
+                            img(data-src="images/feature/01.webp", class="img-fluid" alt="")
+                            div(class="icon")
+                                a(href="images/feature/01.webp" data-fancybox="gallery") 
+                                    i(class="bi bi-plus")
+                            div(class="details")
+                                h3 2020 audi a4 prestige
+                        div(class="box")
+                            img(data-src="images/feature/02.webp", class="img-fluid" alt="")
+                            div(class="icon")
+                                a(href="images/feature/02.webp" data-fancybox="gallery") 
+                                    i(class="bi bi-plus")
+                            div(class="details")
+                                h3 2020 audi a4 prestige
 //recent vehicle
 
 //video
@@ -540,7 +554,7 @@ section(class="testimonial")
                     div(class="text")
                         h3 محمد أحمد
                     div(class="details")
-                        img(data-src="images/testimonial/quote.svg", class="img-fluid quote" alt="")
+                        img(data-src="images/icons/quote.svg", class="img-fluid quote")
                         p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.
                 div(class="testimonial-box")
                     div(class="image")
@@ -549,7 +563,7 @@ section(class="testimonial")
                     div(class="text")
                         h3 محمد أحمد
                     div(class="details")
-                        img(data-src="images/testimonial/quote.svg", class="img-fluid quote" alt="")
+                        img(data-src="images/icons/quote.svg", class="img-fluid quote" alt="")
                         p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.
                 div(class="testimonial-box")
                     div(class="image")
@@ -558,7 +572,7 @@ section(class="testimonial")
                     div(class="text")
                         h3 محمد أحمد
                     div(class="details")
-                        img(data-src="images/testimonial/quote.svg", class="img-fluid quote" alt="")
+                        img(data-src="images/icons/quote.svg", class="img-fluid quote" alt="")
                         p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي.
 //testimonial
 

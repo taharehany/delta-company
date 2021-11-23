@@ -494,14 +494,14 @@ section.main-slider {
 	}
 
 	.slider-item {
-		height: 100vh;
+		padding: 100px 0 150px;
 
 		.item-images {
 			display: grid;
 			grid-template-columns: repeat(3, calc(100% / 3));
 			position: relative;
 			width: 100%;
-			min-height: 20vw;
+			min-height: 22vw;
 
 			img {
 				max-width: 100%;
@@ -1190,7 +1190,8 @@ section.recent-vehicle {
 					background-color: transparent;
 					color: #999999;
 					text-transform: uppercase;
-					font-size: 14px;
+					font-size: 15px;
+					font-weight: 600;
 
 					&.active {
 						color: #db2d2e;
@@ -1381,7 +1382,7 @@ section.video {
 
 //facts
 section.facts {
-	padding: 20% 0 70px;
+	padding: 25% 0 70px;
 
 	.content {
 		.facts-box {

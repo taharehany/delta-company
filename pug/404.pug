@@ -1,19 +1,19 @@
 extend index
 
 block website_title
-    title #{website_title} | error 404
+    title #{website_title} | خطأ
 
 block home_block
     //breadcrumb
-    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/bread.jpg')")
         div(class="container")
             div(class="breadcrumb-title")
-                h2 error
+                h2 خطأ 404
             nav(aria-label="breadcrumb")
                 ol(class="breadcrumb")
                     li(class="breadcrumb-item")
-                        a(href="index.html") Home
-                    li(class="breadcrumb-item active", aria-current="page") error
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") خطأ 404
     //breadcrumb
 
     //error 404
@@ -24,6 +24,6 @@ block home_block
                     span(class="diff-color") 
                         span(class="num") 0
                     | 4
-                p(class="lead text-gray-800 mb-4") page not found
-                a(href="index.html" class="btn back") main page
+                p(class="lead text-gray-800 mb-4") صفحة غير موجودة
+                a(href="index.html" class="btn back") الرئيسية
     //error 404

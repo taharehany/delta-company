@@ -2,8 +2,8 @@
 $main_color: var(--main-color);
 $second_color: var(--second-color);
 $dark_color: var(--dark-color);
-$gray: #7a8a9e;
-$padding_section: 100px 0;
+$gray: #999999;
+$padding_section: 80px 0;
 //global styles
 
 //mixins
@@ -115,13 +115,12 @@ $padding_section: 100px 0;
     text-align: center;
 
     h2 {
-        font-size: 30px;
+        font-size: 34px;
         color: #222;
         position: relative;
-        text-transform: capitalize;
-        font-weight: 600;
         margin-bottom: 20px;
         padding-bottom: 20px;
+        font-weight: 600;
 
         &::before {
             position: absolute;
@@ -139,8 +138,7 @@ $padding_section: 100px 0;
         color: $gray;
         margin-bottom: 20px;
         display: block;
-        text-transform: capitalize;
-        font-weight: 600;
+        font-size: 14px;
     }
 
     p {
@@ -148,7 +146,6 @@ $padding_section: 100px 0;
         margin: auto;
         line-height: 1.8;
         color: #999999;
-        text-align: center;
         font-size: 14px;
         margin-top: 20px;
         line-height: 24px;
@@ -189,8 +186,7 @@ $padding_section: 100px 0;
     .breadcrumb {
         .breadcrumb-item {
             font-size: 14px;
-            text-transform: capitalize;
-
+    
             &.active {
                 color: #6c6b6b;
                 font-weight: 500;
@@ -247,7 +243,7 @@ a {
 
 .alert {
     font-size: 14px;
-    @include borderRadius(0);
+    @include borderRadius(25px);
 
     strong {
         margin-inline-end: 5px;
@@ -259,82 +255,6 @@ a {
 }
 
 //global styles
-
-//theme colors
-.theme-colors {
-    position: fixed;
-    top: 30vh;
-    background-color: #fff;
-    left: -92px;
-    z-index: 99;
-    padding: 5px;
-    @include transition(all ease .3s);
-
-    &.move {
-        left: 0;
-    }
-
-    span {
-        font-size: 12px;
-        display: inline-block;
-        margin-bottom: 5px;
-        display: block
-    }
-
-    .show-icon {
-        position: relative;
-        cursor: pointer;
-
-        .icon {
-            position: absolute;
-            right: -41px;
-            top: -5px;
-            height: 35px;
-            width: 35px;
-            line-height: 35px;
-            text-align: center;
-            background-color: #fff;
-
-            i {
-                animation: icon-rotate linear 3s infinite;
-                display: block;
-            }
-        }
-
-    }
-
-    ul {
-        display: grid;
-        grid-template-columns: repeat(3, 25px);
-        gap: 3px;
-        padding: 0;
-        margin-bottom: 10px;
-
-        li {
-            width: 25px;
-            height: 25px;
-            display: inline-block;
-            cursor: pointer;
-            list-style: none;
-        }
-    }
-
-    .pick-color {
-        width: 100%;
-    }
-}
-
-@keyframes icon-rotate {
-    0% {
-        @include transform(rotate(0deg))
-    }
-
-    100% {
-        @include transform(rotate(360deg))
-    }
-}
-
-//theme colors
 
 //loader
 .loader {

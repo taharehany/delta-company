@@ -1,6 +1,14 @@
 $(document).ready(function () {
   "use strict";
 
+  //show nav link underline 
+  $(".nav-link").on("mouseleave", function () {
+    $(this).addClass("change")
+  });
+  $(".nav-link").on("mousemove", function () {
+    $(this).removeClass("change")
+  });
+
   // fixed header
   $(window).scroll(function () {
     let scroll = $(window).scrollTop();
@@ -12,6 +20,12 @@ $(document).ready(function () {
     }
   });
 
+  (function () {
+    if ($("header").next().hasClass("main-slider")) {
+      $("header").addClass("transparent")
+    }
+  })();
+
   //main slider owl
   $('.main-slider-carousel').owlCarousel({
     loop: true,
@@ -21,6 +35,7 @@ $(document).ready(function () {
     nav: true,
     rtl: true,
     dots: false,
+    dotsEach: 3,
     smartSpeed: 1000,
     autoplaySpeed: true,
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
@@ -34,6 +49,63 @@ $(document).ready(function () {
 
       992: {
         items: 1,
+      }
+    }
+  });
+
+  //testimonial slider owl
+  $(".testimonial-carousel").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    items: 3,
+    nav: false,
+    dots: true,
+    rtl: true,
+    smartSpeed: 1000,
+    margin: 20,
+    navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      575: {
+        items: 1,
+      },
+      768: {
+        items: 1,
+      },
+
+      992: {
+        items: 1,
+      }
+    }
+  });
+
+  //clients slider owl
+  $(".clients-carousel").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    items: 5,
+    nav: false,
+    dots: false,
+    rtl: true,
+    margin: 50,
+    navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
+    responsive: {
+      0: {
+        items: 2,
+      },
+      575: {
+        items: 3,
+      },
+      768: {
+        items: 4,
+      },
+
+      992: {
+        items: 5,
       }
     }
   });
@@ -92,8 +164,8 @@ $(document).ready(function () {
 
   // toast notification
   let toastTrigger = $('.add_to_cart');
-  let toastAdding = $('#addFavToast');
-  let toastRemoving = $('#removeFavToast');
+  let toastAdding = $('#addToast');
+  let toastRemoving = $('#removeToast');
   toastTrigger.on('click', function () {
     $(this).toggleClass("added").find("i").toggleClass("bi-cart bi-check2-all");
 
@@ -107,8 +179,8 @@ $(document).ready(function () {
       let toast = new bootstrap.Toast(toastAdding)
       toast.show();
     } else {
-        let toast = new bootstrap.Toast(toastRemoving)
-        toast.show();
+      let toast = new bootstrap.Toast(toastRemoving)
+      toast.show();
     }
   });
 });

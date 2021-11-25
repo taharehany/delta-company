@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="images/favicon.png"><!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
 <![endif]-->
-    <title>ألما | خطأ</title>
+    <title>ألما | سلة المنتجات</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600&amp;display=swap" rel="stylesheet">
@@ -107,27 +107,72 @@
       <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url('images/bgs/bread.jpg')">
         <div class="container">
           <div class="breadcrumb-title">
-            <h2>خطأ 404</h2>
+            <h2>سلة المنتجات</h2>
           </div>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
-              <li class="breadcrumb-item active" aria-current="page">خطأ 404</li>
+              <li class="breadcrumb-item active" aria-current="page">سلة المنتجات</li>
             </ol>
           </nav>
         </div>
       </nav>
       <!--breadcrumb-->
-      <!--error 404-->
-      <div class="error">
+      <!--products cart-->
+      <section class="products-cart">
         <div class="container">
-          <div class="text-center mx-auto"> 
-            <h2>4<span class="diff-color"> <span class="num">0</span></span>4</h2>
-            <p class="lead text-gray-800 mb-4">صفحة غير موجودة</p><a class="btn back" href="index.html">الرئيسية</a>
+          <div class="content">
+            <div class="table-responsive table-area">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>اسم المنتج</th>
+                    <th>السعر</th>
+                    <th>الكمية</th>
+                    <th>تاريخ الإضافة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> <a class="product-name" href="single-product.html"> 
+                        <div class="image"><img class="img-fluid" data-src="images/products/01.png" alt=""></div>مثال على عنوان المنتج</a></td>
+                    <td>50 ريال</td>
+                    <td class="amount">
+                      <input type="number" min="1" max="9999" value="50">
+                    </td>
+                    <td>2021-05-20 15:36:25</td>
+                    <td> 
+                      <button class="btn btn-danger remove" type="button">&times;</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> <a class="product-name" href="single-product.html"> 
+                        <div class="image"><img class="img-fluid" data-src="images/products/01.png" alt=""></div>مثال على عنوان المنتج</a></td>
+                    <td>50 ريال</td>
+                    <td class="amount">
+                      <input type="number" min="1" max="9999" value="50">
+                    </td>
+                    <td>2021-05-20 15:36:25</td>
+                    <td> 
+                      <button class="btn btn-danger remove" type="button">&times;</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="update"><a class="btn" href="single-product.html">تحديث السلة</a></td>
+                    <td class="coupon">
+                      <form action="" method="POST"> 
+                        <input type="text" placeholder="كوبون خصم">
+                        <button class="btn" type="submit">تطبيق الخصم</button><span class="err">الكود لا يطابق قاعدة البيانات لدينا</span><span class="suc">تم تطبيق الخصم بنجاح</span>
+                      </form>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-      <!--error 404-->
+      </section>
+      <!--products cart-->
       <!--to top-->
       <div id="toTop">
         <button> <i class="bi bi-chevron-double-up"></i></button>

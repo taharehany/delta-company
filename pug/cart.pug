@@ -1,0 +1,65 @@
+extend index
+
+block website_title
+    title #{website_title} | سلة المنتجات
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/bread.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 سلة المنتجات
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active" aria-current="page") سلة المنتجات
+    //breadcrumb
+
+    //products cart
+    section(class="products-cart")
+        div(class="container")
+            div(class="content")
+                div(class="table-responsive table-area")
+                    table(class="table")
+                        thead
+                            tr
+                                th اسم المنتج
+                                th السعر
+                                th الكمية
+                                th تاريخ الإضافة
+                        tbody
+                            tr
+                                td 
+                                    a(href="single-product.html" class="product-name") 
+                                        div(class="image")
+                                            img(data-src="images/products/01.png" class="img-fluid" alt="")
+                                        | مثال على عنوان المنتج
+                                td 50 ريال
+                                td(class="amount")
+                                    input(type="number" min="1" max="9999" value="50") 
+                                td 2021-05-20 15:36:25
+                                td 
+                                    button(class="btn btn-danger remove", type="button") &times;
+                            tr
+                                td 
+                                    a(href="single-product.html" class="product-name") 
+                                        div(class="image")
+                                            img(data-src="images/products/01.png" class="img-fluid" alt="")
+                                        | مثال على عنوان المنتج
+                                td 50 ريال
+                                td(class="amount")
+                                    input(type="number" min="1" max="9999" value="50") 
+                                td 2021-05-20 15:36:25
+                                td 
+                                    button(class="btn btn-danger remove", type="button") &times;
+                            tr
+                                td(class="update")
+                                    a(href="single-product.html" class="btn") تحديث السلة
+                                td(class="coupon")
+                                    form(action="" method="POST") 
+                                        input(type="text" placeholder="كوبون خصم") 
+                                        button(type="submit" class="btn") تطبيق الخصم
+                                        span(class="err") الكود لا يطابق قاعدة البيانات لدينا
+                                        span(class="suc") تم تطبيق الخصم بنجاح
+    //products cart

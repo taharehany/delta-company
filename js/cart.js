@@ -84,6 +84,8 @@ var shoppingCart = (function () {
     // Clear cart
     obj.clearCart = function () {
         cart = [];
+        $('.total-count').html(0);
+        $('.add_to_cart').removeClass("added").find("i").removeClass("bi-check2-all").addClass("bi-cart");;
         saveCart();
     }
 
@@ -146,58 +148,80 @@ $('.clear-cart').click(function () {
     displayCart();
 });
 
-
 function displayCart() {
     var cartArray = shoppingCart.listCart();
     var output = "";
-    for (var i in cartArray) {
-        output += "<tr>" +
-            "<td>" + cartArray[i].name + "</td>" +
-            "<td>(" + cartArray[i].price + ")</td>" +
-            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>" +
-            "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
-            "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>" +
-            "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>" +
-            " = " +
-            "<td>" + cartArray[i].total + "</td>" +
-            "</tr>";
+    // var outputSingleProduct = "";
+    if (cart == '') {
+        $('.there-products').css("display", "none");
+        $('.no-products').css("display", "block");
+        $('.show-cart').html("");
+    } else {
+        $('.there-products').css("display", "block");
+        $('.no-products').css("display", "none");
+        for (var i in cartArray) {
+            output += 
+            `<div class="single">
+                <button class="delete-item btn btn-danger" data-name="${cartArray[i].name}">&times;</button>
+                <a href="single-product.html"> 
+                    <div class="image">
+                        <img class="img-fluid" alt="" src="images/products/01.png" style="">
+                    </div>
+                </a>
+                <div class="text">
+                    <a href="single-product.html"> 
+                        <h3>${cartArray[i].name}</h3>
+                    </a>
+                    <span>${cartArray[i].count} × ${cartArray[i].price} ريال</span>
+                </div>
+            </div>`
+            // outputSingleProduct += 
+            // `<div class="input-group"><button class="minus-item input-group-addon btn btn-primary" data-name="Lemon">-</button><input type="number" class="item-count form-control" data-name="Lemon" value="33"><button class="plus-item btn btn-primary input-group-addon" data-name="Lemon">+</button></div>`
+        }
     }
     $('.show-cart').html(output);
-    $('.total-cart').html(shoppingCart.totalCart());
+    $('.total-cart span').html(shoppingCart.totalCart());
     $('.total-count').html(shoppingCart.totalCount());
 }
-
 // Delete item button
 
 $('.show-cart').on("click", ".delete-item", function (event) {
-    var name = $(this).data('name')
+    var name = $(this).data('name');
     shoppingCart.removeItemFromCartAll(name);
+
+    //get btn that it data name equal that data name you clicked
+    var btnAdded = $(".add_to_cart").filter(function () {
+        return $(this).data("name") == name
+    });
+    btnAdded.removeClass("added").find("i").addClass("bi-cart").removeClass("bi-check2-all");
     displayCart();
 })
 
-$('.add_to_cart').on("click", function (event) {
+$('.add_to_cart').on("click", function () {
     if ($(this).hasClass("added")) {
         var name = $(this).data('name')
         shoppingCart.removeItemFromCartAll(name);
         displayCart();
     }
+    console.log(cart);
 })
 
 // -1
-$('.show-cart').on("click", ".minus-item", function (event) {
+$('.show-cart, .amount').on("click", ".minus-item", function (event) {
     var name = $(this).data('name')
     shoppingCart.removeItemFromCart(name);
+    console.log(name);
     displayCart();
 })
 // +1
-$('.show-cart').on("click", ".plus-item", function (event) {
+$('.show-cart, .amount').on("click", ".plus-item", function (event) {
     var name = $(this).data('name')
     shoppingCart.addItemToCart(name);
     displayCart();
 })
 
 // Item count input
-$('.show-cart').on("change", ".item-count", function (event) {
+$('.show-cart, .amount').on("change", ".item-count", function (event) {
     var name = $(this).data('name');
     var count = Number($(this).val());
     shoppingCart.setCountForItem(name, count);

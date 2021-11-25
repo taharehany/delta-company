@@ -128,19 +128,6 @@ html[dir=rtl] {
                     }
                 }
 
-                .map-links {
-                    li {
-                        padding-left: 0;
-                        padding-right: 20px;
-
-                        &::before {
-                            right: 0;
-                            left: auto;
-                            @include transform(rotate(180deg) translateY(50%));
-                        }
-                    }
-                }
-
                 h3::before {
                     right: 0;
                     left: auto;

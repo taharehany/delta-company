@@ -22,13 +22,13 @@ block home_block
             div(class="content")
                 div(class="row")
                     div(class="col-lg-8")
+                        div(class="alert alert-danger alert-dismissible fade show", role="alert")
+                            strong يوجد خطأ!
+                            | تفقد جميع حقول الإدخال
+                            button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
                         div(class="main-title")
                             h2 تواصل معنا
                         div(class="contact-form")
-                            div(class="alert alert-danger alert-dismissible fade show", role="alert")
-                                strong يوجد خطأ!
-                                | تفقد جميع حقول الإدخال
-                                button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
                             form(action="" method="POST")
                                 div(class="row")
                                     div(class="col-lg-6")
@@ -46,7 +46,7 @@ block home_block
                                     div(class="col-lg-12")
                                         div(class="form-group")
                                             label(for="") رسالتك *
-                                            textarea(class="form-control" rows="4" placeholder="اترك رسالتك هنا")
+                                            textarea(class="form-control" rows="3" placeholder="اترك رسالتك هنا")
                                     div(class="col-lg-12")
                                         p(class="successfully") تم إرسال رسالتك بنجاح
                                 div(class="contact-btn")

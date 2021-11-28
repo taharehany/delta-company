@@ -203,7 +203,6 @@ $('.add_to_cart').on("click", function () {
         shoppingCart.removeItemFromCartAll(name);
         displayCart();
     }
-    console.log(cart);
 })
 
 // -1

@@ -1,0 +1,74 @@
+extend index
+
+block website_title
+    title #{website_title} | الدفع
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/bread.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 الدفع
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active" aria-current="page") الدفع
+    //breadcrumb
+
+    //thanks page
+    section(class="thanks")
+        div(class="container")
+            div(class="content")
+                div(class="text")
+                    p شكرا لك، تم استلام طلبك.
+                    ul 
+                        li رقم الطلب:
+                            strong 525445
+                        li التاريخ:
+                            strong 5/8/2021
+                        li المجموع:
+                            strong 550 ريال سعودي
+                        li طريقة الدفع:
+                            strong كاش عند الاستلام
+                div(class="title")
+                    h4 تفاصيل عملية الشراء
+                div(class="order-details")
+                    table(class="table")
+                        thead
+                            tr
+                                th المنتج
+                                th المجموع
+                        tbody
+                            tr
+                                td 
+                                    a(href="single-product.html") مثال على عنوان المنتج 
+                                    span(class="count") × 50
+                                td 50 ريال
+                            tr
+                                td 
+                                    a(href="single-product.html") مثال على عنوان المنتج 
+                                    span(class="count") × 50
+                                td 50 ريال
+                            tr
+                                td 
+                                    a(href="single-product.html") مثال على عنوان المنتج 
+                                    span(class="count") × 50
+                                td 50 ريال
+                            tr
+                                td 
+                                    a(href="single-product.html") مثال على عنوان المنتج 
+                                    span(class="count") × 50
+                                td 50 ريال
+                            tr
+                                td 
+                                    a(href="single-product.html") مثال على عنوان المنتج 
+                                    span(class="count") × 50
+                                td 50 ريال
+                            tr
+                                td طريقة الدفع
+                                td(class="all-total") كاش عند الدفع
+                            tr
+                                td المجموع الكلي
+                                td(class="all-total") 150 ريال
+    //thanks page

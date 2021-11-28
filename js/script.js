@@ -183,4 +183,7 @@ $(document).ready(function () {
       toast.show();
     }
   });
+
+  //select2 
+  $('.select2').select2();
 });

@@ -186,7 +186,7 @@ $padding_section: 80px 0;
     .breadcrumb {
         .breadcrumb-item {
             font-size: 14px;
-    
+
             &.active {
                 color: #6c6b6b;
                 font-weight: 500;
@@ -241,17 +241,51 @@ a {
     border-color: $main_color;
 }
 
+// .contact-in-page {
+//     .alert {
+//         @include borderRadius(5px);
+//     }
+// }
+
 .alert {
     font-size: 14px;
-    @include borderRadius(25px);
+    @include borderRadius(0);
 
     strong {
         margin-inline-end: 5px;
+    }
+
+    .btn {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        @include borderRadius(30px);
+        padding: 10px 30px;
+        background-color: $main_color;
+        border-color: $main_color;
+
+        &:hover {
+            background-color: $dark_color;
+            border-color: $dark_color;
+            color: #fff;
+        }
     }
 }
 
 .alert-dismissible .btn-close {
     left: auto;
+}
+
+.alert-success {
+    border: 0;
+    border-top: 3px solid #8fae1b;
+    background-color: #f7f6f7;
+}
+
+.alert-danger {
+    border: 0;
+    border-top: 3px solid #b81c23;
+    background-color: #f7f6f7;
 }
 
 //global styles

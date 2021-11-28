@@ -7,10 +7,45 @@
         .hamburger-menu {
             display: inline-block;
         }
+
+        .navbar {
+            .navbar-toggler {
+                order: 1;
+            }
+
+            .cart {
+                order: 0;
+            }
+        }
     }
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    section.main-slider {
+        .main-slider-carousel {
+            .owl-item {
+                .item {
+                    .title {
+                        h1 {
+                            font-size: 28px;
+                        }
+                    }
+
+                    .item-image {
+                        .ice {
+                            left: 0;
+                            width: 100%;
+                        }
+                    }
+
+                    .item-text {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 670px) {}
 
@@ -23,11 +58,36 @@
 @media screen and (max-width: 500px) {
     header {
         .navbar {
+            .navbar-brand {
+                img {
+                    max-width: 70px;
+                }
+            }
+
+            .phone-number {
+                .text {
+                    span {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+
             .navbar-nav {
                 .nav-item {
                     .dropdown-menu {
                         min-width: auto;
                     }
+                }
+            }
+
+            .cart {
+                .btn {
+                    height: 35px;
+                    width: 35px;
                 }
             }
         }

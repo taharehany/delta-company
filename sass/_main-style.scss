@@ -1,6 +1,6 @@
 //global style
 body {
-	font-family: "Noto Kufi Arabic", sans-serif;
+	font-family: "El Messiri", sans-serif;
 	background-color: #fff;
 	overflow-x: hidden;
 
@@ -153,7 +153,6 @@ header {
 	}
 
 	.navbar {
-		padding: 0 85px;
 		background-color: transparent;
 
 		.navbar-brand {
@@ -593,8 +592,7 @@ section.main-slider {
 
 				.btns {
 					.btn {
-						font-size: 12px;
-						font-weight: 600;
+						font-size: 18px;
 						color: #fff;
 						@include borderRadius(30px);
 						padding: 10px 25px;
@@ -661,6 +659,7 @@ section.main-slider {
 
 			i {
 				font-size: 20px;
+				height: 24px;
 			}
 		}
 
@@ -1023,7 +1022,6 @@ section.cta {
 					position: relative;
 					color: #fff;
 					margin-bottom: 15px;
-					font-weight: 600;
 
 					&::before {
 						font-family: "bootstrap-icons";

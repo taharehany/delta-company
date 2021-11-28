@@ -20,7 +20,7 @@ block home_block
     section(class="products-cart")
         div(class="container")
             div(class="content")
-                div(class="table-responsive table-area")
+                div(class="table-responsive details-area")
                     table(class="table")
                         thead
                             tr
@@ -62,4 +62,16 @@ block home_block
                                         button(type="submit" class="btn") تطبيق الخصم
                                         span(class="err") الكود لا يطابق قاعدة البيانات لدينا
                                         span(class="suc") تم تطبيق الخصم بنجاح
+                div(class="cart-totals")
+                    div(class="totals-content")
+                        table(class="table")
+                            tbody
+                                tr
+                                    td المجموع قبل الخصم
+                                    td 5000 ريال
+                                tr
+                                    td المجموع بعد الخصم
+                                    td 4800 ريال
+                        div(class="btns")
+                            a(href="checkout.html" class="btn") التقدم للدفع
     //products cart

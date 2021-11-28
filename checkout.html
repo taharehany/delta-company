@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="images/favicon.png"><!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
 <![endif]-->
-    <title>ألما | خطأ</title>
+    <title>ألما | الدفع</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;700&amp;display=swap" rel="stylesheet">
@@ -107,27 +107,107 @@
       <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url('images/bgs/bread.jpg')">
         <div class="container">
           <div class="breadcrumb-title">
-            <h2>خطأ 404</h2>
+            <h2>الدفع</h2>
           </div>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
-              <li class="breadcrumb-item active" aria-current="page">خطأ 404</li>
+              <li class="breadcrumb-item active" aria-current="page">الدفع</li>
             </ol>
           </nav>
         </div>
       </nav>
       <!--breadcrumb-->
-      <!--error 404-->
-      <div class="error">
+      <!--checkout page-->
+      <section class="checkout">
         <div class="container">
-          <div class="text-center mx-auto"> 
-            <h2>4<span class="diff-color"> <span class="num">0</span></span>4</h2>
-            <p class="lead text-gray-800 mb-4">صفحة غير موجودة</p><a class="btn back" href="index.html">الرئيسية</a>
+          <div class="content">
+            <!--alerts-->
+            <!--form-->
+            <div class="checkout-form">
+              <div class="title">
+                <h4>معلومات الدفع</h4>
+              </div>
+              <form action="" method="POST">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="">الاسم *</label>
+                      <input class="form-control" type="text" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="">الهاتف *</label>
+                      <input class="form-control" type="number" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label for="">الحي *</label>
+                      <select class="select2">
+                        <option value="">الحي الأول</option>
+                        <option value="">الحي الثاني</option>
+                        <option value="">الحي الثالث</option>
+                        <option value="">الحي الرابع</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label for="">اكتب اسم الحي إذا لم تجده في الخيارات السابقة *</label>
+                      <textarea class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label for="">العنوان بالتفصيل *</label>
+                      <textarea class="form-control" rows="2"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="title">
+                  <h4>معلومات المنتج</h4>
+                </div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>اسم المنتج</th>
+                      <th>السعر</th>
+                      <th>الكمية</th>
+                      <th>المجموع</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>مثال على عنوان المنتج</td>
+                      <td>50 ريال</td>
+                      <td class="amount">50</td>
+                      <td>150 ريال</td>
+                    </tr>
+                    <tr>
+                      <td>مثال على عنوان المنتج</td>
+                      <td>50 ريال</td>
+                      <td class="amount">20</td>
+                      <td>150 ريال</td>
+                    </tr>
+                    <tr>
+                      <td>المجموع الكلي</td>
+                      <td class="all-total"><span>150 ريال</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="checkout-btn">
+                  <div class="outer-btn">
+                    <button class="btn" type="submit">اطلب الآن</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-      <!--error 404-->
+      </section>
+      <!--checkout page-->
       <!--to top-->
       <div id="toTop">
         <button> <i class="bi bi-chevron-double-up"></i></button>

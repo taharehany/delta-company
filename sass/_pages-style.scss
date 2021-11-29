@@ -303,10 +303,6 @@ section.single-product {
             .image {
                 position: relative;
 
-                img {
-                    max-width: 450px;
-                }
-
                 .icon {
                     position: absolute;
                     top: 0;
@@ -506,6 +502,7 @@ section.checkout {
             overflow: visible;
             border-collapse: separate;
             border-spacing: 0 10px;
+            min-width: 500px;
 
             thead {
                 th {
@@ -931,7 +928,7 @@ section.products-cart {
             overflow: visible;
             border-collapse: separate;
             border-spacing: 0 10px;
-            min-width: 700px;
+            min-width: 1000px;
 
             .product-name {
                 display: flex;
@@ -990,7 +987,7 @@ section.products-cart {
                         font-size: 15px;
                         color: #808080;
                         vertical-align: baseline;
-                        padding: 30px 20px;
+                        padding: 20px;
                         border: none;
 
                         &.amount {
@@ -1028,8 +1025,8 @@ section.products-cart {
                                 border: 1px solid #ddd;
                                 @include borderRadius(25px);
                                 outline: none;
-                                padding: 10px 15px;
-                                max-width: 200px;
+                                padding: 10px;
+                                max-width: 160px;
                             }
                         }
 

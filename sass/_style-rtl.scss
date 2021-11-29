@@ -17,12 +17,6 @@ html[dir=rtl] {
     header {
         .navbar {
             .navbar-nav {
-                .nav-link{
-                    &::before {
-                        right: -15px;
-                        left: auto
-                    }
-                }
                 .nav-item {
                     .dropdown-menu {
                         li {
@@ -33,10 +27,6 @@ html[dir=rtl] {
             }
         }
         .offcanvas {
-            .navbar .navbar-nav .nav-item .dropdown-toggle::after {
-                left: 0;
-                right: auto
-            }
             .offcanvas-header {
                 justify-content: flex-start;
             }

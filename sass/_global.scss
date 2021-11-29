@@ -3,7 +3,7 @@ $main_color: var(--main-color);
 $second_color: var(--second-color);
 $dark_color: var(--dark-color);
 $gray: #999999;
-$padding_section: 80px 0;
+$padding_section: 70px 0;
 //global styles
 
 //mixins
@@ -201,17 +201,6 @@ $padding_section: 80px 0;
 
 //main broadcrumb
 
-//if no data
-.nothing {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--dark-color);
-    text-transform: capitalize;
-    text-align: center
-}
-
-//if no data
-
 //global styles
 .btn,
 .btn-close {
@@ -297,8 +286,8 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999999;
-    background-color: #EDEDED;
+    z-index: 9999;
+    background-color: #020637;
     display: flex;
     justify-content: center;
     align-items: center;

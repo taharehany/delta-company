@@ -21,8 +21,8 @@ $(document).ready(function () {
   });
 
   (function () {
-    if ($("header").next().hasClass("main-slider")) {
-      $("header").addClass("transparent")
+    if ($("body").find("section").hasClass("main-slider")) {
+      $("header").addClass("transparent");
     }
   })();
 
@@ -42,11 +42,13 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
+        nav: false,
+        dots: true,
       },
       768: {
         items: 1,
+        nav: true,
       },
-
       992: {
         items: 1,
       }
@@ -96,6 +98,9 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 2,
+      },
+      400: {
+        items: 3,
       },
       575: {
         items: 3,
@@ -186,4 +191,8 @@ $(document).ready(function () {
 
   //select2 
   $('.select2').select2();
+});
+
+$(window).on("load", function () {
+  $('.loader').delay(1000).fadeOut(200);
 });

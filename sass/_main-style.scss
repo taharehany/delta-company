@@ -336,8 +336,9 @@ header {
 				font-size: 10px;
 				position: absolute;
 				text-transform: initial;
-				right: 0;
 				top: auto;
+				right: auto;
+				left: 0;
 			}
 
 			&::after {
@@ -364,7 +365,11 @@ header {
 					background-color: transparent;
 					border: none;
 					font-size: 18px;
+					@extend %center;
 				}
+			}
+			.total-count {
+				background-color: $main_color;
 			}
 		}
 	}
@@ -592,7 +597,7 @@ section.main-slider {
 
 				.btns {
 					.btn {
-						font-size: 18px;
+						font-size: 16px;
 						color: #fff;
 						@include borderRadius(30px);
 						padding: 10px 25px;
@@ -681,7 +686,7 @@ section.main-slider {
 
 //about us
 section.about {
-	padding-bottom: 70px;
+	padding: 40px 0 70px;
 
 	.content {
 		.about-box {

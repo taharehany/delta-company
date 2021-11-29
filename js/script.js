@@ -171,7 +171,8 @@ $(document).ready(function () {
   let toastTrigger = $('.add_to_cart');
   let toastAdding = $('#addToast');
   let toastRemoving = $('#removeToast');
-  toastTrigger.on('click', function () {
+  toastTrigger.on('click', function (e) {
+    e.preventDefault();
     $(this).toggleClass("added").find("i").toggleClass("bi-cart bi-check2-all");
 
     if ($(this).hasClass("added")) {

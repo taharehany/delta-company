@@ -141,8 +141,8 @@
                         width: 20px;
                         height: 20px;
                         @include borderRadius(50%);
-                        @extend %center;
                         padding: 0;
+                        line-height: 21px;
                     }
 
                     .image {
@@ -748,9 +748,11 @@ section.thanks {
                             &.all-total {
                                 color: #000
                             }
+
                             a {
                                 color: $main_color
                             }
+
                             .count {
                                 color: #000;
                             }

@@ -175,8 +175,6 @@ function displayCart() {
                     <span>${cartArray[i].count} × ${cartArray[i].price} ريال</span>
                 </div>
             </div>`
-            // outputSingleProduct += 
-            // `<div class="input-group"><button class="minus-item input-group-addon btn btn-primary" data-name="Lemon">-</button><input type="number" class="item-count form-control" data-name="Lemon" value="33"><button class="plus-item btn btn-primary input-group-addon" data-name="Lemon">+</button></div>`
         }
     }
     $('.show-cart').html(output);

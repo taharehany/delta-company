@@ -958,8 +958,7 @@ section.products-cart {
                 height: 30px;
                 width: 30px;
                 padding: 0;
-                @extend %center;
-                line-height: 0;
+                line-height: 33px;
             }
 
             .spacer {

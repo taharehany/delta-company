@@ -633,6 +633,10 @@ section.search {
 						width: 100%;
 					}
 				}
+				.option {
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
 			}
 		}
 

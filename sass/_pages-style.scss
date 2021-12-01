@@ -983,6 +983,11 @@ section.form-request {
                         max-height: 250px;
                         overflow-y: auto;
                     }
+
+                    .option {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
             }
         }

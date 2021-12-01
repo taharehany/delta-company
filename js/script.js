@@ -180,7 +180,8 @@ $(document).ready(function () {
     fade: false,
     autoplay: true,
     autoplaySpeed: 1000,
-    asNavFor: '.slider-nav'
+    asNavFor: '.slider-nav',
+    rtl: true
   });
 
   $('.slider-nav').slick({
@@ -192,13 +193,13 @@ $(document).ready(function () {
     focusOnSelect: true,
     centerMode: true,
     centerPadding: '30px',
+    rtl: true,
     responsive: [{
       breakpoint: 575,
       settings: {
         slidesToShow: 2,
       }
-    }
-  ]
+    }]
   });
 
   //to top button
@@ -267,18 +268,21 @@ function handleTickInit1(tick) {
     tick.value = value;
   };
 }
+
 function handleTickInit2(tick) {
   var nextYear = new Date().getFullYear() + 1;
   Tick.count.down(2021 + "-11-25 24:00:00").onupdate = function (value) {
     tick.value = value;
   };
 }
+
 function handleTickInit3(tick) {
   var nextYear = new Date().getFullYear() + 1;
   Tick.count.down(2021 + "-11-24 24:00:00").onupdate = function (value) {
     tick.value = value;
   };
 }
+
 function handleTickInit4(tick) {
   var nextYear = new Date().getFullYear() + 1;
   Tick.count.down(2021 + "-11-27 24:00:00").onupdate = function (value) {

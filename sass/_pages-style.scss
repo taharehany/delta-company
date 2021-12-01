@@ -544,7 +544,6 @@ section.single-car {
             gap: 20px;
 
             .single-car-images {
-                direction: ltr;
                 position: relative;
 
                 .video-icon {
@@ -1131,11 +1130,15 @@ section.single-offer {
     .content {
         .single-offer-box {
             background-color: #fff;
+            max-width: 880px;
+            margin: auto;
 
             .image {
                 margin-bottom: 25px;
 
-                img {}
+                img {
+                    width: 100%;
+                }
             }
 
             .details {

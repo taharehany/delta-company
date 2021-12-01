@@ -140,7 +140,7 @@
                       <h3 class="title">عنوان العرض هنا</h3></a>
                     <div class="separator"></div>
                     <p>هنا شرح للعرض باختصار</p>
-                    <div class="tick" data-did-init="handleTickInit1">
+                    <div class="tick" data-did-init="handleTickInit">
                       <div class="tick-content" data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -&gt; delay">
                         <div class="tick-group">
                           <div data-key="value" data-repeat="true" data-transform="pad(00) -&gt; split -&gt; delay"><span data-view="flip"></span></div>
@@ -158,7 +158,7 @@
                       <h3 class="title">عنوان العرض هنا</h3></a>
                     <div class="separator"></div>
                     <p>هنا شرح للعرض باختصار</p>
-                    <div class="tick" data-did-init="handleTickInit2">
+                    <div class="tick" data-did-init="handleTickInit">
                       <div class="tick-content" data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -&gt; delay">
                         <div class="tick-group">
                           <div data-key="value" data-repeat="true" data-transform="pad(00) -&gt; split -&gt; delay"><span data-view="flip"></span></div>
@@ -176,7 +176,7 @@
                       <h3 class="title">عنوان العرض هنا</h3></a>
                     <div class="separator"></div>
                     <p>هنا شرح للعرض باختصار</p>
-                    <div class="tick" data-did-init="handleTickInit3">
+                    <div class="tick" data-did-init="handleTickInit">
                       <div class="tick-content" data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -&gt; delay">
                         <div class="tick-group">
                           <div data-key="value" data-repeat="true" data-transform="pad(00) -&gt; split -&gt; delay"><span data-view="flip"></span></div>
@@ -194,7 +194,7 @@
                       <h3 class="title">عنوان العرض هنا</h3></a>
                     <div class="separator"></div>
                     <p>هنا شرح للعرض باختصار</p>
-                    <div class="tick" data-did-init="handleTickInit4">
+                    <div class="tick" data-did-init="handleTickInit">
                       <div class="tick-content" data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -&gt; delay">
                         <div class="tick-group">
                           <div data-key="value" data-repeat="true" data-transform="pad(00) -&gt; split -&gt; delay"><span data-view="flip"></span></div>
@@ -279,5 +279,17 @@
     <script src="js/flip.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      function handleTickInit(tick) {
+          var offset = new Date(localStorage.getItem("countdown-offset") || new Date());
+          localStorage.setItem("countdown-offset", offset);
+          var timeDuration = Tick.helper.duration(48, "hours");
+          var deadline = new Date(offset.setMilliseconds(offset.getMilliseconds() + timeDuration));
+          var counter = Tick.count.down(deadline, { format: ["h", "m", "s"] });
+          counter.onupdate = function (value) {
+              tick.value = value;
+          };
+      }
+    </script>
   </body>
 </html>

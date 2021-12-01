@@ -13,3 +13,15 @@
 <script src="js/flip.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+  function handleTickInit(tick) {
+      var offset = new Date(localStorage.getItem("countdown-offset") || new Date());
+      localStorage.setItem("countdown-offset", offset);
+      var timeDuration = Tick.helper.duration(48, "hours");
+      var deadline = new Date(offset.setMilliseconds(offset.getMilliseconds() + timeDuration));
+      var counter = Tick.count.down(deadline, { format: ["h", "m", "s"] });
+      counter.onupdate = function (value) {
+          tick.value = value;
+      };
+  }
+</script>

@@ -262,30 +262,30 @@ $(window).on("load", function () {
 });
 
 //offers counter
-function handleTickInit1(tick) {
-  var nextYear = new Date().getFullYear() + 1;
-  Tick.count.down(2021 + "-11-22 24:00:00").onupdate = function (value) {
-    tick.value = value;
-  };
-}
+// function handleTickInit1(tick) {
+//   var nextYear = new Date().getFullYear() + 1;
+//   Tick.count.down(2021 + "-11-22 24:00:00").onupdate = function (value) {
+//     tick.value = value;
+//   };
+// }
 
-function handleTickInit2(tick) {
-  var nextYear = new Date().getFullYear() + 1;
-  Tick.count.down(2021 + "-11-25 24:00:00").onupdate = function (value) {
-    tick.value = value;
-  };
-}
+// function handleTickInit2(tick) {
+//   var nextYear = new Date().getFullYear() + 1;
+//   Tick.count.down(2021 + "-11-25 24:00:00").onupdate = function (value) {
+//     tick.value = value;
+//   };
+// }
 
-function handleTickInit3(tick) {
-  var nextYear = new Date().getFullYear() + 1;
-  Tick.count.down(2021 + "-11-24 24:00:00").onupdate = function (value) {
-    tick.value = value;
-  };
-}
+// function handleTickInit3(tick) {
+//   var nextYear = new Date().getFullYear() + 1;
+//   Tick.count.down(2021 + "-11-24 24:00:00").onupdate = function (value) {
+//     tick.value = value;
+//   };
+// }
 
-function handleTickInit4(tick) {
-  var nextYear = new Date().getFullYear() + 1;
-  Tick.count.down(2021 + "-11-27 24:00:00").onupdate = function (value) {
-    tick.value = value;
-  };
-}
+// function handleTickInit4(tick) {
+//   var nextYear = new Date().getFullYear() + 1;
+//   Tick.count.down(2021 + "-11-27 24:00:00").onupdate = function (value) {
+//     tick.value = value;
+//   };
+// }

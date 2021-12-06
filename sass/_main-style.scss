@@ -23,7 +23,7 @@ header {
 
 	&.fixed {
 		// top: -55px;
-		box-shadow: 0 4px 20px 0 rgb(115 115 115 / 14%), 0 7px 10px -5px rgb(126 126 126 / 40%);
+		box-shadow: 0 4px 20px 0 rgb(0 0 0 / 15%), 0 7px 10px -5px rgb(0 0 0 / 15%);
 	}
 
 	.top-part {
@@ -105,7 +105,7 @@ header {
 
 	.navbar {
 		padding: 0 85px;
-		background-color: #fff;
+		background-color: $second_color;
 
 		.navbar-brand {
 			padding: 0;
@@ -153,7 +153,7 @@ header {
 				}
 
 				.nav-link {
-					color: #223645;
+					color: #fff;
 					padding: 0;
 					font-size: 15px;
 					text-transform: capitalize;
@@ -246,6 +246,7 @@ header {
 				text-transform: initial;
 				right: 0;
 				top: auto;
+				color: #fff;
 			}
 
 			&::after {
@@ -276,7 +277,7 @@ header {
 					text-transform: uppercase;
 					font-size: 14px;
 					font-weight: 600;
-					color: #223645
+					color: #fff
 				}
 			}
 

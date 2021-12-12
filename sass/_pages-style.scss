@@ -280,6 +280,15 @@ section.products-in-page {
     @extend .products;
     background-color: #fff;
 
+    .main-title {
+		h2 {
+			color: #fff;
+		}
+		.top-title {
+			color: #fff;
+		}
+	}
+
     &::after,
     &::before {
         display: none;

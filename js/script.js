@@ -196,4 +196,14 @@ $(document).ready(function () {
 
 $(window).on("load", function () {
   $('.loader').delay(1000).fadeOut(200);
+  
+  //wow animate
+  wow = new WOW({
+    boxClass: 'wow', // default
+    animateClass: 'animated', // default
+    offset: 200, // default
+    mobile: false, // default
+    live: true // default
+  })
+  wow.init();
 });

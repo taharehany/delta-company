@@ -103,34 +103,34 @@ section(class="main-slider")
 //about us
 section(class="about")
     div(class="container") 
-        div(class="main-title") اسم موثوق به
-            span(class="top-title") 
+        div(class="main-title") 
+            span(class="top-title") اسم موثوق به
             h2 نبذة عن شركة ألما
         div(class="content")
             div(class="row")
                 div(class="col-lg-3 col-md-6")
-                    div(class="about-box")
+                    div(class="about-box wow fadeInUp" data-wow-delay="0s")
                         div(class="icon")
                             img(data-src="images/about/01.png", class="img-fluid" alt="")
                         div(class="text")
                             h3 عنوان نصي
                             p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
                 div(class="col-lg-3 col-md-6")
-                    div(class="about-box")
+                    div(class="about-box wow fadeInUp" data-wow-delay="0.2s")
                         div(class="icon")
                             img(data-src="images/about/02.png", class="img-fluid" alt="")
                         div(class="text")
                             h3 عنوان نصي
                             p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
                 div(class="col-lg-3 col-md-6")
-                    div(class="about-box")
+                    div(class="about-box wow fadeInUp" data-wow-delay="0.4s")
                         div(class="icon")
                             img(data-src="images/about/03.png", class="img-fluid" alt="")
                         div(class="text")
                             h3 عنوان نصي
                             p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
                 div(class="col-lg-3 col-md-6")
-                    div(class="about-box")
+                    div(class="about-box wow fadeInUp" data-wow-delay="0.6s")
                         div(class="icon")
                             img(data-src="images/about/04.png", class="img-fluid" alt="")
                         div(class="text")
@@ -140,6 +140,9 @@ section(class="about")
 
 //products
 section(class="products")
+    div(class="bg-video-wrap")
+        video(src="video/vid-4.mp4", loop, muted, autoplay)
+        div(class="overlay")
     div(class="container")
         div(class="main-title")
             span(class="top-title") اسم موثوق به في صناعة المياه المعبأة
@@ -147,7 +150,7 @@ section(class="products")
         div(class="content")
             div(class="row")
                 div(class="col-lg-4 col-md-6")
-                    div(class="product-box")
+                    div(class="product-box wow fadeInUp" data-wow-delay="0s")
                         a(href="single-product.html") 
                             div(class="image")
                                 img(data-src="images/products/01.png", class="img-fluid" alt="")
@@ -163,7 +166,7 @@ section(class="products")
                                     i(class="bi bi-cart")
                                     span أضف إلى السلة
                 div(class="col-lg-4 col-md-6")
-                    div(class="product-box")
+                    div(class="product-box wow fadeInUp" data-wow-delay="0.2s")
                         a(href="single-product.html") 
                             div(class="image")
                                 img(data-src="images/products/01.png", class="img-fluid" alt="")
@@ -179,7 +182,7 @@ section(class="products")
                                     i(class="bi bi-cart")
                                     span أضف إلى السلة
                 div(class="col-lg-4 col-md-6")
-                    div(class="product-box")
+                    div(class="product-box wow fadeInUp" data-wow-delay="0.4s")
                         a(href="single-product.html") 
                             div(class="image")
                                 img(data-src="images/products/01.png", class="img-fluid" alt="")
@@ -194,61 +197,13 @@ section(class="products")
                                 a(href="" data-name="name3" data-price="10" class="add_to_cart btn") 
                                     i(class="bi bi-cart")
                                     span أضف إلى السلة
-                //- div(class="col-lg-4 col-md-6")
-                //-     div(class="product-box")
-                //-         a(href="single-product.html") 
-                //-             div(class="image")
-                //-                 img(data-src="images/products/01.png", class="img-fluid" alt="")
-                //-         div(class="text")
-                //-             span(class="badge text-dark") 3 لتر
-                //-             h3 اسم المنتج
-                //-             p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
-                //-             div(class="price")
-                //-                 span(class="new") 10 ريال
-                //-                 span(class="old") 20 ريال
-                //-             div(class="btns")
-                //-                 a(href="" data-name="name4" data-price="10" class="add_to_cart btn") 
-                //-                     i(class="bi bi-cart")
-                //-                     span أضف إلى السلة
-                //- div(class="col-lg-4 col-md-6")
-                //-     div(class="product-box")
-                //-         a(href="single-product.html") 
-                //-             div(class="image")
-                //-                 img(data-src="images/slider/01.png", class="img-fluid" alt="")
-                //-         div(class="text")
-                //-             span(class="badge text-dark") 3 لتر
-                //-             h3 اسم المنتج
-                //-             p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
-                //-             div(class="price")
-                //-                 span(class="new") 10 ريال
-                //-                 span(class="old") 20 ريال
-                //-             div(class="btns")
-                //-                 a(href="" data-name="name5" data-price="10" class="add_to_cart btn") 
-                //-                     i(class="bi bi-cart")
-                //-                     span أضف إلى السلة
-                //- div(class="col-lg-4 col-md-6")
-                //-     div(class="product-box")
-                //-         a(href="single-product.html") 
-                //-             div(class="image")
-                //-                 img(data-src="images/products/01.png", class="img-fluid" alt="")
-                //-         div(class="text")
-                //-             span(class="badge text-dark") 3 لتر
-                //-             h3 اسم المنتج
-                //-             p عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
-                //-             div(class="price")
-                //-                 span(class="new") 10 ريال
-                //-                 span(class="old") 20 ريال
-                //-             div(class="btns")
-                //-                 a(href="" data-name="name6" data-price="10" class="add_to_cart btn") 
-                //-                     i(class="bi bi-cart")
-                //-                     span أضف إلى السلة
 //products
 
 //video
 section(class="video")
     div(class="container")
         div(class="content")
-            div(class="video-box")
+            div(class="video-box wow fadeInDown")
                 div(class="video-image")
                     img(data-src="images/bgs/video.jpg" class="img-fluid" alt="")
                 a(href="https://youtu.be/W4jtlIOmPUM" data-fancybox="gallery")
@@ -261,10 +216,10 @@ section(class="cta")
         div(class="content")
             div(class="row")
                 div(class="col-lg-6")
-                    div(class="image")
+                    div(class="image wow fadeInUp")
                         img(data-src="images/cta.png" class="img-fluid" alt="")
                 div(class="col-lg-6")
-                    div(class="text")
+                    div(class="text wow fadeInUp" data-wow-delay="0.4s")
                         div(class="main-title")
                             span(class="top-title") اسم موثوق به في صناعة المياه المعبأة
                             h2 توصيل وخدمة المياه المعبأة

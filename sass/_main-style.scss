@@ -46,6 +46,37 @@ body {
 	}
 }
 
+.bg-video-wrap {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover;
+	z-index: -1;
+
+	video {
+		@extend %fitimage;
+	}
+	
+	.overlay {
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(45deg, rgba(243, 250, 255, 0.3) 50%, rgba(243, 250, 255, 0.2) 50%);
+		background-size: 3px 3px;
+		z-index: 2;
+	}
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
+
 //global style
 
 //header
@@ -368,6 +399,7 @@ header {
 					@extend %center;
 				}
 			}
+
 			.total-count {
 				background-color: $main_color;
 			}
@@ -738,28 +770,35 @@ section.about {
 //products
 section.products {
 	padding: $padding_section;
-	background-color: #f3f9ff;
+	// background-color: #f3f9ff;
 	position: relative;
+	z-index: 3;
 
-	&::before,
-	&::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: 63px;
-		background-repeat: repeat-x;
-		animation: slide 400s linear infinite;
-		-webkit-animation: slide 400s linear infinite;
-		background-image: url(../images/icons/border-1.png);
-	}
+	// &::before,
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 63px;
+	// 	background-repeat: repeat-x;
+	// 	animation: slide 400s linear infinite;
+	// 	-webkit-animation: slide 400s linear infinite;
+	// 	background-image: url(../images/icons/border-1.png);
+	// }
 
-	&::before {
-		top: -15px;
-	}
+	// &::before {
+	// 	top: -15px;
+	// }
 
-	&::after {
-		bottom: -15px;
+	// &::after {
+	// 	bottom: -15px;
+	// }
+
+	.main-title {
+		.top-title {
+			color: #000;
+		}
 	}
 
 	.content {
@@ -772,6 +811,7 @@ section.products {
 			position: relative;
 			z-index: 1;
 			@include transition(ease-out 0.3s);
+			@include boxshadow(0 4px 20px 0 rgb(115 115 115 / 14%));
 
 			&::after,
 			&::before {
@@ -855,7 +895,7 @@ section.products {
 					.new {
 						color: $main_color;
 					}
-					
+
 					.old {
 						margin-inline-start: 10px;
 						color: #ccc;
@@ -1044,6 +1084,7 @@ section.cta {
 					}
 				}
 			}
+
 			.btns {
 				.btn {
 					font-size: 14px;

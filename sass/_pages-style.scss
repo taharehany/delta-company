@@ -51,12 +51,13 @@
     &::after {
         position: absolute;
         content: '';
-        background: url(../images/bgs/wave.png);
+        background: url(../images/bgs/wave.svg);
         width: 100%;
-        height: 143px;
+        height: 100px;
         left: 0;
         bottom: 0;
-        background-repeat: repeat-x;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .breadcrumb-title {
@@ -64,7 +65,7 @@
 
         h2 {
             text-align: center;
-            color: #222;
+            color: #fff;
             font-size: 46px;
             margin-bottom: 20px;
         }
@@ -79,16 +80,16 @@
             font-weight: 600;
 
             a {
-                color: #222;
+                color: #fff;
             }
 
             &.active {
-                color: #222;
+                color: #fff;
                 font-weight: 500;
             }
 
             &::before {
-                color: #222;
+                color: #fff;
             }
         }
     }

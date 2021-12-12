@@ -281,13 +281,14 @@ section.products-in-page {
     background-color: #fff;
 
     .main-title {
-		h2 {
-			color: #000;
-		}
-		.top-title {
-			color: #000;
-		}
-	}
+        h2 {
+            color: #000;
+        }
+
+        .top-title {
+            color: #000;
+        }
+    }
 
     &::after,
     &::before {
@@ -421,6 +422,16 @@ section.related-products {
     padding: 0 0 70px;
     @extend .products;
     background-color: #fff;
+
+    .main-title {
+        h2 {
+            color: #000;
+        }
+
+        .top-title {
+            color: #000;
+        }
+    }
 
     &::after,
     &::before {

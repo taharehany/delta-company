@@ -1,0 +1,844 @@
+.medi-app-main-navigation .navbar-nav {
+    padding-inline-start: 25px;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+//breadcrumb
+.main-breadcrumb {
+    padding: 7rem 0;
+    position: relative;
+    z-index: -1;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: -1;
+    }
+
+    .breadcrumb-title {
+        text-align: center;
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+    .breadcrumb {
+        justify-content: center;
+        background-color: transparent;
+
+        .breadcrumb-item {
+            font-size: 16px;
+            text-transform: capitalize;
+            font-weight: 600;
+
+            a {
+                color: #fff;
+            }
+
+            &.active {
+                color: #fff;
+                font-weight: 500;
+            }
+
+            &::before {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+//breadcrumb
+
+.medi-app-side-btn a {
+    color: #ffffff;
+    background: #7e1830;
+    border: none;
+    font-size: 20px;
+    padding: 0 30px;
+    border-right: 1px solid #f1f1f1;
+    transition: 0.3s all ease-in-out;
+    display: inline-block;
+    line-height: 2;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.medi-app-main-header .app-medi-mobile_menu_content .m-brand-logo {
+    margin: 30px;
+}
+
+.medi-app-main-menu-wrap .dropdown .dropdown-menu {
+    left: auto;
+    right: 0;
+    text-align: initial;
+
+    li a {
+        @extend %max_one_line
+    }
+}
+
+.medi-app-main-menu-wrap .site-brand-logo {
+    z-index: 9;
+}
+
+.medi-app-banner-text {
+    p {
+        color: #404040;
+    }
+}
+
+.medi-app-search-btn {
+    color: #ffffff;
+    border: none;
+    // padding: 20px;
+    border-right: 1px solid #f1f1f1;
+    transition: 0.3s all ease-in-out;
+    display: block;
+    line-height: 90px;
+    width: 95px;
+    text-align: center;
+
+    img {
+        width: 50px;
+    }
+}
+
+.medi-app-banner-feature {
+    left: 0;
+    right: auto;
+
+    .medi-app-banner-feature-icon-text {
+        box-shadow: 1px 1px 10px 0px #e0e0e0;
+    }
+}
+
+.medi-app-about-text {
+    .desc {
+        @extend %max_lines;
+        -webkit-line-clamp: 6;
+    }
+}
+
+.medi-app-about-page {
+    .medi-app-about-text {
+        .desc {
+            -webkit-line-clamp: unset;
+            overflow: visible;
+            display: block;
+
+        }
+    }
+}
+
+.medi-app-service-section {
+    .medi-app-service-innerbox {
+        padding: 15px;
+
+        &:hover {
+            .medi-app-service-icon {
+                transform: rotateY(0);
+            }
+        }
+
+
+        .app-medi-service-title {
+            h3 {
+                @extend %max_lines;
+                -webkit-line-clamp: 1;
+            }
+        }
+    }
+
+    .medi-app-service-innerbox {
+        .medi-app-service-icon {
+            margin-inline-end: 0;
+            margin-bottom: 20px;
+            position: relative;
+
+            &:hover {
+                &::before {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    right: 50%;
+                    left: 50%;
+                }
+
+                &::after {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    top: 50%;
+                    bottom: 50%;
+                }
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                -webkit-transition: all 0.3s ease-out 0s;
+                transition: all 0.5s ease-out 0s;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                -o-object-fit: cover;
+            }
+        }
+
+        .app-medi-service-text {
+            @extend %max_lines;
+            -webkit-line-clamp: 3;
+            padding-bottom: 0;
+            margin-bottom: 15px;
+            font-size: 12px;
+            line-height: normal;
+
+            p {
+                padding: 0;
+            }
+
+            ul {
+                // @extend %max_lines;
+                // -webkit-line-clamp: 4;
+
+                li {
+                    font-size: 13px;
+                    padding-inline-start: 30px;
+                }
+            }
+        }
+    }
+
+    .carousel__prev,
+    .carousel__next {
+        position: static;
+        transform: none;
+        display: inline-block;
+        line-height: 12px;
+        border: 5px solid #f3f3f3;
+        margin: 15px 5px;
+    }
+}
+
+//single sirvice
+.medi-app-service-single {
+    .medi-app-service-innerbox {
+        .app-medi-service-text {
+            overflow: visible;
+            text-overflow: unset;
+            -webkit-box-orient: unset;
+            display: block;
+            -webkit-line-clamp: unset;
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
+
+        .medi-app-service-icon {
+            img {
+                height: auto;
+            }
+        }
+
+        .app-medi-service-title {
+            h3 {
+                overflow: visible;
+                display: block;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+
+//single sirvice
+
+.app-medi-team-innerbox .app-medi-text-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #191919;
+}
+
+.app-medi-team-single {
+    .medi-app-team-content {
+        background-color: #f1f1f1;
+        box-shadow: 15px 30px 30px 0 rgb(0 0 0 / 10%);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .app-medi-team-innerbox {
+        .app-medi-text-text {
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+                color: #191919;
+            }
+        }
+
+        .description {
+            ul {
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    position: relative;
+                    padding-inline-start: 30px;
+                    margin-bottom: 10px;
+
+                    &::before {
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                        content: "\f0f1";
+                        position: absolute;
+                        right: 0;
+                        color: #7e1830;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.medi-app-cta-section {
+    background-size: cover;
+
+    .medi-app-background_overlay {
+        background-color: rgba(140, 17, 46, .85);
+    }
+}
+
+.app-medi-team-section {
+    .box {
+        margin-bottom: 25px;
+    }
+}
+
+.medi-contact-inner-section {
+    padding: 0 50px;
+
+    .medi-app-cta-form-wrap {
+        padding: 0;
+    }
+
+    .content {
+        // max-width: 880px;
+        // margin: auto;
+    }
+
+    button {
+        width: 150px;
+    }
+}
+
+.invalid {
+    border-color: #dc3545 !important;
+    border-width: 1px !important;
+}
+
+.app-medi-testimonial-img {
+    img {
+        height: 370px;
+        @extend %fitimage
+    }
+}
+
+.app-medi-testimonial-slider {
+    bottom: 0;
+    padding: 45px;
+    right: 0;
+    max-width: 100%;
+    position: static;
+    background-color: transparent;
+    text-align: center;
+
+    .app-medi-testimonial-quote {
+        p {
+            color: #000000;
+        }
+
+        h4 {
+            color: #000;
+        }
+    }
+
+    .quote {
+        margin-bottom: 20px;
+
+        i {
+            font-size: 40px;
+            color: $main_color;
+        }
+    }
+
+    .owl-controls {
+        .owl-nav {
+            @include transition(all ease 0.3s);
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+
+            .owl-prev,
+            .owl-next {
+                i {
+                    border: 1px solid #ddd;
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                    @extend %center;
+
+                    &:hover {
+                        background-color: $main_color;
+                        color: #fff;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        .owl-dots {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            .owl-dot {
+                span {
+                    background-color: #ddd;
+                    width: 15px;
+                    height: 8px;
+                    display: inline-block;
+                    border-radius: 10px;
+                }
+            }
+
+            .owl-dot.active span,
+            .owl-theme .owl-dots .owl-dot:hover span {
+                background: $second_color;
+                width: 25px;
+            }
+        }
+    }
+}
+
+.app-medi-scrollup {
+    background-color: $main_color;
+}
+
+
+.app-medi-search-body .app-medi-search-form button {
+    left: 0;
+    right: auto;
+}
+
+// contact
+
+.inner-page-padding {
+    padding: 100px 0px;
+}
+
+.medi-contact-inner-section {
+
+    .medi-app-cta-form-wrap {
+        padding: 50px;
+        background-color: #f6f6f6;
+    }
+
+    .medi-contact-inner-form {
+        margin: 0 auto;
+        max-width: 750px;
+        padding-top: 50px;
+
+        input,
+        textarea {
+            width: 100%;
+            height: 55px;
+            padding-inline-start: 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 2px solid #e8e8e8;
+        }
+
+        textarea {
+            height: auto;
+        }
+
+        button {
+            color: #fff;
+            width: 150px;
+            height: 60px;
+            border: none;
+            margin-top: 20px;
+            font-weight: 700;
+            position: relative;
+            background-color: #7e1830;
+            transition: 0.3s all ease-in-out;
+
+            span {
+                top: 10px;
+                left: -20px;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                line-height: 40px;
+                color: #7e1830;
+                background-color: #fff;
+                box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 4%);
+            }
+        }
+    }
+
+    &.contact {
+        .medi-app-cta-form-wrap {
+            padding: 30px;
+        }
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .icon-box {
+            display: grid;
+            grid-template-columns: 60px auto;
+            margin-bottom: 35px;
+
+            .icon-box-icon {
+                font-size: 34px;
+                color: #707070;
+                display: flex;
+            }
+
+            .icon-title {
+                color: #000;
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+
+            .icon-box-content {
+                a {
+                    margin-inline-end: 15px;
+                    font-size: 18px;
+
+                    &:hover {
+                        color: #7e1830;
+                    }
+                }
+            }
+        }
+    }
+
+    &.booking {
+        .content {
+            max-width: 880px;
+            margin: auto;
+        }
+
+        button {
+            width: 150px;
+        }
+    }
+
+    &.rating {
+        .content {
+            max-width: 880px;
+            margin: auto;
+        }
+
+        button {
+            width: 150px;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+
+            .form-check {
+                &:last-child {
+                    padding: 0;
+                }
+            }
+
+            .face {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+
+                i {
+                    font-size: 50px;
+                    transition: all ease .3s;
+                    margin-bottom: 5px;
+                }
+            }
+
+            input {
+                opacity: 0;
+
+                &:checked+.face {
+                    color: #711C33;
+
+                    i {
+                        color: #711C33;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.map {
+    line-height: 0;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    padding-inline-end: 0.5rem;
+}
+
+.app-medi-banner-cta-slug {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        font-size: 14px;
+    }
+}
+
+// contact
+
+//error
+.error {
+    padding: $padding_section;
+
+    h2 {
+        color: #000;
+        font-size: 12rem;
+        position: relative;
+        line-height: 1;
+        font-weight: 700;
+        @extend %center;
+
+        .diff-color {
+            color: $main_color
+        }
+    }
+
+    .lead {
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: capitalize
+    }
+
+    .back {
+        color: #fff;
+        background-color: $main_color;
+        @include borderRadius(0);
+        @include transition(all ease .3s);
+        padding: 10px 30px;
+
+        &:hover {
+            background-color: #000;
+        }
+    }
+}
+
+//error
+
+// footer
+.app-medi-footer {
+    background-size: cover;
+
+    .app-medi-footer-widget {
+        .medi-app-footer-logo {
+            img {
+                max-width: 250px;
+                @include borderRadius(10px)
+            }
+        }
+
+        .app-medi-contact-widget {
+            padding: 20px 20px 30px 20px;
+        }
+
+        .cw-widget-btn {
+            width: 100%;
+        }
+
+        .app-medi-menu-widget {
+            li {
+                width: 100%;
+                float: none;
+            }
+        }
+
+        .app-medi-logo-widget {
+            max-width: 100%;
+
+            p {
+                @extend %max_lines;
+                -webkit-line-clamp: 4;
+                padding: 0;
+            }
+        }
+    }
+}
+
+// footer
+
+// responsive
+@media screen and (max-width: 1199px) {
+    .medi-app-sticky-on {
+        height: 70px !important;
+    }
+
+    .medi-app-main-header {
+        height: 111px;
+    }
+
+    .medi-app-search-btn {
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .app-medi-cta-content-2 {
+        display: block;
+
+        .app-medi-cta-call {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .medi-app-about-img-wrap,
+    .medi-app-about-text-wrap {
+        max-width: 100%;
+        margin-inline-end: 0 !important;
+        -webkit-margin-end: 0 !important
+    }
+
+    .medi-app-about-content {
+        .medi-app-about-exp {
+            border: none;
+        }
+
+        .float-right {
+            float: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .medi-contact-inner-section {
+        .medi-app-cta-form-wrap {
+            padding: 20px !important;
+        }
+    }
+
+    .medi-contact-inner-section {
+        &.contact {
+            .medi-app-cta-form-wrap {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .medi-app-main-menu-wrap .site-brand-logo {
+        width: 140px;
+    }
+
+    .medi-app-sticky-on .medi-app-main-menu-wrap .site-brand-logo {
+        height: 70px;
+    }
+
+    .app-medi-testimonial-slider {
+        padding: 0;
+    }
+
+    .medi-app-banner-text a {
+        margin: 0px 0px 0px 25px;
+    }
+
+    .medi-app-banner-text a:nth-child(2) {
+        width: 155px;
+    }
+
+    .medi-app-service-innerbox {
+        padding: 35px 25px;
+    }
+
+    .app-medi-team-single {
+        .app-medi-team-innerbox {
+            .app-medi-text-text {
+                padding: 20px 15px;
+            }
+
+            .app-medi-team-img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .medi-app-service-single {
+        .medi-app-service-innerbox {
+            padding: 25px 15px;
+        }
+    }
+
+    .app-medi-team-innerbox {
+        .app-medi-team-img {
+            img.doc {
+                height: auto;
+            }
+        }
+    }
+
+    .medi-contact-inner-section {
+        .rating {
+            .face {
+                font-size: 14px;
+
+                i {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+// responsive

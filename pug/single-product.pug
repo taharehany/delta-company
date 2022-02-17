@@ -1,0 +1,291 @@
+extend index
+
+block website_title
+    title #{website_title} | single product
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/breadcrumb.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 single product 
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active" aria-current="page") single product 
+    //breadcrumb
+
+    //single product
+    section(class="single-product")
+        div(class="container")
+            div(class="content")
+                div(class="single-product-details")
+                    div(class="row")
+                        div(class="col-lg-5 col-md-6")
+                            a(href="images/products/01.jpg" data-fancybox="gallery") 
+                                div(class="image")
+                                    img(data-src="images/products/01.jpg" class="img-fluid" alt="")
+                        div(class="col-lg-7 col-md-7")
+                            div(class="text")
+                                h3 this is product title
+                                span(class="badge") In Stock
+                                p Roads are part of our life. They reflect our culture. The more our roads are beautiful, the more this would be reflected in our conduct and details of daily life. Our team thinks this way because they conjure up the history and culture of our old neighborhoods to place them in modern molds so as to infuse road users with joy and comfort, most probably without recognizing the reason behind their comfort and joy. When cozy rays of light deflect on the carved inscriptions, a bibelot is skillfully created and accordingly reflected on the surrounding walls  and floor. Because roads are an integral part of the daily trips of sportsmen and pedestrians and those looking for gentle breezes to enjoy,
+                                div(class="btns")
+                                    //- input(type="number" class="item-count form-control" min="0" max="10000" value="0")
+                                    a(href="#!" class="btn cart-btn") 
+                                        i(class="bi bi-cart")
+                                        span add to cart
+                                    a(href="#!" class="btn fav-btn") 
+                                        i(class="bi bi-heart")
+                                        span add to favorites
+                                hr
+                                div(class="categories")
+                                    p 
+                                        span Categories: 
+                                        a(href="", rel="tag") Chairs &amp; Swivels
+                                        | ,
+                                        a(href="", rel="tag") Home Office
+                                        | ,
+                                        a(href="", rel="tag") Living Room
+                                div(class="social-share")
+                                    ul
+                                        li
+                                            a(href="" class="facebook" target="_blank")
+                                                i(class="bi bi-facebook") 
+                                        li
+                                            a(href="" class="twitter" target="_blank")
+                                                i(class="bi bi-twitter")
+                                        li
+                                            a(href="" class="pinterest" target="_blank")
+                                                i(class="bi bi-pinterest")
+                                        li
+                                            a(href="" class="google" target="_blank")
+                                                i(class="bi bi-google")
+                                        li
+                                            a(href="" class="whatsapp" target="_blank")
+                                                i(class="bi bi-whatsapp")
+    //single product
+
+    //single product details
+    section(class="single-product-tabs")
+        div(class="container")
+            div(class="content")
+                ul(class="nav nav-pills", role="tablist")
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link active", id="products-1-tab" data-bs-toggle="pill", data-bs-target="#products-1", type="button", role="tab", aria-controls="products-1", aria-selected="true") all
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="products-2-tab" data-bs-toggle="pill", data-bs-target="#products-2", type="button", role="tab", aria-controls="products-2", aria-selected="false") new arrivals
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="products-3-tab" data-bs-toggle="pill", data-bs-target="#products-3", type="button", role="tab", aria-controls="products-3", aria-selected="false") deal of the week
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="products-4-tab" data-bs-toggle="pill", data-bs-target="#products-4", type="button", role="tab", aria-controls="products-4", aria-selected="false") single product details
+                div(class="tab-content")
+                    div(class="tab-pane fade show active", id="products-1" role="tabpanel", aria-labelledby="products-1-tab") 
+                        div(class="products-content")
+                            div(class="row")
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/01.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                                            //- div(class="product-rating")
+                                                span(class="ratyli")
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/02.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart-fill")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/03.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart-fill")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/04.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart-fill")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/05.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart-fill")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                    div(class="tab-pane fade", id="products-2" role="tabpanel", aria-labelledby="products-2-tab") 
+                        div(class="products-content")
+                            div(class="row")
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/01.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart-fill")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/02.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart-fill")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/03.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                    div(class="tab-pane fade", id="products-3" role="tabpanel", aria-labelledby="products-3-tab") 
+                        div(class="products-content")
+                            div(class="row")
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/01.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+                    div(class="tab-pane fade", id="products-4" role="tabpanel", aria-labelledby="products-4-tab") 
+                        div(class="products-content")
+                            div(class="row")
+                                div(class="col-lg-3")
+                                    div(class="products-box")
+                                        div(class="image")
+                                            img(data-src="images/products/01.jpg", class="img-fluid" alt="")
+                                            div(class="fav")
+                                                a(href="#!" class="btn") 
+                                                    i(class="bi bi-heart")
+                                            div(class="layer")
+                                                a(href="#!" class="btn") add to cart
+                                        div(class="details")
+                                            div(class="title")
+                                                h3
+                                                    a(href="single-product.html") this is product title
+    //single product details
+
+    //related products
+    section(class="related-products")
+        div(class="container")
+            div(class="main-title")
+                h2 related products
+                div(class="decore-title")
+                    img(data-src="images/favicon.png", alt="")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-3")
+                        div(class="related-box")
+                            div(class="image")
+                                img(data-src="images/products/01.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+                    div(class="col-lg-3")
+                        div(class="related-box")
+                            div(class="image")
+                                img(data-src="images/products/02.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+                    div(class="col-lg-3")
+                        div(class="related-box")
+                            div(class="image")
+                                img(data-src="images/products/03.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+                    div(class="col-lg-3")
+                        div(class="related-box")
+                            div(class="image")
+                                img(data-src="images/products/04.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+    //related products

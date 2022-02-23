@@ -51,18 +51,19 @@
 						<button type="submit">
 							إرسال
 							<span>
-								<i class="fas fa-arrow-left"></i>
+								<i v-if="!sending" class="fas fa-arrow-left"></i>
+								<i v-if="sending" class="fas fa-sync fa-spin"></i>
 							</span>
 						</button>
 						<div class="alert alert-warning alert-danger fade show mt-4" role="alert" v-if="notsent">
 							<strong>يوجد خطأ، تفقد جميع الحقول (لا يمكن ترك حقول فارغة)</strong>
 						</div>
 					</form>
-				</div>
-				<div class="alert alert-success mt-4" role="alert" v-if="sent">
-					<h4 class="alert-heading">تم الإرسال بنجاح</h4>
-					<hr />
-					<p>تم استلام رسالتك بنجاح وسيتم التواصل معك في أقرب وقت، شكرا لك</p>
+					<div class="alert alert-success mt-4" role="alert" v-if="sent">
+						<h4 class="alert-heading">تم الإرسال بنجاح</h4>
+						<hr />
+						<p>تم استلام رسالتك بنجاح وسيتم التواصل معك في أقرب وقت، شكرا لك</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -83,6 +84,7 @@ export default {
 		return {
 			notsent: false,
 			sent: false,
+			sending: false,
 			verifiedRecapcha: false,
 			formDataFields: {
 				name: null,
@@ -97,6 +99,9 @@ export default {
 		...mapActions(["storeFormData"]),
 		onSubmitForm(e) {
 			e.preventDefault();
+
+			this.sending = true;
+
 			if (this.verifiedRecapcha == true) {
 				let formDataFieldsArr = Object.values(this.formDataFields);
 				for (let index = 0; index < formDataFieldsArr.length; index++) {
@@ -111,6 +116,7 @@ export default {
 							e.target.reset();
 							this.notsent = false;
 							this.sent = true;
+							this.sending = false;
 							this.formDataFields.name = null;
 							this.formDataFields.email = null;
 							this.formDataFields.phone = null;
@@ -124,6 +130,7 @@ export default {
 				if (field == null) {
 					this.notsent = true;
 					this.sent = false;
+					this.sending = false;
 				} else {
 					this.notsent = false;
 					this.sent = true;

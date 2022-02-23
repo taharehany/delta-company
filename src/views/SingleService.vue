@@ -17,8 +17,13 @@
 	</nav>
 	<!--breadcrumb-->
 
+	<div v-if="loading" class="inside-loading">
+		<i class="fas fa-cog fa-spin"></i>
+		<span>جاري التحميل..</span>
+	</div>
+
 	<!-- Start of service section -->
-	<section id="medi-app-service" class="medi-app-service-section medi-app-service-single" dir="ltr" v-if="service">
+	<section id="medi-app-service" class="medi-app-service-section medi-app-service-single" dir="ltr" v-if="service && !loading">
 		<div class="container">
 			<div id="app-medi-service-slider" class="medi-app-service-content">
 				<div class="carousel__item">
@@ -56,6 +61,7 @@ export default {
 	data() {
 		return {
 			service: null,
+			loading: true,
 		};
 	},
 	methods: {
@@ -65,6 +71,7 @@ export default {
 				.get(`services/${this.$route.params.id}`)
 				.then((result) => {
 					this.service = result.data.data;
+					this.loading = false;
 				});
 		},
 	},

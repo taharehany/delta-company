@@ -62,16 +62,17 @@
 										</div>
 									</div>
 								</div>
-								<vue-recaptcha @verify="onVerify" ref="recaptcha" sitekey="6Ldo0EoeAAAAAIXsn0vVENfNRJZvKKreBs9FHpDy"></vue-recaptcha>
+								<vue-recaptcha @verify="onVerify" @expired="onCaptchaExpired" ref="recaptcha" sitekey="6Ldo0EoeAAAAAIXsn0vVENfNRJZvKKreBs9FHpDy"></vue-recaptcha>
 								<button type="submit">
 									إرسال
 									<span>
-										<i class="fas fa-arrow-left"></i>
+										<i v-if="!sending" class="fas fa-arrow-left"></i>
+										<i v-if="sending" class="fas fa-sync fa-spin"></i>
 									</span>
 								</button>
 							</form>
 						</div>
-                        <div class="alert alert-success mt-2" role="alert" v-if="sent">
+						<div class="alert alert-success mt-2" role="alert" v-if="sent">
 							<h4 class="alert-heading">تم الإرسال بنجاح</h4>
 							<hr />
 							<p>تم استلام رسالتك بنجاح وسيتم التواصل معك في أقرب وقت، شكرا لك</p>
@@ -133,18 +134,18 @@
 									<h4 class="icon-title">مواقع التواصل</h4>
 								</div>
 								<div class="icon-box-content">
-										<a :href="allSettingsApiData.data.instagram">
-											<i class="fab fa-instagram"></i>
-										</a>
-										<a :href="allSettingsApiData.data.facebook">
-											<i class="fab fa-facebook-f"></i>
-										</a>
-										<a :href="allSettingsApiData.data.twitter">
-											<i class="fab fa-twitter"></i>
-										</a>
-										<a :href="allSettingsApiData.data.youtube">
-											<i class="fab fa-youtube"></i>
-										</a>
+									<a :href="allSettingsApiData.data.instagram">
+										<i class="fab fa-instagram"></i>
+									</a>
+									<a :href="allSettingsApiData.data.facebook">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+									<a :href="allSettingsApiData.data.twitter">
+										<i class="fab fa-twitter"></i>
+									</a>
+									<a :href="allSettingsApiData.data.youtube">
+										<i class="fab fa-youtube"></i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -179,7 +180,9 @@ export default {
 		return {
 			notsent: false,
 			sent: false,
+			sending: false,
 			verifiedRecapcha: false,
+			recapchaCode: "",
 			formDataFields: {
 				name: null,
 				email: null,
@@ -192,6 +195,9 @@ export default {
 		...mapActions(["storeFormData", "getSettingsApiData"]),
 		onSubmitForm(e) {
 			e.preventDefault();
+
+			this.sending = true;
+
 			if (this.verifiedRecapcha == true) {
 				let formDataFieldsArr = Object.values(this.formDataFields);
 				for (let index = 0; index < formDataFieldsArr.length; index++) {
@@ -201,24 +207,32 @@ export default {
 					this.notsent = true;
 					this.sent = false;
 				} else {
-					this.storeFormData(this.formDataFields).then(() => {
-						if (this.$store.state.formSent == true) {
-							e.target.reset();
-							this.notsent = false;
-							this.sent = true;
-							this.formDataFields.name = null;
-							this.formDataFields.email = null;
-							this.formDataFields.phone = null;
-							this.formDataFields.message = null;
-						} else {
-							console.log("fields is empty");
-						}
-					});
+					this.storeFormData(this.formDataFields)
+						.then(() => {
+							if (this.$store.state.formSent == true) {
+								e.target.reset();
+								this.notsent = false;
+								this.sent = true;
+								this.sending = false;
+								this.onCaptchaExpired();
+								this.formDataFields.name = null;
+								this.formDataFields.email = null;
+								this.formDataFields.phone = null;
+								this.formDataFields.message = null;
+							} else {
+								console.log("fields is empty");
+							}
+						})
+						.catch((err) => {
+							// this.loadingPage = false;
+                            console.log(err);
+						});
 				}
 			} else {
 				if (field == null) {
 					this.notsent = true;
 					this.sent = false;
+					this.sending = false;
 				} else {
 					this.notsent = false;
 					this.sent = true;
@@ -228,6 +242,10 @@ export default {
 		onVerify: function (response) {
 			console.log("Verify: " + response);
 			this.verifiedRecapcha = true;
+			this.recapchaCode = response;
+		},
+		onCaptchaExpired: function () {
+			this.$refs.recaptcha.reset();
 		},
 	},
 	computed: mapGetters(["allSettingsApiData"]),

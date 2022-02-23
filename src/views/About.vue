@@ -18,7 +18,12 @@
 	</nav>
 	<!--breadcrumb-->
 
-	<section id="medi-app-about" class="medi-app-about-section medi-app-about-page" v-if="allAboutApiData.data">
+	<div v-if="this.$store.state.loading" class="inside-loading">
+		<i class="fas fa-cog fa-spin"></i>
+        <span>جاري التحميل..</span>
+	</div>
+
+	<section id="medi-app-about" class="medi-app-about-section medi-app-about-page" v-if="allAboutApiData.data && !this.$store.state.loading">
 		<div class="container">
 			<div class="medi-app-about-content">
 				<div class="medi-app-about-img-wrap">

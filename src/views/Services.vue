@@ -18,8 +18,13 @@
 	</nav>
 	<!--breadcrumb-->
 
+    <div v-if="this.$store.state.loading" class="inside-loading">
+		<i class="fas fa-cog fa-spin"></i>
+        <span>جاري التحميل..</span>
+	</div>
+
 	<!-- Start of service section -->
-	<section id="medi-app-service" class="medi-app-service-section">
+	<section id="medi-app-service" class="medi-app-service-section" v-if="!this.$store.state.loading">
 		<div class="container">
 			<div id="app-medi-service-slider" class="medi-app-service-content">
 				<div class="row">

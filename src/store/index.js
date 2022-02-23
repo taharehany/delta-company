@@ -5,6 +5,8 @@ axios.defaults.baseURL = 'https://demoyoursite.net/taha/back/right-treatment-bac
 
 export default createStore({
     state: {
+        loading:true,
+        loadingError:false,
         homeApiData: [],
         formSent: null,
         ratingFormSent: null,
@@ -37,12 +39,14 @@ export default createStore({
         //     commit("setServicesApiData", response.data);
         // },
         async getHomeApiData({ commit }) {
+            this.state.loading = true;  
             axios
                 .get("/home", {
                     headers: {},
                 })
                 .then((getData) => {
                     let homeApiData = getData.data;
+                    this.state.loading = false; 
                     commit("setHomeApiData", homeApiData);
                 })
                 .catch((error) => {
@@ -50,16 +54,20 @@ export default createStore({
                 });
         },
         async getServicesApiData({ commit }) {
+            this.state.loading = true;
+            this.state.loadingError = false;
             axios
                 .get("services", {
                     headers: {},
                 })
                 .then((getData) => {
                     let servicesApiData = getData.data;
+                    this.state.loading = false;
                     commit("setServicesApiData", servicesApiData);
                 })
                 .catch((error) => {
                     console.log(error);
+                    this.state.loadingError = true;
                 });
         },
         async getSliderApiData({ commit }) {
@@ -76,12 +84,14 @@ export default createStore({
                 });
         },
         async getAboutApiData({ commit }) {
+            this.state.loading = true;
             axios
                 .get("about", {
                     headers: {},
                 })
                 .then((getData) => {
                     let aboutApiData = getData.data;
+                    this.state.loading = false;
                     commit("setAboutApiData", aboutApiData);
                 })
                 .catch((error) => {
@@ -102,13 +112,16 @@ export default createStore({
                 });
         },
         async getTeamApiData({ commit }) {
+            this.state.loading = true;
             axios
                 .get("team", {
                     headers: {},
                 })
                 .then((getData) => {
                     let teamApiData = getData.data;
+                    this.state.loading = false;
                     commit("setTeamApiData", teamApiData);
+                    return true;
                 })
                 .catch((error) => {
                     console.log(error);

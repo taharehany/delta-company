@@ -7,6 +7,30 @@
     overflow: hidden;
 }
 
+.inside-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    height: 30vh;
+
+    img {
+        max-width: 50px;
+    }
+
+    i {
+        font-size: 70px;
+        color: #7e1830;
+        margin-bottom: 20px;
+    }
+
+    span {
+        font-weight: 600;
+        color: #7e1830;
+    }
+}
+
 //breadcrumb
 .main-breadcrumb {
     padding: 7rem 0;
@@ -615,6 +639,20 @@
                     }
                 }
             }
+        }
+    }
+
+    button {
+        &:focus {
+            color: #fff !important;
+        }
+    }
+}
+
+.medi-app-cta-section {
+    button {
+        &:focus {
+            color: #fff !important;
         }
     }
 }

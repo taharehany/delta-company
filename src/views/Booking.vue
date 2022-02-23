@@ -71,12 +71,13 @@
 						<button type="submit">
 							إرسال
 							<span>
-								<i class="fas fa-arrow-left"></i>
+								<i v-if="!sending" class="fas fa-arrow-left"></i>
+								<i v-if="sending" class="fas fa-sync fa-spin"></i>
 							</span>
 						</button>
 					</form>
 				</div>
-                <div class="alert alert-success mt-2" role="alert" v-if="sent">
+				<div class="alert alert-success mt-2" role="alert" v-if="sent">
 					<h4 class="alert-heading">تم الإرسال بنجاح</h4>
 					<hr />
 					<p>تم استلام رسالتك بنجاح وسيتم التواصل معك في أقرب وقت، شكرا لك</p>
@@ -105,6 +106,7 @@ export default {
 		return {
 			notsent: false,
 			sent: false,
+			sending: false,
 			verifiedRecapcha: false,
 			bookingDataFields: {
 				name: null,
@@ -119,6 +121,9 @@ export default {
 		...mapActions(["storeBookingFormData", "getSettingsApiData"]),
 		onSubmitForm(e) {
 			e.preventDefault();
+
+			this.sending = true;
+
 			if (this.verifiedRecapcha == true) {
 				let bookingDataFieldsArr = Object.values(
 					this.bookingDataFields
@@ -140,6 +145,7 @@ export default {
 								e.target.reset();
 								this.notsent = false;
 								this.sent = true;
+								this.sending = false;
 								this.bookingDataFields.name = null;
 								this.bookingDataFields.email = null;
 								this.bookingDataFields.phone = null;
@@ -155,6 +161,7 @@ export default {
 				if (field == null) {
 					this.notsent = true;
 					this.sent = false;
+					this.sending = false;
 				} else {
 					this.notsent = false;
 					this.sent = true;

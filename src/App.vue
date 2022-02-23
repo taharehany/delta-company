@@ -4,7 +4,7 @@
 			<meta name="description" :content="allSettingsApiData.meta_description" />
 			<meta name="keywords" :content="allSettingsApiData.meta_keywords" />
 		</teleport>
-		<!-- <div id="app-medi-preloader"></div> -->
+		<div id="app-medi-preloader"></div>
 		<div class="up">
 			<a href="#" class="app-medi-scrollup text-center">
 				<i class="fas fa-arrow-up"></i>
@@ -20,7 +20,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
 	mounted() {
 		$("#app-medi-preloader").fadeOut("slow", function () {
-			$(this).remove();
+			// $(this).remove();
 		});
 	},
 	methods: {

@@ -102,12 +102,13 @@
 						<button type="submit">
 							إرسال
 							<span>
-								<i class="fas fa-arrow-left"></i>
+								<i v-if="!sending" class="fas fa-arrow-left"></i>
+								<i v-if="sending" class="fas fa-sync fa-spin"></i>
 							</span>
 						</button>
 					</form>
 				</div>
-                <div class="alert alert-success mt-2" role="alert" v-if="sent">
+				<div class="alert alert-success mt-2" role="alert" v-if="sent">
 					<h4 class="alert-heading">تم الإرسال بنجاح</h4>
 					<hr />
 					<p>تم استلام رسالتك بنجاح وسيتم التواصل معك في أقرب وقت، شكرا لك</p>
@@ -136,6 +137,7 @@ export default {
 		return {
 			notsent: false,
 			sent: false,
+            sending: false,
 			verifiedRecapcha: false,
 			ratingDataFields: {
 				name: null,
@@ -151,6 +153,9 @@ export default {
 		...mapActions(["storeRatingFormData", "getSettingsApiData"]),
 		onSubmitForm(e) {
 			e.preventDefault();
+
+			this.sending = true;
+
 			// console.log(this.ratingDataFields);
 			if (this.verifiedRecapcha == true) {
 				let ratingDataFieldsArr = Object.values(this.ratingDataFields);
@@ -170,6 +175,7 @@ export default {
 							e.target.reset();
 							this.notsent = false;
 							this.sent = true;
+                            this.sending = false;
 							this.ratingDataFields.name = null;
 							this.ratingDataFields.rate = null;
 							this.ratingDataFields.email = null;
@@ -185,6 +191,7 @@ export default {
 				if (field == null) {
 					this.notsent = true;
 					this.sent = false;
+                    this.sending = false;
 				} else {
 					this.notsent = false;
 					this.sent = true;

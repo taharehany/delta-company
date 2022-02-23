@@ -1,4 +1,5 @@
 <template>
+    <div v-if="this.$store.state.loading" id="app-medi-preloader"></div>
 	<Header />
 	<Slider :sliderData="allHomeApiData.data" :callToActionData="allHomeApiData.data" />
 	<About :aboutData="allHomeApiData.data" />

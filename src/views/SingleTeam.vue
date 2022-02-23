@@ -17,8 +17,13 @@
 	</nav>
 	<!--breadcrumb-->
 
+	<div v-if="loading" class="inside-loading">
+		<i class="fas fa-cog fa-spin"></i>
+		<span>جاري التحميل..</span>
+	</div>
+
 	<!-- Start of Team section -->
-	<section id="app-medi-team" class="app-medi-team-section app-medi-team-single">
+	<section id="app-medi-team" class="app-medi-team-section app-medi-team-single" v-if="!loading">
 		<div class="container">
 			<div class="medi-app-team-content">
 				<div class="app-medi-team-innerbox">
@@ -64,7 +69,8 @@ export default {
 	},
 	data() {
 		return {
-			team: [],
+			team: null,
+            loading: true,
 		};
 	},
 	methods: {
@@ -75,6 +81,7 @@ export default {
 			.get(`team/${this.$route.params.id}`)
 			.then((result) => {
 				this.team = result.data.data;
+                this.loading = false;
 			})
 			.catch((error) => {
 				console.log(error);

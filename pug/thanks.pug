@@ -1,0 +1,64 @@
+extend index
+
+block website_title
+    title #{website_title} | thanks page
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/breadcrumb.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 thanks page
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active" aria-current="page") thanks page
+    //breadcrumb
+
+    //thanks page
+    section(class="thanks")
+        div(class="container")
+            div(class="content")
+                div(class="text")
+                    p Thank you, your request has been received.
+                    ul 
+                        li order number:
+                            strong 525445
+                        li date:
+                            strong 5/8/2021
+                        li total:
+                            strong $550
+                        li billing way:
+                            strong on delivery
+                //- div(class="title")
+                    h3 checkout details
+                div(class="order-details")
+                    table(class="table")
+                        thead
+                            tr
+                                th product
+                                th total
+                        tbody
+                            tr
+                                td 
+                                    a(href="single-product.html") ex product name 
+                                    span(class="count") × 50
+                                td $50
+                            tr
+                                td 
+                                    a(href="single-product.html") ex product name 
+                                    span(class="count") × 50
+                                td $50
+                            tr
+                                td 
+                                    a(href="single-product.html") ex product name 
+                                    span(class="count") × 50
+                                td $50
+                            tr
+                                td Billing way
+                                td(class="all-total") On delivery
+                            tr
+                                td Total
+                                td(class="all-total") $150
+    //thanks page

@@ -1,7 +1,7 @@
 /** rtl styles **/
 html[dir=rtl] {
     body {
-        font-family: 'El Messiri', sans-serif;
+        font-family: 'Noto Kufi Arabic', sans-serif;
     }
 
     .breadcrumb-item+.breadcrumb-item::before {
@@ -82,12 +82,50 @@ html[dir=rtl] {
         }
     }
 
-    section.why-us {
-        .content {
-            .why-box {
-                direction: rtl;
+    section.about .content {
+        .text-box {
+            .corner-bottom {
+                &:before {
+                    right: 0;
+                    left: auto;
+                }
+
+                &:after {
+                    left: 0;
+                    right: auto;
+                }
+            }
+
+            .corner-top {
+                &:before {
+                    right: 0;
+                    left: auto;
+                }
+
+                &:after {
+                    left: 0;
+                    right: auto;
+                }
             }
         }
+    }
+
+    section.about-in-page {
+        .content {
+            .about-box {
+                &:nth-child(2n) {
+                    direction: ltr;
+
+                    .about-text {
+                        direction: rtl;
+                    }
+                }
+            }
+        }
+    }
+
+    .bi-arrow-right {
+        transform: rotate(180deg);
     }
 
     section.blogs .content .blogs-box .details,
@@ -100,41 +138,8 @@ html[dir=rtl] {
         left: auto;
     }
 
-    section.about-in-page .content .box:nth-child(even) {
-        .text {
-            direction: rtl;
-        }
-    }
-
-    section.services-in-page .content .nav .nav-link.active::before {
-        left: -30px;
-        right: auto;
-        border-width: 30px 30px 30px 0;
-        border-color: transparent $main_color transparent transparent;
-    }
-
     .form-select {
         background-position: left .75rem center;
-    }
-
-    section.services .content .service-box .details,
-    section.services .single-blog .content .blog-box .details,
-    .single-blog section.services .content .blog-box .details,
-    section.single-service .content .service-box .details,
-    section.single-service .single-blog .content .blog-box .details,
-    .single-blog section.single-service .content .blog-box .details,
-    section.single-blog .content .service-box .details,
-    section.single-blog .content .blog-box .details,
-    section.services-in-page .content .service-box .details,
-    section.services-in-page .single-blog .content .blog-box .details,
-    .single-blog section.services-in-page .content .blog-box .details {
-        right: 0;
-        left: auto;
-
-        &::before {
-            right: -2px;
-            left: auto;
-        }
     }
 
     .form-control.is-invalid,
@@ -195,40 +200,10 @@ html[dir=rtl] {
         right: 0;
     }
 
-    .side-widget .other-services .title h4::after,
-    .side-widget .single-blog .content .other-blogs .title h4::after,
-    .single-blog .content .side-widget .other-blogs .title h4::after,
-    .side-widget .side-contact .title h4::after {
-        right: 0;
-        left: auto;
-    }
-
-    .side-widget .other-services ul li a::before,
-    .side-widget .single-blog .content .other-blogs ul li a::before,
-    .single-blog .content .side-widget .other-blogs ul li a::before {
-        right: 0;
-        left: auto;
-        @include transform(rotate(180deg) translateY(50%))
-    }
-
     .bi.bi-chevron-double-right,
     .bi.bi-arrow-right {
         &::before {
             @include transform(rotate(180deg))
-        }
-    }
-
-    section.about-in-page {
-        .content {
-            .row {
-                &:nth-child(even) {
-                    direction: ltr;
-
-                    .text {
-                        direction: rtl;
-                    }
-                }
-            }
         }
     }
 

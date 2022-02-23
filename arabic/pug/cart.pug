@@ -1,0 +1,108 @@
+extend index
+
+block website_title
+    title #{website_title} | cart
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/breadcrumb.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 cart
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active" aria-current="page") cart
+    //breadcrumb
+
+    //cart
+    section(class="cart")
+        div(class="container")
+            div(class="cart-content")
+                div(class="row")
+                    div(class="col-lg-9")
+                        div(class="table-responsive table-area")
+                            table(class="table")
+                                thead
+                                    tr
+                                        th product
+                                        th Price
+                                        th Quantity
+                                        th Subtotal
+                                        th 
+                                tbody
+                                    tr
+                                        td
+                                            a(class="product-name" href="single-product.html")
+                                                div(class="image")
+                                                    img(class="img-fluid" alt="Natus" src="images/products/01.jpg")
+                                                p Voluptates quis mollitia corrupti officia enim eum molestiae error numquam consequatur nemo laborum
+                                        td $331.00
+                                        td 
+                                            div(class="quantity")
+                                                i(class="decrease-val bi bi-dash-lg")
+                                                input(type="number", min="1", max="500", value="1", class="val", disabled)
+                                                i(class="increase-val bi bi-plus-lg")
+                                        td $1,986.00
+                                        td
+                                            button(class="btn remove removeFromProfile" type="submit")
+                                                | ×
+                                    tr
+                                        td
+                                            a(class="product-name" href="single-product.html")
+                                                div(class="image")
+                                                    img(class="img-fluid" alt="Natus" src="images/products/01.jpg")
+                                                p Voluptates quis mollitia corrupti officia enim eum molestiae error numquam consequatur nemo laborum
+                                        td $331.00
+                                        td 
+                                            div(class="quantity")
+                                                i(class="decrease-val bi bi-dash-lg")
+                                                input(type="number", min="1", max="500", value="1", class="val", disabled)
+                                                i(class="increase-val bi bi-plus-lg")
+                                        td $1,986.00
+                                        td
+                                            button(class="btn remove removeFromProfile" type="submit")
+                                                | ×
+                                    tr
+                                        td
+                                            a(class="product-name" href="single-product.html")
+                                                div(class="image")
+                                                    img(class="img-fluid" alt="Natus" src="images/products/01.jpg")
+                                                p Voluptates quis mollitia corrupti officia enim eum molestiae error numquam consequatur nemo laborum
+                                        td $331.00
+                                        td 
+                                            div(class="quantity")
+                                                i(class="decrease-val bi bi-dash-lg")
+                                                input(type="number", min="1", max="500", value="1", class="val", disabled)
+                                                i(class="increase-val bi bi-plus-lg")
+                                        td $1,986.00
+                                        td
+                                            button(class="btn remove removeFromProfile" type="submit")
+                                                | ×
+                                    tr
+                                        td
+                                            a(class="product-name" href="single-product.html")
+                                                div(class="image")
+                                                    img(class="img-fluid" alt="Natus" src="images/products/01.jpg")
+                                                p Voluptates quis mollitia corrupti officia enim eum molestiae error numquam consequatur nemo laborum
+                                        td $331.00
+                                        td 
+                                            div(class="quantity")
+                                                i(class="decrease-val bi bi-dash-lg")
+                                                input(type="number", min="1", max="500", value="1", class="val", disabled)
+                                                i(class="increase-val bi bi-plus-lg")
+                                        td $1,986.00
+                                        td
+                                            button(class="btn remove removeFromProfile" type="submit")
+                                                | ×
+                    div(class="col-lg-3")
+                        div(class="cart-total")
+                            table(class="table")
+                                tbody
+                                    tr
+                                        td(class="total-title") total price
+                                        td(class="total") $5000
+                            div(class="btns")
+                                a(class="btn ", href="checkout.html") Proceed to checkout
+    //cart

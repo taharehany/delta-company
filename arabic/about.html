@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore nobis illum. Harum a voluptates in eius tenetur quidem Lorem ipsum dolor sit amet consectetur adipisicing elit.">
@@ -14,13 +14,14 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
 </script>
 <![endif]-->
-    <title>Family First | single services</title>
+    <title>الهوية العربية | about</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;700&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <div class="main-wrapper">
@@ -30,40 +31,33 @@
       <header> 
         <!--navbar desktop-->
         <nav class="navbar main-nav navbar-expand-lg">
-          <div class="container-fluid"><a class="navbar-brand" href="index.html"> <img class="img-fluid" data-src="images/logo.png" alt=""></a>
+          <div class="container-fluid"><a class="navbar-brand" href="index.html"> <img class="img-fluid" data-src="../images/logo.png" alt=""></a>
             <div class="group">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hamburger-menu"><span></span><span></span><span></span></div>
               </button>
               <div class="lang">
-                <div class="dropdown">
-                  <button class="dropdown-toggle" id="langDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div class="icon"><img data-src="images/icons/en.png" alt=""><span>eng</span></div>
-                  </button>
-                  <ul class="lang-content dropdown-menu" aria-labelledby="langDropdown">
-                    <li> <a href="arabic/index.html"> <img data-src="images/icons/ar.png" alt="">ar</a></li>
-                  </ul>
-                </div>
+                <div class="dropdown"><a href="../index.html">
+                    <div class="icon"><span>English</span></div></a></div>
               </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active"><a class="nav-link" aria-current="page" href="index.html">home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">about us</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="products.html">our products</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">contact us</a></li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">account</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="profile.html">profile</a></li>
                     <li><a class="dropdown-item" href="wishlist.html">wishlist</a></li>
-                    <li><a class="dropdown-item" href=""><i class="bi bi-box-arrow-left"></i>logout</a></li>
+                    <li><a class="dropdown-item" href="account.html">login or register</a></li>
+                    <li><a class="dropdown-item" href="">logout</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">pages</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="about.html">about us</a></li>
-                    <li><a class="dropdown-item" href="gallery.html">gallery</a></li>
                     <li><a class="dropdown-item" href="products.html">our products</a></li>
                     <li><a class="dropdown-item" href="contact.html">contact us</a></li>
                   </ul>
@@ -90,7 +84,6 @@
                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">pages</a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="about.html">about</a></li>
-                      <li><a class="dropdown-item" href="gallery.html">gallery</a></li>
                       <li><a class="dropdown-item" href="products.html">our products</a></li>
                       <li><a class="dropdown-item" href="contact.html">contact us</a></li>
                     </ul>
@@ -103,86 +96,68 @@
       </header>
       <!--header-->
       <!--breadcrumb-->
-      <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url('images/bgs/broad.jpg')">
+      <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url('../images/bgs/breadcrumb.jpg')">
         <div class="container">
           <div class="breadcrumb-title">
-            <h2>single services</h2>
+            <h2>about</h2>
           </div>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">single services</li>
+              <li class="breadcrumb-item active" aria-current="page">about</li>
             </ol>
           </nav>
         </div>
       </nav>
       <!--breadcrumb-->
-      <!--single services-->
-      <section class="single-service">
+      <!--about page-->
+      <section class="about-in-page">
         <div class="container">
           <div class="content">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="service-box">
-                  <div class="image"><img class="img-fluid" data-src="images/services/01.jpg" alt=""></div>
-                  <div class="details">
-                    <div class="title">
-                      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+            <div class="about-box">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="about-image wow fadeInLeft"><img class="img-fluid" alt="" data-src="../images/about/01.jpg"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="about-text">
+                    <div class="main-title">
+                      <h2>The Culture Ministry’s Three Major Aspirations</h2>
+                      <div class="decore-title"><img data-src="../images/favicon.png" alt=""></div>
                     </div>
-                    <div class="text">
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!</p>
-                    </div>
+                    <p>‘Culture as a life style, Culture for economic growth, and Culture for establishing the Kingdom’s international position’ ‘We shall take a collaborative approach at the Ministry to Saudi creative people, the cultural capital, and we shall go further to create a creativity-supporting and innovation-fostering environment. We shall open new windows for Saudis’ creative energy. Saudi Culture shall remain a tall mighty palm tree in our world’, Ministry of Culture states. The Ministry of Culture goes further to add, ‘We shall export to the nations our culture which takes pride in our history, legacy and traditions.’ ‘We shall widely keep the Kingdom’s doors widely open for other cultures in a process characterized by human cultural exchange and convergence.’ the Ministry adds. ‘Of our top priorities is to unearth and develop the Saudi talents. We shall do our utmost to unlock and exploit all potentials to empower educated and creative people. The Ministry shall remain a staunch ally to be a source of unwavering support.’</p>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="side-widget">
-                  <div class="other-services">
-                    <div class="title">
-                      <h4>All Services</h4>
+            </div>
+            <div class="about-box">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="about-image wow fadeInLeft"><img class="img-fluid" alt="" data-src="../images/about/02.jpg"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="about-text">
+                    <div class="main-title">
+                      <h2>about us</h2>
+                      <div class="decore-title"><img data-src="../images/favicon.png" alt=""></div>
                     </div>
-                    <ul> 
-                      <li> <a href="#!">this is title service 01</a></li>
-                      <li> <a href="#!">this is title service 02</a></li>
-                      <li> <a href="#!">this is title service 03</a></li>
-                      <li> <a href="#!">this is title service 04</a></li>
-                    </ul>
+                    <p>We are a Saudi company that is bent on laying a foundation for the Kingdom’s legacy and documenting it through tracing the legacy roots, decoding it, and grasping its meaning to finally display it in a creative mold and multi-products which embody the splendor, sublimity and depth of Saudi Culture.</p>
                   </div>
-                  <div class="side-contact">
-                    <div class="title">
-                      <h4>Looking for Advice?</h4>
+                </div>
+              </div>
+            </div>
+            <div class="about-box">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="about-image wow fadeInLeft"><img class="img-fluid" alt="" data-src="../images/about/03.jpg"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="about-text">
+                    <div class="main-title">
+                      <h2>our team</h2>
+                      <div class="decore-title"><img data-src="../images/favicon.png" alt=""></div>
                     </div>
-                    <form class="needs-validation" action="" method="" novalidate>
-                      <div class="form-group position-relative">
-                        <label for="">your name *</label>
-                        <input class="form-control" type="text" placeholder="Name" required>
-                      </div>
-                      <div class="form-group position-relative">
-                        <label for="">your email *</label>
-                        <input class="form-control" type="email" placeholder="Email" required>
-                      </div>
-                      <div class="form-group position-relative">
-                        <label for="">your number *</label>
-                        <input class="form-control" type="number" placeholder="Phone" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="">select thing *</label>
-                        <select class="form-select"> 
-                          <option disabled selected>Select type of care</option>
-                          <option value="1">option 01</option>
-                          <option value="2">option 02</option>
-                        </select>
-                      </div>
-                      <div class="btns">
-                        <button class="btn" type="submit">send now</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="help">
-                    <div class="title">
-                      <h4>have a question</h4>
-                    </div>
-                    <p>labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p><a class="btn" href="contact.html">Contact Us</a>
+                    <p>We are creative in the field of culture, and hunters for the treasures of sublimity hidden in the true Saudi Arab identity. Our consultative team includes fine artists, historians, designers and others who work like one team whose aim is to work out our identity in a manner that reflects our true legacy in order to present it a way that we are proud of. Fine artist Mohammed Fare’, a pioneer of a unique school of contemporary art, leads the creative team. A pioneer of the modern school of art, he is renowned for employing such Saudi arts as Al-Salmaniya identity, Najdi inscription and Assiri Qatt to mold them in an antique-modern crucible. With her wealth of long experience in designs, Dr Sameera Al-Sheikh takes part with the consultative team. A famous designer across the Arab world, She has presented the Saudi identity globally through fashion, making her designs bibelots everybody race to get at least one. Passionately in love with legacy, she could dive for and come up with the pearls of the Saudi legacy to present them as a credible witness to our ancient civilization.</p>
                   </div>
                 </div>
               </div>
@@ -190,7 +165,7 @@
           </div>
         </div>
       </section>
-      <!--single services   -->
+      <!--about page-->
       <!--to top-->
       <div id="toTop">
         <button> <i class="bi bi-chevron-double-up"></i></button>
@@ -203,7 +178,7 @@
             <div class="row">
               <div class="col-lg-4 col-md-6">
                 <div class="footer-box">
-                  <div class="text"><a class="footer-logo" href="index.html"> <img class="img-fluid mb-4" data-src="images/logo-white.png" alt=""></a>
+                  <div class="text"><a class="footer-logo" href="index.html"> <img class="img-fluid mb-4" data-src="../images/logo-white.png" alt=""></a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium!</p>
                   </div>
                   <div class="social-links">
@@ -218,7 +193,6 @@
                   <ul class="map-links">
                     <li><a href="#!">home</a></li>
                     <li><a href="about.html">about us</a></li>
-                    <li><a href="gallery.html">gallery</a></li>
                     <li><a href="products.html">our products</a></li>
                     <li><a href="contact.html">contact us</a></li>
                   </ul>
@@ -228,8 +202,8 @@
                 <div class="footer-box">
                   <h3>my account</h3>
                   <ul class="map-links">
-                    <li><a href="#!">profile</a></li>
                     <li><a href="login.html">login</a></li>
+                    <li><a href="profile.html">profile</a></li>
                     <li><a href="wishlist.html">wishlist</a></li>
                   </ul>
                 </div>
@@ -239,9 +213,9 @@
                   <h3>contact</h3>
                   <div class="contact">
                     <p> <i class="bi bi-pin-map"></i>jeddah , saudi arabia</p>
-                    <p> <i class="bi bi-telephone"></i><span>phone: </span><a href="tel: +954 000 000 78">+954 000 000 78</a></p>
-                    <p> <i class="bi bi-newspaper"></i><span>fax: </span>(+9) 000-000-3229</p>
-                    <p> <i class="bi bi-envelope"></i><span>email: </span><a href="mailto:inf@inarabia.co">inf@inarabia.co</a></p>
+                    <p> <i class="bi bi-telephone"></i><a href="tel: +954 000 000 78">phone: +954 000 000 78</a></p>
+                    <p> <i class="bi bi-newspaper"></i>fax: (+9) 000-000-3229</p>
+                    <p> <i class="bi bi-envelope"></i><a href="mailto:inf@inarabia.co">email: inf@inarabia.co</a></p>
                   </div>
                 </div>
               </div>
@@ -257,15 +231,13 @@
       <!--footer part-->
     </div>
     <!--scripts-->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.lazy.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.ratyli.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery.lazy.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/jquery.ratyli.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

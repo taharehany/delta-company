@@ -9,7 +9,7 @@ $(document).ready(function () {
     $(this).removeClass("change")
   });
 
-  // fixed header
+  //fixed header
   $(window).scroll(function () {
     let scroll = $(window).scrollTop();
 
@@ -30,18 +30,15 @@ $(document).ready(function () {
     dots: true,
     rtl: true,
     smartSpeed: 1000,
-    // animateOut: "slideOutUp",
-    // animateIn: "slideInDown",
+    //animateOut: "slideOutUp",
+    //animateIn: "slideInDown",
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
       0: {
         items: 1,
-        nav: false,
-        dots: true,
       },
       768: {
         items: 1,
-        nav: true,
       },
 
       992: {
@@ -61,13 +58,11 @@ $(document).ready(function () {
     rtl: true,
     smartSpeed: 2000,
     margin: 20,
-    lazyLoad : true,
+    lazyLoad: true,
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
     responsive: {
       0: {
         items: 1,
-        nav: false,
-        dots: true,
       },
       768: {
         items: 2,
@@ -156,10 +151,10 @@ $(document).ready(function () {
 
   //validate form
   (function () {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    //Fetch all the forms we want to apply custom Bootstrap validation styles to
     let forms = document.querySelectorAll(".needs-validation")
 
-    // Loop over them and prevent submission
+    //Loop over them and prevent submission
     Array.prototype.slice.call(forms)
       .forEach(function (form) {
         form.addEventListener("submit", function (event) {
@@ -174,7 +169,17 @@ $(document).ready(function () {
       })
   })();
 
-  //store theme colors in local storage 
+  //lazyload images
+  $("img").Lazy({
+    scrollDirection: "vertical",
+    effect: "fadeIn",
+    visibleOnly: false,
+  });
+
+  //rating products
+  $(".product-rating .ratyli").ratyli();
+
+  //products grid
   if (!localStorage.getItem("products_grid")) {
     localStorage.setItem("products_grid", "col-lg-3");
     $(".all-products .box").addClass(localStorage.getItem("products_grid"));
@@ -194,35 +199,23 @@ $(document).ready(function () {
     window.location.reload();
   });
 
-  //lazyload images
-  $("img").Lazy({
-    scrollDirection: "vertical",
-    effect: "fadeIn",
-    visibleOnly: false,
+  //quantity input increase and decrease
+  $(".decrease-val").click(function () {
+    var input_el = $(this).next('input');
+    var v = input_el.val() - 1;
+    if (v >= input_el.attr('min'))
+      input_el.val(v)
   });
 
-  // rating products
-  $(".product-rating .ratyli").ratyli();
+
+  $(".increase-val").click(function () {
+    var input_el = $(this).prev('input');
+    var v = input_el.val() * 1 + 1;
+    if (v <= input_el.attr('max'))
+      input_el.val(v)
+  });
 });
 
 $(window).on("load", function () {
-  $('.loader').delay(500).fadeOut(500);
-
-  //wow animate
-  wow = new WOW({
-    boxClass: 'wow', // default
-    animateClass: 'animated', // default
-    offset: 0, // default
-    mobile: false, // default
-    live: true // default
-  })
-  wow.init();
-
-  //counter up
-  $(".counter").counterUp({
-    delay: 10,
-    time: 1000,
-    offset: 50,
-    beginAt: 100,
-  });
+  // $('.loader').delay(500).fadeOut(500);
 });

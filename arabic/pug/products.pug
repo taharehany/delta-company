@@ -1,0 +1,108 @@
+extend index
+
+block website_title
+    title #{website_title} | products
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/breadcrumb.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 products
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") products
+    //breadcrumb
+    
+    //all products
+    section(class="all-products")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-12")
+                        div(class="results") 
+                            div(class="icons")
+                                i(class="grid-2 bi bi-grid-fill")
+                                i(class="grid-3 bi bi-grid-3x3-gap-fill")
+                                div(class="text") showing 20 of results 
+                            div(class="filter")
+                                form(action="")
+                                    div(class="form-group")
+                                        select(name="" class="form-select")
+                                            option(value="" selected disabled) categories
+                                            option(value="") deal of the week   
+                                            option(value="") featured products    
+                                            option(value="") new arrivals
+                    div(class="box")
+                        div(class="products-box")
+                            div(class="image")
+                                a(href="single-product.html")
+                                    img(data-src="../images/products/01.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart-fill")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+                    div(class="box")
+                        div(class="products-box")
+                            div(class="image")
+                                a(href="single-product.html")
+                                    img(data-src="../images/products/02.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart-fill")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+                    div(class="box")
+                        div(class="products-box")
+                            div(class="image")
+                                a(href="single-product.html")
+                                    img(data-src="../images/products/03.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart-fill")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+                    div(class="box")
+                        div(class="products-box")
+                            div(class="image")
+                                a(href="single-product.html")
+                                    img(data-src="../images/products/04.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart-fill")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+                    div(class="box")
+                        div(class="products-box")
+                            div(class="image")
+                                a(href="single-product.html")
+                                    img(data-src="../images/products/05.jpg", class="img-fluid" alt="")
+                                div(class="fav")
+                                    a(href="#!" class="btn") 
+                                        i(class="bi bi-heart-fill")
+                                div(class="layer")
+                                    a(href="#!" class="btn") add to cart
+                            div(class="details")
+                                div(class="title")
+                                    h3
+                                        a(href="single-product.html") this is product title
+    //all products

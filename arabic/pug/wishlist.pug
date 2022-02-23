@@ -1,0 +1,76 @@
+extend index
+
+block website_title
+    title #{website_title} | wishlist
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/breadcrumb.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 wishlist
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active" aria-current="page") wishlist
+    //breadcrumb
+
+    //wishlist
+    section(class="wishlist")
+        div(class="container")
+            div(class="wishlist-content")
+                div(class="table-responsive table-area")
+                    table(class="table table-hover")
+                        thead
+                            tr
+                                th product
+                                th category
+                                th adding date
+                                th controle
+                        tbody
+                            tr
+                                td
+                                    a(class="product-name" href="single-product.html")
+                                        div(class="image")
+                                            img(class="img-fluid" alt="Natus" src="images/products/01.jpg")
+                                        p Voluptates quis mollitia corrupti officia enim eum molestiae error numquam consequatur nemo laborum
+                                td scarf
+                                td 12/06/2021
+                                td
+                                    button(class="btn remove removeFromProfile" type="submit")
+                                        | ×
+                            tr
+                                td
+                                    a(class="product-name" href="single-product.html")
+                                        div(class="image")
+                                            img(class="img-fluid" alt="Consequatur" src="images/products/01.jpg")
+                                        p Expedita et vero dolor minima hic earum culpa fugiat asperiores neque placeat eum voluptatum
+                                td scarf
+                                td 12/06/2021
+                                td
+                                    button(class="btn remove removeFromProfile" type="submit")
+                                        | ×
+                            tr
+                                td
+                                    a(class="product-name" href="single-product.html")
+                                        div(class="image")
+                                            img(class="img-fluid" alt="Minima" src="images/products/01.jpg")
+                                        p Irure iure ut excepturi in
+                                td scarf
+                                td 11/30/2021
+                                td
+                                    button(class="btn remove removeFromProfile" type="submit")
+                                        | ×
+                            tr
+                                td
+                                    a(class="product-name" href="single-product.html")
+                                        div(class="image")
+                                            img(class="img-fluid" alt="Itaque" src="images/products/01.jpg")
+                                        p Enim corrupti sit adipisci est aliqua Quis dolorum debitis rerum ratione laudantium ab
+                                td scarf
+                                td 01/04/2022
+                                td
+                                    button(class="btn remove removeFromProfile" type="submit")
+                                            | ×
+    //wishlist

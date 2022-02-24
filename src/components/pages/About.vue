@@ -1,0 +1,52 @@
+<template lang="pug">
+//about page
+section(class="about-in-page")
+    div(class="container")
+        div(class="content")
+            div(class="about-box")
+                div(class="row")
+                    div(class="col-lg-6")
+                        div(class="about-image wow fadeInLeft")
+                            img(class="img-fluid", alt="" src="@/assets/images/about/01.jpg")
+                    div(class="col-lg-6")
+                        div(class="about-text")
+                            div(class="main-title")
+                                h2 The Culture Ministry’s Three Major Aspirations
+                                div(class="decore-title")
+                                    img(src="@/assets/images/favicon.png", alt="")
+                            p ‘Culture as a life style, Culture for economic growth, and Culture for establishing the Kingdom’s international position’ ‘We shall take a collaborative approach at the Ministry to Saudi creative people, the cultural capital, and we shall go further to create a creativity-supporting and innovation-fostering environment. We shall open new windows for Saudis’ creative energy. Saudi Culture shall remain a tall mighty palm tree in our world’, Ministry of Culture states. The Ministry of Culture goes further to add, ‘We shall export to the nations our culture which takes pride in our history, legacy and traditions.’ ‘We shall widely keep the Kingdom’s doors widely open for other cultures in a process characterized by human cultural exchange and convergence.’ the Ministry adds. ‘Of our top priorities is to unearth and develop the Saudi talents. We shall do our utmost to unlock and exploit all potentials to empower educated and creative people. The Ministry shall remain a staunch ally to be a source of unwavering support.’
+            div(class="about-box")
+                div(class="row")
+                    div(class="col-lg-6")
+                        div(class="about-image wow fadeInLeft")
+                            img(class="img-fluid", alt="" src="@/assets/images/about/02.jpg")
+                    div(class="col-lg-6")
+                        div(class="about-text")
+                            div(class="main-title")
+                                h2 about us
+                                div(class="decore-title")
+                                    img(src="@/assets/images/favicon.png", alt="")
+                            p We are a Saudi company that is bent on laying a foundation for the Kingdom’s legacy and documenting it through tracing the legacy roots, decoding it, and grasping its meaning to finally display it in a creative mold and multi-products which embody the splendor, sublimity and depth of Saudi Culture.
+            div(class="about-box")
+                div(class="row")
+                    div(class="col-lg-6")
+                        div(class="about-image wow fadeInLeft")
+                            img(class="img-fluid", alt="" src="@/assets/images/about/03.jpg")
+                    div(class="col-lg-6")
+                        div(class="about-text")
+                            div(class="main-title")
+                                h2 our team
+                                div(class="decore-title")
+                                    img(src="@/assets/images/favicon.png", alt="")
+                            p We are creative in the field of culture, and hunters for the treasures of sublimity hidden in the true Saudi Arab identity. Our consultative team includes fine artists, historians, designers and others who work like one team whose aim is to work out our identity in a manner that reflects our true legacy in order to present it a way that we are proud of. Fine artist Mohammed Fare’, a pioneer of a unique school of contemporary art, leads the creative team. A pioneer of the modern school of art, he is renowned for employing such Saudi arts as Al-Salmaniya identity, Najdi inscription and Assiri Qatt to mold them in an antique-modern crucible. With her wealth of long experience in designs, Dr Sameera Al-Sheikh takes part with the consultative team. A famous designer across the Arab world, She has presented the Saudi identity globally through fashion, making her designs bibelots everybody race to get at least one. Passionately in love with legacy, she could dive for and come up with the pearls of the Saudi legacy to present them as a credible witness to our ancient civilization.
+//about page
+</template>
+
+<script>
+export default {
+	name: "About",
+	components: {
+        
+	},
+};
+</script>

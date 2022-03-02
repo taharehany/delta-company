@@ -1,17 +1,17 @@
 <template lang="pug">
 //clients
-section.clients
-	.container
-		.content
-			carousel.clients-carousel(:items-to-show="5", :autoplay="4000", :settings="settings")
-				slide.item(v-for="slide in 5", :key="slide")
-					img.img-fluid(src="@/assets/images/clients/01.png", alt="")
+section(class="clients" v-if="clientsData")
+	div(class="container")
+		div(class="content")
+			carousel(class="clients-carousel" :items-to-show="5", :autoplay="4000", :settings="settings" dir="ltr")
+				slide(class="item" v-for="client in clientsData", :key="client.id")
+					img(class="img-fluid" :src="client.image", :alt="client.image_alt")
 //clients
 </template>
 
 <script>
 import "vue3-carousel/dist/carousel.css";
-import { Carousel, Navigation, Slide, Pagination } from "vue3-carousel";
+import { Carousel, Slide } from "vue3-carousel";
 
 export default {
 	name: "Clients",
@@ -25,5 +25,8 @@ export default {
 			transition: 500,
 		},
 	}),
+	props: {
+		clientsData: Array,
+	},
 };
 </script>

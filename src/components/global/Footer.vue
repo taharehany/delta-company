@@ -13,63 +13,74 @@ footer
 				div(class="col-lg-4 col-md-6")
 					div(class="footer-box")
 						div(class="text")
-							a(href="index.html" class="footer-logo") 
-								img(data-src="images/logo-white.png", class="img-fluid mb-4" alt="")
-							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium!
+							router-link(to="/" class="footer-logo" exact) 
+								img(:src="footerData.logo_white", class="img-fluid mb-4" alt="")
+							p {{ footerData.footer_description }}
 						div(class="social-links")
-							h4 Follow on Socials
+							h4 {{ $t("follow_on_socials") }}
 							div(class="links")
-								a(href="#", class="bi bi-facebook")
-								a(href="#", class="bi bi-twitter")
-								a(href="#", class="bi bi-instagram")
-								a(href="#", class="bi bi-linkedin")
+								a(:href="footerData.facebook", class="bi bi-facebook")
+								a(:href="footerData.twitter", class="bi bi-twitter")
+								a(:href="footerData.instagram", class="bi bi-instagram")
 				div(class="col-lg-2 col-md-6")
 					div(class="footer-box")
-						h3 useful links
+						h3 {{ $t("useful_links") }}
 						ul(class="map-links")
 							li
-								a(href="#!") home
+								router-link(to="/" exact) {{ $t("home") }}
 							li
-								a(href="about.html") about us
+								router-link(to="/about") {{ $t("about") }}
 							li
-								a(href="products.html") our products
+								router-link(to="/products") {{ $t("our_products") }}
 							li
-								a(href="contact.html") contact us
-				div(class="col-lg-3 col-md-6")
+								router-link(to="/contact") {{ $t("contact_us") }}
+				div(class="col-lg-2 col-md-6")
 					div(class="footer-box")
-						h3 my account
+						h3 {{ $t("my_account") }}
 						ul(class="map-links")
-							li
-								a(href="login.html") login
-							li
-								a(href="profile.html") profile
-							li
-								a(href="wishlist.html") wishlist
-				div(class="col-lg-3")
+							li(v-if="!userData")
+								router-link(to="/account") {{ $t("login_or_register") }}
+							li(v-if="userData")
+								router-link(to="/profile") {{ $t("profile") }}
+							li(v-if="userData")
+								router-link(to="/wishlist") {{ $t("wishlist") }}
+							li(v-if="userData")
+								router-link(to="/" @click="logout") {{ $t("logout") }}
+				div(class="col-lg-4")
 					div(class="footer-box")
-						h3 contact
+						h3 {{ $t("contact") }}
 						div(class="contact")
 							p 
 								i(class="bi bi-pin-map")
-								| jeddah , saudi arabia
+								| {{ footerData.address }}
 							p 
 								i(class="bi bi-telephone")
-								a(href="tel: +954 000 000 78") phone: +954 000 000 78
+								a(:href="'tel:'+footerData.phone") {{ $t("phone") }}: {{ footerData.phone }}
 							p 
 								i(class="bi bi-newspaper")
-								| fax: (+9) 000-000-3229
+								| {{ $t("fax") }}: {{ footerData.fax }}
 							p 
 								i(class="bi bi-envelope")
-								a(href="mailto:inf@inarabia.co") email: inf@inarabia.co
+								a(:href="'mailto:'+footerData.email") {{ $t("email") }}: {{ footerData.email }}
 		div(class="copyright")
 			div(class="copy-text")
-				p all copyright is reseved &copy;
-					a(href="#") DeltaITech
+				p {{ footerData.copyrights }} &copy;
+					router-link(to="/http://marwan.tech/") {{ $t("marwan_tech") }}
 //footer part
 </template>
 
 <script>
 export default {
-    name: "Footer"
-}
+	name: "Footer",
+	props: {
+		footerData: Array,
+		userData: Array,
+	},
+    methods: {
+        logout() {
+			sessionStorage.removeItem("user_data");
+			window.location.reload();
+		},
+    }
+};
 </script>

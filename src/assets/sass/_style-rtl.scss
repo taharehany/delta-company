@@ -207,6 +207,24 @@ html[dir=rtl] {
         }
     }
 
+    .new-arrivals {
+        .carousel__track {
+            direction: rtl;
+        }
+    }
+
+    .carousel__slide {
+        direction: rtl !important;
+    }
+
+    .toast-part {
+        right: 0;
+        left: auto;
+    
+        .toast {
+            
+        }
+    }
     footer {
         .footer-content {
             .footer-box {

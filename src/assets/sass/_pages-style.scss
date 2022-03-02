@@ -56,6 +56,15 @@
 
 //breadcrumb
 
+//spinner
+.spinner-border {
+    width: 1.1rem;
+    height: 1.1rem;
+    border-width: 2px;
+    margin-inline-start: 5px;
+}
+//spinner
+
 //global page style
 .navigation {
     margin-top: 25px;
@@ -813,6 +822,10 @@ section.login-register {
         margin: 1px auto;
     }
 
+    .alert {
+        @include borderRadius(10px)
+    }
+ 
     .login-register-box {
         max-width: 600px;
         margin: auto;
@@ -841,7 +854,7 @@ section.login-register {
             }
 
             .form-group {
-                margin-bottom: 15px;
+                margin-bottom: 20px;
 
                 &.subm {
                     text-align: initial;
@@ -986,6 +999,11 @@ section.profile {
 
             .form-group {
                 margin-bottom: 15px;
+                label {
+                    margin-bottom: 10px;
+                    text-transform: capitalize;
+                    color: #747474;
+                }
 
                 .btn {
                     background-color: $main_color;
@@ -994,15 +1012,16 @@ section.profile {
                     @include borderRadius(15px);
                     border-color: #fff;
                     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                    text-transform: capitalize;
                 }
             }
 
             .form-control {
                 border: none;
                 @include transition(all ease 0.3s);
-                color: #333;
+                color: #000;
                 background-color: #f6f6f6;
-                font-size: 14px;
+                font-size: 16px;
                 padding: 15px;
                 border-bottom: 1px solid transparent;
                 @include borderRadius(5px);
@@ -1498,6 +1517,10 @@ section.contact {
         }
     }
 
+    .invalid-feedback {
+        color: #272e4a;
+    }
+
     .info-area {
         margin-bottom: 50px;
         z-index: 9;
@@ -1572,9 +1595,10 @@ section.contact {
     .form-area {
         margin: auto;
         background-color: rgba(92, 148, 78, 0.7);
-        padding: 50px;
+        padding: 40px;
         margin-bottom: 1px;
         @include borderRadius(10px);
+        max-width: 750px;
 
         .contact-box {
             max-width: 700px;
@@ -1586,12 +1610,13 @@ section.contact {
 
                     .btn {
                         background-color: $dark_color;
-                        padding: 10px 45px;
+                        padding: 10px 25px;
                         display: inline-block;
                         @include borderRadius(10px);
                         border-color: #fff;
                         box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
                         color: #fff;
+                        width: 150px;
 
                         &:hover {
                             background-color: $main_color;
@@ -1630,7 +1655,6 @@ section.contact {
                 color: #ffffff;
                 font-size: 18px;
                 margin-bottom: 0;
-                margin-top: 25px;
             }
         }
     }

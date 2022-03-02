@@ -11,6 +11,26 @@ body {
     }
 }
 
+.invalid-tooltip,
+.invalid-feedback {
+    display: block
+}
+
+.toast-part {
+    z-index: 9;
+    left: 0;
+
+    .toast {
+        width: auto;
+        max-width: 500px;
+        text-transform: capitalize;
+
+        .btn-close {
+            margin: 12px;
+        }
+    }
+}
+
 //global style
 
 //header
@@ -20,6 +40,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 999;
+    box-shadow: 0 4px 20px 0 rgba(115, 115, 115, .14), 0 7px 10px -5px rgba(126, 126, 126, .4);
 
     &.fixed {
         // top: -55px;
@@ -148,11 +169,22 @@ header {
                     padding-inline-end: 0;
                 }
 
+                &.user-tab {
+                    padding: 0 13px;
+                    background-color: $main_color;
+                    .nav-link {
+                        color: #fff;
+                    }
+                    .username {
+                        text-transform: capitalize;
+                    }
+                }
+
                 .nav-link {
                     color: #223645;
                     padding: 0;
-                    font-size: 15px;
-                    text-transform: capitalize;
+                    font-size: 14px;
+                    text-transform: uppercase;
                     font-weight: 600;
                     position: relative;
 
@@ -266,6 +298,8 @@ header {
             }
 
             .icon {
+                cursor: pointer;
+
                 img {
                     @extend %fitimage;
                     width: 25px;
@@ -909,6 +943,7 @@ section.clients {
                 height: 100px;
             }
         }
+
         .carousel__slide {
             padding: 10px;
         }
@@ -1174,7 +1209,7 @@ section.new-arrivals {
                         color: #222;
                         font-weight: 600;
                         @extend %max_lines;
-                        -webkit-line-clamp: 1;
+                        -webkit-line-clamp: 2;
                         min-height: 20px;
 
                         &:hover {
@@ -1347,7 +1382,6 @@ section.featured-products {
         .products-content {
             .products-box {
                 @extend .arrivals-box;
-
                 margin-bottom: 25px;
             }
         }
@@ -1728,7 +1762,7 @@ footer {
                 a {
                     color: #fff;
                     display: inline-block;
-                    direction: ltr;
+                    // direction: ltr;
                 }
             }
         }

@@ -10,7 +10,7 @@ section(class="subscribe" v-if="ctaData")
                             h3(class="heading") {{ ctaData.title }}
                             p(class="sub-title") {{ ctaData.description }}
                         div(class="icon")
-                            a(:href="'tel:'+settingsData.phone")
+                            a(:href="'tel:'+settingsData.phone" aria-label="telephone icon")
                                 i(class="bi bi-telephone-outbound") 
 //subscribe
 </template>

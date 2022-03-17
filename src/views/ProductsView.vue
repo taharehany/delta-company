@@ -1,37 +1,39 @@
 <template lang="pug">
-//breadcrumb
-nav(aria-label="breadcrumb" class="main-breadcrumb" v-if="productsData.settings" :style="{backgroundImage: `url(${productsData.settings.breadcrumb_bg})`}")
-    div(class="container") 
-        div(class="breadcrumb-title")
-            h2 {{ $t("products") }}
-        nav(aria-label="breadcrumb")
-            ol(class="breadcrumb")
-                li(class="breadcrumb-item")
-                    router-link(to="/" exact) {{ $t("home") }}
-                li(class="breadcrumb-item active", aria-current="page") {{ $t("products") }}
-//breadcrumb
-Products(:productsApi="productsData.products")
+//loading data
+LoadingData(v-if="this.$store.state.loading")
+//loading data
+
+Products(:productsData="productsData" v-if="!this.$store.state.loading")
 </template>
 
 <script>
 import Products from "@/components/pages/Products.vue";
+import LoadingData from "@/components/global/LoadingData.vue";
 import { mapState } from "vuex";
 
 export default {
-	name: "AboutView",
+	name: "ProductsView",
 	components: {
 		Products,
+        LoadingData,
 	},
-    data() {
-        return{
-            productsApi: [],
-        }
-    },
 	computed: {
 		...mapState(["productsData"]),
 	},
 	created() {
 		this.$store.dispatch("getProductsData");
+	},
+    watch: {
+		$route: {
+			immediate: true,
+			handler(to, from) {
+                if (this.$i18n.locale == "en") {
+                    document.title = to.meta.title || "In Arabia | Products";
+                } else {
+                    document.title = to.meta.title || "الهوية العربية | المنتجات";
+                }
+			},
+		},
 	},
 };
 </script>

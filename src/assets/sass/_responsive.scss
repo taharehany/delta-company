@@ -3,6 +3,11 @@
 @media screen and (max-width: 1199px) {
     header {
         .navbar {
+            .navbar-brand {
+                img {
+                    max-width: 185px;
+                }
+            }
             .navbar-nav {
                 .nav-item {
                     padding: 0 10px;
@@ -33,12 +38,29 @@
             .navbar-toggler {
                 order: 2;
             }
-
             .navbar-nav {
                 .nav-item {
+                    &.dropdown {
+                        .dropdown-menu[data-bs-popper] {
+                            margin-inline-end: 10px;
+                        }
+                    }
+
                     .nav-link {
                         &::after {
                             display: none;
+                        }
+                    }
+
+                    &.user-tab {
+
+                        // padding: 0 10px 10px;
+                        .dropdown-menu[data-bs-popper] {
+                            margin-inline-end: 0;
+                        }
+
+                        .nav-link {
+                            padding: 10px 0
                         }
                     }
                 }
@@ -109,6 +131,11 @@
             }
         }
     }
+
+    section.single-product-tabs .content .reviews-form {
+        border-inline-end: 0;
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -135,6 +162,8 @@
     }
 
     section.new-arrivals {
+        padding: $padding_section;
+
         .content {
             padding: 0;
 
@@ -217,13 +246,6 @@
 }
 
 @media screen and (max-width: 670px) {
-
-    section.bmi .content .bmi-result table td,
-    section.bmi .content .bmi-result table th {
-        padding: 15px;
-        font-size: 14px;
-    }
-
     section.subscribe {
         .subscribe-form {
             padding: 70px 25px;
@@ -232,12 +254,47 @@
 
     section.contact {
         .form-area {
-            padding: 25px;
+            padding: 15px;
+        }
+    }
+
+
+    .carousel__prev,
+    .carousel__next {
+        position: static !important;
+        display: inline-flex !important;
+        margin-top: 40px !important;
+    }
+
+    .content {
+        .image {
+            .layer {
+                bottom: 0 !important;
+                opacity: 1 !important;
+            }
         }
     }
 }
 
 @media screen and (max-width: 575px) {
+    section.main-slider {
+        .slider-item {
+            img {
+                height: 70vh;
+            }
+
+            .item-details {
+                .title {
+                    font-size: 18px;
+                }
+
+                .item-text {
+                    padding: 25px;
+                }
+            }
+        }
+    }
+
     .main-title h2 {
         font-size: 26px;
     }
@@ -290,10 +347,45 @@
             .text {
                 ul {
                     display: block;
+
                     li {
                         border-inline-end: none;
                         padding-inline-end: 0;
                         margin-inline-end: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-breadcrumb {
+        padding: 4rem 0;
+    }
+
+    section.featured-products .content .nav .nav-link {
+        padding: 5px 12px;
+    }
+
+    section.wishlist .wishlist-content .table-area table.table tbody td,
+    section.cart .wishlist-content .table-area table.table tbody td,
+    section.cart .cart-content .table-area table.table tbody td {
+        padding: 5px 10px;
+    }
+
+    section.wishlist .wishlist-content .table-area table.table thead th,
+    section.cart .wishlist-content .table-area table.table thead th,
+    section.cart .cart-content .table-area table.table thead th {
+        padding: 10px 10px;
+    }
+
+    %products_placeholder {
+        .content {
+            .product-box {
+                border: 0;
+
+                .image {
+                    img {
+                        height: 400px;
                     }
                 }
             }
@@ -304,6 +396,24 @@
 @media screen and (max-width: 500px) {
     header {
         .navbar {
+            .navbar-brand {
+                img {
+                    max-width: 180px;
+                }
+            }
+
+            .navbar-toggler {
+                margin-inline-start: 10px;
+            }
+
+            .cart-icon {
+                margin-inline-end: 15px;
+
+                .badge {
+                    font-size: 10px;
+                }
+            }
+
             .navbar-nav {
                 .nav-item {
                     .dropdown-menu {
@@ -340,6 +450,16 @@
         }
     }
 
+    section.about {
+        .content {
+            .image-box {
+                .image {
+                    padding: 3rem;
+                }
+            }
+        }
+    }
+
     #toTop {
         bottom: 42px;
 
@@ -351,7 +471,7 @@
 
     footer {
         .footer-content {
-            padding-bottom: 50px;
+            padding-bottom: 10px;
 
             .footer-box {
                 .about {
@@ -379,7 +499,7 @@
         .navbar {
             .navbar-brand {
                 img {
-                    max-width: 130px;
+                    max-width: 150px;
                 }
             }
         }

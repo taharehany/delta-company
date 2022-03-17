@@ -1,10 +1,4 @@
 <template lang="pug">
-//to top
-div(id="toTop")
-	button 
-		i(class="bi bi-chevron-double-up")
-//to top
-
 //footer part
 footer
 	div(class="container")
@@ -14,14 +8,14 @@ footer
 					div(class="footer-box")
 						div(class="text")
 							router-link(to="/" class="footer-logo" exact) 
-								img(:src="footerData.logo_white", class="img-fluid mb-4" alt="")
+								img(v-lazy="footerData.logo_white", class="img-fluid mb-4" :alt="$t('website_name')")
 							p {{ footerData.footer_description }}
 						div(class="social-links")
 							h4 {{ $t("follow_on_socials") }}
 							div(class="links")
-								a(:href="footerData.facebook", class="bi bi-facebook")
-								a(:href="footerData.twitter", class="bi bi-twitter")
-								a(:href="footerData.instagram", class="bi bi-instagram")
+								a(:href="footerData.facebook", class="bi bi-facebook" target="_blank" rel="noreferrer" aria-label="facebook")
+								a(:href="footerData.twitter", class="bi bi-twitter" target="_blank" rel="noreferrer" aria-label="twitter")
+								a(:href="footerData.instagram", class="bi bi-instagram" target="_blank" rel="noreferrer" aria-label="instagram")
 				div(class="col-lg-2 col-md-6")
 					div(class="footer-box")
 						h3 {{ $t("useful_links") }}
@@ -45,6 +39,10 @@ footer
 							li(v-if="userData")
 								router-link(to="/wishlist") {{ $t("wishlist") }}
 							li(v-if="userData")
+								router-link(to="/cart") {{ $t("cart") }}
+							li(v-if="userData")
+								router-link(to="/orders") {{ $t("orders") }}
+							li(v-if="userData")
 								router-link(to="/" @click="logout") {{ $t("logout") }}
 				div(class="col-lg-4")
 					div(class="footer-box")
@@ -65,7 +63,7 @@ footer
 		div(class="copyright")
 			div(class="copy-text")
 				p {{ footerData.copyrights }} &copy;
-					router-link(to="/http://marwan.tech/") {{ $t("marwan_tech") }}
+					a(href="http://marwan.tech/") {{ getYear }} {{ $t("marwan_tech") }}
 //footer part
 </template>
 
@@ -78,9 +76,16 @@ export default {
 	},
     methods: {
         logout() {
-			sessionStorage.removeItem("user_data");
+			localStorage.clear();
+            this.$store.commit("destroyCart");
 			window.location.reload();
 		},
+    },
+    computed: {
+         getYear() {
+            let date = new Date();
+            return date.getFullYear();
+        }
     }
 };
 </script>

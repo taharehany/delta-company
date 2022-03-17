@@ -5,14 +5,14 @@ section(class="in-depths" v-if="divingData")
         div(class="content")
             div(class="row")
                 div(class="col-lg-6")
-                    div(class="depths-image")
-                        img(:src="divingData.image" class="img-fluid" :alt="divingData.image_alt")
+                    div(class="depths-image" data-aos="fade-up")
+                        img(v-lazy="divingData.image" class="img-fluid" :alt="divingData.image_alt")
                 div(class="col-lg-6")
-                    div(class="depths-text")
+                    div(class="depths-text" data-aos="fade-down")
                         div(class="main-title")
                             h2 {{ divingData.title }}
                             p {{ divingData.description }}
-                            a(href="#!" class="btn") learn more
+                            router-link(to="/about" class="btn") {{ $t("learn_more") }}
 //in depths
 </template>
 

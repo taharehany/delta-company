@@ -1,16 +1,4 @@
 <template lang="pug">
-//breadcrumb
-nav(aria-label="breadcrumb" class="main-breadcrumb" v-if="settingsData" :style="{backgroundImage: `url(${settingsData.breadcrumb_bg})`}")
-    div(class="container") 
-        div(class="breadcrumb-title")
-            h2 {{ $t("error404") }}
-        nav(aria-label="breadcrumb")
-            ol(class="breadcrumb")
-                li(class="breadcrumb-item")
-                    router-link(to="/" exact) {{ $t("home") }}
-                li(class="breadcrumb-item active", aria-current="page") {{ $t("error404") }}
-//breadcrumb
-
 //error 404
 div(class="error")
     div(class="container")
@@ -25,15 +13,19 @@ div(class="error")
 </template>
 
 <script>
-import { mapState } from "vuex";
-
 export default {
 	name: "Error404",
-	computed: {
-		...mapState(["settingsData"]),
-	},
-	created() {
-		this.$store.dispatch("getSettingsData");
+    watch: {
+		$route: {
+			immediate: true,
+			handler(to, from) {
+                if (this.$i18n.locale == "en") {
+                    document.title = to.meta.title || "In Arabia | 404";
+                } else {
+                    document.title = to.meta.title || "الهوية العربية | 404";
+                }
+			},
+		},
 	},
 };
 </script>

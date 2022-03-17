@@ -1,23 +1,9 @@
 <template lang="pug">
-//breadcrumb
-nav(aria-label="breadcrumb" class="main-breadcrumb" v-if="settingsData" :style="{backgroundImage: `url(${settingsData.breadcrumb_bg})`}")
-    div(class="container") 
-        div(class="breadcrumb-title")
-            h2 {{ $t("contact_us") }}
-        nav(aria-label="breadcrumb")
-            ol(class="breadcrumb")
-                li(class="breadcrumb-item")
-                    router-link(to="/" exact) {{ $t("home") }}
-                li(class="breadcrumb-item active", aria-current="page") {{ $t("contact_us") }}
-//breadcrumb
+//if mesage sent
+Toast(:showIfValue="sent" :message="$t('message_sent_successfully')" :success="true")
 
-//toast part
-div(class="position-fixed bottom-0 p-3 toast-part")
-    div(class="toast align-items-center text-white bg-success border-0" :class="{ 'show': sent }" role="alert", aria-live="assertive", aria-atomic="true")
-        div(class="d-flex")
-            div(class="toast-body") {{ $t("mesage_sent_successfully") }}
-            button(type="button", class="btn-close btn-close-white", data-bs-dismiss="toast", aria-label="Close")
-//toast part
+//if mesage not sent
+Toast(:showIfValue="recapchaError" :message="$t('recapcha_error')" :success="false")
 
 //contact
 section(class="contact")
@@ -25,24 +11,22 @@ section(class="contact")
         div(class="info-area")
             div(class="row")
                 div(class="col-md-4 col-lg-4")
-                    div(class="info-box")
+                    div(class="info-box" data-aos="fade-up")
                         i(class="bi bi-envelope") 
                         h3 {{ $t("email") }}
                         a(:href="'mailto:'+settingsData.email") {{ settingsData.email }}
                 div(class="col-md-4 col-lg-4")   
-                    div(class="info-box")
+                    div(class="info-box" data-aos="fade-up" :data-aos-delay="200")
                         i(class="bi bi-telephone")
                         h3 {{ $t("phone") }}
                         a(:href="'tel:'+settingsData.phone" dir="ltr") {{ settingsData.phone }}
                 div(class="col-md-4 col-lg-4")
-                    div(class="info-box")
+                    div(class="info-box" data-aos="fade-up" :data-aos-delay="300")
                         i(class="bi bi-pin-map")
                         h3 {{ $t("address") }}
                         span {{ settingsData.address }}
-        div(class="form-area")
+        div(class="form-area" data-aos="fade-up" :data-aos-delay="500")
             div(class="contact-box")
-                //- div(class="text-center mb-3" v-if="sent")
-                    p(class="successfully") Message Sent Successfully 
                 div(class="form-content")
                     form(class="g-3" enctype="multipart/form-data" @submit.prevent="handleContactForm")
                         div(class="row")
@@ -75,11 +59,12 @@ section(class="contact")
 
 //map
 section(class="map")
-    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55251.33564056191!2d31.22344491853406!3d30.059558098334296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1634654464669!5m2!1sen!2seg", width="100%", height="450", style="border:0;", allowfullscreen="", loading="lazy")
+    iframe(:src="settingsData.map_url", width="100%", height="450", style="border:0;", allowfullscreen="", loading="lazy")
 //map
 </template>
 
 <script>
+import Toast from "@/components/global/Toast.vue";
 import { mapState, mapActions } from "vuex";
 import { VueRecaptcha } from "vue-recaptcha";
 
@@ -87,14 +72,15 @@ export default {
 	name: "ContactView",
 	components: {
 		VueRecaptcha,
+        Toast
 	},
 	data() {
 		return {
-			productsApi: [],
-			notsent: false,
-			sent: false,
-			sending: false,
-			verifiedRecapcha: false,
+			notsent: null,
+			sent: null,
+			sending: null,
+			verifiedRecapcha: null,
+			recapchaError: null,
 			contactFormData: {
 				name: null,
 				phone: null,
@@ -118,23 +104,24 @@ export default {
 	methods: {
 		...mapActions(["storeFormData"]),
 		handleContactForm(e) {
-			this.sending = true;
-
-			if (this.verifiedRecapcha == true) {
+            if (this.verifiedRecapcha == true) {
+                this.sending = true;
+                this.sent = null;
+                this.recapchaError = null
 				this.storeFormData(this.contactFormData).then(() => {
 					if (!this.$store.state.contactErrorsApi) {
 						e.target.reset();
-						this.notsent = false;
+						this.notsent = null;
 						this.sent = true;
-						this.sending = false;
+						this.sending = null;
 						this.onCaptchaExpired();
 						this.contactFormData.name = null;
 						this.contactFormData.email = null;
 						this.contactFormData.phone = null;
 						this.contactFormData.message = null;
 					} else {
-						this.sending = false;
-						this.sent = false;
+						this.sending = null;
+						this.sent = null;
 						let errors = this.$store.state.contactErrorsApi.data.data;
 						this.contactErrors.name = errors.name;
 						this.contactErrors.email = errors.email;
@@ -142,7 +129,9 @@ export default {
 						this.contactErrors.message = errors.message;
 					}
 				});
-			}
+			} else {
+                this.recapchaError = true;
+            }
 		},
 		onVerify: function (response) {
 			this.verifiedRecapcha = true;
@@ -150,6 +139,18 @@ export default {
 		},
 		onCaptchaExpired: function () {
 			this.$refs.recaptcha.reset();
+		},
+	},
+    watch: {
+		$route: {
+			immediate: true,
+			handler(to, from) {
+                if (this.$i18n.locale == "en") {
+                    document.title = to.meta.title || "In Arabia | Contact us";
+                } else {
+                    document.title = to.meta.title || "الهوية العربية | تواصل معنا";
+                }
+			},
 		},
 	},
 };

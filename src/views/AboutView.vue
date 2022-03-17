@@ -1,27 +1,20 @@
 <template lang="pug">
-//breadcrumb
-nav(aria-label="breadcrumb" class="main-breadcrumb" v-if="aboutData.settings" :style="{backgroundImage: `url(${aboutData.settings.breadcrumb_bg})`}")
-    div(class="container") 
-        div(class="breadcrumb-title")
-            h2 {{ $t("about_us") }}
-        nav(aria-label="breadcrumb")
-            ol(class="breadcrumb")
-                li(class="breadcrumb-item")
-                    router-link(to="/" exact) {{ $t("home") }}
-                li(class="breadcrumb-item active", aria-current="page") {{ $t("about_us") }}
-//breadcrumb
-About(:aboutApi="aboutData.about")
+//loading data
+LoadingData(v-if="this.$store.state.loading")
+//loading data
+
+About(:aboutApi="aboutData.about" v-if="!this.$store.state.loading")
 </template>
 
 <script>
-import Breadcrumb from "@/components/global/Breadcrumb.vue";
+import LoadingData from "@/components/global/LoadingData.vue";
 import About from "@/components/pages/About.vue";
 import { mapState } from "vuex"
 
 export default {
 	name: "AboutView",
 	components: {
-        Breadcrumb,
+        LoadingData,
         About,
 	},
     data() {
@@ -30,10 +23,22 @@ export default {
         }
     },
     computed: {
-        ...mapState(["aboutData"])
+        ...mapState(["aboutData"]),
     },
     created() {
         this.$store.dispatch("getAboutData");
-    }
+    },
+    watch: {
+		$route: {
+			immediate: true,
+			handler(to, from) {
+                if (this.$i18n.locale == "en") {
+                    document.title = to.meta.title || "In Arabia | About us";
+                } else {
+                    document.title = to.meta.title || "الهوية العربية | من نحن";
+                }
+			},
+		},
+	},
 };
 </script>

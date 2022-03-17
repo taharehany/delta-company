@@ -20,13 +20,19 @@
 
     .breadcrumb-title {
         text-align: center;
+        margin-bottom: 15px;
 
         h2 {
             text-align: center;
             color: #fff;
-            font-size: 40px;
+            font-size: 34px;
             font-weight: 600;
             text-transform: capitalize;
+            max-width: 550px;
+            margin: auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
@@ -63,6 +69,25 @@
     border-width: 2px;
     margin-inline-start: 5px;
 }
+
+.wishlist-spinner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    .spinner-border {
+        width: 2rem;
+        height: 2rem;
+        margin-inline-start: 0;
+    }
+}
+
 //spinner
 
 //global page style
@@ -186,6 +211,53 @@
 
 //global page style
 
+//reviews modal
+
+.reviews-modal {
+    .modal-dialog {
+        margin: 2rem auto;
+    }
+
+    .modal-header {
+        background-color: $main_color;
+        box-shadow: 0 4px 20px 0 rgb(115 115 115 / 14%), 0 7px 10px -5px rgb(126 126 126 / 40%);
+        margin: -1rem 1rem 0rem;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        color: #fff;
+
+        h5 {
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+
+        .btn-close {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 2rem 1rem;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: space-between;
+
+        .forget-btn {
+            border: none;
+            background: none;
+            font-size: 14px;
+            color: $main_color;
+        }
+    }
+}
+
+//reviews modal
+
 //about page
 section.about-in-page {
     padding: $padding_section;
@@ -200,11 +272,12 @@ section.about-in-page {
 
             &:nth-child(even) {
                 direction: rtl;
-                
+
                 .about-text {
                     direction: initial;
                 }
             }
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -251,6 +324,7 @@ section.about-in-page {
             .about-text {
                 p {
                     font-size: 16px;
+                    text-align: justify;
                 }
             }
         }
@@ -357,10 +431,18 @@ section.gallery {
 
 //products page
 section.all-products {
-    @extend .new-arrivals;
+    @extend %products_placeholder;
     padding: $padding_section;
 
     .content {
+        padding: 0;
+
+        .alert {
+            .btn {
+                padding: 0;
+            }
+        }
+
         .results {
             display: flex;
             align-items: center;
@@ -395,11 +477,13 @@ section.all-products {
         }
 
         .products-box {
-            @extend .arrivals-box;
-            margin-bottom: 25px
+            @extend .product-box;
+            margin-bottom: 25px;
+            border: 0;
         }
     }
 }
+
 
 //products page
 
@@ -408,6 +492,11 @@ section.single-product {
     padding: $padding_section;
 
     .content {
+        .alert {
+            .btn {
+                padding: 0;
+            }
+        }
         .single-product-details {
             .image {
                 position: relative;
@@ -439,7 +528,8 @@ section.single-product {
                 p {
                     color: #999999;
                     font-size: 16px;
-                    text-align: justify
+                    text-align: justify;
+                    text-transform: capitalize;
                 }
 
                 hr {
@@ -565,9 +655,22 @@ section.single-product {
                     }
 
                     &.added {
-                        background-color: $second_color;
-                        border-color: $second_color;
-                        color: #fff;
+                        padding: 0;
+                        border: none;
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+
+                        i {
+                            display: inline-block;
+                            background-color: $second_color;
+                            width: 30px;
+                            height: 30px;
+                            font-size: 23px;
+                            border-radius: 50%;
+                            color: #fff !important;
+                        }
                     }
                 }
 
@@ -601,6 +704,7 @@ section.single-product-tabs {
             justify-content: flex-start;
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
+            padding-right: 0;
 
             .nav-link {
                 border-radius: 0;
@@ -618,7 +722,7 @@ section.single-product-tabs {
         }
 
         .subtitle {
-            font-size: 20px;
+            font-size: 18px;
             color: #000;
             margin-bottom: 15px;
             text-transform: capitalize;
@@ -628,6 +732,12 @@ section.single-product-tabs {
             margin-bottom: 30px;
             border-inline-end: 1px solid #eee;
             padding-inline-end: 30px;
+
+            .hint {
+                color: #333;
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
 
             .form-group {
                 margin-bottom: 15px;
@@ -693,9 +803,12 @@ section.single-product-tabs {
             }
 
             .product-rating {
-                display: flex;
-                align-items: center;
                 margin-bottom: 25px;
+
+                .rating-field {
+                    display: flex;
+                    align-items: center;
+                }
 
                 p {
                     text-transform: capitalize;
@@ -703,36 +816,38 @@ section.single-product-tabs {
                     font-size: 18px;
                     margin-inline-end: 5px;
                 }
-
-                .ratyli {
-                    .rate {
-                        color: #fff;
-                        font-size: 26px;
-                        cursor: pointer;
-                    }
-
-                    .rate-empty {
-                        color: $main_color;
-                    }
-
-                    &.rated {
-                        .rate-full {
-                            color: #ecc809;
-                        }
-                    }
-
-                    .rate-active {
-                        color: #ecc809;
-                    }
-                }
             }
         }
 
         .reviews-content {
             margin-bottom: 25px;
 
+            .reviews-title {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                h3 {
+                    font-size: 18px;
+                    color: #000;
+                    margin-bottom: 0;
+                    text-transform: capitalize;
+                }
+
+                .btn {
+                    text-transform: capitalize;
+                    background-color: transparent;
+                    color: #000;
+                    border-radius: 0;
+                    padding: 0;
+                    font-size: 18px;
+                    text-decoration: underline;
+                }
+            }
+
             ul {
                 padding: 0;
+                margin: 0;
             }
 
             .review-item {
@@ -798,14 +913,14 @@ section.single-product-tabs {
 
 //related product
 section.related-products {
-    @extend .new-arrivals;
+    @extend %products_placeholder;
     padding: $padding_section;
 
     .content {
         padding: 0;
 
         .related-box {
-            @extend .arrivals-box;
+            @extend .product-box;
             margin-bottom: 25px
         }
     }
@@ -825,7 +940,7 @@ section.login-register {
     .alert {
         @include borderRadius(10px)
     }
- 
+
     .login-register-box {
         max-width: 600px;
         margin: auto;
@@ -919,6 +1034,7 @@ section.profile {
             display: flex;
             flex-direction: column;
         }
+
         .tab-content {
             .subtitle {
                 text-transform: capitalize;
@@ -999,6 +1115,7 @@ section.profile {
 
             .form-group {
                 margin-bottom: 15px;
+
                 label {
                     margin-bottom: 10px;
                     text-transform: capitalize;
@@ -1055,7 +1172,8 @@ section.wishlist {
             table {
                 overflow: visible;
                 border-spacing: 0 10px;
-                min-width: 700px;
+                // min-width: 700px;
+                position: relative;
 
                 .product-name {
                     display: flex;
@@ -1359,6 +1477,10 @@ section.checkout {
                             justify-content: flex-end;
                         }
                     }
+
+                    .product-name {
+                        color: #222;
+                    }
                 }
             }
 
@@ -1384,7 +1506,8 @@ section.checkout {
 //checkout page
 
 //thanks page
-section.thanks {
+section.thanks,
+section.orders {
     padding: $padding_section;
     background-color: #f7f7f7;
 
@@ -1415,7 +1538,6 @@ section.thanks {
                 padding: 20px;
                 display: flex;
                 border: 1px solid $main_color;
-                // @include borderRadius(15px);
 
                 li {
                     list-style: none;
@@ -1423,6 +1545,10 @@ section.thanks {
                     border-inline-end: 1px dashed #d3ced2;
                     padding-inline-end: 25px;
                     margin-inline-end: 25px;
+
+                    &:not(strong) {
+                        text-transform: capitalize;
+                    }
 
                     &:last-child {
                         border-inline-end: 0;
@@ -1443,6 +1569,11 @@ section.thanks {
         .order-details {
             background-color: #fff;
             padding: 25px;
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
 
             table {
                 overflow: visible;
@@ -1455,7 +1586,7 @@ section.thanks {
                         text-transform: capitalize;
                         border: none;
                         vertical-align: middle;
-                        padding: 10px 0;
+                        padding: 8px 0;
                         white-space: nowrap;
                     }
                 }
@@ -1486,6 +1617,11 @@ section.thanks {
 
                             &.all-total {
                                 color: #000
+                            }
+
+                            &.status {
+                                color: $main_color;
+                                font-weight: 600;
                             }
 
                             a {
@@ -1594,7 +1730,7 @@ section.contact {
 
     .form-area {
         margin: auto;
-        background-color: rgba(92, 148, 78, 0.7);
+        background-color: rgba(208, 185, 126, 0.7);
         padding: 40px;
         margin-bottom: 1px;
         @include borderRadius(10px);
@@ -1610,7 +1746,7 @@ section.contact {
 
                     .btn {
                         background-color: $dark_color;
-                        padding: 10px 25px;
+                        padding: 10px 15px;
                         display: inline-block;
                         @include borderRadius(10px);
                         border-color: #fff;

@@ -1,10 +1,12 @@
 <template lang="pug">
+div(class="loader" v-if="this.$store.state.loading")
+    img(src="@/assets/images/logo.png", class="img-fluid" alt="Logo")
 Slider(:sliderData="homeData.slider")
 About(:aboutData="homeData.about")
 Arrivals(:arrivalData="homeData.new_arrivals" :userData="session")
 Diving(:divingData="homeData.diving")
-Cta(:ctaData="homeData.diving" :settingsData="homeData.settings")
-Featured(:allProductsData="homeData.products" :categoriesData="homeData.categories" :userData="session")
+Cta(:ctaData="homeData.cta" :settingsData="homeData.settings")
+Featured(:allProductsData="homeData.products" :categoriesData="homeData.categories" :userData="session" v-if="homeData.products !== undefined")
 Clients(:clientsData="homeData.clients")
 </template>
 
@@ -16,7 +18,6 @@ import Diving from "@/components/home/Diving.vue";
 import Cta from "@/components/home/Cta.vue";
 import Featured from "@/components/home/Featured.vue";
 import Clients from "@/components/home/Clients.vue";
-
 import { mapState } from "vuex"
 
 export default {
@@ -32,15 +33,7 @@ export default {
 	},
     data() {
         return{
-            sliderData: [],
-            aboutData: [],
-            arrivalData: [],
-            divingData: [],
-            ctaData: [],
-            allProductsData: [],
-            categoriesData: [],
-            settingsData: [],
-            session: JSON.parse(sessionStorage.getItem('user_data')),
+            session: JSON.parse(localStorage.getItem('user_data')),
         }
     },
     computed: {
@@ -48,6 +41,18 @@ export default {
     },
     created() {
         this.$store.dispatch("getHomeData");
-    }
+    },
+    watch: {
+		$route: {
+			immediate: true,
+			handler(to, from) {
+                if (this.$i18n.locale == "en") {
+                    document.title = to.meta.title || "In Arabia | Home";
+                } else {
+                    document.title = to.meta.title || "الهوية العربية | الرئيسية";
+                }
+			},
+		},
+	},
 };
 </script>

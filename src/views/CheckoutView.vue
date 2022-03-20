@@ -56,7 +56,6 @@ section(class="checkout")
 
 <script>
 import CheckoutItemSummary from "@/components/pages/CheckoutItemSummary.vue";
-import { mapState } from "vuex";
 import axios from "axios";
 
 export default {

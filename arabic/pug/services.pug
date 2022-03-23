@@ -1,0 +1,155 @@
+extend index
+
+block website_title
+    title #{website_title} | خدماتنا
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 خدماتنا
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") خدماتنا
+    //breadcrumb
+    
+    //services
+    section(class="services-in-page")
+        div(class="container")
+            div(class="main-title")
+                h2 خدماتنا
+            div(class="content")
+                div(class="nav flex-column nav-pills", id="v-pills-tab" role="tablist", aria-orientation="vertical")
+                    button#v-pills-1-tab(class="nav-link active", data-bs-toggle="pill", data-bs-target="#v-pills-1", type="button", role="tab", aria-controls="v-pills-1", aria-selected="true") 
+                        span أولاّ: الخدمات القانونية
+                    button#v-pills-2-tab(class="nav-link", data-bs-toggle="pill", data-bs-target="#v-pills-2", type="button", role="tab", aria-controls="v-pills-2", aria-selected="false")
+                        span ثانياً: الخدمات الإدارية
+                div(class="tab-content" id="v-pills-tabContent")
+                    div(class="tab-pane fade show active", id="v-pills-1" role="tabpanel", aria-labelledby="v-pills-1-tab") 
+                        div(class="row")
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay="0s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/01.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") القضايا الشرعية وديوان المظالم و المدنية والجنائية والتجارية و الإدارية والعمالية
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".1s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/02.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") صياغة العقود والوثائق القانونية
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".2s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/03.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") صياغة العقود والوثائق القانونية
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".3s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/04.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") الإستشارات القانونية
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".4s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/05.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") تأسيس الشركات بكافة أنواعها والقيام بعمليات دمج الشركات والمؤسسات
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".5s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/06.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") التأمين
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                    div(class="tab-pane fade", id="v-pills-2" role="tabpanel", aria-labelledby="v-pills-2-tab") 
+                        div(class="row")
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay="0s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/01.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") القضايا الشرعية وديوان المظالم و المدنية والجنائية والتجارية و الإدارية والعمالية
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".1s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/02.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") صياغة العقود والوثائق القانونية
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".2s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/03.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") صياغة العقود والوثائق القانونية
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".3s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/04.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") الإستشارات القانونية
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".4s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/05.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") تأسيس الشركات بكافة أنواعها والقيام بعمليات دمج الشركات والمؤسسات
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+                            div(class="col-xl-4 col-lg-6 col-md-6 box")
+                                div(class="service-box wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".5s")
+                                    div(class="image")
+                                        a(href="single-service.html") 
+                                            img(class="img-fluid" data-src="../images/services/06.jpg" alt="")
+                                    div(class="details")
+                                        div(class="title")
+                                            a(href="single-service.html") التأمين
+                                        div(class="btns")
+                                            a(href="single-service.html" class="btn details-btn") تفاصيل الخدمة
+    //services

@@ -24,7 +24,7 @@ header
         div(class="container-fluid")
             div(class="navbar-brand") 
                 a(href="index.html") 
-                    img(data-src="images/logo.png", class="img-fluid" alt ="")
+                    img(data-src="images/logo.png", class="img-fluid" alt ="logo")
             button(class="navbar-toggler", type="button", data-bs-toggle="offcanvas", data-bs-target="#side_menu", aria-controls="side_menu", aria-expanded="false", aria-label="Toggle navigation")
                 div(class="hamburger-menu")
                     span
@@ -44,18 +44,6 @@ header
                         a(class="nav-link", href="contact.html") contact us
                     li(class="nav-item dropdown")
                         a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
-                            | pages
-                        ul(class="dropdown-menu")
-                            li
-                                a(class="dropdown-item", href="about.html") about
-                            li
-                                a(class="dropdown-item", href="services.html") services
-                            li
-                                a(class="dropdown-item", href="blogs.html") blogs
-                            li
-                                a(class="dropdown-item", href="contact.html") contact us
-                    li(class="nav-item dropdown")
-                        a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
                             | language
                         ul(class="dropdown-menu")
                             li
@@ -63,7 +51,7 @@ header
                             li
                                 a(class="dropdown-item", href="#!") english
             div(class="btn-area")
-                button(class="btn consultant" type="button", data-bs-toggle="modal", data-bs-target="#consultantModal") consultant
+                a(class="btn consultant" href="contact.html") consultation
     //navbar desktop
 
     //side menu in mobile only
@@ -86,18 +74,6 @@ header
                             a(class="nav-link", href="contact.html") contact us
                         li(class="nav-item dropdown")
                             a(class="nav-link dropdown-toggle" href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
-                                | pages
-                            ul(class="dropdown-menu")
-                                li
-                                    a(class="dropdown-item", href="about.html") about
-                                li
-                                    a(class="dropdown-item", href="services.html") services
-                                li
-                                    a(class="dropdown-item", href="blogs.html") blogs
-                                li
-                                    a(class="dropdown-item", href="contact.html") contact us
-                        li(class="nav-item dropdown")
-                            a(class="nav-link dropdown-toggle" href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
                                 | language
                             ul(class="dropdown-menu")
                                 li
@@ -105,41 +81,3 @@ header
                                 li
                                     a(class="dropdown-item", href="#!") english
 //header
-
-//consultant modal
-div(class="modals")
-    div(class="modal consultant-modal fade", id="consultantModal" tabindex="-1", aria-labelledby="consultantModalLabel", aria-hidden="true")
-        div(class="modal-dialog")
-            div(class="modal-content")
-                div(class="modal-header")
-                    h5(class="modal-title" id="consultantModalLabel") consultant
-                    button(type="button", class="btn-close btn-close-white", data-bs-dismiss="modal", aria-label="Close")
-                div(class="modal-body inter-form")
-                    form(class="g-3 needs-validation" action="" novalidate)
-                        div(class="row")
-                        div(class="col-lg-12")
-                            div(class="form-group input-group flex-nowrap")
-                                i(class="input-group-text bi bi-person")
-                                input(type="text" class="form-control" placeholder="Name" required)
-                        div(class="col-lg-12")
-                            div(class="form-group input-group flex-nowrap")
-                                div(class="input-group has-validation")
-                                    i(class="input-group-text bi bi-envelope")
-                                    input(type="email" class="form-control" placeholder="Email" required)
-                                    div(class="invalid-tooltip")
-                                        | email error
-                        div(class="col-lg-12")
-                            div(class="form-group input-group flex-nowrap")
-                                i(class="input-group-text bi bi-telephone")
-                                input(type="number" class="form-control" placeholder="Phone" required)
-                        div(class="col-lg-12")
-                            div(class="form-group input-group flex-nowrap")
-                                i(class="input-group-text bi bi-check2-circle")
-                                select(class="form-select")
-                                    option(disabled, selected) Select an option
-                                    option(value="1") option 01
-                                    option(value="2") option 02
-                            div(class="col-lg-12 text-center")
-                                div(class="form-group")
-                                    button(class="btn btn-danger" type="submit") send now
-    //consultant modal

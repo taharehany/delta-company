@@ -1,43 +1,36 @@
 extend index
 
 block website_title
-    title #{website_title} | من نحن
+    title #{website_title} | about us
 
 block home_block
     //breadcrumb
-    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/breadcrumb.jpg')")
         div(class="container")
             div(class="breadcrumb-title")
-                h2 من نحن
+                h2 about us
             nav(aria-label="breadcrumb")
                 ol(class="breadcrumb")
                     li(class="breadcrumb-item")
-                        a(href="index.html") الرئيسية
-                    li(class="breadcrumb-item active", aria-current="page") من نحن
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") about us
     //breadcrumb
     
     //about page
     section(class="about-in-page")
         div(class="container")
             div(class="content")
-                div(class="row")
-                    div(class="col-lg-6 box")
-                        div(class="main-title wow slideInUp" data-wow-duration="1.3s" data-wow-delay="0s")
-                            h2 رسالتنا
-                        div(class="text wow slideInUp" data-wow-duration="1.3s" data-wow-delay=".1s")
-                            p ترتبط المحاماة بالحياة القانونية ، كما تعيش في المحاكم وفي المجتمع ويقع على المحامي واجب خماسي الأبعاد: واجبه نحو موكله ، وواجب نحو خصمه ، وواجب نحو المحكمة ، وواجب تجاه نفسه ، وواجبه تجاه النظام القانوني في الدولة.
-                            p  ولكن الواجب الأعلى والأسمى الذي يقع على المحامي هو واجبه وولاؤه للعدل والحق . أنه من الخطأ أن نعتبر المحامي لسان موكله ، والناطق باسمه فقط يقول ما يريد موكله ، وأنه أداته لما يرشده إليه ، إن المحامي ليس كذلك وإنما هو مدين بالولاء والإخلاص للقضية الأهم وهي قضية العدالة والحق.
-                            ul
-                                li عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة
-                                li عند موافقه العميل المبدئيه على التصميم يتمويقول البعض ان وضع النصوص التجريبية
-                    div(class="col-lg-6")
-                        div(class="image wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".1s")
-                            img(class="img-fluid", src="../images/about/about-img1.jpg", alt="about-img")
-                div(class="row")
-                    div(class="col-lg-6 box")
-                        div(class="text wow slideInUp" data-wow-duration="1.3s" data-wow-delay=".1s")
-                            p ومع إنتشار الشركات التجارية والصناعية وتشابك المصالح وتعدد المنازعات خاصة مع كثرة القوانين ، باتت الحاجة ماسة إلى وجود مكاتب قانونية متكاملة ومتخصصة تقوم بتقديم الخدمات القانونية المتنوعة بدءً من تقديم المشورة القانونية لحفظ الحقوق وصيانة المصالح ، وإعداد الدراسات والأبحاث القانونية المتنوعة ، وانتهاء بتمثيل الخصوم أمام الجهات القضائية المختلفة للدفاع عن المصالح . لذا فنحن في مكتب حكم العدالة بما نضمه من نخبة من المحامين والمستشارين القانونين ، نشكل فريق عمل جيد وكفء في مختلف التخصصات القانونية ، وقادرين_ بإذن الله تعالى_ على تقديم أفضل الخدمات القانونية لعملائنا .
-                    div(class="col-lg-6")
-                        div(class="image wow zoomInDown" data-wow-duration="1.3s" data-wow-delay=".1s")
-                            img(class="img-fluid", src="../images/about/about-img2.jpg", alt="about-img")
+                div(class="image")
+                    img(class="img-fluid", data-src="../images/about/abl.jpg", alt="image_alt")
+                div(class="text")
+                    div(class="main-title")
+                        h2 Take it as simple is that,
+                        p When you’re ready to try a new restaurant, you might ask your friends for recommendations, read a good review, or check out the menu before you spend your money and time there. If you enjoy your first meal, you’ll return again and again, but if your thoughts was less than great, then first visit will also be your last. Finding the suitable gym is a lot like finding new restaurant. A good gym will fit your own personality and motivate you to come back and exercise on a regular basis.
+                    ul
+                        li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        li Proin sit amet diam et elit dictum sodales.
+                        li Suspendisse tempus felis a libero mollis ultrices.
+                        li Duis quis odio quis dui sagittis laoreet.
+                        li Suspendisse tempus felis a libero mollis ultrices.
+                div(class="clearfix")
     //about page

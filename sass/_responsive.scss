@@ -1,12 +1,41 @@
-@media screen and (max-width: 1500px) {}
+@media screen and (max-width: 1500px) {
+    header {
+        .navbar {
+            .navbar-brand {
+                top: 100%;
+            }
+        }
+    }
+}
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1199px) {
+    header {
+        .top-part {
+            padding: 13px 0;
+        }
+
+        .navbar {
+            padding: 10px 0;
+        }
+    }
+}
 
 @media screen and (max-width: 991px) {
     header {
         .navbar {
             padding: 10px 0;
+
+            .navbar-brand {
+                max-width: 200px;
+            }
+
+            .navbar-nav {
+                .nav-item {
+                    padding: 0;
+                }
+            }
         }
+
         .hamburger-menu {
             display: inline-block;
         }
@@ -18,8 +47,18 @@
 
     section.about {
         .content {
+            .main-title {
+                h2 {
+                    font-size: 24px;
+                }
+            }
+
             .about-image {
                 margin-bottom: 3rem;
+            }
+
+            .about-text {
+                padding: 0;
             }
         }
     }
@@ -117,6 +156,12 @@
                 }
             }
         }
+
+        .navbar {
+            .navbar-brand {
+                max-width: 200px;
+            }
+        }
     }
 
     section.main-slider {
@@ -133,11 +178,51 @@
         }
     }
 
+    section.about-in-page {
+        padding-bottom: 150px;
+
+        &::after {
+            opacity: 0.2;
+        }
+
+        .main-title {
+            h2 {
+                font-size: 34px;
+            }
+        }
+
+        .content {
+            .image {
+                margin-inline-end: 0;
+                float: none;
+
+                img {
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+    }
+
     .item-btn {
         .btn {
             span {
                 padding: 12px 25px;
             }
+        }
+    }
+
+    section.contact {
+        .info-area {
+            .info-box {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    footer {
+        .footer-box {
+            margin-bottom: 25px;
         }
     }
 }
@@ -177,6 +262,16 @@
 }
 
 @media screen and (max-width: 575px) {
+    header.fixed {
+        .navbar {
+            .navbar-brand {
+                top: 100%;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
+
     .main-title h2 {
         font-size: 35px;
     }
@@ -223,6 +318,10 @@
         .main-slider-carousel {
             .owl-item {
                 .item {
+                    img {
+                        height: 650px;
+                    }
+
                     .item-details {
                         .title {
                             font-size: 26px;

@@ -42,6 +42,32 @@ $(document).ready(function () {
     }
   });
 
+  //team slider owl
+  $(".team-slider").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    items: 4,
+    margin: 20,
+    nav: false,
+    dots: true,
+    rtl: true,
+    smartSpeed: 1000,
+    navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
+    responsive: {
+      0: {
+        items: 1,
+        dots: true,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 4,
+      }
+    }
+  });
+
   //to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 500) {
@@ -101,13 +127,7 @@ $(document).ready(function () {
 $(window).on("load", function () {
   $('.loader').delay(500).fadeOut(500);
 
-  //wow animate
-  wow = new WOW({
-    boxClass: 'wow', // default
-    animateClass: 'animated', // default
-    offset: 0, // default
-    mobile: false, // default
-    live: true // default
-  })
-  wow.init();
+  AOS.init({
+    duration: 800,
+  });
 });

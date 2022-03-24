@@ -1,19 +1,19 @@
 extend index
 
 block website_title
-    title #{website_title} | صفحة المقال
+    title #{website_title} | single blog
 
 block home_block
     //breadcrumb
-    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/breadcrumb.jpg')")
         div(class="container")
             div(class="breadcrumb-title")
-                h2 صفحة المقال
+                h2 single blog
             nav(aria-label="breadcrumb")
                 ol(class="breadcrumb")
                     li(class="breadcrumb-item")
-                        a(href="index.html") الرئيسية
-                    li(class="breadcrumb-item active", aria-current="page") صفحة المقال
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") single blog
     //breadcrumb
     
     //single blog
@@ -24,39 +24,44 @@ block home_block
                     div(class="col-lg-8")
                         div(class="blog-box")
                             div(class="image")
-                                img(class="img-fluid" data-src="../images/blogs/02.jpg" alt="")
+                                img(class="img-fluid" data-src="../images/blogs/02.jpg" alt="image_alt")
                             div(class="details")
                                 div(class="title")
-                                    h3 نظام ديوان المظالم
+                                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 div(class="text")
-                                    p المادة الأولى : ديوان المظالم هيئة قضاء إداري مستقلة ، يرتبط مباشرة بالملك ، ويكون مقره مدينة الرياض .ويتمتع قضاء الديوان وقضاته بالضمانات المنصوص عليها في نظام القضاء ، ويلتزمون بالواجبات المنصوص عليها فيه .المادة الثانية : يتألف ديوان المظالم من رئيس بمرتبة وزير ، ونائب رئيس أو أكثر ، وعدد كاف من القضاة ، ويلحق به العدد اللازم من الباحثين والفنيين والإداريين ونحوهم.المادة الثالثة : يتم تعيين نواب رئيس الديوان بأمر ملكي ممن تتوفر فيهم شروط شغل درجة رئيس محكمة استئناف.
-                                    p المادة الخامسة عشرة : مع عدم الإخلال بما ورد في المادة السابعة والعشرين من نظام القضاء ، إذ رفعت دعوى عن موضوع واحد أمام إحدى محاكم الديوان وأمام أي جهة أخرى ، تختص بالفصل في بعض المنازعات ولم تتخل إحداهما عن نظرها أو تخلتا كلتاهما ؛ فيرفع طلب تعيين الجهة المختصة إلى لجنة الفصل في تنازع الاختصاص التي تؤلف من ثلاثة أعضاء : عضو من المحكمة الإدارية العليا يختاره رئيس المحكمة ، وعضو من الجهة الأخرى يختاره رئيس الجهة ، وعضو من مجلس القضاء الإداري يختاره رئيس المجلس ويكون رئيساً لهذه اللجنة ، كما تختص هذه اللجنة بالفصل في النزاع الذي يقوم بشأن تنفيذ حكمين نهائيين متناقضين صادر أحدهما من محاكم الديوان والآخر من الجهة الأخرى ، وتفصل في هذه الدعاوى وفقاً للأحكام والإجراءات الواردة في نظام القضاء
-                                    p المادة الأولى : ديوان المظالم هيئة قضاء إداري مستقلة ، يرتبط مباشرة بالملك ، ويكون مقره مدينة الرياض .ويتمتع قضاء الديوان وقضاته بالضمانات المنصوص عليها في نظام القضاء ، ويلتزمون بالواجبات المنصوص عليها فيه .المادة الثانية : يتألف ديوان المظالم من رئيس بمرتبة وزير ، ونائب رئيس أو أكثر ، وعدد كاف من القضاة ، ويلحق به العدد اللازم من الباحثين والفنيين والإداريين ونحوهم.المادة الثالثة : يتم تعيين نواب رئيس الديوان بأمر ملكي ممن تتوفر فيهم شروط شغل درجة رئيس محكمة استئناف.
-                                    h4 هنا عنوان فرعي 1
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias 
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    h4 this is title 1
                                     ul 
-                                        li المادة الخامسة عشرة : مع عدم الإخلال بما ورد في المادة السابعة والعشرين من نظام القضاء ، إذ رفعت دعوى عن موضوع واحد أمام إحدى محاكم الديوان وأمام أي جهة أخرى ، تختص بالفصل في بعض المنازعات ولم تتخل إحداهما عن نظرها أو تخلتا كلتاهما ؛ فيرفع طلب تعيين الجهة المختصة إلى لجنة الفصل في تنازع الاختصاص التي تؤلف من ثلاثة أعضاء : عضو من المحكمة الإدارية العليا يختاره رئيس المحكمة ، وعضو من الجهة الأخرى يختاره رئيس الجهة ، وعضو من مجلس القضاء الإداري يختاره رئيس المجلس ويكون رئيساً لهذه اللجنة ، كما تختص هذه اللجنة بالفصل في النزاع الذي يقوم بشأن تنفيذ حكمين نهائيين متناقضين صادر أحدهما من محاكم الديوان والآخر من الجهة الأخرى ، وتفصل في هذه الدعاوى وفقاً للأحكام والإجراءات الواردة في نظام القضاء
-                                        li المادة الخامسة عشرة : مع عدم الإخلال بما ورد في المادة السابعة والعشرين من نظام القضاء ، إذ رفعت دعوى عن موضوع واحد أمام إحدى محاكم الديوان وأمام أي جهة أخرى ، تختص بالفصل في بعض المنازعات ولم تتخل إحداهما عن نظرها أو تخلتا كلتاهما ؛ فيرفع طلب تعيين الجهة المختصة إلى لجنة الفصل في تنازع الاختصاص التي تؤلف من ثلاثة أعضاء : عضو من المحكمة الإدارية العليا يختاره رئيس المحكمة ، وعضو من الجهة الأخرى يختاره رئيس الجهة ، وعضو من مجلس القضاء الإداري يختاره رئيس المجلس ويكون رئيساً لهذه اللجنة ، كما تختص هذه اللجنة بالفصل في النزاع الذي يقوم بشأن تنفيذ حكمين نهائيين متناقضين صادر أحدهما من محاكم الديوان والآخر من الجهة الأخرى ، وتفصل في هذه الدعاوى وفقاً للأحكام والإجراءات الواردة في نظام القضاء
-                                        li المادة الخامسة عشرة : مع عدم الإخلال بما ورد في المادة السابعة والعشرين من نظام القضاء ، إذ رفعت دعوى عن موضوع واحد أمام إحدى محاكم الديوان وأمام أي جهة أخرى ، تختص بالفصل في بعض المنازعات ولم تتخل إحداهما عن نظرها أو تخلتا كلتاهما ؛ فيرفع طلب تعيين الجهة المختصة إلى لجنة الفصل في تنازع الاختصاص التي تؤلف من ثلاثة أعضاء : عضو من المحكمة الإدارية العليا يختاره رئيس المحكمة ، وعضو من الجهة الأخرى يختاره رئيس الجهة ، وعضو من مجلس القضاء الإداري يختاره رئيس المجلس ويكون رئيساً لهذه اللجنة ، كما تختص هذه اللجنة بالفصل في النزاع الذي يقوم بشأن تنفيذ حكمين نهائيين متناقضين صادر أحدهما من محاكم الديوان والآخر من الجهة الأخرى ، وتفصل في هذه الدعاوى وفقاً للأحكام والإجراءات الواردة في نظام القضاء
-                                        li المادة الخامسة عشرة : مع عدم الإخلال بما ورد في المادة السابعة والعشرين من نظام القضاء ، إذ رفعت دعوى عن موضوع واحد أمام إحدى محاكم الديوان وأمام أي جهة أخرى ، تختص بالفصل في بعض المنازعات ولم تتخل إحداهما عن نظرها أو تخلتا كلتاهما ؛ فيرفع طلب تعيين الجهة المختصة إلى لجنة الفصل في تنازع الاختصاص التي تؤلف من ثلاثة أعضاء : عضو من المحكمة الإدارية العليا يختاره رئيس المحكمة ، وعضو من الجهة الأخرى يختاره رئيس الجهة ، وعضو من مجلس القضاء الإداري يختاره رئيس المجلس ويكون رئيساً لهذه اللجنة ، كما تختص هذه اللجنة بالفصل في النزاع الذي يقوم بشأن تنفيذ حكمين نهائيين متناقضين صادر أحدهما من محاكم الديوان والآخر من الجهة الأخرى ، وتفصل في هذه الدعاوى وفقاً للأحكام والإجراءات الواردة في نظام القضاء
-                                    h4 هنا عنوان فرعي 2
-                                    p المادة الخامسة عشرة : مع عدم الإخلال بما ورد في المادة السابعة والعشرين من نظام القضاء ، إذ رفعت دعوى عن موضوع واحد أمام إحدى محاكم الديوان وأمام أي جهة أخرى ، تختص بالفصل في بعض المنازعات ولم تتخل إحداهما عن نظرها أو تخلتا كلتاهما ؛ فيرفع طلب تعيين الجهة المختصة إلى لجنة الفصل في تنازع الاختصاص التي تؤلف من ثلاثة أعضاء : عضو من المحكمة الإدارية العليا يختاره رئيس المحكمة ، وعضو من الجهة الأخرى يختاره رئيس الجهة ، وعضو من مجلس القضاء الإداري يختاره رئيس المجلس ويكون رئيساً لهذه اللجنة ، كما تختص هذه اللجنة بالفصل في النزاع الذي يقوم بشأن تنفيذ حكمين نهائيين متناقضين صادر أحدهما من محاكم الديوان والآخر من الجهة الأخرى ، وتفصل في هذه الدعاوى وفقاً للأحكام والإجراءات الواردة في نظام القضاء
+                                        li Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatibus dolore aliquam dicta repudiandae temporibus obcaecati quas velit consequatur iure, doloremque praesentium vero porro reprehenderit sit, laboriosam minima eveniet voluptates!
+                                        li Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatibus dolore aliquam dicta repudiandae temporibus obcaecati quas velit consequatur iure, doloremque praesentium vero porro reprehenderit sit, laboriosam minima eveniet voluptates!
+                                        li Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatibus dolore aliquam dicta repudiandae temporibus obcaecati quas velit consequatur iure, doloremque praesentium vero porro reprehenderit sit, laboriosam minima eveniet voluptates!
+                                        li Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptatibus dolore aliquam dicta repudiandae temporibus obcaecati quas velit consequatur iure, doloremque praesentium vero porro reprehenderit sit, laboriosam minima eveniet voluptates!
+                                    h4 this is title 2
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias 
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias 
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias eligendi iure!
+                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolor maiores suscipit ex nesciunt est mollitia praesentium. Voluptates natus inventore corrupti consectetur temporibus quisquam quod, eveniet nostrum molestias 
                     div(class="col-lg-4")
                         div(class="side-widget")
-                            div(class="other-services")
+                            div(class="other-blogs")
                                 div(class="title")
-                                    h4 جميع الخدمات
+                                    h4 All blogs
                                 ul 
                                     li 
-                                        a(href="#!") هنا عنوان الخدمة 01
+                                        a(href="#!") this is title blog 01
                                     li 
-                                        a(href="#!") هنا عنوان الخدمة 02
+                                        a(href="#!") this is title blog 02
                                     li 
-                                        a(href="#!") هنا عنوان الخدمة 03
+                                        a(href="#!") this is title blog 03
                                     li 
-                                        a(href="#!") هنا عنوان الخدمة 04
+                                        a(href="#!") this is title blog 04
                             div(class="help")
                                 div(class="title")
-                                    h4 كيف يمكننا مساعدتك!
-                                p ترتبط المحاماة بالحياة القانونية ، كما تعيش في المحاكم وفي المجتمع ويقع على المحامي واجب خماسي الأبعاد: واجبه نحو موكله ، وواجب نحو خصمه ، وواجب نحو المحكمة ، وواجب تجاه نفسه ، وواجبه تجاه النظام القانوني في الدولة.
-                                a(class="btn", href="contact.html") تواصل معنا
+                                    h4 How We Can Help You!
+                                p labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                a(class="btn", href="contact.html") Contact Us
     //single blog 

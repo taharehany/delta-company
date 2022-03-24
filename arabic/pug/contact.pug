@@ -1,79 +1,70 @@
 extend index
 
 block website_title
-    title #{website_title} | تواصل معنا
+    title #{website_title} | contact
 
 block home_block
     //breadcrumb
-    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/broad.jpg')")
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/breadcrumb.jpg')")
         div(class="container")
             div(class="breadcrumb-title")
-                h2 تواصل معنا
+                h2 contact
             nav(aria-label="breadcrumb")
                 ol(class="breadcrumb")
                     li(class="breadcrumb-item")
-                        a(href="index.html") الرئيسية
-                    li(class="breadcrumb-item active", aria-current="page") تواصل معنا
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") contact
     //breadcrumb
 
-    //contact page
-    section(class="contact-in-page")
+    //contact
+    section(class="contact")
         div(class="container")
-            div(class="content")
+            div(class="info-area")
                 div(class="row")
-                    div(class="col-lg-4")
-                        div(class="main-title wow slideInUp" data-wow-duration="1.3s" data-wow-delay="0s")
-                            h2 تواصل معنا الآن
-                        div(class="contact-info wow slideInUp" data-wow-duration="1.3s" data-wow-delay=".2s")
-                            div(class="content")
-                                div(class="details")
-                                    div(class="info-box")
-                                        div(class="icon")
-                                            i(class="bi bi-envelope") 
-                                        div(class="info")
-                                            h4 البريد الإلكتروني
-                                            p
-                                                a(href="mailto:info@hokmaladalah.com") info@hokmaladalah.com
-                                    div(class="info-box")
-                                        div(class="icon")
-                                            i(class="bi bi-telephone")
-                                        div(class="info")
-                                            h4 هاتف
-                                            p
-                                                a(href="tel:00966553255414" dir="ltr") 00966553255414
-                                    div(class="info-box")
-                                        div(class="icon")
-                                            i(class="bi bi-pin-map")
-                                        div(class="info")
-                                            h4 العنوان
-                                            p المملكة العربية السعودية
-                    div(class="col-lg-8")
-                        div(class="contact-form wow slideInUp" data-wow-duration="1.3s" data-wow-delay=".4s")
-                            div(class="alert alert-danger alert-dismissible fade show", role="alert")
-                                strong يجب كتابة الاسم!
-                                | هناك خطأ في حقل من الحقول
-                                button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
-                            form(class="needs-validation" novalidate)
-                                div(class="row")
-                                    div(class="col-lg-6")
-                                        div(class="form-group position-relative")
-                                            input(type="text" class="form-control" placeholder="الاسم" required)
-                                    div(class="col-lg-6")
-                                        div(class="form-group position-relative")
-                                            input(type="email" class="form-control" placeholder="البريد الإلكتروني" required)
-                                    div(class="col-lg-12")
-                                        div(class="form-group position-relative")
-                                            input(type="number" class="form-control" placeholder="الهاتف" required)
-                                    div(class="col-lg-12")
-                                        div(class="form-group")
-                                            textarea(class="form-control" rows="5" placeholder="اترك رسالتك هنا")
-                                    div(class="col-lg-12")
-                                        p(class="successfully") تم إرسال الرسالة بنجاح
-                                div(class="contact-btn")
-                                    div(class="outer-btn")
-                                        button(class="btn" type="submit")
-                                            span إرسال
-    //contact page
+                    div(class="col-md-4 col-lg-4")
+                        div(class="info-box")
+                            i(class="bi bi-envelope") 
+                            h4 email
+                            a(href="mailto:") mail@yahoo.com
+                    div(class="col-md-4 col-lg-4")   
+                        div(class="info-box")
+                            i(class="bi bi-telephone")
+                            h4 phone
+                            a(href="tel:" dir="ltr") +201988209222
+                    div(class="col-md-4 col-lg-4")
+                        div(class="info-box")
+                            i(class="bi bi-pin-map")
+                            h4 location
+                            span 6th of October city
+            div(class="form-area")
+                div(class="main-title")
+                    h2 contact us
+                        span(class="line")
+                div(class="contact-box")
+                    div(class="form-content")
+                        form(class="g-3 needs-validation", action="" novalidate)
+                            div(class="row")
+                                div(class="col-lg-6")
+                                    div(class="form-group position-relative")
+                                        input(type="text", class="form-control", placeholder="Name" required)
+                                div(class="col-lg-6")
+                                    div(class="form-group position-relative")
+                                        input(type="number", class="form-control", placeholder="Number" required)
+                                div(class="col-lg-12")
+                                    div(class="form-group position-relative")
+                                        div(class="input-group has-validation")
+                                            input(type="email", class="form-control", placeholder="Email" required)
+                                            div(class="invalid-tooltip")
+                                                | email error
+                                div(class="col-lg-12")
+                                    div(class="form-group position-relative")
+                                        textarea(rows="6" placeholder="Type your message" class="form-control" required)
+                                div(class="col-lg-12 text-center")
+                                    div(class="form-group contact-btn")
+                                        div(class="outer-btn")
+                                            button(class="btn" type="submit")
+                                                span Submit now
+    //contact 
 
     //map
     section(class="map")

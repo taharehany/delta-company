@@ -115,12 +115,41 @@ header {
 			@extend %two_way_anim_selector;
 			color: #fff;
 			font-size: 14px;
-			padding: 13px 35px;
+			padding: 13px 25px;
 			font-weight: 500;
 			@include borderRadius(0);
 			border: none;
 			background-color: $main_color;
 			text-transform: capitalize;
+		}
+		.dropdown-menu {
+			padding: 0;
+			box-shadow: 0 10px 50px 0 rgba(13, 38, 59, 10%);
+			@include borderRadius(0);
+			border-top: 2px solid $main_color;
+			@include transition(all linear 0.2s);
+
+			li {
+				border-bottom: 1px solid #eee;
+				line-height: 3;
+
+				&:last-of-type {
+					border-bottom: none;
+				}
+			}
+
+			.dropdown-item {
+				font-size: 13px;
+				padding: 0 20px;
+				@include transition(all linear 0.2s);
+				text-transform: capitalize;
+				position: relative;
+
+				&:hover {
+					color: #fff;
+					background-color: $main_color;
+				}
+			}
 		}
 	}
 

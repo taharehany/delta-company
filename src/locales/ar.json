@@ -1,0 +1,67 @@
+{
+  "website_name": "الدغيلبي والطلحي",
+  "more_about_us": "المزيد عنا",
+  "about_us": "من نحن",
+  "home": "الرئيسية",
+  "follow_on_socials": "روابط التواصل",
+  "useful_links": "روابط مفيدة",
+  "about": "من نحن",
+  "services": "الخدمات",
+  "blogs": "المقالات",
+  "our_practice_area": "خدماتنا المتنوعة",
+  "more_services": "المزيد من الخدمات",
+  "team": "فريق العمل",
+  "meet_our_advisors": "فريق العمل",
+  "our_blogs": "مقالاتنا",
+  "more_blogs": "المزيد من المقالات",
+  "language": "اللغة",
+  "how_we_can_help_you": "كيف يمكننا مساعدتك",
+  "message_sent_successfully": "تم استلام رسالتك بنجاح وسيتم التواصل معك في أقرب وقت، شكرا لك",
+ 
+
+  "contact_us": "تواصل معنا",
+  "contact": "تواصل معنا",
+  "phone": "الهاتف",
+  "message": "الرسالة",
+  "address": "العنوان",
+  "email": "البريد الإلكتروني",
+  "marwan_tech": "مروان تك",
+  
+  "wrong": "خطأ",
+  "name": "الاسم",
+
+  "error404": "خطأ 404",
+  "page_not_found": "لم يتم إيجاد الصفحة",
+
+  "sending": "جاري الإرسال",
+  "send": "إرسال",
+  "description": "الوصف",
+  
+  "oops": "فارغ",
+  "no_results": "لا يوجد نتائج",
+  "recapcha_error": "قم بتحديد إنك لست روبوتا",
+
+  "status": "الحالة",
+  "date": "التاريخ",
+  "no_data_found": "لا يوجد بيانات",
+  "controle": "التحكم",
+  "save_changes": "حفظ المتغيرات",
+
+  "all_blogs": "جميع المقالات",
+  "all_services": "جميع الخدمات",
+
+
+  "AboutView": "من نحن",
+  "BlogsView": "المقالات",
+  "SingleBlogView": "صفحة المقال",
+  "ServicesView": "الخدمات",
+  "SingleServiceView": "صفحة الخدمة",
+  "TeamView": "فريق العمل",
+  "ContactView": "تواصل معنا",
+  "Error404": "صفحة غير موجودة",
+  "": "",
+  "": "",
+  "": "",
+  "": "",
+  "": ""
+}

@@ -1,0 +1,451 @@
+//global variables 
+$main_color: #e3ac2b;
+$second_color: #182350;
+$dark_color: #191919;
+$gray_color: #343434;
+$padding_section: 100px 0;
+$headerTop: 55px;
+//global styles
+
+//mixins
+@mixin borderRadius($border) {
+    border-radius: $border;
+    -webkit-border-radius: $border;
+    -moz-border-radius: $border;
+    -ms-border-radius: $border;
+    -o-border-radius: $border;
+}
+
+@mixin transition($trans) {
+    transition: $trans;
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -ms-transition: $trans;
+    -o-transition: $trans;
+}
+
+@mixin transform($transform) {
+    transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+}
+
+@mixin animation($anim) {
+    animation: $anim;
+    -webkit-animation: $anim;
+    -moz-animation: $anim;
+    -ms-animation: $anim;
+    -o-animation: $anim;
+}
+
+@mixin animationDelay($anim) {
+    -webkit-animation-delay: $anim;
+    -moz-animation-delay: $anim;
+    -ms-animation-delay: $anim;
+    -o-animation-delay: $anim;
+    animation-delay: $anim;
+}
+
+@mixin boxshadow($shadow) {
+    box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+}
+
+//mixins
+
+//placeholder selectors
+%center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%overflow_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+%overlay {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+%before {
+    content: "";
+    position: absolute;
+}
+
+%fitimage {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+%max_lines {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+%max_one_line {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+//global btn
+%two_way_anim_selector {
+    position: relative;
+    z-index: 1;
+
+    &:focus,
+    &:active,
+    &:hover {
+        &::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    &::before {
+        content: "";
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        inset: 0 0 0 0;
+        background: $dark_color;
+        z-index: -1;
+        @include transition(transform 0.5s ease);
+        z-index: -1;
+    }
+}
+
+%btn_selector {
+    .outer-btn {
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+            &::before {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .btn {
+        @include borderRadius(0);
+        font-size: 15px;
+        color: $main_color;
+        text-transform: capitalize;
+        @include transition(all ease 0.3s);
+        padding: 0;
+        background: none;
+        color: #000;
+        position: relative;
+        background-color: #fff;
+        border: 1px solid #fff;
+        overflow: hidden;
+
+        &:focus,
+        &:active,
+        &:hover {
+            color: #fff;
+            box-shadow: none;
+
+            span {
+                overflow: hidden;
+
+                &::before {
+                    @include transform(translateX(-40%));
+                }
+
+                &::after {
+                    @include transform(translateX(40%));
+                }
+            }
+        }
+
+        span {
+            position: relative;
+            display: block;
+            padding: 15px 35px;
+            z-index: 1;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                border-bottom: 55px solid $main_color;
+                @include transition(all ease 0.3s);
+                z-index: -1;
+            }
+
+            &::before {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: -50px;
+                border-right: 30px solid transparent;
+                @include transform(translateX(-100%));
+            }
+
+            &::after {
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: -50px;
+                border-left: 30px solid transparent;
+                @include transform(translateX(100%));
+            }
+        }
+    }
+}
+
+//placeholder selectors
+
+//main title
+.main-title {
+    margin-bottom: 4rem;
+    position: relative;
+    text-align: center;
+
+    h2 {
+        font-size: 36px;
+        color: $dark_color;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 0;
+
+        .diff-color {
+            color: $main_color;
+            margin-inline-end: 5px;
+            margin-inline-start: 5px;
+        }
+    }
+
+    .top-title {
+        position: relative;
+        display: inline-block;
+        color: $main_color;
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding-inline-end: 60px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            right: 0px;
+            bottom: 8px;
+            width: 40px;
+            height: 2px;
+            background-color: $second_color;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            right: 10px;
+            bottom: 13px;
+            width: 30px;
+            height: 2px;
+            background-color: $main_color;
+        }
+    }
+}
+
+//main title
+
+//to top button
+#toTop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    margin: 0;
+    z-index: 99;
+    display: none;
+
+    button {
+        background-color: $main_color;
+        width: 45px;
+        height: 45px;
+        border: none;
+        color: #fff;
+    }
+}
+
+//to top button
+
+//main broadcrumb
+.main-breadcrumb {
+    padding: 1.5rem 0;
+
+    ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    .breadcrumb {
+        .breadcrumb-item {
+            font-size: 14px;
+            text-transform: capitalize;
+
+            &.active {
+                color: #6c6b6b;
+                font-weight: 500;
+            }
+
+            &::before {
+                color: #6c6b6b;
+            }
+        }
+    }
+}
+
+//main broadcrumb
+
+//if no data
+.nothing {
+    font-size: 20px;
+    font-weight: 500;
+    color: $dark_color;
+    text-transform: capitalize;
+    text-align: center
+}
+
+//if no data
+
+//global styles
+.btn,
+.btn-close {
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+dl,
+ol,
+ul {
+    padding: 0;
+    padding-inline-start: 20px;
+}
+
+.modal-backdrop.show {
+    opacity: .7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-check-input:checked {
+    background-color: $main_color;
+    border-color: $main_color;
+}
+
+.alert {
+    font-size: 14px;
+
+    strong {
+        margin-inline-end: 5px;
+    }
+}
+
+//global styles
+
+//spinner
+.spinner-border {
+    width: 1.1rem;
+    height: 1.1rem;
+    border-width: 2px;
+    margin-inline-start: 5px;
+}
+
+//spinner
+
+//toast
+.invalid-tooltip,
+.invalid-feedback {
+    display: block
+}
+
+.toast-part {
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    .toast-content {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .toast {
+        border-radius: 0;
+        width: 100%;
+        text-transform: capitalize;
+
+        .btn-close {
+            margin: 15px;
+        }
+    }
+}
+
+//toast
+
+//loader
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    video {
+        max-width: 100%;
+    }
+}
+
+//loader
+
+.inside-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    height: 30vh;
+
+    img {
+        max-width: 150px;
+    }
+}

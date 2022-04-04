@@ -1,6 +1,7 @@
 <template lang="pug">
 div(class="loader" v-if="this.$store.state.loading")
-    img(src="@/assets/images/preloader.svg", class="img-fluid" alt="preloader")
+    img(src="@/assets/images/fav.png", class="img-fluid" alt="preloader")
+    //- img(src="@/assets/images/preloader.svg", class="img-fluid" alt="preloader")
     
 Slider(:sliderData="homeData.slider" v-if="homeData")
 About(:aboutData="homeData.about" v-if="homeData")

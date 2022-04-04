@@ -429,11 +429,41 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 400px;
 
     video {
         max-width: 100%;
     }
+    img {
+        max-width: 160px;
+        @include animation(opacity 1.5s infinite alternate);
+    }
 }
+
+@-webkit-keyframes opacity {
+    0% {
+        opacity: 0.5;
+        transform: rotate3d(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate3d(0, 2, 0, 1turn);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0.5;
+        transform: rotate3d(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate3d(0, 2,0, 1turn);
+    }
+}
+
 
 //loader
 
@@ -446,6 +476,6 @@ a {
     height: 30vh;
 
     img {
-        max-width: 150px;
+        max-width: 130px;
     }
 }

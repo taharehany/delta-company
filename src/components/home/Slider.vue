@@ -8,7 +8,7 @@ section(class="main-slider")
                 div(class="container")
                     div(class="item-text")
                         h1(class="title")  {{ slide.title }}
-                        div(v-html="slide.description")
+                        p {{ slide.description }}
                         div(class="item-btn")
                             div(class="outer-btn")
                                 router-link(to="/about" class="btn")

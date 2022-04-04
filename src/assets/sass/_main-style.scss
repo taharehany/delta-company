@@ -1,6 +1,6 @@
 //global style
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", 'Noto Kufi Arabic', sans-serif;
     background-color: #fff;
     overflow-x: hidden;
     color: $gray_color;
@@ -425,7 +425,7 @@ section.main-slider {
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-image: linear-gradient(50deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%);
+                background-image: linear-gradient(50deg, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .3) 0);
                 z-index: 0;
             }
 
@@ -463,7 +463,7 @@ section.main-slider {
                     font-weight: 700;
                     @extend %max_lines;
                     -webkit-line-clamp: 2;
-                    line-height: 1.5;
+                    line-height: 1.3;
                 }
 
                 p {
@@ -704,12 +704,12 @@ section.services {
                 z-index: 1;
 
                 &:hover {
-                    &::before {
-                        height: 100%;
+                    * {
+                        color: #fff;
                     }
 
-                    p {
-                        color: #fff;
+                    &::before {
+                        height: 100%;
                     }
                 }
 
@@ -992,6 +992,7 @@ section.team {
                     @extend %max_lines;
                     -webkit-line-clamp: 2;
                     min-height: 48px;
+
                     a {
                         font-size: 22px;
                         text-transform: capitalize;
@@ -1088,7 +1089,7 @@ section.cta {
                 font-size: 60px;
                 font-weight: 100;
                 color: $main_color;
-                font-family: "Roboto", sans-serif;
+                font-family: "Roboto", 'Noto Kufi Arabic', sans-serif;
             }
         }
 
@@ -1207,7 +1208,7 @@ section.cta {
 footer {
     background-color: #060606;
     padding: 60px 0 0;
-    background: linear-gradient(rgba(#060606, .95), rgba(#060606, .95)), url("../images/bgs/footer.jpg");
+    background: linear-gradient(rgba(#060606, .8), rgba(#060606, .8)), url("../images/bgs/footer.jpg");
     background-position: center;
     background-position: left center;
     background-repeat: no-repeat;

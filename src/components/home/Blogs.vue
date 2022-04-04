@@ -18,7 +18,7 @@ section(class="blogs")
                                     | {{ blog.created_at }}
                             div(class="title")
                                 router-link(:to="`/blogs/${blog.id}`") {{ blog.title }}
-                            div(v-html="description")
+                            div(v-html="blog.description.substring(0, 150)")
             div(class="blogs-btn")
                 div(class="outer-btn")
                     router-link(to="/blogs" class="btn")
@@ -34,7 +34,7 @@ export default {
 	},
     computed: {
         description () {
-            return this.blogsData.map(element => element.description.substring(0, 100))
+            // return this.blogsData.map(element => element.description.substring(0, 100))
         }
     }
 };

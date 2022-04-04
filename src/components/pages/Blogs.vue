@@ -16,7 +16,7 @@ section(class="blogs-in-page")
                                     | {{ blog.created_at }}
                             div(class="title")
                                 router-link(:to="`/blogs/${blog.id}`") {{ blog.title }}
-                            div(v-html="description")
+                            div(v-html="blog.description.substring(0, 150)")
 //blogs
 </template>
 
@@ -26,10 +26,5 @@ export default {
 	props: {
 		blogsData: Array
 	},
-    computed: {
-        description () {
-            return this.blogsData.map(element => element.description.substring(0, 100))
-        }
-    }
 };
 </script>

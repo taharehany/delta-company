@@ -14,8 +14,8 @@ section(class="services")
                                 img(class="img-fluid" v-lazy="service.image" :alt="service.image_alt")
                         div(class="details")
                             div(class="title")
-                                router-link(:to="`/services/${service.id}`") {{ service.title }}
-                            div(v-html="description")
+                                router-link(:to="`/services/${service.id}`") {{ service.title.substring(0, 20) }}
+                            div(v-html="service.description.substring(0, 130)+'...'")
                             div(class="btns")
                                 router-link(:to="`/services/${service.id}`" class="details-btn" :aria-label="service.title") 
                                     i(class="bi bi-chevron-right")
@@ -32,10 +32,5 @@ export default {
     props: {
         servicesData: Array
     },
-    computed: {
-        description () {
-            return this.servicesData.map(element => element.description.substring(0, 50))
-        }
-    }
 };
 </script>

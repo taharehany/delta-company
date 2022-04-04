@@ -4,10 +4,10 @@ module.exports = defineConfig({
     outputDir : 'dist',
     pwa: {
         name: 'الدغيلبي والطلحي',
-        themeColor: '#4DBA87',
-        msTileColor: '#000000',
+        themeColor: '#e3ac2b',
+        msTileColor: '#182350',
         appleMobileWebAppCapable: 'yes',
-        appleMobileWebAppStatusBarStyle: 'black',
+        appleMobileWebAppStatusBarStyle: '#e3ac2b',
         workboxOptions: {
             skipWaiting: false
         },

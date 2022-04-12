@@ -1,0 +1,15 @@
+extend index
+
+block website_title
+    title #{website_title} | خطأ 404
+
+block home_block
+    //error 404
+    div(class="error")
+        div(class="container")
+            div(class="text-center mx-auto") 
+                h2 404
+                p(class="lead text-gray-800 mb-4") صفحة غير موجودة
+                a(href="index.html" class="btn back") العودة إلى الرئيسية ←
+    //error 404
+

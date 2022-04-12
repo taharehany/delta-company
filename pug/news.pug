@@ -1,0 +1,146 @@
+extends index
+
+block website_title
+    title #{website_title} | جميع الأخبار
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb")
+        div(class="container")
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") الرئيسية
+                    li(class="breadcrumb-item active", aria-current="page") جميع الأخبار
+    //breadcrumb
+
+    //all news
+    div(class="allnews-page")
+        div(class="container")
+            div(class="allnews-content")
+                div(class="row")
+                    div(class="col-lg-9")
+                        //if no results
+                        //- p(class="nothing") لا يوجد أخبار
+                        div(class="allnews-")
+                            div(class="row")
+                                div(class="col-lg-4 col-md-6")
+                                    div(class="card")
+                                        a(href="single-news.html", class="image" title="") 
+                                            img(data-src="images/trending/01.jpg", class="img-fluid", alt="")
+                                        div(class="card-body")
+                                            h2(class="card-title") 
+                                                a(href="single-news.html") عنوان الخبر هنا
+                                            p(class="card-text") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                            span(class="card-date")
+                                                a(href="#") 
+                                                    i(class="bi bi-calendar")
+                                                    small(class="text-muted") 18 فبراير 2021 
+                                                    small(class="text-muted") 11:52 ص
+                                div(class="col-lg-4 col-md-6")
+                                    div(class="card")
+                                        a(href="single-news.html", class="image" title="") 
+                                            img(data-src="images/trending/02.jpg", class="img-fluid", alt="")
+                                        div(class="card-body")
+                                            h2(class="card-title") 
+                                                a(href="single-news.html") عنوان الخبر هنا
+                                            p(class="card-text") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                            span(class="card-date")
+                                                a(href="#") 
+                                                    i(class="bi bi-calendar")
+                                                    small(class="text-muted") 18 فبراير 2021 
+                                                    small(class="text-muted") 11:52 ص
+                                div(class="col-lg-4 col-md-6")
+                                    div(class="card")
+                                        a(href="single-news.html", class="image" title="") 
+                                            img(data-src="images/trending/03.jpg", class="img-fluid", alt="")
+                                        div(class="card-body")
+                                            h2(class="card-title") 
+                                                a(href="single-news.html") عنوان الخبر هنا
+                                            p(class="card-text") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                            span(class="card-date")
+                                                a(href="#") 
+                                                    i(class="bi bi-calendar")
+                                                    small(class="text-muted") 18 فبراير 2021 
+                                                    small(class="text-muted") 11:52 ص
+                                div(class="col-lg-4 col-md-6")
+                                    div(class="card")
+                                        a(href="single-news.html", class="image" title="") 
+                                            img(data-src="images/trending/04.jpg", class="img-fluid", alt="")
+                                        div(class="card-body")
+                                            h2(class="card-title") 
+                                                a(href="single-news.html") عنوان الخبر هنا
+                                            p(class="card-text") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                            span(class="card-date")
+                                                a(href="#") 
+                                                    i(class="bi bi-calendar")
+                                                    small(class="text-muted") 18 فبراير 2021 
+                                                    small(class="text-muted") 11:52 ص
+                                div(class="col-lg-4 col-md-6")
+                                    div(class="card")
+                                        a(href="single-news.html", class="image" title="") 
+                                            img(data-src="images/trending/03.jpg", class="img-fluid", alt="")
+                                        div(class="card-body")
+                                            h2(class="card-title") 
+                                                a(href="single-news.html") عنوان الخبر هنا
+                                            p(class="card-text") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                            span(class="card-date")
+                                                a(href="#") 
+                                                    i(class="bi bi-calendar")
+                                                    small(class="text-muted") 18 فبراير 2021 
+                                                    small(class="text-muted") 11:52 ص
+                                div(class="col-lg-4 col-md-6")
+                                    div(class="card")
+                                        a(href="single-news.html", class="image" title="") 
+                                            img(data-src="images/trending/01.jpg", class="img-fluid", alt="")
+                                        div(class="card-body")
+                                            h2(class="card-title") 
+                                                a(href="single-news.html") عنوان الخبر هنا
+                                            p(class="card-text") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                            span(class="card-date")
+                                                a(href="#") 
+                                                    i(class="bi bi-calendar")
+                                                    small(class="text-muted") 18 فبراير 2021 
+                                                    small(class="text-muted") 11:52 ص
+                                div(class="col-lg-4 col-md-6")
+                                    div(class="card")
+                                        a(href="single-news.html", class="image" title="") 
+                                            img(data-src="images/trending/02.jpg", class="img-fluid", alt="")
+                                        div(class="card-body")
+                                            h2(class="card-title") 
+                                                a(href="single-news.html") عنوان الخبر هنا
+                                            p(class="card-text") عند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
+                                            span(class="card-date")
+                                                a(href="#") 
+                                                    i(class="bi bi-calendar")
+                                                    small(class="text-muted") 18 فبراير 2021 
+                                                    small(class="text-muted") 11:52 ص
+                                //pagination
+                                nav(aria-label="Page navigation" class="navigation")
+                                    ul(class="pagination")
+                                        li(class="page-item")
+                                            a(class="page-link arrow", href="#!", aria-label="Previous")
+                                                span(aria-hidden="true") &laquo;
+                                        li(class="page-item active")
+                                            a(class="page-link", href="#!") 1
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 2
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 3
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 4
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 5
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 6
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 7
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 8
+                                        li(class="page-item")
+                                            a(class="page-link arrow", href="#!", aria-label="Next")
+                                                span(aria-hidden="true") &raquo;
+                    //aside column
+                    div(class="col-lg-3")
+                        include includes/aside-column.pug
+    //search news
